@@ -1,9 +1,17 @@
 # ninja log v6
-2	328	1771311248543592909	build.ninja	c8d46ba7fc3f9b93
-1	74	1771310719538355417	CMakeFiles/numericore.dir/src/main.cpp.o.ddi	e9458dfecc19baed
-1	4	1771311214909704947	CMakeFiles/numericore.dir/CXXModules.json	9057cae43e758e17
-1	4	1771311214909704947	CMakeFiles/numericore.dir/CXX.dd	9057cae43e758e17
+73	304	1771312155178917075	CMakeFiles/numericore.dir/src/main.cpp.o	937fd33bc2a6e42a
+1	287	1771312241101287052	/home/cadenv07/CLionProjects/numericore/cmake-build-debug/cmake_install.cmake	c8d46ba7fc3f9b93
+69	72	1771312155174573230	CMakeFiles/numericore.dir/src/main.cpp.o.modmap	9057cae43e758e17
 4	45	1771311214913825542	numericore	406ac80b3edf12d5
-1	4	1771311214909704947	CMakeFiles/numericore.dir/src/main.cpp.o.modmap	9057cae43e758e17
-2	328	1771311248543592909	/home/cadenv07/CLionProjects/numericore/cmake-build-debug/cmake_install.cmake	c8d46ba7fc3f9b93
-78	415	1771310719615355160	CMakeFiles/numericore.dir/src/main.cpp.o	ec2cec5728b88bd7
+69	72	1771312155174573230	CMakeFiles/numericore.dir/CXX.dd	9057cae43e758e17
+69	72	1771312155174573230	CMakeFiles/numericore.dir/CXXModules.json	9057cae43e758e17
+1	69	1771312155106573457	CMakeFiles/numericore.dir/src/main.cpp.o.ddi	72d283bd485aaf19
+1	287	1771312241101287052	build.ninja	c8d46ba7fc3f9b93
+0	343	1771312241101287052	build.ninja	c8d46ba7fc3f9b93
+0	343	1771312241101287052	/home/cadenv07/CLionProjects/numericore/cmake-build-debug/cmake_install.cmake	c8d46ba7fc3f9b93
+0	61	1771312241109287025	CMakeFiles/numericore.dir/src/main.cpp.o.ddi	60c5603206f8b33b
+61	65	1771312241170286822	CMakeFiles/numericore.dir/CXX.dd	9057cae43e758e17
+61	65	1771312241170286822	CMakeFiles/numericore.dir/CXXModules.json	9057cae43e758e17
+61	65	1771312241170286822	CMakeFiles/numericore.dir/src/main.cpp.o.modmap	9057cae43e758e17
+65	284	1771312241174286809	CMakeFiles/numericore.dir/src/main.cpp.o	964615c333cf9211
+284	326	1771312241393286080	numericore	49b0730b8724c056

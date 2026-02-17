@@ -200,6 +200,21 @@
 			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU.cmake"
 		},
 		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindOpenGL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+		},
+		{
 			"isExternal" : true,
 			"path" : "/usr/lib/cmake/fmt/fmt-config-version.cmake"
 		},
@@ -234,6 +249,62 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glfw3/glfw3ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glfw3/glfw3Config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glfw3/glfw3Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glfw3/glfw3Targets-none.cmake"
 		},
 		{
 			"path" : "vcpkg.json"
