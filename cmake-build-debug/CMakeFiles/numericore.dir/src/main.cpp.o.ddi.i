@@ -51717,11 +51717,50 @@ typedef struct GLFWallocator
 
 
 # 5 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+float vertices[] = {
+    -0.5f, -0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+     0.0f, 0.5f, 0.0f
+};
+
 int main() {
+    std::printf("DISPLAY=%s\n", std::getenv("DISPLAY"));
+    std::printf("XAUTHORITY=%s\n", std::getenv("XAUTHORITY"));
+
+    glfwInitHint(
+# 15 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                0x00050003
+# 15 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                             , 
+# 15 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                               0x00060004
+# 15 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                );
+
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW3" << std::endl;
         return -1;
     }
+
+    glfwWindowHint(
+# 22 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                  0x00022002
+# 22 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                            , 3);
+    glfwWindowHint(
+# 23 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                  0x00022003
+# 23 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                            , 3);
+    glfwWindowHint(
+# 24 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                  0x00022008
+# 24 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     , 
+# 24 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                       0x00032001
+# 24 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                               );
 
     GLFWwindow* window = glfwCreateWindow(800,600,"Numericore", nullptr, nullptr);
     if (!window) {
@@ -51732,14 +51771,197 @@ int main() {
 
     glfwMakeContextCurrent(window);
 
+    glewExperimental = 
+# 35 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                      1
+# 35 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                             ;
+    GLenum err = glewInit();
+    if (err != 
+# 37 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+              0
+# 37 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                     ) {
+        fprintf(
+# 38 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+               stderr
+# 38 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                     , "GLEW init failed: %s\n", glewGetErrorString(err));
+        return -1;
+    }
+
+    GLuint VBO, VAO;
+    
+# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewGenVertexArrays
+# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                    (1, &VAO);
+    
+# 44 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewGenBuffers
+# 44 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+               (1, &VBO);
+
+    
+# 46 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewBindVertexArray
+# 46 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                    (VAO);
+    
+# 47 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewBindBuffer
+# 47 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+               (
+# 47 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                0x8892
+# 47 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                               , VBO);
+    
+# 48 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewBufferData
+# 48 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+               (
+# 48 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                0x8892
+# 48 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                               , sizeof(vertices), vertices, 
+# 48 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                                             0x88E4
+# 48 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                                           );
+
+    const auto vertexShaderSource = "#version 330 core\n"
+        "layout (location = 0) in vec3 aPos;\n"
+        "void main()\n"
+        "{\n"
+        "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+        "}\0";
+    const unsigned int vertexShader = 
+# 56 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                     __glewCreateShader
+# 56 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                   (
+# 56 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                                    0x8B31
+# 56 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                                    );
+    
+# 57 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewShaderSource
+# 57 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                 (vertexShader, 1, &vertexShaderSource, nullptr);
+    
+# 58 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewCompileShader
+# 58 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                  (vertexShader);
+    std::cout << "test" << std::endl;
+
+    const auto fragmentShaderSource = "#version 330 core\n"
+    "out vec4 FragColor;\n"
+    "void main()\n"
+    "{\n"
+    "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+    "}\0";
+    const unsigned int fragmentShader = 
+# 67 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                       __glewCreateShader
+# 67 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                     (
+# 67 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                                      0x8B30
+# 67 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                                        );
+    
+# 68 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewShaderSource
+# 68 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                 (fragmentShader, 1, &fragmentShaderSource, nullptr);
+    
+# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewCompileShader
+# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                  (fragmentShader);
+
+    const unsigned int shaderProgram = 
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                      __glewCreateProgram
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                     ();
+    
+# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewAttachShader
+# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                 (shaderProgram, vertexShader);
+    
+# 73 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewAttachShader
+# 73 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                 (shaderProgram, fragmentShader);
+    
+# 74 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewLinkProgram
+# 74 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                (shaderProgram);
+
+    
+# 76 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewUseProgram
+# 76 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+               (shaderProgram);
+    
+# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewDeleteShader
+# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                 (vertexShader);
+    
+# 78 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewDeleteShader
+# 78 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                 (fragmentShader);
+
+    
+# 80 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewVertexAttribPointer
+# 80 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                        (0, 3, 
+# 80 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                               0x1406
+# 80 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                       , 
+# 80 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                         0
+# 80 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                 , 3 * sizeof(float), (void*)0);
+    
+# 81 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+   __glewEnableVertexAttribArray
+# 81 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                            (0);
+
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
         glClear(
-# 22 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 85 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                0x00004000
-# 22 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 85 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                   );
 
+        
+# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+       __glewUseProgram
+# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                   (shaderProgram);
+        
+# 88 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+       __glewBindVertexArray
+# 88 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                        (VAO);
+        glDrawArrays(
+# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                    0x0004
+# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                , 0, 3);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
