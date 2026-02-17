@@ -1,21 +1,9 @@
 # ninja log v6
-52	245	1771310579850862482	CMakeFiles/numericore.dir/src/main.cpp.o	ba5cc3cec9702c24
-1	201	1771310665307594786	/home/cadenv07/CLionProjects/numericore/cmake-build-debug/cmake_install.cmake	c8d46ba7fc3f9b93
-0	4	1771310606123733369	CMakeFiles/numericore.dir/src/main.cpp.o.modmap	9057cae43e758e17
-245	278	1771310580043820298	numericore	f8d4faa899b555ac
-0	4	1771310606123733369	CMakeFiles/numericore.dir/CXX.dd	9057cae43e758e17
-0	4	1771310606123733369	CMakeFiles/numericore.dir/CXXModules.json	9057cae43e758e17
-1	48	1771310579799821112	CMakeFiles/numericore.dir/src/main.cpp.o.ddi	82097d46e167bad4
-1	201	1771310665307594786	build.ninja	c8d46ba7fc3f9b93
-1	49	1771310675594501845	CMakeFiles/numericore.dir/src/main.cpp.o.ddi	e9458dfecc19baed
-49	53	1771310675642501686	CMakeFiles/numericore.dir/CXX.dd	9057cae43e758e17
-49	53	1771310675642501686	CMakeFiles/numericore.dir/CXXModules.json	9057cae43e758e17
-49	53	1771310675642501686	CMakeFiles/numericore.dir/src/main.cpp.o.modmap	9057cae43e758e17
-53	244	1771310675647045672	CMakeFiles/numericore.dir/src/main.cpp.o	ec2cec5728b88bd7
-244	277	1771310675837501036	numericore	966c49ba459f036c
+2	328	1771311248543592909	build.ninja	c8d46ba7fc3f9b93
 1	74	1771310719538355417	CMakeFiles/numericore.dir/src/main.cpp.o.ddi	e9458dfecc19baed
-74	78	1771310719611355174	CMakeFiles/numericore.dir/CXX.dd	9057cae43e758e17
-74	78	1771310719611355174	CMakeFiles/numericore.dir/CXXModules.json	9057cae43e758e17
-74	78	1771310719611355174	CMakeFiles/numericore.dir/src/main.cpp.o.modmap	9057cae43e758e17
+1	4	1771311214909704947	CMakeFiles/numericore.dir/CXXModules.json	9057cae43e758e17
+1	4	1771311214909704947	CMakeFiles/numericore.dir/CXX.dd	9057cae43e758e17
+4	45	1771311214913825542	numericore	406ac80b3edf12d5
+1	4	1771311214909704947	CMakeFiles/numericore.dir/src/main.cpp.o.modmap	9057cae43e758e17
+2	328	1771311248543592909	/home/cadenv07/CLionProjects/numericore/cmake-build-debug/cmake_install.cmake	c8d46ba7fc3f9b93
 78	415	1771310719615355160	CMakeFiles/numericore.dir/src/main.cpp.o	ec2cec5728b88bd7
-415	448	1771310719952354037	numericore	966c49ba459f036c

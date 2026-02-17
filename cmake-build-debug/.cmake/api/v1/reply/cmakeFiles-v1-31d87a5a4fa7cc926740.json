@@ -216,6 +216,26 @@
 			"path" : "/usr/lib/cmake/fmt/fmt-targets-none.cmake"
 		},
 		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindGLEW.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
 			"path" : "vcpkg.json"
 		}
 	],
