@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "numericore",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "copy_resources::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-copy_resources-Debug-fa648a0a7cc1f088b4ab.json",
+					"name" : "copy_resources",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "numericore::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-numericore-Debug-a20a038abd6cac5f4574.json",
+					"jsonFile" : "target-numericore-Debug-bd0083cbd8afb6fbf003.json",
 					"name" : "numericore",
 					"projectIndex" : 0
 				}

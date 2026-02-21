@@ -1,4 +1,26 @@
 {
+	"globsDependent" : 
+	[
+		{
+			"expression" : "/home/cadenv07/CLionProjects/numericore/headers/*.h",
+			"paths" : 
+			[
+				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h",
+				"/home/cadenv07/CLionProjects/numericore/headers/util/File.h"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/cadenv07/CLionProjects/numericore/src/*.cpp",
+			"paths" : 
+			[
+				"/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp",
+				"/home/cadenv07/CLionProjects/numericore/src/main.cpp",
+				"/home/cadenv07/CLionProjects/numericore/src/util/File.cpp"
+			],
+			"recurse" : true
+		}
+	],
 	"inputs" : 
 	[
 		{

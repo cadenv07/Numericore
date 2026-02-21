@@ -1,3 +1,4 @@
+/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/copy_resources.dir
 /home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/numericore.dir
 /home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/numericore.dir/src/util/File.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

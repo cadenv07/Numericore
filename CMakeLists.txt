@@ -12,6 +12,33 @@ if(GLEW_FOUND)
     link_libraries(${GLEW_LIBRARIES})
 endif()
 
-add_executable(numericore src/main.cpp)
-target_include_directories(numericore PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/headers")
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
+        "${CMAKE_SOURCE_DIR}/src/*.cpp"
+)
+
+file(GLOB_RECURSE HEADERS CONFIGURE_DEPENDS
+        "${CMAKE_SOURCE_DIR}/headers/*.h"
+)
+
+file(GLOB_RECURSE RESOURCE_FILES
+        "${CMAKE_SOURCE_DIR}/res/*"
+)
+
+add_custom_target(copy_resources ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/res
+        ${CMAKE_BINARY_DIR}/res
+)
+
+add_executable(numericore ${SOURCES} ${HEADERS}
+        headers/util/File.h
+        src/util/File.cpp
+)
+
+target_include_directories(numericore PRIVATE
+        "${CMAKE_SOURCE_DIR}/headers"
+)
+
+add_dependencies(numericore copy_resources)
+
 target_link_libraries(numericore PRIVATE fmt::fmt OpenGL::GL GLEW::GLEW glfw)
