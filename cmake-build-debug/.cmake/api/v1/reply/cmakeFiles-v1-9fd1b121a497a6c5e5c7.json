@@ -1,0 +1,362 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "/home/cadenv07/CLionProjects/numericore/headers/*.h",
+			"paths" : 
+			[
+				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Camera.h",
+				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h",
+				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h",
+				"/home/cadenv07/CLionProjects/numericore/headers/graphics/stb_image.h",
+				"/home/cadenv07/CLionProjects/numericore/headers/util/File.h"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/cadenv07/CLionProjects/numericore/src/*.cpp",
+			"paths" : 
+			[
+				"/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp",
+				"/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp",
+				"/home/cadenv07/CLionProjects/numericore/src/main.cpp",
+				"/home/cadenv07/CLionProjects/numericore/src/util/File.cpp"
+			],
+			"recurse" : true
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.1.2/CMakeSystem.cmake"
+		},
+		{
+			"path" : "vcpkg/scripts/buildsystems/vcpkg.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.1.2/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Linker/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Linker/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindOpenGL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/fmt/fmt-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/fmt/fmt-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/fmt/fmt-targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/fmt/fmt-targets-none.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindGLEW.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glfw3/glfw3ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glfw3/glfw3Config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glfw3/glfw3Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glfw3/glfw3Targets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glm/glmConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glm/glmConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glm/glmConfig-release.cmake"
+		},
+		{
+			"path" : "vcpkg.json"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/cadenv07/CLionProjects/numericore/cmake-build-debug",
+		"source" : "/home/cadenv07/CLionProjects/numericore"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}
