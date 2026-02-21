@@ -5,6 +5,10 @@
 #include "graphics/Shader.h"
 #include "graphics/Texture.h"
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 float vertices[] = {
     .5f, .5f, .0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
     .5f, -.5f, .0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
@@ -73,11 +77,16 @@ int main() {
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
     glEnableVertexAttribArray(2);
 
+    glm::mat4 trans = glm::mat4(1.0f);
+    trans = glm::rotate(trans, glm::radians(45.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    trans = glm::scale(trans, glm::vec3(2.0f,2.0f, 2.0f));
+
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(s.getID());
+        s.setMat4("transform", trans);
         glBindTexture(GL_TEXTURE_2D, t.getID());
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

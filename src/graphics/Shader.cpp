@@ -4,6 +4,7 @@
 
 #include "graphics/Shader.h"
 #include <GL/glew.h>
+#include <glm/gtc/type_ptr.hpp>
 
 #include "util/File.h"
 
@@ -42,11 +43,14 @@ void Shader::use() const {
 }
 
 void Shader::setBool(const std::string &name, const bool value) const {
-    glUniform1i(glGetUniformLocation(s_id, name.c_str()), (int)value);
+    glUniform1i(glGetUniformLocation(s_id, name.c_str()), value);
 }
 void Shader::setInt(const std::string &name, const int value) const {
     glUniform1i(glGetUniformLocation(s_id, name.c_str()), value);
 }
 void Shader::setFloat(const std::string &name, const float value) const {
     glUniform1f(glGetUniformLocation(s_id, name.c_str()), value);
+}
+void Shader::setMat4(const std::string &name, const glm::mat4 &m) const {
+    glUniformMatrix4fv(glGetUniformLocation(s_id, name.c_str()), 1, GL_FALSE, glm::value_ptr(m));
 }
