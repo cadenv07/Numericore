@@ -155,4 +155,5 @@ CMakeFiles/numericore.dir/src/main.cpp.o.ddi: \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h /usr/include/GL/glu.h \
  /usr/include/GL/gl.h /usr/include/GLFW/glfw3.h \
- /home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h
+ /home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h \
+ /home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h

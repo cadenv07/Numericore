@@ -26,6 +26,11 @@
 			"language" : "CXX",
 			"source" : "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
 		},
+		"CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+		},
 		"CMakeFiles/numericore.dir/src/main.cpp.o" : 
 		{
 			"language" : "CXX",

@@ -6,6 +6,8 @@
 			"paths" : 
 			[
 				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h",
+				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h",
+				"/home/cadenv07/CLionProjects/numericore/headers/graphics/stb_image.h",
 				"/home/cadenv07/CLionProjects/numericore/headers/util/File.h"
 			],
 			"recurse" : true
@@ -15,6 +17,7 @@
 			"paths" : 
 			[
 				"/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp",
+				"/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp",
 				"/home/cadenv07/CLionProjects/numericore/src/main.cpp",
 				"/home/cadenv07/CLionProjects/numericore/src/util/File.cpp"
 			],

@@ -5,6 +5,8 @@
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/cadenv07/CLionProjects/numericore/headers/*.h")
 set(OLD_GLOB
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h"
+  "/home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h"
+  "/home/cadenv07/CLionProjects/numericore/headers/graphics/stb_image.h"
   "/home/cadenv07/CLionProjects/numericore/headers/util/File.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -16,6 +18,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/cadenv07/CLionProjects/numericore/src/*.cpp")
 set(OLD_GLOB
   "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+  "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/util/File.cpp"
   )

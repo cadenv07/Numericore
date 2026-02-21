@@ -31688,6 +31688,9 @@ public:
     [[nodiscard]]
     unsigned int getID() const { return s_id; }
 
+    void setBool(const std::string &name, bool value) const;
+    void setInt(const std::string &name, int value) const;
+    void setFloat(const std::string &name, float value) const;
 private:
     unsigned int s_id;
 };
@@ -39765,4 +39768,38 @@ void Shader::use() const {
    __glewUseProgram
 # 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                (s_id);
+}
+
+void Shader::setBool(const std::string &name, const bool value) const {
+    
+# 45 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+   __glewUniform1i
+# 45 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+              (
+# 45 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+               __glewGetUniformLocation
+# 45 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+                                   (s_id, name.c_str()), (int)value);
+}
+void Shader::setInt(const std::string &name, const int value) const {
+    
+# 48 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+   __glewUniform1i
+# 48 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+              (
+# 48 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+               __glewGetUniformLocation
+# 48 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+                                   (s_id, name.c_str()), value);
+}
+void Shader::setFloat(const std::string &name, const float value) const {
+    
+# 51 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+   __glewUniform1f
+# 51 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+              (
+# 51 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+               __glewGetUniformLocation
+# 51 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+                                   (s_id, name.c_str()), value);
 }
