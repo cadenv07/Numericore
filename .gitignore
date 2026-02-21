@@ -5,6 +5,7 @@ out/
 
 # vcpkg
 cmake-build-debug/vcpkg_installed
+cmake-build-debug/numericore
 
 # IDE - CLion / IntelliJ
 .idea/
