@@ -4,7 +4,7 @@ cmake-build-*/
 out/
 
 # vcpkg
-vcpkg_installed/
+vcpkg/
 
 # IDE - CLion / IntelliJ
 .idea/
