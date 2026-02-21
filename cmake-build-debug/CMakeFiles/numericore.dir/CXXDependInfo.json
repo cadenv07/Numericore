@@ -14,7 +14,8 @@
 	"forward-modules-from-target-dirs" : [],
 	"include-dirs" : 
 	[
-		"/home/cadenv07/CLionProjects/numericore/headers"
+		"/home/cadenv07/CLionProjects/numericore/headers",
+		"vcpkg_installed/x64-linux/include"
 	],
 	"language" : "CXX",
 	"linked-target-dirs" : [],
@@ -30,6 +31,16 @@
 		{
 			"language" : "CXX",
 			"source" : "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+		},
+		"CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/cadenv07/CLionProjects/numericore/src/graphics/models/Mesh.cpp"
+		},
+		"CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/cadenv07/CLionProjects/numericore/src/graphics/models/Model.cpp"
 		},
 		"CMakeFiles/numericore.dir/src/main.cpp.o" : 
 		{

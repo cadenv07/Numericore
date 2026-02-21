@@ -1,12 +1,14 @@
 #version 330 core
 out vec4 FragColor;
 
-in vec4 vertexColor;
-in vec2 TexCoord;
+in vec2 TexCoords;
 
-uniform sampler2D text;
+struct Material {
+    sampler2D texture_diffuse1;
+};
 
-void main()
-{
-    FragColor = texture(text, TexCoord) * vertexColor;
+uniform Material material;
+
+void main() {
+    FragColor = texture(material.texture_diffuse1, TexCoords); // FULL BRIGHT TEXTURE
 }

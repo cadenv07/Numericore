@@ -5,6 +5,7 @@
 #ifndef NUMERICORE_MESH_H
 #define NUMERICORE_MESH_H
 
+#include <memory>
 #include <glm/glm.hpp>
 
 #include "graphics/Texture.h"

@@ -19,15 +19,15 @@ public:
     }
     void draw(const Shader& shader) const;
 private:
-    glm::mat4 model{1.0f};
+    std::vector<Texture> textures_loaded;
+    glm::mat4 model = glm::mat4(1.0f);
     std::vector<Mesh> meshes;
     std::string directory;
 
     void loadModel(const std::string& path);
     void processNode(const aiNode* node, const aiScene* scene);
-    Mesh processMesh(aiMesh* mesh, const aiScene* scene) const;
-    std::vector<Texture> loadMaterialTextures(const aiMaterial *mat, aiTextureType type,
-                                             const std::string& typeName) const;
+    Mesh processMesh(aiMesh* mesh, const aiScene* scene);
+    std::vector<Texture> loadMaterialTextures(const aiMaterial *mat, aiTextureType type, const std::string& typeName);
 };
 
 #endif //NUMERICORE_MODEL_H

@@ -5,6 +5,9 @@
 
 #include "graphics/models/Mesh.h"
 
+#include <iostream>
+#include <ostream>
+
 Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures)
     : vertices(std::move(vertices)), indices(std::move(indices)), textures(std::move(textures)) {
     setupMesh();
@@ -49,6 +52,6 @@ void Mesh::draw(const Shader& shader) const {
     }
     glActiveTexture(GL_TEXTURE0);
     glBindVertexArray(VAO);
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
 }

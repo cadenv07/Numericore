@@ -20,8 +20,9 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:UNINITIALIZED=Debug
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable colored diagnostics throughout.
 CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
@@ -286,6 +287,12 @@ OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/libOpenGL.so
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
+//The directory containing a CMake configuration file for RapidJSON.
+RapidJSON_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/share/rapidjson
+
+//Path to a file.
+Stb_INCLUDE_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include
+
 //Automatically copy dependencies into the output directory for
 // executables.
 VCPKG_APPLOCAL_DEPS:BOOL=ON
@@ -344,12 +351,24 @@ X_VCPKG_APPLOCAL_DEPS_INSTALL:BOOL=OFF
 // serialization.
 X_VCPKG_APPLOCAL_DEPS_SERIALIZED:BOOL=OFF
 
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug/lib/libz.a
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/lib/libz.a
+
 //Path to a program.
 Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 
 //The directory which contains the installed libraries for each
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed
+
+//The directory containing a CMake configuration file for assimp.
+assimp_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/share/assimp
 
 //The directory containing a CMake configuration file for flm.
 flm_DIR:PATH=flm_DIR-NOTFOUND
@@ -371,6 +390,24 @@ numericore_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 numericore_SOURCE_DIR:STATIC=/home/cadenv07/CLionProjects/numericore
+
+//The directory containing a CMake configuration file for poly2tri.
+poly2tri_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/share/poly2tri
+
+//The directory containing a CMake configuration file for polyclipping.
+polyclipping_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/share/polyclipping
+
+//The directory containing a CMake configuration file for pugixml.
+pugixml_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/share/pugixml
+
+//The directory containing a CMake configuration file for unofficial-minizip.
+unofficial-minizip_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/share/unofficial-minizip
+
+//The directory containing a CMake configuration file for utf8cpp.
+utf8cpp_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/share/utf8cpp
+
+//The directory containing a CMake configuration file for zip.
+zip_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/share/zip-kuba--
 
 
 ########################
@@ -534,8 +571,12 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_GLEW:INTERNAL=[/usr/include][/usr/lib/libGLEW.so][v2.3.1()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/libOpenGL.so][/usr/lib/libGLX.so][/usr/include][ ][v()]
+//Details about finding Stb
+FIND_PACKAGE_MESSAGE_DETAILS_Stb:INTERNAL=[/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/lib/libz.a;debug;/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug/lib/libz.a][/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include][ ][v1.3.1()]
 //ADVANCED property for variable: GLEW_INCLUDE_DIR
 GLEW_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLEW_SHARED_LIBRARY_DEBUG
@@ -572,8 +613,16 @@ OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Stb_INCLUDE_DIR
+Stb_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VCPKG_VERBOSE
 VCPKG_VERBOSE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Making sure VCPKG_MANIFEST_MODE doesn't change
 Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=ON
 //Vcpkg root directory

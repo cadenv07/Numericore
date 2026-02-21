@@ -314,6 +314,72 @@ CMakeFiles/numericore.dir/src/main.cpp.o.ddi: \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
  /home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h \
+ /usr/include/c++/15.2.1/memory \
+ /usr/include/c++/15.2.1/bits/stl_tempbuf.h \
+ /usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/15.2.1/bits/align.h \
+ /usr/include/c++/15.2.1/bits/unique_ptr.h \
+ /usr/include/c++/15.2.1/bits/shared_ptr.h \
+ /usr/include/c++/15.2.1/bits/shared_ptr_base.h \
+ /usr/include/c++/15.2.1/bits/allocated_ptr.h \
+ /usr/include/c++/15.2.1/ext/concurrence.h \
+ /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h \
+ /usr/include/c++/15.2.1/bits/atomic_base.h \
+ /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/15.2.1/bits/atomic_wait.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
+ /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h /usr/include/syscall.h \
+ /usr/include/sys/syscall.h /usr/include/asm/unistd.h \
+ /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
+ /usr/include/c++/15.2.1/bits/std_mutex.h \
+ /usr/include/c++/15.2.1/backward/auto_ptr.h \
+ /usr/include/c++/15.2.1/bits/ranges_uninitialized.h \
+ /usr/include/c++/15.2.1/bits/ranges_algobase.h \
+ /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
+ /usr/include/c++/15.2.1/pstl/execution_defs.h \
+ /home/cadenv07/CLionProjects/numericore/headers/graphics/models/Model.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/scene.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/types.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/defs.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/config.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/vector2.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/vector3.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/color4.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/matrix3x3.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/matrix4x4.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/quaternion.h \
+ /usr/include/c++/15.2.1/cstring \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/vector2.inl \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/vector3.inl \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/color4.inl \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/matrix3x3.inl \
+ /usr/include/c++/15.2.1/algorithm \
+ /usr/include/c++/15.2.1/bits/stl_algo.h \
+ /usr/include/c++/15.2.1/bits/algorithmfwd.h \
+ /usr/include/c++/15.2.1/bits/stl_heap.h \
+ /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/15.2.1/bits/ranges_algo.h \
+ /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/matrix4x4.inl \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/MathFunctions.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/quaternion.inl \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/texture.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/Compiler/pushpack1.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/Compiler/poppack1.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/mesh.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/aabb.h \
+ /usr/include/c++/15.2.1/unordered_set \
+ /usr/include/c++/15.2.1/bits/unordered_set.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/light.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/camera.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/material.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/material.inl \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/anim.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/assimp/metadata.h \
+ /home/cadenv07/CLionProjects/numericore/headers/graphics/models/Mesh.h \
  /usr/include/glm/gtc/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_projection.hpp \
  /usr/include/glm/gtc/constants.hpp \
@@ -358,6 +424,5 @@ CMakeFiles/numericore.dir/src/main.cpp.o.ddi: \
  /usr/include/glm/ext/vector_int1_sized.hpp \
  /usr/include/glm/ext/vector_uint1.hpp \
  /usr/include/glm/ext/vector_uint1_sized.hpp \
- /usr/include/c++/15.2.1/cstring /usr/include/string.h \
- /usr/include/strings.h /usr/include/glm/gtc/type_ptr.inl \
+ /usr/include/glm/gtc/type_ptr.inl \
  /home/cadenv07/CLionProjects/numericore/headers/graphics/Camera.h
