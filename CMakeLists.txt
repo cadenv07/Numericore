@@ -31,7 +31,8 @@ add_custom_target(copy_resources ALL
         ${CMAKE_BINARY_DIR}/res
 )
 
-add_executable(numericore ${SOURCES} ${HEADERS})
+add_executable(numericore ${SOURCES} ${HEADERS}
+        headers/graphics/Camera.h)
 
 target_include_directories(numericore PRIVATE
         "${CMAKE_SOURCE_DIR}/headers"
