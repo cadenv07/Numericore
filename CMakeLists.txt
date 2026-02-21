@@ -30,10 +30,7 @@ add_custom_target(copy_resources ALL
         ${CMAKE_BINARY_DIR}/res
 )
 
-add_executable(numericore ${SOURCES} ${HEADERS}
-        headers/util/File.h
-        src/util/File.cpp
-)
+add_executable(numericore ${SOURCES} ${HEADERS})
 
 target_include_directories(numericore PRIVATE
         "${CMAKE_SOURCE_DIR}/headers"

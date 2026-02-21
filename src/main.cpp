@@ -3,12 +3,13 @@
 #include <GLFW/glfw3.h>
 
 #include "graphics/Shader.h"
+#include "graphics/Texture.h"
 
 float vertices[] = {
-    .5f, .5f, .0f, 1.0f, 0.0f, 0.0f,
-    .5f, -.5f, .0f, 0.0f, 1.0f, 0.0f,
-    -.5f, -.5f, .0f, 0.0f, 0.0f, 1.0f,
-    -.5f, .5f, .0f, 1.0f, 1.0f, 1.0f
+    .5f, .5f, .0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+    .5f, -.5f, .0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
+    -.5f, -.5f, .0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
+    -.5f, .5f, .0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f
 };
 
 unsigned int indices[] = {
@@ -50,6 +51,8 @@ int main() {
     const Shader s("res/shaders/vert/shader.vert", "res/shaders/frag/shader.frag");
     s.use();
 
+    const Texture t("res/textures/texture.jpg");
+
     GLuint VBO, VAO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -63,16 +66,19 @@ int main() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+    glEnableVertexAttribArray(2);
 
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(s.getID());
+        glBindTexture(GL_TEXTURE_2D, t.getID());
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
