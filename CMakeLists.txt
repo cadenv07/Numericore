@@ -8,6 +8,7 @@ find_package(fmt CONFIG REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glm REQUIRED)
+find_package(assimp REQUIRED)
 if(GLEW_FOUND)
     include_directories(${GLEW_INCLUDE_DIRS})
     link_libraries(${GLEW_LIBRARIES})
@@ -32,7 +33,11 @@ add_custom_target(copy_resources ALL
 )
 
 add_executable(numericore ${SOURCES} ${HEADERS}
-        headers/graphics/Camera.h)
+        headers/graphics/Camera.h
+        headers/graphics/models/Mesh.h
+        src/graphics/models/Mesh.cpp
+        headers/graphics/models/Model.h
+        src/graphics/models/Model.cpp)
 
 target_include_directories(numericore PRIVATE
         "${CMAKE_SOURCE_DIR}/headers"
@@ -40,4 +45,4 @@ target_include_directories(numericore PRIVATE
 
 add_dependencies(numericore copy_resources)
 
-target_link_libraries(numericore PRIVATE fmt::fmt OpenGL::GL GLEW::GLEW glfw glm::glm)
+target_link_libraries(numericore PRIVATE fmt::fmt OpenGL::GL GLEW::GLEW glfw glm::glm assimp::assimp)

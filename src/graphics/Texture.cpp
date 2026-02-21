@@ -10,7 +10,7 @@
 #include <iostream>
 #include <ostream>
 
-Texture::Texture(std::string filename) {
+Texture::Texture(std::string filename, std::string type): type(std::move(type)) {
     const char* charArr = std::move(filename).c_str();
 
     glGenTextures(1, &tex_id);
