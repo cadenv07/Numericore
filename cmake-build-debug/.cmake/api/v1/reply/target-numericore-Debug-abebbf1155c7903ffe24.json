@@ -34,7 +34,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 33,
+				"line" : 34,
 				"parent" : 0
 			},
 			{
@@ -46,7 +46,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 41,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
@@ -80,13 +80,13 @@
 			{
 				"command" : 7,
 				"file" : 1,
-				"line" : 39,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 35,
+				"line" : 36,
 				"parent" : 0
 			}
 		]
@@ -166,6 +166,11 @@
 			{
 				"backtrace" : 3,
 				"fragment" : "/usr/lib/libglfw.so.3.4",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/libglm.a",
 				"role" : "libraries"
 			},
 			{

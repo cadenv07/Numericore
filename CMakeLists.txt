@@ -7,6 +7,7 @@ find_package(OpenGL REQUIRED)
 find_package(fmt CONFIG REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
+find_package(glm REQUIRED)
 if(GLEW_FOUND)
     include_directories(${GLEW_INCLUDE_DIRS})
     link_libraries(${GLEW_LIBRARIES})
@@ -38,4 +39,4 @@ target_include_directories(numericore PRIVATE
 
 add_dependencies(numericore copy_resources)
 
-target_link_libraries(numericore PRIVATE fmt::fmt OpenGL::GL GLEW::GLEW glfw)
+target_link_libraries(numericore PRIVATE fmt::fmt OpenGL::GL GLEW::GLEW glfw glm::glm)

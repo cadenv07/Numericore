@@ -245,6 +245,9 @@ GLEW_STATIC_LIBRARY_DEBUG:FILEPATH=GLEW_STATIC_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 GLEW_STATIC_LIBRARY_RELEASE:FILEPATH=GLEW_STATIC_LIBRARY_RELEASE-NOTFOUND
 
+//The directory containing a CMake configuration file for GLM.
+GLM_DIR:PATH=GLM_DIR-NOTFOUND
+
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
 
@@ -349,11 +352,17 @@ Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed
 
+//The directory containing a CMake configuration file for flm.
+flm_DIR:PATH=flm_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for fmt.
 fmt_DIR:PATH=/usr/lib/cmake/fmt
 
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/usr/lib/cmake/glfw3
+
+//The directory containing a CMake configuration file for glm.
+glm_DIR:PATH=/usr/lib/cmake/glm
 
 //Value Computed by CMake
 numericore_BINARY_DIR:STATIC=/home/cadenv07/CLionProjects/numericore/cmake-build-debug

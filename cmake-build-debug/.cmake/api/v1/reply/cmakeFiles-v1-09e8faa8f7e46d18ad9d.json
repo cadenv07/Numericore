@@ -332,6 +332,18 @@
 			"path" : "/usr/lib/cmake/glfw3/glfw3Targets-none.cmake"
 		},
 		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glm/glmConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glm/glmConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/cmake/glm/glmConfig-release.cmake"
+		},
+		{
 			"path" : "vcpkg.json"
 		}
 	],

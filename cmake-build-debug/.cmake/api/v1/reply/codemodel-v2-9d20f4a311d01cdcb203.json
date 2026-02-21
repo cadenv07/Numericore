@@ -41,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "copy_resources::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-copy_resources-Debug-fa648a0a7cc1f088b4ab.json",
+					"jsonFile" : "target-copy_resources-Debug-385fb2ffacfb9e684b27.json",
 					"name" : "copy_resources",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "numericore::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-numericore-Debug-43dca6a0d2366b16bbf2.json",
+					"jsonFile" : "target-numericore-Debug-abebbf1155c7903ffe24.json",
 					"name" : "numericore",
 					"projectIndex" : 0
 				}

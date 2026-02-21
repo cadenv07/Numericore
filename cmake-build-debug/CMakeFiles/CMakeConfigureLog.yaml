@@ -13113,3 +13113,482 @@ events:
         - "/opt"
       CMAKE_FIND_ROOT_PATH: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug;/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux"
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "GLM"
+    configs:
+      -
+        filename: "GLMConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "glm-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "GLM"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/pkgRedirects/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/pkgRedirects/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/glm/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/glm/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/var/lib/flatpak/exports/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/var/lib/flatpak/exports/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/share/JetBrains/Toolbox/scripts/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/share/JetBrains/Toolbox/scripts/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/Documents/clion-2025.3.2/bin/ninja/linux/x64/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/Documents/clion-2025.3.2/bin/ninja/linux/x64/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/lib/cmake/glm/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/lib/cmake/glm/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/GLMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug"
+        - "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux"
+      ENV{PATH}:
+        - "/home/cadenv07/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/home/cadenv07/.local/share/JetBrains/Toolbox/scripts"
+        - "/home/cadenv07/Documents/clion-2025.3.2/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_FIND_ROOT_PATH: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug;/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux"
+...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "flm"
+    configs:
+      -
+        filename: "flmConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "flm-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "flm"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/pkgRedirects/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/pkgRedirects/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/var/lib/flatpak/exports/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/var/lib/flatpak/exports/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/share/JetBrains/Toolbox/scripts/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/share/JetBrains/Toolbox/scripts/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/Documents/clion-2025.3.2/bin/ninja/linux/x64/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/Documents/clion-2025.3.2/bin/ninja/linux/x64/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/flmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/flm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug"
+        - "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux"
+      ENV{PATH}:
+        - "/home/cadenv07/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/home/cadenv07/.local/share/JetBrains/Toolbox/scripts"
+        - "/home/cadenv07/Documents/clion-2025.3.2/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_FIND_ROOT_PATH: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug;/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux"
+...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "glm"
+    configs:
+      -
+        filename: "glmConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "glm-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "glm"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/pkgRedirects/glmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/pkgRedirects/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/glmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cadenv07/.local/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/glmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/glmConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/glm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/cmake/glm/glmConfig.cmake"
+      mode: "config"
+      version: "1.0.3"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug"
+        - "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux"
+      ENV{PATH}:
+        - "/home/cadenv07/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/home/cadenv07/.local/share/JetBrains/Toolbox/scripts"
+        - "/home/cadenv07/Documents/clion-2025.3.2/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/cadenv07/Documents/clion-2025.3.2/bin/cmake/linux/x64"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_FIND_ROOT_PATH: "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/debug;/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux"
+...
