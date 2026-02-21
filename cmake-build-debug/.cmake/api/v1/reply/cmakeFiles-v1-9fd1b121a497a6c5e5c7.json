@@ -5,6 +5,7 @@
 			"expression" : "/home/cadenv07/CLionProjects/numericore/headers/*.h",
 			"paths" : 
 			[
+				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Camera.h",
 				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h",
 				"/home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h",
 				"/home/cadenv07/CLionProjects/numericore/headers/graphics/stb_image.h",

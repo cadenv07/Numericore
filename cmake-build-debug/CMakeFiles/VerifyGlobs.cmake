@@ -4,6 +4,7 @@
 # HEADERS at CMakeLists.txt:20 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/cadenv07/CLionProjects/numericore/headers/*.h")
 set(OLD_GLOB
+  "/home/cadenv07/CLionProjects/numericore/headers/graphics/Camera.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/stb_image.h"
