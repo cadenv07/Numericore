@@ -11,6 +11,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "graphics/Camera.h"
+#include "util/InputHandler.h"
 
 int main() {
     std::printf("DISPLAY=%s\n", std::getenv("DISPLAY"));
@@ -49,13 +50,46 @@ int main() {
     Camera camera(glm::vec3(0.0f, 0.0f, 10.0f));
 
     glEnable(GL_DEPTH_TEST);
-    glDisable(GL_CULL_FACE);
+    glEnable(GL_CULL_FACE);
 
     Model backpack("res/models/backpack.obj");
+
+    InputHandler input(window);
+
+    input.addKeyListener([&](const int key, int, const int action, int) {
+        if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+            glfwSetWindowShouldClose(window, GL_TRUE);
+    });
+
+    input.addMouseMoveListener([&](double x, double y, const double dx, const double dy) {
+       camera.rotate(static_cast<float>(dx)*0.08f,static_cast<float>(dy)*-0.08f);
+    });
+
+    input.addKeyListener([&](const int key, int, const int action, int) {
+        if (key == GLFW_KEY_M && action == GLFW_PRESS)
+            InputHandler::disableMouse(window);
+        if (key == GLFW_KEY_N && action == GLFW_PRESS)
+            InputHandler::enableMouse(window);
+    });
 
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        input.beginFrame();
+
+        if (input.isDownKey(GLFW_KEY_W))
+            camera.moveForward(.1f);
+        if (input.isDownKey(GLFW_KEY_A))
+            camera.moveRight(-.1);
+        if (input.isDownKey(GLFW_KEY_S))
+            camera.moveForward(-.1);
+        if (input.isDownKey(GLFW_KEY_D))
+            camera.moveRight(.1);
+        if (input.isDownKey(GLFW_KEY_LEFT_SHIFT))
+            camera.moveUp(-.1);
+        if (input.isDownKey(GLFW_KEY_SPACE))
+            camera.moveUp(.1);
 
         s.use();
         glBindTexture(GL_TEXTURE_2D, t.getID());

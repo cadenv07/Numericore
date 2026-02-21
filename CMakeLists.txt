@@ -37,7 +37,8 @@ add_executable(numericore ${SOURCES} ${HEADERS}
         headers/graphics/models/Mesh.h
         src/graphics/models/Mesh.cpp
         headers/graphics/models/Model.h
-        src/graphics/models/Model.cpp)
+        src/graphics/models/Model.cpp
+        headers/util/InputHandler.h)
 
 target_include_directories(numericore PRIVATE
         "${CMAKE_SOURCE_DIR}/headers"

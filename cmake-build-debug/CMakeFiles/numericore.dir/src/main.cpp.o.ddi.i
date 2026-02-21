@@ -128225,6 +128225,9 @@ public:
     [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*zoom), 800.0f / 600.0f, 0.1f, 100.0f); };
 
     void move(const glm::vec3& direction) { position += direction; }
+    void moveForward(const float distance) { position += front * distance; }
+    void moveRight(const float distance) { position += right * distance; }
+    void moveUp(const float distance) { position += up * distance; }
     void rotate(const float xOffset, const float yOffset) { yaw += xOffset; pitch += yOffset; if (pitch > 89.0f) pitch = 89.0f; if (pitch < -89.0f) pitch = -89.0f; updateCameraVectors(); }
 private:
     glm::vec3 position, front{}, up, right{};
@@ -128242,19 +128245,175 @@ private:
     }
 };
 # 14 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
+# 1 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 1
+# 12 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+class InputHandler {
+public:
+    using MouseMoveFn = std::function<void(double x, double y, double dx, double dy)>;
+    using MouseBtnFn = std::function<void(int button, int action, int mods)>;
+    using KeyFn = std::function<void(int key, int scancode, int action, int mods)>;
+    using ScrollFn = std::function<void(double xOffset, double yOffset)>;
+    using CharFn = std::function<void(unsigned int codepoint)>;
+
+    explicit InputHandler(GLFWwindow* w) { attach(w); };
+    InputHandler() = default;
+    ~InputHandler() = default;
+
+    void attach(GLFWwindow* w) {
+        window = w;
+        glfwSetWindowUserPointer(window, this);
+
+        glfwSetCursorPosCallback(window, &InputHandler::glfwCursorPos);
+        glfwSetMouseButtonCallback(window, &InputHandler::glfwMouseButton);
+        glfwSetKeyCallback(window, &InputHandler::glfwKey);
+        glfwSetScrollCallback(window, &InputHandler::glfwScroll);
+        glfwSetCharCallback(window, &InputHandler::glfwChar);
+    }
+
+    void beginFrame() {
+        lastKeys = keys; lastMouseButtons = mouseButtons;
+        lastMouseX = mouseX; lastMouseY = mouseY;
+        scrollX = scrollY = 0.0;
+    }
+
+    [[nodiscard]] bool isDownKey(const int key) const { return key >= 0 && key < keys.size() && keys[key];}
+    [[nodiscard]] bool wasPressedKey(const int key) const { return isDownKey(key) && !lastKeys[key]; }
+    [[nodiscard]] bool wasReleasedKey(const int key) const { return !isDownKey(key) && lastKeys[key]; }
+    [[nodiscard]] bool isDownMouse(const int btn) const { return btn >= 0 && btn < mouseButtons.size() && mouseButtons[btn]; }
+    [[nodiscard]] bool wasPressedMouse(const int btn) const { return isDownMouse(btn) && !lastMouseButtons[btn]; }
+    [[nodiscard]] bool wasReleasedMouse(const int btn) const { return !isDownMouse(btn) && lastMouseButtons[btn]; }
+
+    [[nodiscard]] double x() const { return mouseX; }
+    [[nodiscard]] double y() const { return mouseY; }
+    [[nodiscard]] double dx() const { return mouseX - lastMouseX; }
+    [[nodiscard]] double dy() const { return mouseY - lastMouseY; }
+
+    void addMouseMoveListener(const MouseMoveFn& fn) { mouseMoveListeners.push_back(fn); }
+    void addMouseBtnListener(const MouseBtnFn& fn) { mouseBtnListeners.push_back(fn); }
+    void addKeyListener(const KeyFn& fn) { keyListeners.push_back(fn); }
+    void addScrollListener(const ScrollFn& fn) { scrollListeners.push_back(fn); }
+    void addCharListener(const CharFn& fn) { charListeners.push_back(fn); }
+
+    static void disableMouse(GLFWwindow* window) { glfwSetInputMode(window, 
+# 59 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                                                                           0x00033001
+# 59 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                                                                      , 
+# 59 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                                                                                        0x00034003
+# 59 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                                                                                            ); }
+    static void enableMouse(GLFWwindow* window) { glfwSetInputMode(window, 
+# 60 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                                                                          0x00033001
+# 60 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                                                                     , 
+# 60 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                                                                                       0x00034001
+# 60 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                                                                                         ); }
+
+    void processInput(GLFWwindow* window);
+    static void mouse_callback(GLFWwindow* window, double xPos, double yPos);
+private:
+    GLFWwindow* window = nullptr;
+
+    std::array<bool, 
+# 67 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                    348 
+# 67 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                  + 1> keys{};
+    std::array<bool, 
+# 68 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                    348 
+# 68 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                  + 1> lastKeys{};
+    std::array<bool, 
+# 69 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                    7 
+# 69 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                           + 1> mouseButtons{};
+    std::array<bool, 
+# 70 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                    7 
+# 70 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                           + 1> lastMouseButtons{};
+
+    double mouseX = 0.0, mouseY = 0.0;
+    double lastMouseX = 0.0, lastMouseY = 0.0;
+    double scrollX = 0.0, scrollY = 0.0;
+
+    std::vector<MouseMoveFn> mouseMoveListeners;
+    std::vector<MouseBtnFn> mouseBtnListeners;
+    std::vector<KeyFn> keyListeners;
+    std::vector<ScrollFn> scrollListeners;
+    std::vector<CharFn> charListeners;
+
+    static InputHandler* self(GLFWwindow* w) {
+        return static_cast<InputHandler*>(glfwGetWindowUserPointer(w));
+    }
+
+    static void glfwCursorPos(GLFWwindow* window, const double xPos, const double yPos) {
+        if (auto* s = self(window)) s->onCursorPos(xPos, yPos);
+    }
+    static void glfwMouseButton(GLFWwindow* window, const int button, const int action, const int mods) {
+        if (auto* s = self(window)) s->onMouseButton(button, action, mods);
+    }
+    static void glfwKey(GLFWwindow* window, const int key, const int scancode, const int action, const int mods) {
+        if (auto* s = self(window)) s->onKey(key, scancode, action, mods);
+    }
+    static void glfwScroll(GLFWwindow* window, const double xOffset, const double yOffset) {
+        if (auto* s = self(window)) s->onScroll(xOffset, yOffset);
+    }
+    static void glfwChar(GLFWwindow* window, const unsigned int codepoint) {
+        if (const auto* s = self(window)) s->onChar(codepoint);
+    }
+
+    void onCursorPos(const double xPos, const double yPos) {
+        mouseX = xPos; mouseY = yPos;
+        const double ddx = mouseX - lastMouseX; const double ddy = mouseY - lastMouseY;
+        for (auto& fn : mouseMoveListeners) fn(mouseX, mouseY, ddx, ddy);
+    }
+    void onMouseButton(const int button, const int action, const int mods) {
+        if (button >= 0 && button < mouseButtons.size())
+            mouseButtons[button] = (action != 
+# 109 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                                             0
+# 109 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                                         );
+        for (auto& fn : mouseBtnListeners) fn(button, action, mods);
+    }
+    void onKey(const int key, const int scancode, const int action, const int mods) {
+        if (key >= 0 && key < keys.size())
+            keys[key] = (action != 
+# 114 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 3 4
+                                  0
+# 114 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
+                                              );
+        for (auto& fn : keyListeners) fn(key, scancode, action, mods);
+    }
+    void onScroll(const double xOffset, const double yOffset) {
+        scrollX += xOffset; scrollY += yOffset;
+        for (auto& fn : scrollListeners) fn(xOffset, yOffset);
+    }
+    void onChar(const unsigned int codepoint) const {
+        for (auto& fn : charListeners) fn(codepoint);
+    }
+};
+# 15 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
 
 int main() {
     std::printf("DISPLAY=%s\n", std::getenv("DISPLAY"));
     std::printf("XAUTHORITY=%s\n", std::getenv("XAUTHORITY"));
 
     glfwInitHint(
-# 19 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 20 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                 0x00050003
-# 19 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 20 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              , 
-# 19 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 20 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                0x00060004
-# 19 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 20 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                 );
 
     if (!glfwInit()) {
@@ -128263,23 +128422,23 @@ int main() {
     }
 
     glfwWindowHint(
-# 26 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                  0x00022002
-# 26 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                            , 3);
-    glfwWindowHint(
 # 27 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                  0x00022003
+                  0x00022002
 # 27 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                             , 3);
     glfwWindowHint(
 # 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                  0x00022003
+# 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                            , 3);
+    glfwWindowHint(
+# 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   0x00022008
-# 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      , 
-# 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                        0x00032001
-# 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                                );
 
     GLFWwindow* window = glfwCreateWindow(800,600,"Numericore", nullptr, nullptr);
@@ -128292,20 +128451,20 @@ int main() {
     glfwMakeContextCurrent(window);
 
     glewExperimental = 
-# 39 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 40 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                       1
-# 39 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 40 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              ;
     GLenum err = glewInit();
     if (err != 
-# 41 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
               0
-# 41 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                      ) {
         fprintf(
-# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                stderr
-# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                      , "GLEW init failed: %s\n", glewGetErrorString(err));
         return -1;
     }
@@ -128316,35 +128475,120 @@ int main() {
     Camera camera(glm::vec3(0.0f, 0.0f, 10.0f));
 
     glEnable(
-# 51 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-            0x0B71
-# 51 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                         );
-    glDisable(
 # 52 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-             0x0B44
+            0x0B71
 # 52 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                          );
+    glEnable(
+# 53 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+            0x0B44
+# 53 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                        );
 
     Model backpack("res/models/backpack.obj");
+
+    InputHandler input(window);
+
+    input.addKeyListener([&](const int key, int, const int action, int) {
+        if (key == 
+# 60 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                  256 
+# 60 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                  && action == 
+# 60 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                               1
+# 60 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                         )
+            glfwSetWindowShouldClose(window, 
+# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                            1
+# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                   );
+    });
+
+    input.addMouseMoveListener([&](double x, double y, const double dx, const double dy) {
+       camera.rotate(static_cast<float>(dx)*0.08f,static_cast<float>(dy)*-0.08f);
+    });
+
+    input.addKeyListener([&](const int key, int, const int action, int) {
+        if (key == 
+# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                  77 
+# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                             && action == 
+# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                          1
+# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                    )
+            InputHandler::disableMouse(window);
+        if (key == 
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                  78 
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                             && action == 
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                          1
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                    )
+            InputHandler::enableMouse(window);
+    });
 
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
         glClear(
-# 58 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                0x00004000 
-# 58 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                    | 
-# 58 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                      0x00000100
-# 58 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                         );
+
+        input.beginFrame();
+
+        if (input.isDownKey(
+# 81 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           87
+# 81 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            camera.moveForward(.1f);
+        if (input.isDownKey(
+# 83 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           65
+# 83 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            camera.moveRight(-.1);
+        if (input.isDownKey(
+# 85 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           83
+# 85 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            camera.moveForward(-.1);
+        if (input.isDownKey(
+# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           68
+# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            camera.moveRight(.1);
+        if (input.isDownKey(
+# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           340
+# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                              ))
+            camera.moveUp(-.1);
+        if (input.isDownKey(
+# 91 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           32
+# 91 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                         ))
+            camera.moveUp(.1);
 
         s.use();
         glBindTexture(
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                      0x0DE1
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                   , t.getID());
         s.setMat4("view", camera.getViewMatrix());
         s.setMat4("projection", camera.getProjectionMatrix(45));

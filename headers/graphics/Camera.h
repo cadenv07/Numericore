@@ -26,6 +26,9 @@ public:
     [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*zoom), 800.0f / 600.0f, 0.1f, 100.0f); };
 
     void move(const glm::vec3& direction) { position += direction; }
+    void moveForward(const float distance) { position += front * distance; }
+    void moveRight(const float distance) { position += right * distance; }
+    void moveUp(const float distance) { position += up * distance; }
     void rotate(const float xOffset, const float yOffset) { yaw += xOffset; pitch += yOffset; if (pitch > 89.0f) pitch = 89.0f; if (pitch < -89.0f) pitch = -89.0f; updateCameraVectors(); }
 private:
     glm::vec3 position, front{}, up, right{};

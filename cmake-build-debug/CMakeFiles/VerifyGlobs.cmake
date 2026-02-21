@@ -11,6 +11,7 @@ set(OLD_GLOB
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Model.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/stb_image.h"
   "/home/cadenv07/CLionProjects/numericore/headers/util/File.h"
+  "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

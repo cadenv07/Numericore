@@ -425,4 +425,5 @@ CMakeFiles/numericore.dir/src/main.cpp.o.ddi: \
  /usr/include/glm/ext/vector_uint1.hpp \
  /usr/include/glm/ext/vector_uint1_sized.hpp \
  /usr/include/glm/gtc/type_ptr.inl \
- /home/cadenv07/CLionProjects/numericore/headers/graphics/Camera.h
+ /home/cadenv07/CLionProjects/numericore/headers/graphics/Camera.h \
+ /home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h
