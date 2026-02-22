@@ -15,6 +15,8 @@
 void Model::draw(const Shader& shader) const {
     shader.use();
     shader.setMat4("model", model);
+    shader.setBool("nineSlice", conf.nineSlice);
+    shader.setVec4("uNineBorderUV", conf.nineBorderUV);
     for (const Mesh& mesh : meshes) {
         mesh.draw(shader);
     }

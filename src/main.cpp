@@ -26,6 +26,7 @@ int main() {
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+    //glEnable(GL_MULTISAMPLE);
 
     InputHandler input(window.getWindow());
 
@@ -49,8 +50,7 @@ int main() {
         camera.zoom(static_cast<float>(y)*0.08f);
     });
 
-    Light sl({ .direction = glm::vec3(0.f, 0.0f, -1.f), .ambient = glm::vec3(1.f),
-        .diffuse = glm::vec3(.0f), .specular = glm::vec3(0.f)});
+    Light l({ .ambient = glm::vec3(1.f), .diffuse = glm::vec3(.0f), .specular = glm::vec3(0.f)});
 
     Level level;
 
@@ -71,6 +71,8 @@ int main() {
             frames = 0;
             lastFpsSample = now;
         }
+
+        s.setFloat("material.shininess", 1.f);
 
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -96,7 +98,7 @@ int main() {
         s.setVec3("viewPos", camera.getPosition());
 
         // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        sl.apply(s);
+        l.apply(s);
         level.render(s);
 
         // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);

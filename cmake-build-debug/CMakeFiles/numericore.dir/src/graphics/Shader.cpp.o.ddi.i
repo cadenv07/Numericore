@@ -75027,6 +75027,7 @@ public:
     void setInt(const std::string &name, int value) const;
     void setFloat(const std::string &name, float value) const;
     void setMat4(const std::string &name, const glm::mat4& m) const;
+    void setVec2(const std::string &name, const glm::vec2& v) const;
     void setVec3(const std::string &name, const glm::vec3& v) const;
     void setVec4(const std::string &name, const glm::vec4& v) const;
 private:
@@ -99300,20 +99301,28 @@ void Shader::setMat4(const std::string &name, const glm::mat4 &m) const {
 # 82 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                                                                    , glm::value_ptr(m));
 }
-void Shader::setVec3(const std::string &name, const glm::vec3 &v) const {
+void Shader::setVec2(const std::string &name, const glm::vec2 &v) const {
     use();
     
 # 86 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-   __glewUniform3fv
+   __glewUniform2fv
 # 86 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+               (getUniformLocation(name.c_str()), 1, glm::value_ptr(v));
+}
+void Shader::setVec3(const std::string &name, const glm::vec3 &v) const {
+    use();
+    
+# 90 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+   __glewUniform3fv
+# 90 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                (getUniformLocation(name.c_str()), 1, glm::value_ptr(v));
 }
 void Shader::setVec4(const std::string &name, const glm::vec4 &v) const {
     use();
     
-# 90 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 94 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewUniform4fv
-# 90 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 94 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                (getUniformLocation(name.c_str()), 1, glm::value_ptr(v));
 }
 
@@ -99322,9 +99331,9 @@ int Shader::getUniformLocation(const char *name) const {
         return uniformLocations.at(name);
 
     int location = 
-# 97 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 101 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
                   __glewGetUniformLocation
-# 97 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 101 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                                       (s_id, name);
 
     if (location == -1) {

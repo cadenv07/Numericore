@@ -211,6 +211,41 @@ CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o.ddi: \
  /usr/include/c++/15.2.1/bits/ranges_algobase.h \
  /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/15.2.1/pstl/execution_defs.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/vec4.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_bool4.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/detail/type_vec4.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/detail/qualifier.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/detail/setup.hpp \
+ /usr/include/c++/15.2.1/cassert \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/simd/platform.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/detail/type_vec4.inl \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/detail/compute_vector_relational.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/detail/compute_vector_decl.hpp \
+ /usr/include/c++/15.2.1/functional \
+ /usr/include/c++/15.2.1/bits/std_function.h \
+ /usr/include/c++/15.2.1/unordered_map \
+ /usr/include/c++/15.2.1/bits/unordered_map.h \
+ /usr/include/c++/15.2.1/bits/hashtable.h \
+ /usr/include/c++/15.2.1/bits/hashtable_policy.h \
+ /usr/include/c++/15.2.1/bits/enable_special_members.h \
+ /usr/include/c++/15.2.1/bits/node_handle.h \
+ /usr/include/c++/15.2.1/bits/erase_if.h /usr/include/c++/15.2.1/vector \
+ /usr/include/c++/15.2.1/bits/stl_vector.h \
+ /usr/include/c++/15.2.1/bits/stl_bvector.h \
+ /usr/include/c++/15.2.1/bits/vector.tcc /usr/include/c++/15.2.1/array \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/detail/_vectorize.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_bool4_precision.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_float4.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_float4_precision.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_double4.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_double4_precision.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/detail/setup.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_int4.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_int4_sized.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/scalar_int_sized.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_uint4.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/vector_uint4_sized.hpp \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/glm/ext/scalar_uint_sized.hpp \
  /usr/include/c++/15.2.1/iostream /usr/include/c++/15.2.1/ostream \
  /usr/include/c++/15.2.1/bits/ostream.tcc /usr/include/c++/15.2.1/istream \
  /usr/include/c++/15.2.1/bits/istream.tcc

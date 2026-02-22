@@ -8,6 +8,8 @@
 #include <memory>
 #include <string>
 
+#include <glm/vec4.hpp>
+
 class Texture {
 public:
     struct TextConf {
@@ -17,6 +19,8 @@ public:
         int TEXTURE_MIN_FILTER = 0x2703;
         int TEXTURE_MAG_FILTER = 0x2601;
         int FLIP_VERTICALLY = 1;
+        bool nineSlice = false;
+        glm::vec4 nineBorderUV = glm::vec4(0.0f, 0.0f, 1.0f, 1.0f);
     };
 
     explicit Texture(std::string filename, const TextConf& cfg, std::string type = "");
