@@ -13,39 +13,12 @@
 
 #include "graphics/Camera.h"
 #include "graphics/Light.h"
+#include "graphics/Window.h"
 #include "level/Level.h"
 #include "util/InputHandler.h"
 
 int main() {
-    std::printf("DISPLAY=%s\n", std::getenv("DISPLAY"));
-    std::printf("XAUTHORITY=%s\n", std::getenv("XAUTHORITY"));
-
-    glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_X11);
-
-    if (!glfwInit()) {
-        std::cerr << "Failed to initialize GLFW3" << std::endl;
-        return -1;
-    }
-
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-    GLFWwindow* window = glfwCreateWindow(2560,1440,"Numericore", nullptr, nullptr);
-    if (!window) {
-        std::cerr << "Failed to create GLFW3" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-
-    glfwMakeContextCurrent(window);
-
-    glewExperimental = GL_TRUE;
-    GLenum err = glewInit();
-    if (err != GLEW_OK) {
-        fprintf(stderr, "GLEW init failed: %s\n", glewGetErrorString(err));
-        return -1;
-    }
+    Window window(2560, 1440, "Numericore");
 
     Shader s("res/shaders/vert/shader.vert", "res/shaders/frag/shader.frag");
 
@@ -54,11 +27,11 @@ int main() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
 
-    InputHandler input(window);
+    InputHandler input(window.getWindow());
 
     input.addKeyListener([&](const int key, int, const int action, int) {
         if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-            glfwSetWindowShouldClose(window, GL_TRUE);
+            glfwSetWindowShouldClose(window.getWindow(), GL_TRUE);
     });
 
     input.addMouseMoveListener([&](double x, double y, const double dx, const double dy) {
@@ -67,16 +40,16 @@ int main() {
 
     input.addKeyListener([&](const int key, int, const int action, int) {
         if (key == GLFW_KEY_M && action == GLFW_PRESS)
-            InputHandler::disableMouse(window);
+            InputHandler::disableMouse(window.getWindow());
         if (key == GLFW_KEY_N && action == GLFW_PRESS)
-            InputHandler::enableMouse(window);
+            InputHandler::enableMouse(window.getWindow());
     });
 
     input.addScrollListener([&](const double x, const double y) {
         camera.zoom(static_cast<float>(y)*0.08f);
     });
 
-    Light sl({ .direction = glm::vec3(0.5f, 1.0f, -.5f), .ambient = glm::vec3(1.f),
+    Light sl({ .direction = glm::vec3(0.f, 0.0f, -1.f), .ambient = glm::vec3(1.f),
         .diffuse = glm::vec3(.0f), .specular = glm::vec3(0.f)});
 
     Level level;
@@ -85,7 +58,7 @@ int main() {
     auto lastFpsSample = clock::now();
     int frames = 0;
 
-    while (!glfwWindowShouldClose(window)) {
+    while (!glfwWindowShouldClose(window.getWindow())) {
         // FPS counter (averaged over ~0.5s to avoid flicker)
         frames++;
         const auto now = clock::now();
@@ -93,7 +66,7 @@ int main() {
         if (elapsed.count() >= 0.5) {
             const double fps = static_cast<double>(frames) / elapsed.count();
             const std::string title = "Numericore - FPS: " + std::to_string(static_cast<int>(fps + 0.5));
-            glfwSetWindowTitle(window, title.c_str());
+            glfwSetWindowTitle(window.getWindow(), title.c_str());
 
             frames = 0;
             lastFpsSample = now;
@@ -122,7 +95,7 @@ int main() {
         // s.setVec3("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
         s.setVec3("viewPos", camera.getPosition());
 
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         sl.apply(s);
         level.render(s);
 
@@ -130,10 +103,9 @@ int main() {
         // backpack.draw(s);
         // cube.draw(b);
 
-        glfwSwapBuffers(window);
+        glfwSwapBuffers(window.getWindow());
         glfwPollEvents();
     }
 
-    glfwTerminate();
     return 0;
 }

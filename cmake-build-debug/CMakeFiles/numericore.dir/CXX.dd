@@ -5,6 +5,8 @@ build CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o: dyndep
 
 build CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o: dyndep
 
+build CMakeFiles/numericore.dir/src/graphics/Window.cpp.o: dyndep
+
 build CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o: dyndep
 
 build CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o: dyndep

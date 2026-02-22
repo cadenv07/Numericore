@@ -22,11 +22,6 @@
 	"module-dir" : "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/numericore.dir",
 	"sources" : 
 	{
-		"CMakeFiles/numericore.dir/headers/graphics/Window.cpp.o" : 
-		{
-			"language" : "CXX",
-			"source" : "/home/cadenv07/CLionProjects/numericore/headers/graphics/Window.cpp"
-		},
 		"CMakeFiles/numericore.dir/src/graphics/Light.cpp.o" : 
 		{
 			"language" : "CXX",
@@ -41,6 +36,11 @@
 		{
 			"language" : "CXX",
 			"source" : "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+		},
+		"CMakeFiles/numericore.dir/src/graphics/Window.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/cadenv07/CLionProjects/numericore/src/graphics/Window.cpp"
 		},
 		"CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o" : 
 		{

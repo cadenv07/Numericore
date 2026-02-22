@@ -29,6 +29,7 @@ set(OLD_GLOB
   "/home/cadenv07/CLionProjects/numericore/src/graphics/Light.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+  "/home/cadenv07/CLionProjects/numericore/src/graphics/Window.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/graphics/models/Mesh.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/graphics/models/Model.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/level/Level.cpp"

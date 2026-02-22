@@ -98,10 +98,10 @@ vec3 calculateLight(Light light) {
 }
 
 void main() {
+//    FragColor = vec4(fract(FragPos * 0.1), 1.0);
     vec3 output = vec3(0.0);
     for(int i = 0; i < MAX_LIGHTS; i++)
             if(lights[i].type != 0)
                 output += calculateLight(lights[i]);
     FragColor = vec4(output, 1.0);
-//    FragColor = texture(material.texture_diffuse1, TexCoords);
 }

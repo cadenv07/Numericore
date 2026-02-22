@@ -474,6 +474,7 @@ CMakeFiles/numericore.dir/src/main.cpp.o.ddi: \
  /home/cadenv07/CLionProjects/numericore/headers/graphics/Camera.h \
  /home/cadenv07/CLionProjects/numericore/headers/graphics/Light.h \
  /home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h \
+ /home/cadenv07/CLionProjects/numericore/headers/graphics/Window.h \
  /home/cadenv07/CLionProjects/numericore/headers/level/Level.h \
  /home/cadenv07/CLionProjects/numericore/headers/tiles/Tile.h \
  /home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h

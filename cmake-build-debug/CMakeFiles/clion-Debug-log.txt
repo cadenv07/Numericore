@@ -79,8 +79,8 @@ The package glm provides CMake targets:
     find_package(glm CONFIG REQUIRED)
     target_link_libraries(main PRIVATE glm::glm-header-only)
 
-All requested installations completed successfully in: 119 us
+All requested installations completed successfully in: 115 us
 -- Running vcpkg install - done
--- Configuring done (1.0s)
+-- Configuring done (0.9s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/cadenv07/CLionProjects/numericore/cmake-build-debug

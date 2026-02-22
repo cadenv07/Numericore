@@ -152704,6 +152704,18 @@ private:
     int id = 0;
 };
 # 16 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
+# 1 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Window.h" 1
+# 10 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Window.h"
+class Window {
+public:
+    Window(int width, int height, const char* title);
+    ~Window();
+
+    GLFWwindow* getWindow() const { return window; }
+private:
+    GLFWwindow* window;
+};
+# 17 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
 # 1 "/home/cadenv07/CLionProjects/numericore/headers/level/Level.h" 1
 
 
@@ -152740,7 +152752,7 @@ public:
 private:
     std::vector<std::unique_ptr<Tile>> tiles;
 };
-# 17 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
+# 18 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
 # 1 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 1
 # 12 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
 class InputHandler {
@@ -152896,112 +152908,43 @@ private:
         for (auto& fn : charListeners) fn(codepoint);
     }
 };
-# 18 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
+# 19 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
 
 int main() {
-    std::printf("DISPLAY=%s\n", std::getenv("DISPLAY"));
-    std::printf("XAUTHORITY=%s\n", std::getenv("XAUTHORITY"));
-
-    glfwInitHint(
-# 23 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                0x00050003
-# 23 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                             , 
-# 23 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                               0x00060004
-# 23 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                                );
-
-    if (!glfwInit()) {
-        std::cerr << "Failed to initialize GLFW3" << std::endl;
-        return -1;
-    }
-
-    glfwWindowHint(
-# 30 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                  0x00022002
-# 30 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                            , 3);
-    glfwWindowHint(
-# 31 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                  0x00022003
-# 31 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                            , 3);
-    glfwWindowHint(
-# 32 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                  0x00022008
-# 32 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                     , 
-# 32 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                                       0x00032001
-# 32 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                                               );
-
-    GLFWwindow* window = glfwCreateWindow(2560,1440,"Numericore", nullptr, nullptr);
-    if (!window) {
-        std::cerr << "Failed to create GLFW3" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-
-    glfwMakeContextCurrent(window);
-
-    glewExperimental = 
-# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                      1
-# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                             ;
-    GLenum err = glewInit();
-    if (err != 
-# 45 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-              0
-# 45 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                     ) {
-        fprintf(
-# 46 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-               stderr
-# 46 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                     , "GLEW init failed: %s\n", glewGetErrorString(err));
-        return -1;
-    }
+    Window window(2560, 1440, "Numericore");
 
     Shader s("res/shaders/vert/shader.vert", "res/shaders/frag/shader.frag");
 
     Camera camera(glm::vec3(0.0f, 0.0f, 10.0f));
 
     glEnable(
-# 54 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 27 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
             0x0B71
-# 54 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 27 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                          );
     glEnable(
-# 55 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
             0x0B44
-# 55 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                         );
-    glDisable(
-# 56 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-             0x0B90
-# 56 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                            );
 
-    InputHandler input(window);
+    InputHandler input(window.getWindow());
 
     input.addKeyListener([&](const int key, int, const int action, int) {
         if (key == 
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 33 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   256 
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 33 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                   && action == 
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 33 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                                1
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 33 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                          )
-            glfwSetWindowShouldClose(window, 
-# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                                            1
-# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                                   );
+            glfwSetWindowShouldClose(window.getWindow(), 
+# 34 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                                                        1
+# 34 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                                               );
     });
 
     input.addMouseMoveListener([&](double x, double y, const double dx, const double dy) {
@@ -153010,32 +152953,32 @@ int main() {
 
     input.addKeyListener([&](const int key, int, const int action, int) {
         if (key == 
-# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   77 
-# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              && action == 
-# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                           1
-# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                     )
-            InputHandler::disableMouse(window);
+            InputHandler::disableMouse(window.getWindow());
         if (key == 
-# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 44 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   78 
-# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 44 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              && action == 
-# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 44 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                           1
-# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 44 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                     )
-            InputHandler::enableMouse(window);
+            InputHandler::enableMouse(window.getWindow());
     });
 
     input.addScrollListener([&](const double x, const double y) {
         camera.zoom(static_cast<float>(y)*0.08f);
     });
 
-    Light sl({ .direction = glm::vec3(0.5f, 1.0f, -.5f), .ambient = glm::vec3(1.f),
+    Light sl({ .direction = glm::vec3(0.f, 0.0f, -1.f), .ambient = glm::vec3(1.f),
         .diffuse = glm::vec3(.0f), .specular = glm::vec3(0.f)});
 
     Level level;
@@ -153044,7 +152987,7 @@ int main() {
     auto lastFpsSample = clock::now();
     int frames = 0;
 
-    while (!glfwWindowShouldClose(window)) {
+    while (!glfwWindowShouldClose(window.getWindow())) {
 
         frames++;
         const auto now = clock::now();
@@ -153052,7 +152995,7 @@ int main() {
         if (elapsed.count() >= 0.5) {
             const double fps = static_cast<double>(frames) / elapsed.count();
             const std::string title = "Numericore - FPS: " + std::to_string(static_cast<int>(fps + 0.5));
-            glfwSetWindowTitle(window, title.c_str());
+            glfwSetWindowTitle(window.getWindow(), title.c_str());
 
             frames = 0;
             lastFpsSample = now;
@@ -153060,51 +153003,51 @@ int main() {
 
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(
-# 104 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 76 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                0x00004000 
-# 104 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 76 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                    | 
-# 104 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 76 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                      0x00000100
-# 104 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 76 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                         );
 
         input.beginFrame();
 
         if (input.isDownKey(
-# 108 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 80 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            87
-# 108 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 80 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveForward(.1f);
         if (input.isDownKey(
-# 110 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 82 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            65
-# 110 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 82 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveRight(-.1);
         if (input.isDownKey(
-# 112 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 84 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            83
-# 112 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 84 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveForward(-.1);
         if (input.isDownKey(
-# 114 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 86 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            68
-# 114 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 86 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveRight(.1);
         if (input.isDownKey(
-# 116 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 88 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            340
-# 116 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 88 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                               ))
             camera.moveUp(-.1);
         if (input.isDownKey(
-# 118 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 90 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            32
-# 118 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 90 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                          ))
             camera.moveUp(.1);
 
@@ -153113,15 +153056,7 @@ int main() {
 
         s.setVec3("viewPos", camera.getPosition());
 
-        glPolygonMode(
-# 126 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                     0x0408
-# 126 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                      , 
-# 126 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                                        0x1B01
-# 126 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                               );
+
         sl.apply(s);
         level.render(s);
 
@@ -153129,10 +153064,9 @@ int main() {
 
 
 
-        glfwSwapBuffers(window);
+        glfwSwapBuffers(window.getWindow());
         glfwPollEvents();
     }
 
-    glfwTerminate();
     return 0;
 }
