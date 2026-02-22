@@ -30,7 +30,7 @@ public:
         float linear = 0.09f;
         float quadratic = 0.032f;
 
-        int type = 0;
+        int type = DIRECTIONAL;
     };
 
     explicit Light(int type = DIRECTIONAL): config({.type = type }), id(numLights++) {}

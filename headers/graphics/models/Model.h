@@ -13,10 +13,11 @@
 
 #include "Mesh.h"
 #include "graphics/Shader.h"
+#include "graphics/Texture.h"
 
 class Model {
 public:
-    explicit Model(const char* path) {
+    explicit Model(const char* path, const Texture::TextConf& cfg = {}): conf(cfg) {
         loadModel(path);
     }
     void draw(const Shader& shader) const;
@@ -37,6 +38,8 @@ private:
     glm::mat4 model = glm::mat4(1.0f);
     std::vector<Mesh> meshes;
     std::string directory;
+
+    Texture::TextConf conf;
 
     void loadModel(const std::string& path);
     void processNode(const aiNode* node, const aiScene* scene);

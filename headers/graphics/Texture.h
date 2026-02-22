@@ -10,7 +10,16 @@
 
 class Texture {
 public:
-    explicit Texture(std::string filename, std::string type = "");
+    struct TextConf {
+        int TEXTURE_WRAP_S = 0x2901;
+        int TEXTURE_WRAP_T = 0x2901;
+        int TEXTURE_WRAP_R = 0x2901;
+        int TEXTURE_MIN_FILTER = 0x2703;
+        int TEXTURE_MAG_FILTER = 0x2601;
+        int FLIP_VERTICALLY = 1;
+    };
+
+    explicit Texture(std::string filename, const TextConf& cfg, std::string type = "");
     ~Texture() = default;
 
     Texture(const Texture&) = default;
@@ -26,6 +35,8 @@ public:
 private:
     int width{}, height{}, nrChannels{};
     unsigned char *data{};
+
+    TextConf config;
 
     std::string type{};
     std::string path{};

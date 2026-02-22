@@ -10,8 +10,8 @@
 #include <iostream>
 #include <ostream>
 
-Texture::Texture(std::string filename, std::string type)
-    : type(std::move(type)), path(std::move(filename))
+Texture::Texture(std::string filename, const TextConf& cfg, std::string type)
+    : type(std::move(type)), path(std::move(filename)), config(cfg)
 {
     unsigned int id = 0;
     glGenTextures(1, &id);
@@ -26,12 +26,13 @@ Texture::Texture(std::string filename, std::string type)
         }
     );
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, config.TEXTURE_WRAP_S);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, config.TEXTURE_WRAP_T);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_R, config.TEXTURE_WRAP_R);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, config.TEXTURE_MIN_FILTER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, config.TEXTURE_MAG_FILTER);
 
-    stbi_set_flip_vertically_on_load(true);
+    stbi_set_flip_vertically_on_load(config.FLIP_VERTICALLY);
     unsigned char* data = stbi_load(path.c_str(), &width, &height, &nrChannels, 0);
     GLint fmt = (nrChannels == 4) ? GL_RGBA : GL_RGB;
 

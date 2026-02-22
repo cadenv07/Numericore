@@ -1,3 +1,4 @@
+#include <chrono>
 #include <iostream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -12,6 +13,7 @@
 
 #include "graphics/Camera.h"
 #include "graphics/Light.h"
+#include "level/Level.h"
 #include "util/InputHandler.h"
 
 int main() {
@@ -45,16 +47,12 @@ int main() {
         return -1;
     }
 
-    Texture t("res/textures/texture.jpg");
     Shader s("res/shaders/vert/shader.vert", "res/shaders/frag/shader.frag");
-    Shader b("res/shaders/vert/bright.vert", "res/shaders/frag/bright.frag");
 
     Camera camera(glm::vec3(0.0f, 0.0f, 10.0f));
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
-
-    Model backpack("res/models/backpack.obj");
 
     InputHandler input(window);
 
@@ -78,14 +76,30 @@ int main() {
         camera.zoom(static_cast<float>(y)*0.08f);
     });
 
-    Model cube("res/models/cube/cube-tex.obj");
-    cube.translate(glm::vec3(0,0,2));
+    Light sl({ .direction = glm::vec3(0.5f, 1.0f, -.5f), .ambient = glm::vec3(1.f),
+        .diffuse = glm::vec3(.0f), .specular = glm::vec3(0.f)});
 
-    //PointLight dl({ .position = cube.getPosition() });
-    Light sl({ .position = camera.getPosition(), .direction = camera.getFront(), .type = Light::SPOT });
+    Level level;
+
+    using clock = std::chrono::steady_clock;
+    auto lastFpsSample = clock::now();
+    int frames = 0;
 
     while (!glfwWindowShouldClose(window)) {
-        glClearColor(0,0,0,1);
+        // FPS counter (averaged over ~0.5s to avoid flicker)
+        frames++;
+        const auto now = clock::now();
+        const std::chrono::duration<double> elapsed = now - lastFpsSample;
+        if (elapsed.count() >= 0.5) {
+            const double fps = static_cast<double>(frames) / elapsed.count();
+            const std::string title = "Numericore - FPS: " + std::to_string(static_cast<int>(fps + 0.5));
+            glfwSetWindowTitle(window, title.c_str());
+
+            frames = 0;
+            lastFpsSample = now;
+        }
+
+        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         input.beginFrame();
@@ -103,35 +117,18 @@ int main() {
         if (input.isDownKey(GLFW_KEY_SPACE))
             camera.moveUp(.1);
 
-        if (input.isDownKey(GLFW_KEY_I))
-            cube.translate(glm::vec3(0,0,-.1));
-        if (input.isDownKey(GLFW_KEY_J))
-            cube.translate(glm::vec3(-.1,0,0));
-        if (input.isDownKey(GLFW_KEY_K))
-            cube.translate(glm::vec3(0,0,.1));
-        if (input.isDownKey(GLFW_KEY_L))
-            cube.translate(glm::vec3(.1,0,0));
-        if (input.isDownKey(GLFW_KEY_U))
-            cube.translate(glm::vec3(0,.1,0));
-        if (input.isDownKey(GLFW_KEY_O))
-            cube.translate(glm::vec3(0,-.1,0));
-
-        s.setFloat("material.shininess", 32.0f);
-
-        sl.setPosition(camera.getPosition());
-        sl.setDirection(camera.getFront());
-        sl.apply(s);
-
         s.setMat4("view", camera.getViewMatrix());
         s.setMat4("projection", camera.getProjectionMatrix(45));
+        // s.setVec3("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
         s.setVec3("viewPos", camera.getPosition());
-        b.setMat4("view", camera.getViewMatrix());
-        b.setMat4("projection", camera.getProjectionMatrix(45));
-        b.setVec3("lightColor", sl.getConfig().color);
+
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        sl.apply(s);
+        level.render(s);
 
         // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        backpack.draw(s);
-        cube.draw(b);
+        // backpack.draw(s);
+        // cube.draw(b);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

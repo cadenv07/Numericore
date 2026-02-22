@@ -33,7 +33,15 @@ add_custom_target(copy_resources ALL
         ${CMAKE_BINARY_DIR}/res
 )
 
-add_executable(numericore ${SOURCES} ${HEADERS})
+add_executable(numericore ${SOURCES} ${HEADERS}
+        src/level/Level.cpp
+        headers/level/Level.h
+        src/tiles/Tile.cpp
+        headers/tiles/Tile.h
+        src/tiles/types/BasicTile.cpp
+        headers/tiles/types/BasicTile.h
+        src/graphics/Window.cpp
+        headers/graphics/Window.h)
 
 target_include_directories(numericore PRIVATE
         "${CMAKE_SOURCE_DIR}/headers"

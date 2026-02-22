@@ -38906,8 +38906,8 @@ extern int stbi_is_16_bit_from_callbacks(stbi_io_callbacks const *c, void *user)
    return stbi__is_16_main(&s);
 }
 # 6 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 2
-# 1 "/usr/include/GL/glew.h" 1 3 4
-# 221 "/usr/include/GL/glew.h" 3 4
+# 1 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 1 3 4
+# 221 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 # 1 "/usr/include/c++/15.2.1/cstddef" 1 3 4
 # 52 "/usr/include/c++/15.2.1/cstddef" 3 4
 # 1 "/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h" 1 3 4
@@ -39046,7 +39046,7 @@ namespace std
 }
 
 #pragma GCC diagnostic pop
-# 222 "/usr/include/GL/glew.h" 2 3 4
+# 222 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 2 3 4
 # 1 "/usr/include/c++/15.2.1/cstdint" 1 3 4
 # 50 "/usr/include/c++/15.2.1/cstdint" 3 4
 namespace std
@@ -39089,8 +39089,8 @@ namespace std
   using ::uintptr_t;
 # 144 "/usr/include/c++/15.2.1/cstdint" 3 4
 }
-# 223 "/usr/include/GL/glew.h" 2 3 4
-# 279 "/usr/include/GL/glew.h" 3 4
+# 223 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 2 3 4
+# 279 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 extern "C" {
 
 
@@ -39115,7 +39115,7 @@ typedef float GLclampf;
 typedef double GLdouble;
 typedef double GLclampd;
 typedef void GLvoid;
-# 313 "/usr/include/GL/glew.h" 3 4
+# 313 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef int64_t GLint64EXT;
 typedef uint64_t GLuint64EXT;
 
@@ -39126,7 +39126,7 @@ typedef struct __GLsync *GLsync;
 typedef char GLchar;
 
 typedef void *GLeglImageOES;
-# 859 "/usr/include/GL/glew.h" 3 4
+# 859 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 extern void glAccum (GLenum op, GLfloat value);
 extern void glAlphaFunc (GLenum func, GLclampf ref);
 extern GLboolean glAreTexturesResident (GLsizei n, const GLuint *textures, GLboolean *residences);
@@ -39463,102 +39463,12 @@ extern void glVertex4s (GLshort x, GLshort y, GLshort z, GLshort w);
 extern void glVertex4sv (const GLshort *v);
 extern void glVertexPointer (GLint size, GLenum type, GLsizei stride, const void *pointer);
 extern void glViewport (GLint x, GLint y, GLsizei width, GLsizei height);
-# 1216 "/usr/include/GL/glew.h" 3 4
-# 1 "/usr/include/GL/glu.h" 1 3 4
-# 34 "/usr/include/GL/glu.h" 3 4
-# 1 "/usr/include/GL/gl.h" 1 3 4
-# 35 "/usr/include/GL/glu.h" 2 3 4
-# 61 "/usr/include/GL/glu.h" 3 4
-extern "C" {
-# 266 "/usr/include/GL/glu.h" 3 4
-class GLUnurbs;
-class GLUquadric;
-class GLUtesselator;
-
-
-
-
-
-
-typedef GLUnurbs GLUnurbsObj;
-typedef GLUquadric GLUquadricObj;
-typedef GLUtesselator GLUtesselatorObj;
-typedef GLUtesselator GLUtriangulatorObj;
-
-
-
-
-typedef void ( * _GLUfuncptr)(void);
-
-extern void gluBeginCurve (GLUnurbs* nurb);
-extern void gluBeginPolygon (GLUtesselator* tess);
-extern void gluBeginSurface (GLUnurbs* nurb);
-extern void gluBeginTrim (GLUnurbs* nurb);
-extern GLint gluBuild1DMipmapLevels (GLenum target, GLint internalFormat, GLsizei width, GLenum format, GLenum type, GLint level, GLint base, GLint max, const void *data);
-extern GLint gluBuild1DMipmaps (GLenum target, GLint internalFormat, GLsizei width, GLenum format, GLenum type, const void *data);
-extern GLint gluBuild2DMipmapLevels (GLenum target, GLint internalFormat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLint level, GLint base, GLint max, const void *data);
-extern GLint gluBuild2DMipmaps (GLenum target, GLint internalFormat, GLsizei width, GLsizei height, GLenum format, GLenum type, const void *data);
-extern GLint gluBuild3DMipmapLevels (GLenum target, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLint level, GLint base, GLint max, const void *data);
-extern GLint gluBuild3DMipmaps (GLenum target, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *data);
-extern GLboolean gluCheckExtension (const GLubyte *extName, const GLubyte *extString);
-extern void gluCylinder (GLUquadric* quad, GLdouble base, GLdouble top, GLdouble height, GLint slices, GLint stacks);
-extern void gluDeleteNurbsRenderer (GLUnurbs* nurb);
-extern void gluDeleteQuadric (GLUquadric* quad);
-extern void gluDeleteTess (GLUtesselator* tess);
-extern void gluDisk (GLUquadric* quad, GLdouble inner, GLdouble outer, GLint slices, GLint loops);
-extern void gluEndCurve (GLUnurbs* nurb);
-extern void gluEndPolygon (GLUtesselator* tess);
-extern void gluEndSurface (GLUnurbs* nurb);
-extern void gluEndTrim (GLUnurbs* nurb);
-extern const GLubyte * gluErrorString (GLenum error);
-extern void gluGetNurbsProperty (GLUnurbs* nurb, GLenum property, GLfloat* data);
-extern const GLubyte * gluGetString (GLenum name);
-extern void gluGetTessProperty (GLUtesselator* tess, GLenum which, GLdouble* data);
-extern void gluLoadSamplingMatrices (GLUnurbs* nurb, const GLfloat *model, const GLfloat *perspective, const GLint *view);
-extern void gluLookAt (GLdouble eyeX, GLdouble eyeY, GLdouble eyeZ, GLdouble centerX, GLdouble centerY, GLdouble centerZ, GLdouble upX, GLdouble upY, GLdouble upZ);
-extern GLUnurbs* gluNewNurbsRenderer (void);
-extern GLUquadric* gluNewQuadric (void);
-extern GLUtesselator* gluNewTess (void);
-extern void gluNextContour (GLUtesselator* tess, GLenum type);
-extern void gluNurbsCallback (GLUnurbs* nurb, GLenum which, _GLUfuncptr CallBackFunc);
-extern void gluNurbsCallbackData (GLUnurbs* nurb, GLvoid* userData);
-extern void gluNurbsCallbackDataEXT (GLUnurbs* nurb, GLvoid* userData);
-extern void gluNurbsCurve (GLUnurbs* nurb, GLint knotCount, GLfloat *knots, GLint stride, GLfloat *control, GLint order, GLenum type);
-extern void gluNurbsProperty (GLUnurbs* nurb, GLenum property, GLfloat value);
-extern void gluNurbsSurface (GLUnurbs* nurb, GLint sKnotCount, GLfloat* sKnots, GLint tKnotCount, GLfloat* tKnots, GLint sStride, GLint tStride, GLfloat* control, GLint sOrder, GLint tOrder, GLenum type);
-extern void gluOrtho2D (GLdouble left, GLdouble right, GLdouble bottom, GLdouble top);
-extern void gluPartialDisk (GLUquadric* quad, GLdouble inner, GLdouble outer, GLint slices, GLint loops, GLdouble start, GLdouble sweep);
-extern void gluPerspective (GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar);
-extern void gluPickMatrix (GLdouble x, GLdouble y, GLdouble delX, GLdouble delY, GLint *viewport);
-extern GLint gluProject (GLdouble objX, GLdouble objY, GLdouble objZ, const GLdouble *model, const GLdouble *proj, const GLint *view, GLdouble* winX, GLdouble* winY, GLdouble* winZ);
-extern void gluPwlCurve (GLUnurbs* nurb, GLint count, GLfloat* data, GLint stride, GLenum type);
-extern void gluQuadricCallback (GLUquadric* quad, GLenum which, _GLUfuncptr CallBackFunc);
-extern void gluQuadricDrawStyle (GLUquadric* quad, GLenum draw);
-extern void gluQuadricNormals (GLUquadric* quad, GLenum normal);
-extern void gluQuadricOrientation (GLUquadric* quad, GLenum orientation);
-extern void gluQuadricTexture (GLUquadric* quad, GLboolean texture);
-extern GLint gluScaleImage (GLenum format, GLsizei wIn, GLsizei hIn, GLenum typeIn, const void *dataIn, GLsizei wOut, GLsizei hOut, GLenum typeOut, GLvoid* dataOut);
-extern void gluSphere (GLUquadric* quad, GLdouble radius, GLint slices, GLint stacks);
-extern void gluTessBeginContour (GLUtesselator* tess);
-extern void gluTessBeginPolygon (GLUtesselator* tess, GLvoid* data);
-extern void gluTessCallback (GLUtesselator* tess, GLenum which, _GLUfuncptr CallBackFunc);
-extern void gluTessEndContour (GLUtesselator* tess);
-extern void gluTessEndPolygon (GLUtesselator* tess);
-extern void gluTessNormal (GLUtesselator* tess, GLdouble valueX, GLdouble valueY, GLdouble valueZ);
-extern void gluTessProperty (GLUtesselator* tess, GLenum which, GLdouble data);
-extern void gluTessVertex (GLUtesselator* tess, GLdouble *location, GLvoid* data);
-extern GLint gluUnProject (GLdouble winX, GLdouble winY, GLdouble winZ, const GLdouble *model, const GLdouble *proj, const GLint *view, GLdouble* objX, GLdouble* objY, GLdouble* objZ);
-extern GLint gluUnProject4 (GLdouble winX, GLdouble winY, GLdouble winZ, GLdouble clipW, const GLdouble *model, const GLdouble *proj, const GLint *view, GLdouble nearVal, GLdouble farVal, GLdouble* objX, GLdouble* objY, GLdouble* objZ, GLdouble* objW);
-
-
-}
-# 1217 "/usr/include/GL/glew.h" 2 3 4
-# 1266 "/usr/include/GL/glew.h" 3 4
+# 1266 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYTEXSUBIMAGE3DPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 typedef void ( * PFNGLDRAWRANGEELEMENTSPROC) (GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void *indices);
 typedef void ( * PFNGLTEXIMAGE3DPROC) (GLenum target, GLint level, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const void *pixels);
 typedef void ( * PFNGLTEXSUBIMAGE3DPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *pixels);
-# 1391 "/usr/include/GL/glew.h" 3 4
+# 1391 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLACTIVETEXTUREPROC) (GLenum texture);
 typedef void ( * PFNGLCLIENTACTIVETEXTUREPROC) (GLenum texture);
 typedef void ( * PFNGLCOMPRESSEDTEXIMAGE1DPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const void *data);
@@ -39605,7 +39515,7 @@ typedef void ( * PFNGLMULTITEXCOORD4IVPROC) (GLenum target, const GLint *v);
 typedef void ( * PFNGLMULTITEXCOORD4SPROC) (GLenum target, GLshort s, GLshort t, GLshort r, GLshort q);
 typedef void ( * PFNGLMULTITEXCOORD4SVPROC) (GLenum target, const GLshort *v);
 typedef void ( * PFNGLSAMPLECOVERAGEPROC) (GLclampf value, GLboolean invert);
-# 1534 "/usr/include/GL/glew.h" 3 4
+# 1534 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDCOLORPROC) (GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 typedef void ( * PFNGLBLENDEQUATIONPROC) (GLenum mode);
 typedef void ( * PFNGLBLENDFUNCSEPARATEPROC) (GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
@@ -39653,7 +39563,7 @@ typedef void ( * PFNGLWINDOWPOS3IPROC) (GLint x, GLint y, GLint z);
 typedef void ( * PFNGLWINDOWPOS3IVPROC) (const GLint *p);
 typedef void ( * PFNGLWINDOWPOS3SPROC) (GLshort x, GLshort y, GLshort z);
 typedef void ( * PFNGLWINDOWPOS3SVPROC) (const GLshort *p);
-# 1690 "/usr/include/GL/glew.h" 3 4
+# 1690 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef ptrdiff_t GLintptr;
 typedef ptrdiff_t GLsizeiptr;
 
@@ -39676,7 +39586,7 @@ typedef GLboolean ( * PFNGLISBUFFERPROC) (GLuint buffer);
 typedef GLboolean ( * PFNGLISQUERYPROC) (GLuint id);
 typedef void* ( * PFNGLMAPBUFFERPROC) (GLenum target, GLenum access);
 typedef GLboolean ( * PFNGLUNMAPBUFFERPROC) (GLenum target);
-# 1827 "/usr/include/GL/glew.h" 3 4
+# 1827 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLATTACHSHADERPROC) (GLuint program, GLuint shader);
 typedef void ( * PFNGLBINDATTRIBLOCATIONPROC) (GLuint program, GLuint index, const GLchar* name);
 typedef void ( * PFNGLBLENDEQUATIONSEPARATEPROC) (GLenum modeRGB, GLenum modeAlpha);
@@ -39770,14 +39680,14 @@ typedef void ( * PFNGLVERTEXATTRIB4UBVPROC) (GLuint index, const GLubyte* v);
 typedef void ( * PFNGLVERTEXATTRIB4UIVPROC) (GLuint index, const GLuint* v);
 typedef void ( * PFNGLVERTEXATTRIB4USVPROC) (GLuint index, const GLushort* v);
 typedef void ( * PFNGLVERTEXATTRIBPOINTERPROC) (GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void* pointer);
-# 2048 "/usr/include/GL/glew.h" 3 4
+# 2048 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLUNIFORMMATRIX2X3FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 typedef void ( * PFNGLUNIFORMMATRIX2X4FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 typedef void ( * PFNGLUNIFORMMATRIX3X2FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 typedef void ( * PFNGLUNIFORMMATRIX3X4FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 typedef void ( * PFNGLUNIFORMMATRIX4X2FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 typedef void ( * PFNGLUNIFORMMATRIX4X3FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
-# 2177 "/usr/include/GL/glew.h" 3 4
+# 2177 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINCONDITIONALRENDERPROC) (GLuint id, GLenum mode);
 typedef void ( * PFNGLBEGINTRANSFORMFEEDBACKPROC) (GLenum primitiveMode);
 typedef void ( * PFNGLBINDFRAGDATALOCATIONPROC) (GLuint program, GLuint colorNumber, const GLchar* name);
@@ -39833,66 +39743,66 @@ typedef void ( * PFNGLVERTEXATTRIBI4UIPROC) (GLuint index, GLuint v0, GLuint v1,
 typedef void ( * PFNGLVERTEXATTRIBI4UIVPROC) (GLuint index, const GLuint* v0);
 typedef void ( * PFNGLVERTEXATTRIBI4USVPROC) (GLuint index, const GLushort* v0);
 typedef void ( * PFNGLVERTEXATTRIBIPOINTERPROC) (GLuint index, GLint size, GLenum type, GLsizei stride, const void*pointer);
-# 2333 "/usr/include/GL/glew.h" 3 4
+# 2333 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWARRAYSINSTANCEDPROC) (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDPROC) (GLenum mode, GLsizei count, GLenum type, const void* indices, GLsizei primcount);
 typedef void ( * PFNGLPRIMITIVERESTARTINDEXPROC) (GLuint buffer);
 typedef void ( * PFNGLTEXBUFFERPROC) (GLenum target, GLenum internalFormat, GLuint buffer);
-# 2375 "/usr/include/GL/glew.h" 3 4
+# 2375 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTUREPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level);
 typedef void ( * PFNGLGETBUFFERPARAMETERI64VPROC) (GLenum target, GLenum value, GLint64 * data);
 typedef void ( * PFNGLGETINTEGER64I_VPROC) (GLenum pname, GLuint index, GLint64 * data);
-# 2395 "/usr/include/GL/glew.h" 3 4
+# 2395 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLVERTEXATTRIBDIVISORPROC) (GLuint index, GLuint divisor);
-# 2421 "/usr/include/GL/glew.h" 3 4
+# 2421 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONSEPARATEIPROC) (GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 typedef void ( * PFNGLBLENDEQUATIONIPROC) (GLuint buf, GLenum mode);
 typedef void ( * PFNGLBLENDFUNCSEPARATEIPROC) (GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
 typedef void ( * PFNGLBLENDFUNCIPROC) (GLuint buf, GLenum src, GLenum dst);
 typedef void ( * PFNGLMINSAMPLESHADINGPROC) (GLclampf value);
-# 2496 "/usr/include/GL/glew.h" 3 4
+# 2496 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLenum ( * PFNGLGETGRAPHICSRESETSTATUSPROC) (void);
 typedef void ( * PFNGLGETNCOMPRESSEDTEXIMAGEPROC) (GLenum target, GLint lod, GLsizei bufSize, GLvoid *pixels);
 typedef void ( * PFNGLGETNTEXIMAGEPROC) (GLenum tex, GLint level, GLenum format, GLenum type, GLsizei bufSize, GLvoid *pixels);
 typedef void ( * PFNGLGETNUNIFORMDVPROC) (GLuint program, GLint location, GLsizei bufSize, GLdouble *params);
-# 2538 "/usr/include/GL/glew.h" 3 4
+# 2538 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC) (GLenum mode, const GLvoid *indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
 typedef void ( * PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC) (GLenum mode, GLenum type, const GLvoid *indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
 typedef void ( * PFNGLSPECIALIZESHADERPROC) (GLuint shader, const GLchar *pEntryPoint, GLuint numSpecializationConstants, const GLuint *pConstantIndex, const GLuint *pConstantValue);
-# 2569 "/usr/include/GL/glew.h" 3 4
+# 2569 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTBUFFERMASK3DFXPROC) (GLuint mask);
-# 2655 "/usr/include/GL/glew.h" 3 4
+# 2655 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( *GLDEBUGPROCAMD)(GLuint id, GLenum category, GLenum severity, GLsizei length, const GLchar* message, void* userParam);
 
 typedef void ( * PFNGLDEBUGMESSAGECALLBACKAMDPROC) (GLDEBUGPROCAMD callback, void *userParam);
 typedef void ( * PFNGLDEBUGMESSAGEENABLEAMDPROC) (GLenum category, GLenum severity, GLsizei count, const GLuint* ids, GLboolean enabled);
 typedef void ( * PFNGLDEBUGMESSAGEINSERTAMDPROC) (GLenum category, GLenum severity, GLuint id, GLsizei length, const GLchar* buf);
 typedef GLuint ( * PFNGLGETDEBUGMESSAGELOGAMDPROC) (GLuint count, GLsizei bufsize, GLenum* categories, GLenum* severities, GLuint* ids, GLsizei* lengths, GLchar* message);
-# 2688 "/usr/include/GL/glew.h" 3 4
+# 2688 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONINDEXEDAMDPROC) (GLuint buf, GLenum mode);
 typedef void ( * PFNGLBLENDEQUATIONSEPARATEINDEXEDAMDPROC) (GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 typedef void ( * PFNGLBLENDFUNCINDEXEDAMDPROC) (GLuint buf, GLenum src, GLenum dst);
 typedef void ( * PFNGLBLENDFUNCSEPARATEINDEXEDAMDPROC) (GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
-# 2714 "/usr/include/GL/glew.h" 3 4
+# 2714 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC) (GLuint renderbuffer, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
 typedef void ( * PFNGLRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC) (GLenum target, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
-# 2734 "/usr/include/GL/glew.h" 3 4
+# 2734 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERSAMPLEPOSITIONSFVAMDPROC) (GLenum target, GLuint numsamples, GLuint pixelindex, const GLfloat* values);
 typedef void ( * PFNGLGETFRAMEBUFFERPARAMETERFVAMDPROC) (GLenum target, GLenum pname, GLuint numsamples, GLuint pixelindex, GLsizei size, GLfloat* values);
 typedef void ( * PFNGLGETNAMEDFRAMEBUFFERPARAMETERFVAMDPROC) (GLuint framebuffer, GLenum pname, GLuint numsamples, GLuint pixelindex, GLsizei size, GLfloat* values);
 typedef void ( * PFNGLNAMEDFRAMEBUFFERSAMPLEPOSITIONSFVAMDPROC) (GLuint framebuffer, GLuint numsamples, GLuint pixelindex, const GLfloat* values);
-# 2852 "/usr/include/GL/glew.h" 3 4
+# 2852 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLVERTEXATTRIBPARAMETERIAMDPROC) (GLuint index, GLenum pname, GLint param);
-# 2865 "/usr/include/GL/glew.h" 3 4
+# 2865 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIDRAWARRAYSINDIRECTAMDPROC) (GLenum mode, const void *indirect, GLsizei primcount, GLsizei stride);
 typedef void ( * PFNGLMULTIDRAWELEMENTSINDIRECTAMDPROC) (GLenum mode, GLenum type, const void *indirect, GLsizei primcount, GLsizei stride);
-# 2886 "/usr/include/GL/glew.h" 3 4
+# 2886 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDELETENAMESAMDPROC) (GLenum identifier, GLuint num, const GLuint* names);
 typedef void ( * PFNGLGENNAMESAMDPROC) (GLenum identifier, GLuint num, GLuint* names);
 typedef GLboolean ( * PFNGLISNAMEAMDPROC) (GLenum identifier, GLuint name);
-# 2910 "/usr/include/GL/glew.h" 3 4
+# 2910 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLQUERYOBJECTPARAMETERUIAMDPROC) (GLenum target, GLuint id, GLenum pname, GLuint param);
-# 2931 "/usr/include/GL/glew.h" 3 4
+# 2931 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINPERFMONITORAMDPROC) (GLuint monitor);
 typedef void ( * PFNGLDELETEPERFMONITORSAMDPROC) (GLsizei n, GLuint* monitors);
 typedef void ( * PFNGLENDPERFMONITORAMDPROC) (GLuint monitor);
@@ -39904,25 +39814,25 @@ typedef void ( * PFNGLGETPERFMONITORCOUNTERSAMDPROC) (GLuint group, GLint* numCo
 typedef void ( * PFNGLGETPERFMONITORGROUPSTRINGAMDPROC) (GLuint group, GLsizei bufSize, GLsizei* length, GLchar *groupString);
 typedef void ( * PFNGLGETPERFMONITORGROUPSAMDPROC) (GLint* numGroups, GLsizei groupsSize, GLuint *groups);
 typedef void ( * PFNGLSELECTPERFMONITORCOUNTERSAMDPROC) (GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint* counterList);
-# 3001 "/usr/include/GL/glew.h" 3 4
+# 3001 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSETMULTISAMPLEFVAMDPROC) (GLenum pname, GLuint index, const GLfloat* val);
-# 3098 "/usr/include/GL/glew.h" 3 4
+# 3098 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXSTORAGESPARSEAMDPROC) (GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags);
 typedef void ( * PFNGLTEXTURESTORAGESPARSEAMDPROC) (GLuint texture, GLenum target, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLsizei layers, GLbitfield flags);
-# 3118 "/usr/include/GL/glew.h" 3 4
+# 3118 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSTENCILOPVALUEAMDPROC) (GLenum face, GLuint value);
-# 3186 "/usr/include/GL/glew.h" 3 4
+# 3186 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTESSELLATIONFACTORAMDPROC) (GLfloat factor);
 typedef void ( * PFNGLTESSELLATIONMODEAMDPROC) (GLenum mode);
-# 3233 "/usr/include/GL/glew.h" 3 4
+# 3233 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLITFRAMEBUFFERANGLEPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
-# 3250 "/usr/include/GL/glew.h" 3 4
+# 3250 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLRENDERBUFFERSTORAGEMULTISAMPLEANGLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-# 3265 "/usr/include/GL/glew.h" 3 4
+# 3265 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWARRAYSINSTANCEDANGLEPROC) (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDANGLEPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
 typedef void ( * PFNGLVERTEXATTRIBDIVISORANGLEPROC) (GLuint index, GLuint divisor);
-# 3365 "/usr/include/GL/glew.h" 3 4
+# 3365 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINQUERYANGLEPROC) (GLenum target, GLuint id);
 typedef void ( * PFNGLDELETEQUERIESANGLEPROC) (GLsizei n, const GLuint* ids);
 typedef void ( * PFNGLENDQUERYANGLEPROC) (GLenum target);
@@ -39934,17 +39844,17 @@ typedef void ( * PFNGLGETQUERYOBJECTUIVANGLEPROC) (GLuint id, GLenum pname, GLui
 typedef void ( * PFNGLGETQUERYIVANGLEPROC) (GLenum target, GLenum pname, GLint* params);
 typedef GLboolean ( * PFNGLISQUERYANGLEPROC) (GLuint id);
 typedef void ( * PFNGLQUERYCOUNTERANGLEPROC) (GLuint id, GLenum target);
-# 3400 "/usr/include/GL/glew.h" 3 4
+# 3400 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETTRANSLATEDSHADERSOURCEANGLEPROC) (GLuint shader, GLsizei bufsize, GLsizei* length, GLchar* source);
-# 3463 "/usr/include/GL/glew.h" 3 4
+# 3463 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYTEXTURELEVELSAPPLEPROC) (GLuint destinationTexture, GLuint sourceTexture, GLint sourceBaseLevel, GLsizei sourceLevelCount);
-# 3480 "/usr/include/GL/glew.h" 3 4
+# 3480 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWELEMENTARRAYAPPLEPROC) (GLenum mode, GLint first, GLsizei count);
 typedef void ( * PFNGLDRAWRANGEELEMENTARRAYAPPLEPROC) (GLenum mode, GLuint start, GLuint end, GLint first, GLsizei count);
 typedef void ( * PFNGLELEMENTPOINTERAPPLEPROC) (GLenum type, const void *pointer);
 typedef void ( * PFNGLMULTIDRAWELEMENTARRAYAPPLEPROC) (GLenum mode, const GLint* first, const GLsizei *count, GLsizei primcount);
 typedef void ( * PFNGLMULTIDRAWRANGEELEMENTARRAYAPPLEPROC) (GLenum mode, GLuint start, GLuint end, const GLint* first, const GLsizei *count, GLsizei primcount);
-# 3504 "/usr/include/GL/glew.h" 3 4
+# 3504 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDELETEFENCESAPPLEPROC) (GLsizei n, const GLuint* fences);
 typedef void ( * PFNGLFINISHFENCEAPPLEPROC) (GLuint fence);
 typedef void ( * PFNGLFINISHOBJECTAPPLEPROC) (GLenum object, GLint name);
@@ -39953,17 +39863,17 @@ typedef GLboolean ( * PFNGLISFENCEAPPLEPROC) (GLuint fence);
 typedef void ( * PFNGLSETFENCEAPPLEPROC) (GLuint fence);
 typedef GLboolean ( * PFNGLTESTFENCEAPPLEPROC) (GLuint fence);
 typedef GLboolean ( * PFNGLTESTOBJECTAPPLEPROC) (GLenum object, GLuint name);
-# 3558 "/usr/include/GL/glew.h" 3 4
+# 3558 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBUFFERPARAMETERIAPPLEPROC) (GLenum target, GLenum pname, GLint param);
 typedef void ( * PFNGLFLUSHMAPPEDBUFFERRANGEAPPLEPROC) (GLenum target, GLintptr offset, GLsizeiptr size);
-# 3581 "/usr/include/GL/glew.h" 3 4
+# 3581 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLRENDERBUFFERSTORAGEMULTISAMPLEAPPLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 typedef void ( * PFNGLRESOLVEMULTISAMPLEFRAMEBUFFERAPPLEPROC) (void);
-# 3603 "/usr/include/GL/glew.h" 3 4
+# 3603 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETOBJECTPARAMETERIVAPPLEPROC) (GLenum objectType, GLuint name, GLenum pname, GLint* params);
 typedef GLenum ( * PFNGLOBJECTPURGEABLEAPPLEPROC) (GLenum objectType, GLuint name, GLenum option);
 typedef GLenum ( * PFNGLOBJECTUNPURGEABLEAPPLEPROC) (GLenum objectType, GLuint name, GLenum option);
-# 3685 "/usr/include/GL/glew.h" 3 4
+# 3685 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLenum ( * PFNGLCLIENTWAITSYNCAPPLEPROC) (GLsync GLsync, GLbitfield flags, GLuint64 timeout);
 typedef void ( * PFNGLDELETESYNCAPPLEPROC) (GLsync GLsync);
 typedef GLsync ( * PFNGLFENCESYNCAPPLEPROC) (GLenum condition, GLbitfield flags);
@@ -39971,19 +39881,19 @@ typedef void ( * PFNGLGETINTEGER64VAPPLEPROC) (GLenum pname, GLint64* params);
 typedef void ( * PFNGLGETSYNCIVAPPLEPROC) (GLsync GLsync, GLenum pname, GLsizei bufSize, GLsizei* length, GLint *values);
 typedef GLboolean ( * PFNGLISSYNCAPPLEPROC) (GLsync GLsync);
 typedef void ( * PFNGLWAITSYNCAPPLEPROC) (GLsync GLsync, GLbitfield flags, GLuint64 timeout);
-# 3763 "/usr/include/GL/glew.h" 3 4
+# 3763 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETTEXPARAMETERPOINTERVAPPLEPROC) (GLenum target, GLenum pname, void **params);
 typedef void ( * PFNGLTEXTURERANGEAPPLEPROC) (GLenum target, GLsizei length, void *pointer);
-# 3791 "/usr/include/GL/glew.h" 3 4
+# 3791 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDVERTEXARRAYAPPLEPROC) (GLuint array);
 typedef void ( * PFNGLDELETEVERTEXARRAYSAPPLEPROC) (GLsizei n, const GLuint* arrays);
 typedef void ( * PFNGLGENVERTEXARRAYSAPPLEPROC) (GLsizei n, const GLuint* arrays);
 typedef GLboolean ( * PFNGLISVERTEXARRAYAPPLEPROC) (GLuint array);
-# 3819 "/usr/include/GL/glew.h" 3 4
+# 3819 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFLUSHVERTEXARRAYRANGEAPPLEPROC) (GLsizei length, void *pointer);
 typedef void ( * PFNGLVERTEXARRAYPARAMETERIAPPLEPROC) (GLenum pname, GLint param);
 typedef void ( * PFNGLVERTEXARRAYRANGEAPPLEPROC) (GLsizei length, void *pointer);
-# 3847 "/usr/include/GL/glew.h" 3 4
+# 3847 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDISABLEVERTEXATTRIBAPPLEPROC) (GLuint index, GLenum pname);
 typedef void ( * PFNGLENABLEVERTEXATTRIBAPPLEPROC) (GLuint index, GLenum pname);
 typedef GLboolean ( * PFNGLISVERTEXATTRIBENABLEDAPPLEPROC) (GLuint index, GLenum pname);
@@ -39991,7 +39901,7 @@ typedef void ( * PFNGLMAPVERTEXATTRIB1DAPPLEPROC) (GLuint index, GLuint size, GL
 typedef void ( * PFNGLMAPVERTEXATTRIB1FAPPLEPROC) (GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat* points);
 typedef void ( * PFNGLMAPVERTEXATTRIB2DAPPLEPROC) (GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble* points);
 typedef void ( * PFNGLMAPVERTEXATTRIB2FAPPLEPROC) (GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat* points);
-# 3900 "/usr/include/GL/glew.h" 3 4
+# 3900 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef int GLfixed;
 
 typedef void ( * PFNGLCLEARDEPTHFPROC) (GLclampf d);
@@ -39999,15 +39909,15 @@ typedef void ( * PFNGLDEPTHRANGEFPROC) (GLclampf n, GLclampf f);
 typedef void ( * PFNGLGETSHADERPRECISIONFORMATPROC) (GLenum shadertype, GLenum precisiontype, GLint* range, GLint *precision);
 typedef void ( * PFNGLRELEASESHADERCOMPILERPROC) (void);
 typedef void ( * PFNGLSHADERBINARYPROC) (GLsizei count, const GLuint* shaders, GLenum binaryformat, const void*binary, GLsizei length);
-# 3923 "/usr/include/GL/glew.h" 3 4
+# 3923 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMEMORYBARRIERBYREGIONPROC) (GLbitfield barriers);
-# 3940 "/usr/include/GL/glew.h" 3 4
+# 3940 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPRIMITIVEBOUNDINGBOXARBPROC) (GLfloat minX, GLfloat minY, GLfloat minZ, GLfloat minW, GLfloat maxX, GLfloat maxY, GLfloat maxZ, GLfloat maxW);
-# 3986 "/usr/include/GL/glew.h" 3 4
+# 3986 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC) (GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLuint baseinstance);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLint basevertex, GLuint baseinstance);
-# 4005 "/usr/include/GL/glew.h" 3 4
+# 4005 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLuint64 ( * PFNGLGETIMAGEHANDLEARBPROC) (GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum format);
 typedef GLuint64 ( * PFNGLGETTEXTUREHANDLEARBPROC) (GLuint texture);
 typedef GLuint64 ( * PFNGLGETTEXTURESAMPLERHANDLEARBPROC) (GLuint texture, GLuint sampler);
@@ -40024,45 +39934,45 @@ typedef void ( * PFNGLUNIFORMHANDLEUI64ARBPROC) (GLint location, GLuint64 value)
 typedef void ( * PFNGLUNIFORMHANDLEUI64VARBPROC) (GLint location, GLsizei count, const GLuint64* value);
 typedef void ( * PFNGLVERTEXATTRIBL1UI64ARBPROC) (GLuint index, GLuint64EXT x);
 typedef void ( * PFNGLVERTEXATTRIBL1UI64VARBPROC) (GLuint index, const GLuint64EXT* v);
-# 4053 "/usr/include/GL/glew.h" 3 4
+# 4053 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDFRAGDATALOCATIONINDEXEDPROC) (GLuint program, GLuint colorNumber, GLuint index, const GLchar * name);
 typedef GLint ( * PFNGLGETFRAGDATAINDEXPROC) (GLuint program, const GLchar * name);
-# 4078 "/usr/include/GL/glew.h" 3 4
+# 4078 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBUFFERSTORAGEPROC) (GLenum target, GLsizeiptr size, const void *data, GLbitfield flags);
-# 4094 "/usr/include/GL/glew.h" 3 4
+# 4094 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef struct _cl_context *cl_context;
 typedef struct _cl_event *cl_event;
 
 typedef GLsync ( * PFNGLCREATESYNCFROMCLEVENTARBPROC) (cl_context context, cl_event event, GLbitfield flags);
-# 4110 "/usr/include/GL/glew.h" 3 4
+# 4110 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLEARBUFFERDATAPROC) (GLenum target, GLenum internalformat, GLenum format, GLenum type, const void *data);
 typedef void ( * PFNGLCLEARBUFFERSUBDATAPROC) (GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, const void *data);
 typedef void ( * PFNGLCLEARNAMEDBUFFERDATAEXTPROC) (GLuint buffer, GLenum internalformat, GLenum format, GLenum type, const void *data);
 typedef void ( * PFNGLCLEARNAMEDBUFFERSUBDATAEXTPROC) (GLuint buffer, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, const void *data);
-# 4131 "/usr/include/GL/glew.h" 3 4
+# 4131 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLEARTEXIMAGEPROC) (GLuint texture, GLint level, GLenum format, GLenum type, const void *data);
 typedef void ( * PFNGLCLEARTEXSUBIMAGEPROC) (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *data);
-# 4153 "/usr/include/GL/glew.h" 3 4
+# 4153 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLIPCONTROLPROC) (GLenum origin, GLenum depth);
-# 4172 "/usr/include/GL/glew.h" 3 4
+# 4172 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLAMPCOLORARBPROC) (GLenum target, GLenum clamp);
-# 4231 "/usr/include/GL/glew.h" 3 4
+# 4231 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDISPATCHCOMPUTEPROC) (GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z);
 typedef void ( * PFNGLDISPATCHCOMPUTEINDIRECTPROC) (GLintptr indirect);
-# 4251 "/usr/include/GL/glew.h" 3 4
+# 4251 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDISPATCHCOMPUTEGROUPSIZEARBPROC) (GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z, GLuint group_size_x, GLuint group_size_y, GLuint group_size_z);
-# 4290 "/usr/include/GL/glew.h" 3 4
+# 4290 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYBUFFERSUBDATAPROC) (GLenum readtarget, GLenum writetarget, GLintptr readoffset, GLintptr writeoffset, GLsizeiptr size);
-# 4303 "/usr/include/GL/glew.h" 3 4
+# 4303 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYIMAGESUBDATAPROC) (GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth);
-# 4351 "/usr/include/GL/glew.h" 3 4
+# 4351 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( *GLDEBUGPROCARB)(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam);
 
 typedef void ( * PFNGLDEBUGMESSAGECALLBACKARBPROC) (GLDEBUGPROCARB callback, const void *userParam);
 typedef void ( * PFNGLDEBUGMESSAGECONTROLARBPROC) (GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint* ids, GLboolean enabled);
 typedef void ( * PFNGLDEBUGMESSAGEINSERTARBPROC) (GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* buf);
 typedef GLuint ( * PFNGLGETDEBUGMESSAGELOGARBPROC) (GLuint count, GLsizei bufSize, GLenum* sources, GLenum* types, GLuint* ids, GLenum* severities, GLsizei* lengths, GLchar* messageLog);
-# 4423 "/usr/include/GL/glew.h" 3 4
+# 4423 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDTEXTUREUNITPROC) (GLuint unit, GLuint texture);
 typedef void ( * PFNGLBLITNAMEDFRAMEBUFFERPROC) (GLuint readFramebuffer, GLuint drawFramebuffer, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 typedef GLenum ( * PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC) (GLuint framebuffer, GLenum target);
@@ -40160,27 +40070,27 @@ typedef void ( * PFNGLVERTEXARRAYBINDINGDIVISORPROC) (GLuint vaobj, GLuint bindi
 typedef void ( * PFNGLVERTEXARRAYELEMENTBUFFERPROC) (GLuint vaobj, GLuint buffer);
 typedef void ( * PFNGLVERTEXARRAYVERTEXBUFFERPROC) (GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
 typedef void ( * PFNGLVERTEXARRAYVERTEXBUFFERSPROC) (GLuint vaobj, GLuint first, GLsizei count, const GLuint* buffers, const GLintptr *offsets, const GLsizei *strides);
-# 4646 "/usr/include/GL/glew.h" 3 4
+# 4646 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWBUFFERSARBPROC) (GLsizei n, const GLenum* bufs);
-# 4659 "/usr/include/GL/glew.h" 3 4
+# 4659 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONSEPARATEIARBPROC) (GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 typedef void ( * PFNGLBLENDEQUATIONIARBPROC) (GLuint buf, GLenum mode);
 typedef void ( * PFNGLBLENDFUNCSEPARATEIARBPROC) (GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
 typedef void ( * PFNGLBLENDFUNCIARBPROC) (GLuint buf, GLenum src, GLenum dst);
-# 4678 "/usr/include/GL/glew.h" 3 4
+# 4678 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWELEMENTSBASEVERTEXPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLint basevertex);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex);
 typedef void ( * PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC) (GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void *indices, GLint basevertex);
 typedef void ( * PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC) (GLenum mode, const GLsizei* count, GLenum type, const void*const *indices, GLsizei drawcount, const GLint *basevertex);
-# 4700 "/usr/include/GL/glew.h" 3 4
+# 4700 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWARRAYSINDIRECTPROC) (GLenum mode, const void *indirect);
 typedef void ( * PFNGLDRAWELEMENTSINDIRECTPROC) (GLenum mode, GLenum type, const void *indirect);
-# 4841 "/usr/include/GL/glew.h" 3 4
+# 4841 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERPARAMETERIPROC) (GLenum target, GLenum pname, GLint param);
 typedef void ( * PFNGLGETFRAMEBUFFERPARAMETERIVPROC) (GLenum target, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVEXTPROC) (GLuint framebuffer, GLenum pname, GLint* params);
 typedef void ( * PFNGLNAMEDFRAMEBUFFERPARAMETERIEXTPROC) (GLuint framebuffer, GLenum pname, GLint param);
-# 4935 "/usr/include/GL/glew.h" 3 4
+# 4935 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDFRAMEBUFFERPROC) (GLenum target, GLuint framebuffer);
 typedef void ( * PFNGLBINDRENDERBUFFERPROC) (GLenum target, GLuint renderbuffer);
 typedef void ( * PFNGLBLITFRAMEBUFFERPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
@@ -40201,21 +40111,21 @@ typedef GLboolean ( * PFNGLISFRAMEBUFFERPROC) (GLuint framebuffer);
 typedef GLboolean ( * PFNGLISRENDERBUFFERPROC) (GLuint renderbuffer);
 typedef void ( * PFNGLRENDERBUFFERSTORAGEPROC) (GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
 typedef void ( * PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-# 5017 "/usr/include/GL/glew.h" 3 4
+# 5017 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTUREARBPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level);
 typedef void ( * PFNGLFRAMEBUFFERTEXTUREFACEARBPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face);
 typedef void ( * PFNGLFRAMEBUFFERTEXTURELAYERARBPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
 typedef void ( * PFNGLPROGRAMPARAMETERIARBPROC) (GLuint program, GLenum pname, GLint value);
-# 5041 "/usr/include/GL/glew.h" 3 4
+# 5041 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETPROGRAMBINARYPROC) (GLuint program, GLsizei bufSize, GLsizei* length, GLenum *binaryFormat, void*binary);
 typedef void ( * PFNGLPROGRAMBINARYPROC) (GLuint program, GLenum binaryFormat, const void *binary, GLsizei length);
 typedef void ( * PFNGLPROGRAMPARAMETERIPROC) (GLuint program, GLenum pname, GLint value);
-# 5058 "/usr/include/GL/glew.h" 3 4
+# 5058 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC) (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei bufSize, void *pixels);
 typedef void ( * PFNGLGETTEXTURESUBIMAGEPROC) (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLsizei bufSize, void *pixels);
-# 5076 "/usr/include/GL/glew.h" 3 4
+# 5076 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSPECIALIZESHADERARBPROC) (GLuint shader, const GLchar* pEntryPoint, GLuint numSpecializationConstants, const GLuint* pConstantIndex, const GLuint* pConstantValue);
-# 5118 "/usr/include/GL/glew.h" 3 4
+# 5118 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETUNIFORMDVPROC) (GLuint program, GLint location, GLdouble* params);
 typedef void ( * PFNGLUNIFORM1DPROC) (GLint location, GLdouble x);
 typedef void ( * PFNGLUNIFORM1DVPROC) (GLint location, GLsizei count, const GLdouble* value);
@@ -40234,7 +40144,7 @@ typedef void ( * PFNGLUNIFORMMATRIX3X4DVPROC) (GLint location, GLsizei count, GL
 typedef void ( * PFNGLUNIFORMMATRIX4DVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLdouble* value);
 typedef void ( * PFNGLUNIFORMMATRIX4X2DVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLdouble* value);
 typedef void ( * PFNGLUNIFORMMATRIX4X3DVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLdouble* value);
-# 5174 "/usr/include/GL/glew.h" 3 4
+# 5174 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETUNIFORMI64VARBPROC) (GLuint program, GLint location, GLint64* params);
 typedef void ( * PFNGLGETUNIFORMUI64VARBPROC) (GLuint program, GLint location, GLuint64* params);
 typedef void ( * PFNGLGETNUNIFORMI64VARBPROC) (GLuint program, GLint location, GLsizei bufSize, GLint64* params);
@@ -40271,7 +40181,7 @@ typedef void ( * PFNGLUNIFORM4I64ARBPROC) (GLint location, GLint64 x, GLint64 y,
 typedef void ( * PFNGLUNIFORM4I64VARBPROC) (GLint location, GLsizei count, const GLint64* value);
 typedef void ( * PFNGLUNIFORM4UI64ARBPROC) (GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
 typedef void ( * PFNGLUNIFORM4UI64VARBPROC) (GLint location, GLsizei count, const GLuint64* value);
-# 5357 "/usr/include/GL/glew.h" 3 4
+# 5357 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLORSUBTABLEPROC) (GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const void *data);
 typedef void ( * PFNGLCOLORTABLEPROC) (GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const void *table);
 typedef void ( * PFNGLCOLORTABLEPARAMETERFVPROC) (GLenum target, GLenum pname, const GLfloat *params);
@@ -40304,46 +40214,46 @@ typedef void ( * PFNGLMINMAXPROC) (GLenum target, GLenum internalformat, GLboole
 typedef void ( * PFNGLRESETHISTOGRAMPROC) (GLenum target);
 typedef void ( * PFNGLRESETMINMAXPROC) (GLenum target);
 typedef void ( * PFNGLSEPARABLEFILTER2DPROC) (GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const void *row, const void *column);
-# 5435 "/usr/include/GL/glew.h" 3 4
+# 5435 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC) (GLenum mode, const void *indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
 typedef void ( * PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC) (GLenum mode, GLenum type, const void *indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
-# 5452 "/usr/include/GL/glew.h" 3 4
+# 5452 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWARRAYSINSTANCEDARBPROC) (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDARBPROC) (GLenum mode, GLsizei count, GLenum type, const void* indices, GLsizei primcount);
 typedef void ( * PFNGLVERTEXATTRIBDIVISORARBPROC) (GLuint index, GLuint divisor);
-# 5471 "/usr/include/GL/glew.h" 3 4
+# 5471 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETINTERNALFORMATIVPROC) (GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint* params);
-# 5584 "/usr/include/GL/glew.h" 3 4
+# 5584 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETINTERNALFORMATI64VPROC) (GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64* params);
-# 5597 "/usr/include/GL/glew.h" 3 4
+# 5597 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLINVALIDATEBUFFERDATAPROC) (GLuint buffer);
 typedef void ( * PFNGLINVALIDATEBUFFERSUBDATAPROC) (GLuint buffer, GLintptr offset, GLsizeiptr length);
 typedef void ( * PFNGLINVALIDATEFRAMEBUFFERPROC) (GLenum target, GLsizei numAttachments, const GLenum* attachments);
 typedef void ( * PFNGLINVALIDATESUBFRAMEBUFFERPROC) (GLenum target, GLsizei numAttachments, const GLenum* attachments, GLint x, GLint y, GLsizei width, GLsizei height);
 typedef void ( * PFNGLINVALIDATETEXIMAGEPROC) (GLuint texture, GLint level);
 typedef void ( * PFNGLINVALIDATETEXSUBIMAGEPROC) (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth);
-# 5638 "/usr/include/GL/glew.h" 3 4
+# 5638 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFLUSHMAPPEDBUFFERRANGEPROC) (GLenum target, GLintptr offset, GLsizeiptr length);
 typedef void * ( * PFNGLMAPBUFFERRANGEPROC) (GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
-# 5664 "/usr/include/GL/glew.h" 3 4
+# 5664 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCURRENTPALETTEMATRIXARBPROC) (GLint index);
 typedef void ( * PFNGLMATRIXINDEXPOINTERARBPROC) (GLint size, GLenum type, GLsizei stride, void *pointer);
 typedef void ( * PFNGLMATRIXINDEXUBVARBPROC) (GLint size, GLubyte *indices);
 typedef void ( * PFNGLMATRIXINDEXUIVARBPROC) (GLint size, GLuint *indices);
 typedef void ( * PFNGLMATRIXINDEXUSVARBPROC) (GLint size, GLushort *indices);
-# 5685 "/usr/include/GL/glew.h" 3 4
+# 5685 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDBUFFERSBASEPROC) (GLenum target, GLuint first, GLsizei count, const GLuint* buffers);
 typedef void ( * PFNGLBINDBUFFERSRANGEPROC) (GLenum target, GLuint first, GLsizei count, const GLuint* buffers, const GLintptr *offsets, const GLsizeiptr *sizes);
 typedef void ( * PFNGLBINDIMAGETEXTURESPROC) (GLuint first, GLsizei count, const GLuint* textures);
 typedef void ( * PFNGLBINDSAMPLERSPROC) (GLuint first, GLsizei count, const GLuint* samplers);
 typedef void ( * PFNGLBINDTEXTURESPROC) (GLuint first, GLsizei count, const GLuint* textures);
 typedef void ( * PFNGLBINDVERTEXBUFFERSPROC) (GLuint first, GLsizei count, const GLuint* buffers, const GLintptr *offsets, const GLsizei *strides);
-# 5708 "/usr/include/GL/glew.h" 3 4
+# 5708 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIDRAWARRAYSINDIRECTPROC) (GLenum mode, const void *indirect, GLsizei primcount, GLsizei stride);
 typedef void ( * PFNGLMULTIDRAWELEMENTSINDIRECTPROC) (GLenum mode, GLenum type, const void *indirect, GLsizei primcount, GLsizei stride);
-# 5733 "/usr/include/GL/glew.h" 3 4
+# 5733 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSAMPLECOVERAGEARBPROC) (GLclampf value, GLboolean invert);
-# 5782 "/usr/include/GL/glew.h" 3 4
+# 5782 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLACTIVETEXTUREARBPROC) (GLenum texture);
 typedef void ( * PFNGLCLIENTACTIVETEXTUREARBPROC) (GLenum texture);
 typedef void ( * PFNGLMULTITEXCOORD1DARBPROC) (GLenum target, GLdouble s);
@@ -40378,7 +40288,7 @@ typedef void ( * PFNGLMULTITEXCOORD4IARBPROC) (GLenum target, GLint s, GLint t, 
 typedef void ( * PFNGLMULTITEXCOORD4IVARBPROC) (GLenum target, const GLint *v);
 typedef void ( * PFNGLMULTITEXCOORD4SARBPROC) (GLenum target, GLshort s, GLshort t, GLshort r, GLshort q);
 typedef void ( * PFNGLMULTITEXCOORD4SVARBPROC) (GLenum target, const GLshort *v);
-# 5867 "/usr/include/GL/glew.h" 3 4
+# 5867 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINQUERYARBPROC) (GLenum target, GLuint id);
 typedef void ( * PFNGLDELETEQUERIESARBPROC) (GLsizei n, const GLuint* ids);
 typedef void ( * PFNGLENDQUERYARBPROC) (GLenum target);
@@ -40387,23 +40297,23 @@ typedef void ( * PFNGLGETQUERYOBJECTIVARBPROC) (GLuint id, GLenum pname, GLint* 
 typedef void ( * PFNGLGETQUERYOBJECTUIVARBPROC) (GLuint id, GLenum pname, GLuint* params);
 typedef void ( * PFNGLGETQUERYIVARBPROC) (GLenum target, GLenum pname, GLint* params);
 typedef GLboolean ( * PFNGLISQUERYARBPROC) (GLuint id);
-# 5908 "/usr/include/GL/glew.h" 3 4
+# 5908 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMAXSHADERCOMPILERTHREADSARBPROC) (GLuint count);
-# 5961 "/usr/include/GL/glew.h" 3 4
+# 5961 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPOINTPARAMETERFARBPROC) (GLenum pname, GLfloat param);
 typedef void ( * PFNGLPOINTPARAMETERFVARBPROC) (GLenum pname, const GLfloat* params);
-# 5990 "/usr/include/GL/glew.h" 3 4
+# 5990 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPOLYGONOFFSETCLAMPPROC) (GLfloat factor, GLfloat units, GLfloat clamp);
-# 6060 "/usr/include/GL/glew.h" 3 4
+# 6060 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETPROGRAMINTERFACEIVPROC) (GLuint program, GLenum programInterface, GLenum pname, GLint* params);
 typedef GLuint ( * PFNGLGETPROGRAMRESOURCEINDEXPROC) (GLuint program, GLenum programInterface, const GLchar* name);
 typedef GLint ( * PFNGLGETPROGRAMRESOURCELOCATIONPROC) (GLuint program, GLenum programInterface, const GLchar* name);
 typedef GLint ( * PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC) (GLuint program, GLenum programInterface, const GLchar* name);
 typedef void ( * PFNGLGETPROGRAMRESOURCENAMEPROC) (GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei* length, GLchar *name);
 typedef void ( * PFNGLGETPROGRAMRESOURCEIVPROC) (GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, const GLenum* props, GLsizei bufSize, GLsizei *length, GLint *params);
-# 6088 "/usr/include/GL/glew.h" 3 4
+# 6088 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPROVOKINGVERTEXPROC) (GLenum mode);
-# 6132 "/usr/include/GL/glew.h" 3 4
+# 6132 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLenum ( * PFNGLGETGRAPHICSRESETSTATUSARBPROC) (void);
 typedef void ( * PFNGLGETNCOLORTABLEARBPROC) (GLenum target, GLenum format, GLenum type, GLsizei bufSize, void* table);
 typedef void ( * PFNGLGETNCOMPRESSEDTEXIMAGEARBPROC) (GLenum target, GLint lod, GLsizei bufSize, void* img);
@@ -40424,13 +40334,13 @@ typedef void ( * PFNGLGETNUNIFORMFVARBPROC) (GLuint program, GLint location, GLs
 typedef void ( * PFNGLGETNUNIFORMIVARBPROC) (GLuint program, GLint location, GLsizei bufSize, GLint* params);
 typedef void ( * PFNGLGETNUNIFORMUIVARBPROC) (GLuint program, GLint location, GLsizei bufSize, GLuint* params);
 typedef void ( * PFNGLREADNPIXELSARBPROC) (GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, void* data);
-# 6210 "/usr/include/GL/glew.h" 3 4
+# 6210 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLEVALUATEDEPTHVALUESARBPROC) (void);
 typedef void ( * PFNGLFRAMEBUFFERSAMPLELOCATIONSFVARBPROC) (GLenum target, GLuint start, GLsizei count, const GLfloat* v);
 typedef void ( * PFNGLNAMEDFRAMEBUFFERSAMPLELOCATIONSFVARBPROC) (GLuint framebuffer, GLuint start, GLsizei count, const GLfloat* v);
-# 6230 "/usr/include/GL/glew.h" 3 4
+# 6230 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMINSAMPLESHADINGARBPROC) (GLclampf value);
-# 6245 "/usr/include/GL/glew.h" 3 4
+# 6245 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDSAMPLERPROC) (GLuint unit, GLuint sampler);
 typedef void ( * PFNGLDELETESAMPLERSPROC) (GLsizei count, const GLuint * samplers);
 typedef void ( * PFNGLGENSAMPLERSPROC) (GLsizei count, GLuint* samplers);
@@ -40445,7 +40355,7 @@ typedef void ( * PFNGLSAMPLERPARAMETERFPROC) (GLuint sampler, GLenum pname, GLfl
 typedef void ( * PFNGLSAMPLERPARAMETERFVPROC) (GLuint sampler, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLSAMPLERPARAMETERIPROC) (GLuint sampler, GLenum pname, GLint param);
 typedef void ( * PFNGLSAMPLERPARAMETERIVPROC) (GLuint sampler, GLenum pname, const GLint* params);
-# 6316 "/usr/include/GL/glew.h" 3 4
+# 6316 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLACTIVESHADERPROGRAMPROC) (GLuint pipeline, GLuint program);
 typedef void ( * PFNGLBINDPROGRAMPIPELINEPROC) (GLuint pipeline);
 typedef GLuint ( * PFNGLCREATESHADERPROGRAMVPROC) (GLenum type, GLsizei count, const GLchar * const * strings);
@@ -40506,12 +40416,12 @@ typedef void ( * PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC) (GLuint program, GLint loca
 typedef void ( * PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC) (GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat* value);
 typedef void ( * PFNGLUSEPROGRAMSTAGESPROC) (GLuint pipeline, GLbitfield stages, GLuint program);
 typedef void ( * PFNGLVALIDATEPROGRAMPIPELINEPROC) (GLuint pipeline);
-# 6486 "/usr/include/GL/glew.h" 3 4
+# 6486 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC) (GLuint program, GLuint bufferIndex, GLenum pname, GLint* params);
-# 6609 "/usr/include/GL/glew.h" 3 4
+# 6609 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDIMAGETEXTUREPROC) (GLuint unit, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLenum format);
 typedef void ( * PFNGLMEMORYBARRIERPROC) (GLbitfield barriers);
-# 6668 "/usr/include/GL/glew.h" 3 4
+# 6668 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef char GLcharARB;
 typedef unsigned int GLhandleARB;
 
@@ -40554,9 +40464,9 @@ typedef void ( * PFNGLUNIFORMMATRIX3FVARBPROC) (GLint location, GLsizei count, G
 typedef void ( * PFNGLUNIFORMMATRIX4FVARBPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat* value);
 typedef void ( * PFNGLUSEPROGRAMOBJECTARBPROC) (GLhandleARB programObj);
 typedef void ( * PFNGLVALIDATEPROGRAMARBPROC) (GLhandleARB programObj);
-# 6795 "/usr/include/GL/glew.h" 3 4
+# 6795 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSHADERSTORAGEBLOCKBINDINGPROC) (GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding);
-# 6818 "/usr/include/GL/glew.h" 3 4
+# 6818 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETACTIVESUBROUTINENAMEPROC) (GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei* length, GLchar *name);
 typedef void ( * PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC) (GLuint program, GLenum shadertype, GLuint index, GLsizei bufsize, GLsizei* length, GLchar *name);
 typedef void ( * PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC) (GLuint program, GLenum shadertype, GLuint index, GLenum pname, GLint* values);
@@ -40565,18 +40475,18 @@ typedef GLuint ( * PFNGLGETSUBROUTINEINDEXPROC) (GLuint program, GLenum shaderty
 typedef GLint ( * PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC) (GLuint program, GLenum shadertype, const GLchar* name);
 typedef void ( * PFNGLGETUNIFORMSUBROUTINEUIVPROC) (GLenum shadertype, GLint location, GLuint* params);
 typedef void ( * PFNGLUNIFORMSUBROUTINESUIVPROC) (GLenum shadertype, GLsizei count, const GLuint* indices);
-# 6896 "/usr/include/GL/glew.h" 3 4
+# 6896 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOMPILESHADERINCLUDEARBPROC) (GLuint shader, GLsizei count, const GLchar* const *path, const GLint *length);
 typedef void ( * PFNGLDELETENAMEDSTRINGARBPROC) (GLint namelen, const GLchar* name);
 typedef void ( * PFNGLGETNAMEDSTRINGARBPROC) (GLint namelen, const GLchar* name, GLsizei bufSize, GLint *stringlen, GLchar *string);
 typedef void ( * PFNGLGETNAMEDSTRINGIVARBPROC) (GLint namelen, const GLchar* name, GLenum pname, GLint *params);
 typedef GLboolean ( * PFNGLISNAMEDSTRINGARBPROC) (GLint namelen, const GLchar* name);
 typedef void ( * PFNGLNAMEDSTRINGARBPROC) (GLenum type, GLint namelen, const GLchar* name, GLint stringlen, const GLchar *string);
-# 6955 "/usr/include/GL/glew.h" 3 4
+# 6955 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBUFFERPAGECOMMITMENTARBPROC) (GLenum target, GLintptr offset, GLsizeiptr size, GLboolean commit);
-# 6980 "/usr/include/GL/glew.h" 3 4
+# 6980 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXPAGECOMMITMENTARBPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLboolean commit);
-# 7050 "/usr/include/GL/glew.h" 3 4
+# 7050 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLenum ( * PFNGLCLIENTWAITSYNCPROC) (GLsync GLsync,GLbitfield flags,GLuint64 timeout);
 typedef void ( * PFNGLDELETESYNCPROC) (GLsync GLsync);
 typedef GLsync ( * PFNGLFENCESYNCPROC) (GLenum condition,GLbitfield flags);
@@ -40584,17 +40494,17 @@ typedef void ( * PFNGLGETINTEGER64VPROC) (GLenum pname, GLint64* params);
 typedef void ( * PFNGLGETSYNCIVPROC) (GLsync GLsync,GLenum pname,GLsizei bufSize,GLsizei* length, GLint *values);
 typedef GLboolean ( * PFNGLISSYNCPROC) (GLsync GLsync);
 typedef void ( * PFNGLWAITSYNCPROC) (GLsync GLsync,GLbitfield flags,GLuint64 timeout);
-# 7108 "/usr/include/GL/glew.h" 3 4
+# 7108 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPATCHPARAMETERFVPROC) (GLenum pname, const GLfloat* values);
 typedef void ( * PFNGLPATCHPARAMETERIPROC) (GLenum pname, GLint value);
-# 7123 "/usr/include/GL/glew.h" 3 4
+# 7123 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXTUREBARRIERPROC) (void);
-# 7153 "/usr/include/GL/glew.h" 3 4
+# 7153 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXBUFFERARBPROC) (GLenum target, GLenum internalformat, GLuint buffer);
-# 7179 "/usr/include/GL/glew.h" 3 4
+# 7179 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXBUFFERRANGEPROC) (GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
 typedef void ( * PFNGLTEXTUREBUFFERRANGEEXTPROC) (GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
-# 7206 "/usr/include/GL/glew.h" 3 4
+# 7206 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOMPRESSEDTEXIMAGE1DARBPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const void *data);
 typedef void ( * PFNGLCOMPRESSEDTEXIMAGE2DARBPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void *data);
 typedef void ( * PFNGLCOMPRESSEDTEXIMAGE3DARBPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const void *data);
@@ -40602,27 +40512,27 @@ typedef void ( * PFNGLCOMPRESSEDTEXSUBIMAGE1DARBPROC) (GLenum target, GLint leve
 typedef void ( * PFNGLCOMPRESSEDTEXSUBIMAGE2DARBPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void *data);
 typedef void ( * PFNGLCOMPRESSEDTEXSUBIMAGE3DARBPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const void *data);
 typedef void ( * PFNGLGETCOMPRESSEDTEXIMAGEARBPROC) (GLenum target, GLint lod, void *img);
-# 7471 "/usr/include/GL/glew.h" 3 4
+# 7471 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETMULTISAMPLEFVPROC) (GLenum pname, GLuint index, GLfloat* val);
 typedef void ( * PFNGLSAMPLEMASKIPROC) (GLuint index, GLbitfield mask);
 typedef void ( * PFNGLTEXIMAGE2DMULTISAMPLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
 typedef void ( * PFNGLTEXIMAGE3DMULTISAMPLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
-# 7592 "/usr/include/GL/glew.h" 3 4
+# 7592 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXSTORAGE1DPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width);
 typedef void ( * PFNGLTEXSTORAGE2DPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
 typedef void ( * PFNGLTEXSTORAGE3DPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth);
-# 7609 "/usr/include/GL/glew.h" 3 4
+# 7609 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXSTORAGE2DMULTISAMPLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
 typedef void ( * PFNGLTEXSTORAGE3DMULTISAMPLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
 typedef void ( * PFNGLTEXTURESTORAGE2DMULTISAMPLEEXTPROC) (GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
 typedef void ( * PFNGLTEXTURESTORAGE3DMULTISAMPLEEXTPROC) (GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
-# 7649 "/usr/include/GL/glew.h" 3 4
+# 7649 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXTUREVIEWPROC) (GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers);
-# 7665 "/usr/include/GL/glew.h" 3 4
+# 7665 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETQUERYOBJECTI64VPROC) (GLuint id, GLenum pname, GLint64* params);
 typedef void ( * PFNGLGETQUERYOBJECTUI64VPROC) (GLuint id, GLenum pname, GLuint64* params);
 typedef void ( * PFNGLQUERYCOUNTERPROC) (GLuint id, GLenum target);
-# 7687 "/usr/include/GL/glew.h" 3 4
+# 7687 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDTRANSFORMFEEDBACKPROC) (GLenum target, GLuint id);
 typedef void ( * PFNGLDELETETRANSFORMFEEDBACKSPROC) (GLsizei n, const GLuint* ids);
 typedef void ( * PFNGLDRAWTRANSFORMFEEDBACKPROC) (GLenum mode, GLuint id);
@@ -40630,20 +40540,20 @@ typedef void ( * PFNGLGENTRANSFORMFEEDBACKSPROC) (GLsizei n, GLuint* ids);
 typedef GLboolean ( * PFNGLISTRANSFORMFEEDBACKPROC) (GLuint id);
 typedef void ( * PFNGLPAUSETRANSFORMFEEDBACKPROC) (void);
 typedef void ( * PFNGLRESUMETRANSFORMFEEDBACKPROC) (void);
-# 7715 "/usr/include/GL/glew.h" 3 4
+# 7715 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINQUERYINDEXEDPROC) (GLenum target, GLuint index, GLuint id);
 typedef void ( * PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC) (GLenum mode, GLuint id, GLuint stream);
 typedef void ( * PFNGLENDQUERYINDEXEDPROC) (GLenum target, GLuint index);
 typedef void ( * PFNGLGETQUERYINDEXEDIVPROC) (GLenum target, GLuint index, GLenum pname, GLint* params);
-# 7734 "/usr/include/GL/glew.h" 3 4
+# 7734 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC) (GLenum mode, GLuint id, GLsizei primcount);
 typedef void ( * PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC) (GLenum mode, GLuint id, GLuint stream, GLsizei primcount);
-# 7766 "/usr/include/GL/glew.h" 3 4
+# 7766 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLLOADTRANSPOSEMATRIXDARBPROC) (GLdouble m[16]);
 typedef void ( * PFNGLLOADTRANSPOSEMATRIXFARBPROC) (GLfloat m[16]);
 typedef void ( * PFNGLMULTTRANSPOSEMATRIXDARBPROC) (GLdouble m[16]);
 typedef void ( * PFNGLMULTTRANSPOSEMATRIXFARBPROC) (GLfloat m[16]);
-# 7819 "/usr/include/GL/glew.h" 3 4
+# 7819 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDBUFFERBASEPROC) (GLenum target, GLuint index, GLuint buffer);
 typedef void ( * PFNGLBINDBUFFERRANGEPROC) (GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size);
 typedef void ( * PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC) (GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformBlockName);
@@ -40654,12 +40564,12 @@ typedef void ( * PFNGLGETINTEGERI_VPROC) (GLenum target, GLuint index, GLint* da
 typedef GLuint ( * PFNGLGETUNIFORMBLOCKINDEXPROC) (GLuint program, const GLchar* uniformBlockName);
 typedef void ( * PFNGLGETUNIFORMINDICESPROC) (GLuint program, GLsizei uniformCount, const GLchar* const * uniformNames, GLuint* uniformIndices);
 typedef void ( * PFNGLUNIFORMBLOCKBINDINGPROC) (GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding);
-# 7863 "/usr/include/GL/glew.h" 3 4
+# 7863 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDVERTEXARRAYPROC) (GLuint array);
 typedef void ( * PFNGLDELETEVERTEXARRAYSPROC) (GLsizei n, const GLuint* arrays);
 typedef void ( * PFNGLGENVERTEXARRAYSPROC) (GLsizei n, GLuint* arrays);
 typedef GLboolean ( * PFNGLISVERTEXARRAYPROC) (GLuint array);
-# 7882 "/usr/include/GL/glew.h" 3 4
+# 7882 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETVERTEXATTRIBLDVPROC) (GLuint index, GLenum pname, GLdouble* params);
 typedef void ( * PFNGLVERTEXATTRIBL1DPROC) (GLuint index, GLdouble x);
 typedef void ( * PFNGLVERTEXATTRIBL1DVPROC) (GLuint index, const GLdouble* v);
@@ -40670,7 +40580,7 @@ typedef void ( * PFNGLVERTEXATTRIBL3DVPROC) (GLuint index, const GLdouble* v);
 typedef void ( * PFNGLVERTEXATTRIBL4DPROC) (GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 typedef void ( * PFNGLVERTEXATTRIBL4DVPROC) (GLuint index, const GLdouble* v);
 typedef void ( * PFNGLVERTEXATTRIBLPOINTERPROC) (GLuint index, GLint size, GLenum type, GLsizei stride, const void* pointer);
-# 7922 "/usr/include/GL/glew.h" 3 4
+# 7922 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDVERTEXBUFFERPROC) (GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
 typedef void ( * PFNGLVERTEXARRAYBINDVERTEXBUFFEREXTPROC) (GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
 typedef void ( * PFNGLVERTEXARRAYVERTEXATTRIBBINDINGEXTPROC) (GLuint vaobj, GLuint attribindex, GLuint bindingindex);
@@ -40683,7 +40593,7 @@ typedef void ( * PFNGLVERTEXATTRIBFORMATPROC) (GLuint attribindex, GLint size, G
 typedef void ( * PFNGLVERTEXATTRIBIFORMATPROC) (GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
 typedef void ( * PFNGLVERTEXATTRIBLFORMATPROC) (GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
 typedef void ( * PFNGLVERTEXBINDINGDIVISORPROC) (GLuint bindingindex, GLuint divisor);
-# 8000 "/usr/include/GL/glew.h" 3 4
+# 8000 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLVERTEXBLENDARBPROC) (GLint count);
 typedef void ( * PFNGLWEIGHTPOINTERARBPROC) (GLint size, GLenum type, GLsizei stride, void *pointer);
 typedef void ( * PFNGLWEIGHTBVARBPROC) (GLint size, GLbyte *weights);
@@ -40694,7 +40604,7 @@ typedef void ( * PFNGLWEIGHTSVARBPROC) (GLint size, GLshort *weights);
 typedef void ( * PFNGLWEIGHTUBVARBPROC) (GLint size, GLubyte *weights);
 typedef void ( * PFNGLWEIGHTUIVARBPROC) (GLint size, GLuint *weights);
 typedef void ( * PFNGLWEIGHTUSVARBPROC) (GLint size, GLushort *weights);
-# 8063 "/usr/include/GL/glew.h" 3 4
+# 8063 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef ptrdiff_t GLintptrARB;
 typedef ptrdiff_t GLsizeiptrARB;
 
@@ -40709,7 +40619,7 @@ typedef void ( * PFNGLGETBUFFERSUBDATAARBPROC) (GLenum target, GLintptrARB offse
 typedef GLboolean ( * PFNGLISBUFFERARBPROC) (GLuint buffer);
 typedef void * ( * PFNGLMAPBUFFERARBPROC) (GLenum target, GLenum access);
 typedef GLboolean ( * PFNGLUNMAPBUFFERARBPROC) (GLenum target);
-# 8179 "/usr/include/GL/glew.h" 3 4
+# 8179 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDPROGRAMARBPROC) (GLenum target, GLuint program);
 typedef void ( * PFNGLDELETEPROGRAMSARBPROC) (GLsizei n, const GLuint* programs);
 typedef void ( * PFNGLDISABLEVERTEXATTRIBARRAYARBPROC) (GLuint index);
@@ -40772,11 +40682,11 @@ typedef void ( * PFNGLVERTEXATTRIB4UBVARBPROC) (GLuint index, const GLubyte* v);
 typedef void ( * PFNGLVERTEXATTRIB4UIVARBPROC) (GLuint index, const GLuint* v);
 typedef void ( * PFNGLVERTEXATTRIB4USVARBPROC) (GLuint index, const GLushort* v);
 typedef void ( * PFNGLVERTEXATTRIBPOINTERARBPROC) (GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void *pointer);
-# 8322 "/usr/include/GL/glew.h" 3 4
+# 8322 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDATTRIBLOCATIONARBPROC) (GLhandleARB programObj, GLuint index, const GLcharARB* name);
 typedef void ( * PFNGLGETACTIVEATTRIBARBPROC) (GLhandleARB programObj, GLuint index, GLsizei maxLength, GLsizei* length, GLint *size, GLenum *type, GLcharARB *name);
 typedef GLint ( * PFNGLGETATTRIBLOCATIONARBPROC) (GLhandleARB programObj, const GLcharARB* name);
-# 8353 "/usr/include/GL/glew.h" 3 4
+# 8353 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLORP3UIPROC) (GLenum type, GLuint color);
 typedef void ( * PFNGLCOLORP3UIVPROC) (GLenum type, const GLuint* color);
 typedef void ( * PFNGLCOLORP4UIPROC) (GLenum type, GLuint color);
@@ -40815,7 +40725,7 @@ typedef void ( * PFNGLVERTEXP3UIPROC) (GLenum type, GLuint value);
 typedef void ( * PFNGLVERTEXP3UIVPROC) (GLenum type, const GLuint* value);
 typedef void ( * PFNGLVERTEXP4UIPROC) (GLenum type, GLuint value);
 typedef void ( * PFNGLVERTEXP4UIVPROC) (GLenum type, const GLuint* value);
-# 8454 "/usr/include/GL/glew.h" 3 4
+# 8454 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDEPTHRANGEARRAYVPROC) (GLuint first, GLsizei count, const GLclampd * v);
 typedef void ( * PFNGLDEPTHRANGEINDEXEDPROC) (GLuint index, GLclampd n, GLclampd f);
 typedef void ( * PFNGLGETDOUBLEI_VPROC) (GLenum target, GLuint index, GLdouble* data);
@@ -40826,7 +40736,7 @@ typedef void ( * PFNGLSCISSORINDEXEDVPROC) (GLuint index, const GLint * v);
 typedef void ( * PFNGLVIEWPORTARRAYVPROC) (GLuint first, GLsizei count, const GLfloat * v);
 typedef void ( * PFNGLVIEWPORTINDEXEDFPROC) (GLuint index, GLfloat x, GLfloat y, GLfloat w, GLfloat h);
 typedef void ( * PFNGLVIEWPORTINDEXEDFVPROC) (GLuint index, const GLfloat * v);
-# 8485 "/usr/include/GL/glew.h" 3 4
+# 8485 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLWINDOWPOS2DARBPROC) (GLdouble x, GLdouble y);
 typedef void ( * PFNGLWINDOWPOS2DVARBPROC) (const GLdouble* p);
 typedef void ( * PFNGLWINDOWPOS2FARBPROC) (GLfloat x, GLfloat y);
@@ -40843,20 +40753,20 @@ typedef void ( * PFNGLWINDOWPOS3IARBPROC) (GLint x, GLint y, GLint z);
 typedef void ( * PFNGLWINDOWPOS3IVARBPROC) (const GLint* p);
 typedef void ( * PFNGLWINDOWPOS3SARBPROC) (GLshort x, GLshort y, GLshort z);
 typedef void ( * PFNGLWINDOWPOS3SVARBPROC) (const GLshort* p);
-# 8569 "/usr/include/GL/glew.h" 3 4
+# 8569 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMAXACTIVESHADERCORESARMPROC) (GLuint count);
-# 8685 "/usr/include/GL/glew.h" 3 4
+# 8685 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWBUFFERSATIPROC) (GLsizei n, const GLenum* bufs);
-# 8702 "/usr/include/GL/glew.h" 3 4
+# 8702 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWELEMENTARRAYATIPROC) (GLenum mode, GLsizei count);
 typedef void ( * PFNGLDRAWRANGEELEMENTARRAYATIPROC) (GLenum mode, GLuint start, GLuint end, GLsizei count);
 typedef void ( * PFNGLELEMENTPOINTERATIPROC) (GLenum type, const void *pointer);
-# 8728 "/usr/include/GL/glew.h" 3 4
+# 8728 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETTEXBUMPPARAMETERFVATIPROC) (GLenum pname, GLfloat *param);
 typedef void ( * PFNGLGETTEXBUMPPARAMETERIVATIPROC) (GLenum pname, GLint *param);
 typedef void ( * PFNGLTEXBUMPPARAMETERFVATIPROC) (GLenum pname, GLfloat *param);
 typedef void ( * PFNGLTEXBUMPPARAMETERIVATIPROC) (GLenum pname, GLint *param);
-# 8802 "/usr/include/GL/glew.h" 3 4
+# 8802 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLALPHAFRAGMENTOP1ATIPROC) (GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod);
 typedef void ( * PFNGLALPHAFRAGMENTOP2ATIPROC) (GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod);
 typedef void ( * PFNGLALPHAFRAGMENTOP3ATIPROC) (GLenum op, GLuint dst, GLuint dstMod, GLuint arg1, GLuint arg1Rep, GLuint arg1Mod, GLuint arg2, GLuint arg2Rep, GLuint arg2Mod, GLuint arg3, GLuint arg3Rep, GLuint arg3Mod);
@@ -40871,16 +40781,16 @@ typedef GLuint ( * PFNGLGENFRAGMENTSHADERSATIPROC) (GLuint range);
 typedef void ( * PFNGLPASSTEXCOORDATIPROC) (GLuint dst, GLuint coord, GLenum swizzle);
 typedef void ( * PFNGLSAMPLEMAPATIPROC) (GLuint dst, GLuint interp, GLenum swizzle);
 typedef void ( * PFNGLSETFRAGMENTSHADERCONSTANTATIPROC) (GLuint dst, const GLfloat* value);
-# 8841 "/usr/include/GL/glew.h" 3 4
+# 8841 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void * ( * PFNGLMAPOBJECTBUFFERATIPROC) (GLuint buffer);
 typedef void ( * PFNGLUNMAPOBJECTBUFFERATIPROC) (GLuint buffer);
-# 8879 "/usr/include/GL/glew.h" 3 4
+# 8879 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPNTRIANGLESFATIPROC) (GLenum pname, GLfloat param);
 typedef void ( * PFNGLPNTRIANGLESIATIPROC) (GLenum pname, GLint param);
-# 8899 "/usr/include/GL/glew.h" 3 4
+# 8899 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSTENCILFUNCSEPARATEATIPROC) (GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask);
 typedef void ( * PFNGLSTENCILOPSEPARATEATIPROC) (GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
-# 9001 "/usr/include/GL/glew.h" 3 4
+# 9001 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLARRAYOBJECTATIPROC) (GLenum array, GLint size, GLenum type, GLsizei stride, GLuint buffer, GLuint offset);
 typedef void ( * PFNGLFREEOBJECTBUFFERATIPROC) (GLuint buffer);
 typedef void ( * PFNGLGETARRAYOBJECTFVATIPROC) (GLenum array, GLenum pname, GLfloat* params);
@@ -40893,11 +40803,11 @@ typedef GLboolean ( * PFNGLISOBJECTBUFFERATIPROC) (GLuint buffer);
 typedef GLuint ( * PFNGLNEWOBJECTBUFFERATIPROC) (GLsizei size, const void *pointer, GLenum usage);
 typedef void ( * PFNGLUPDATEOBJECTBUFFERATIPROC) (GLuint buffer, GLuint offset, GLsizei size, const void *pointer, GLenum preserve);
 typedef void ( * PFNGLVARIANTARRAYOBJECTATIPROC) (GLuint id, GLenum type, GLsizei stride, GLuint buffer, GLuint offset);
-# 9036 "/usr/include/GL/glew.h" 3 4
+# 9036 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETVERTEXATTRIBARRAYOBJECTFVATIPROC) (GLuint index, GLenum pname, GLfloat* params);
 typedef void ( * PFNGLGETVERTEXATTRIBARRAYOBJECTIVATIPROC) (GLuint index, GLenum pname, GLint* params);
 typedef void ( * PFNGLVERTEXATTRIBARRAYOBJECTATIPROC) (GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLuint buffer, GLuint offset);
-# 9064 "/usr/include/GL/glew.h" 3 4
+# 9064 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLIENTACTIVEVERTEXSTREAMATIPROC) (GLenum stream);
 typedef void ( * PFNGLNORMALSTREAM3BATIPROC) (GLenum stream, GLbyte x, GLbyte y, GLbyte z);
 typedef void ( * PFNGLNORMALSTREAM3BVATIPROC) (GLenum stream, const GLbyte *coords);
@@ -40943,43 +40853,43 @@ typedef void ( * PFNGLVERTEXSTREAM4IATIPROC) (GLenum stream, GLint x, GLint y, G
 typedef void ( * PFNGLVERTEXSTREAM4IVATIPROC) (GLenum stream, const GLint *coords);
 typedef void ( * PFNGLVERTEXSTREAM4SATIPROC) (GLenum stream, GLshort x, GLshort y, GLshort z, GLshort w);
 typedef void ( * PFNGLVERTEXSTREAM4SVATIPROC) (GLenum stream, const GLshort *coords);
-# 9233 "/usr/include/GL/glew.h" 3 4
+# 9233 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLEGLIMAGETARGETTEXSTORAGEEXTPROC) (GLenum target, GLeglImageOES image, const GLint* attrib_list);
 typedef void ( * PFNGLEGLIMAGETARGETTEXTURESTORAGEEXTPROC) (GLuint texture, GLeglImageOES image, const GLint* attrib_list);
-# 9292 "/usr/include/GL/glew.h" 3 4
+# 9292 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEEXTPROC) (GLenum mode, GLint first, GLsizei count, GLsizei instancecount, GLuint baseinstance);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEEXTPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLuint baseinstance);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEEXTPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance);
-# 9328 "/usr/include/GL/glew.h" 3 4
+# 9328 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLint ( * PFNGLGETUNIFORMBUFFERSIZEEXTPROC) (GLuint program, GLint location);
 typedef GLintptr ( * PFNGLGETUNIFORMOFFSETEXTPROC) (GLuint program, GLint location);
 typedef void ( * PFNGLUNIFORMBUFFEREXTPROC) (GLuint program, GLint location, GLuint buffer);
-# 9351 "/usr/include/GL/glew.h" 3 4
+# 9351 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDCOLOREXTPROC) (GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
-# 9367 "/usr/include/GL/glew.h" 3 4
+# 9367 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONSEPARATEEXTPROC) (GLenum modeRGB, GLenum modeAlpha);
-# 9388 "/usr/include/GL/glew.h" 3 4
+# 9388 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDFRAGDATALOCATIONINDEXEDEXTPROC) (GLuint program, GLuint colorNumber, GLuint index, const GLchar * name);
 typedef GLint ( * PFNGLGETFRAGDATAINDEXEXTPROC) (GLuint program, const GLchar * name);
 typedef GLint ( * PFNGLGETPROGRAMRESOURCELOCATIONINDEXEXTPROC) (GLuint program, GLenum programInterface, const GLchar* name);
-# 9410 "/usr/include/GL/glew.h" 3 4
+# 9410 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDFUNCSEPARATEEXTPROC) (GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
-# 9437 "/usr/include/GL/glew.h" 3 4
+# 9437 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONEXTPROC) (GLenum mode);
-# 9472 "/usr/include/GL/glew.h" 3 4
+# 9472 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBUFFERSTORAGEEXTPROC) (GLenum target, GLsizeiptr size, const void *data, GLbitfield flags);
-# 9485 "/usr/include/GL/glew.h" 3 4
+# 9485 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLEARTEXIMAGEEXTPROC) (GLuint texture, GLint level, GLenum format, GLenum type, const void *data);
 typedef void ( * PFNGLCLEARTEXSUBIMAGEEXTPROC) (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *data);
-# 9507 "/usr/include/GL/glew.h" 3 4
+# 9507 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLIPCONTROLEXTPROC) (GLenum origin, GLenum depth);
-# 9591 "/usr/include/GL/glew.h" 3 4
+# 9591 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLORSUBTABLEEXTPROC) (GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, const void *data);
 typedef void ( * PFNGLCOPYCOLORSUBTABLEEXTPROC) (GLenum target, GLsizei start, GLint x, GLint y, GLsizei width);
-# 9609 "/usr/include/GL/glew.h" 3 4
+# 9609 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLLOCKARRAYSEXTPROC) (GLint first, GLsizei count);
 typedef void ( * PFNGLUNLOCKARRAYSEXTPROC) (void);
-# 9663 "/usr/include/GL/glew.h" 3 4
+# 9663 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCONVOLUTIONFILTER1DEXTPROC) (GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const void *image);
 typedef void ( * PFNGLCONVOLUTIONFILTER2DEXTPROC) (GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const void *image);
 typedef void ( * PFNGLCONVOLUTIONPARAMETERFEXTPROC) (GLenum target, GLenum pname, GLfloat param);
@@ -40993,30 +40903,30 @@ typedef void ( * PFNGLGETCONVOLUTIONPARAMETERFVEXTPROC) (GLenum target, GLenum p
 typedef void ( * PFNGLGETCONVOLUTIONPARAMETERIVEXTPROC) (GLenum target, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETSEPARABLEFILTEREXTPROC) (GLenum target, GLenum format, GLenum type, void *row, void *column, void *span);
 typedef void ( * PFNGLSEPARABLEFILTER2DEXTPROC) (GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, const void *row, const void *column);
-# 9715 "/usr/include/GL/glew.h" 3 4
+# 9715 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINORMALPOINTEREXTPROC) (GLenum type, GLsizei stride, void *pointer);
 typedef void ( * PFNGLTANGENTPOINTEREXTPROC) (GLenum type, GLsizei stride, void *pointer);
-# 9730 "/usr/include/GL/glew.h" 3 4
+# 9730 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYIMAGESUBDATAEXTPROC) (GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth);
-# 9743 "/usr/include/GL/glew.h" 3 4
+# 9743 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYTEXIMAGE1DEXTPROC) (GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border);
 typedef void ( * PFNGLCOPYTEXIMAGE2DEXTPROC) (GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border);
 typedef void ( * PFNGLCOPYTEXSUBIMAGE1DEXTPROC) (GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width);
 typedef void ( * PFNGLCOPYTEXSUBIMAGE2DEXTPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 typedef void ( * PFNGLCOPYTEXSUBIMAGE3DEXTPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
-# 9768 "/usr/include/GL/glew.h" 3 4
+# 9768 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCULLPARAMETERDVEXTPROC) (GLenum pname, GLdouble* params);
 typedef void ( * PFNGLCULLPARAMETERFVEXTPROC) (GLenum pname, GLfloat* params);
-# 9790 "/usr/include/GL/glew.h" 3 4
+# 9790 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETOBJECTLABELEXTPROC) (GLenum type, GLuint object, GLsizei bufSize, GLsizei* length, GLchar *label);
 typedef void ( * PFNGLLABELOBJECTEXTPROC) (GLenum type, GLuint object, GLsizei length, const GLchar* label);
-# 9805 "/usr/include/GL/glew.h" 3 4
+# 9805 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLINSERTEVENTMARKEREXTPROC) (GLsizei length, const GLchar* marker);
 typedef void ( * PFNGLPOPGROUPMARKEREXTPROC) (void);
 typedef void ( * PFNGLPUSHGROUPMARKEREXTPROC) (GLsizei length, const GLchar* marker);
-# 9825 "/usr/include/GL/glew.h" 3 4
+# 9825 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDEPTHBOUNDSEXTPROC) (GLclampd zmin, GLclampd zmax);
-# 9853 "/usr/include/GL/glew.h" 3 4
+# 9853 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDMULTITEXTUREEXTPROC) (GLenum texunit, GLenum target, GLuint texture);
 typedef GLenum ( * PFNGLCHECKNAMEDFRAMEBUFFERSTATUSEXTPROC) (GLuint framebuffer, GLenum target);
 typedef void ( * PFNGLCLIENTATTRIBDEFAULTEXTPROC) (GLbitfield mask);
@@ -41233,9 +41143,9 @@ typedef void ( * PFNGLVERTEXARRAYVERTEXATTRIBDIVISOREXTPROC) (GLuint vaobj, GLui
 typedef void ( * PFNGLVERTEXARRAYVERTEXATTRIBIOFFSETEXTPROC) (GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLsizei stride, GLintptr offset);
 typedef void ( * PFNGLVERTEXARRAYVERTEXATTRIBOFFSETEXTPROC) (GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLintptr offset);
 typedef void ( * PFNGLVERTEXARRAYVERTEXOFFSETEXTPROC) (GLuint vaobj, GLuint buffer, GLint size, GLenum type, GLsizei stride, GLintptr offset);
-# 10300 "/usr/include/GL/glew.h" 3 4
+# 10300 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, const GLenum* attachments);
-# 10321 "/usr/include/GL/glew.h" 3 4
+# 10321 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINQUERYEXTPROC) (GLenum target, GLuint id);
 typedef void ( * PFNGLDELETEQUERIESEXTPROC) (GLsizei n, const GLuint* ids);
 typedef void ( * PFNGLENDQUERYEXTPROC) (GLenum target);
@@ -41246,16 +41156,16 @@ typedef void ( * PFNGLGETQUERYOBJECTUIVEXTPROC) (GLuint id, GLenum pname, GLuint
 typedef void ( * PFNGLGETQUERYIVEXTPROC) (GLenum target, GLenum pname, GLint* params);
 typedef GLboolean ( * PFNGLISQUERYEXTPROC) (GLuint id);
 typedef void ( * PFNGLQUERYCOUNTEREXTPROC) (GLuint id, GLenum target);
-# 10387 "/usr/include/GL/glew.h" 3 4
+# 10387 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWBUFFERSEXTPROC) (GLsizei n, const GLenum* bufs);
-# 10400 "/usr/include/GL/glew.h" 3 4
+# 10400 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLORMASKINDEXEDEXTPROC) (GLuint buf, GLboolean r, GLboolean g, GLboolean b, GLboolean a);
 typedef void ( * PFNGLDISABLEINDEXEDEXTPROC) (GLenum target, GLuint index);
 typedef void ( * PFNGLENABLEINDEXEDEXTPROC) (GLenum target, GLuint index);
 typedef void ( * PFNGLGETBOOLEANINDEXEDVEXTPROC) (GLenum value, GLuint index, GLboolean* data);
 typedef void ( * PFNGLGETINTEGERINDEXEDVEXTPROC) (GLenum value, GLuint index, GLint* data);
 typedef GLboolean ( * PFNGLISENABLEDINDEXEDEXTPROC) (GLenum target, GLuint index);
-# 10423 "/usr/include/GL/glew.h" 3 4
+# 10423 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONSEPARATEIEXTPROC) (GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 typedef void ( * PFNGLBLENDEQUATIONIEXTPROC) (GLuint buf, GLenum mode);
 typedef void ( * PFNGLBLENDFUNCSEPARATEIEXTPROC) (GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
@@ -41264,31 +41174,31 @@ typedef void ( * PFNGLCOLORMASKIEXTPROC) (GLuint buf, GLboolean r, GLboolean g, 
 typedef void ( * PFNGLDISABLEIEXTPROC) (GLenum target, GLuint index);
 typedef void ( * PFNGLENABLEIEXTPROC) (GLenum target, GLuint index);
 typedef GLboolean ( * PFNGLISENABLEDIEXTPROC) (GLenum target, GLuint index);
-# 10450 "/usr/include/GL/glew.h" 3 4
+# 10450 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWELEMENTSBASEVERTEXEXTPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLint basevertex);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXEXTPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex);
 typedef void ( * PFNGLDRAWRANGEELEMENTSBASEVERTEXEXTPROC) (GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void *indices, GLint basevertex);
 typedef void ( * PFNGLMULTIDRAWELEMENTSBASEVERTEXEXTPROC) (GLenum mode, const GLsizei* count, GLenum type, const void *const *indices, GLsizei drawcount, const GLint *basevertex);
-# 10469 "/usr/include/GL/glew.h" 3 4
+# 10469 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWARRAYSINSTANCEDEXTPROC) (GLenum mode, GLint start, GLsizei count, GLsizei primcount);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDEXTPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
-# 10487 "/usr/include/GL/glew.h" 3 4
+# 10487 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWRANGEELEMENTSEXTPROC) (GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void *indices);
-# 10500 "/usr/include/GL/glew.h" 3 4
+# 10500 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWTRANSFORMFEEDBACKEXTPROC) (GLenum mode, GLuint id);
 typedef void ( * PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDEXTPROC) (GLenum mode, GLuint id, GLsizei instancecount);
-# 10515 "/usr/include/GL/glew.h" 3 4
+# 10515 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void* GLeglClientBufferEXT;
 
 typedef void ( * PFNGLBUFFERSTORAGEEXTERNALEXTPROC) (GLenum target, GLintptr offset, GLsizeiptr size, GLeglClientBufferEXT clientBuffer, GLbitfield flags);
 typedef void ( * PFNGLNAMEDBUFFERSTORAGEEXTERNALEXTPROC) (GLuint buffer, GLintptr offset, GLsizeiptr size, GLeglClientBufferEXT clientBuffer, GLbitfield flags);
-# 10550 "/usr/include/GL/glew.h" 3 4
+# 10550 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFOGCOORDPOINTEREXTPROC) (GLenum type, GLsizei stride, const void *pointer);
 typedef void ( * PFNGLFOGCOORDDEXTPROC) (GLdouble coord);
 typedef void ( * PFNGLFOGCOORDDVEXTPROC) (const GLdouble *coord);
 typedef void ( * PFNGLFOGCOORDFEXTPROC) (GLfloat coord);
 typedef void ( * PFNGLFOGCOORDFVEXTPROC) (const GLfloat *coord);
-# 10595 "/usr/include/GL/glew.h" 3 4
+# 10595 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAGMENTCOLORMATERIALEXTPROC) (GLenum face, GLenum mode);
 typedef void ( * PFNGLFRAGMENTLIGHTMODELFEXTPROC) (GLenum pname, GLfloat param);
 typedef void ( * PFNGLFRAGMENTLIGHTMODELFVEXTPROC) (GLenum pname, GLfloat* params);
@@ -41307,19 +41217,19 @@ typedef void ( * PFNGLGETFRAGMENTLIGHTIVEXTPROC) (GLenum light, GLenum pname, GL
 typedef void ( * PFNGLGETFRAGMENTMATERIALFVEXTPROC) (GLenum face, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLGETFRAGMENTMATERIALIVEXTPROC) (GLenum face, GLenum pname, const GLint* params);
 typedef void ( * PFNGLLIGHTENVIEXTPROC) (GLenum pname, GLint param);
-# 10670 "/usr/include/GL/glew.h" 3 4
+# 10670 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERSHADINGRATEEXTPROC) (GLenum target, GLenum attachment, GLuint texture, GLint baseLayer, GLsizei numLayers, GLsizei texelWidth, GLsizei texelHeight);
 typedef void ( * PFNGLGETFRAGMENTSHADINGRATESEXTPROC) (GLsizei samples, GLsizei maxCount, GLsizei* count, GLenum *shadingRates);
 typedef void ( * PFNGLSHADINGRATECOMBINEROPSEXTPROC) (GLenum combinerOp0, GLenum combinerOp1);
 typedef void ( * PFNGLSHADINGRATEEXTPROC) (GLenum rate);
-# 10712 "/usr/include/GL/glew.h" 3 4
+# 10712 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLITFRAMEBUFFEREXTPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
-# 10725 "/usr/include/GL/glew.h" 3 4
+# 10725 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLITFRAMEBUFFERLAYEREXTPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint srcLayer, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLint dstLayer, GLbitfield mask, GLenum filter);
 typedef void ( * PFNGLBLITFRAMEBUFFERLAYERSEXTPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
-# 10744 "/usr/include/GL/glew.h" 3 4
+# 10744 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-# 10821 "/usr/include/GL/glew.h" 3 4
+# 10821 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDFRAMEBUFFEREXTPROC) (GLenum target, GLuint framebuffer);
 typedef void ( * PFNGLBINDRENDERBUFFEREXTPROC) (GLenum target, GLuint renderbuffer);
 typedef GLenum ( * PFNGLCHECKFRAMEBUFFERSTATUSEXTPROC) (GLenum target);
@@ -41337,14 +41247,14 @@ typedef void ( * PFNGLGETRENDERBUFFERPARAMETERIVEXTPROC) (GLenum target, GLenum 
 typedef GLboolean ( * PFNGLISFRAMEBUFFEREXTPROC) (GLuint framebuffer);
 typedef GLboolean ( * PFNGLISRENDERBUFFEREXTPROC) (GLuint renderbuffer);
 typedef void ( * PFNGLRENDERBUFFERSTORAGEEXTPROC) (GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
-# 10985 "/usr/include/GL/glew.h" 3 4
+# 10985 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTUREEXTPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level);
 typedef void ( * PFNGLFRAMEBUFFERTEXTUREFACEEXTPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face);
 typedef void ( * PFNGLPROGRAMPARAMETERIEXTPROC) (GLuint program, GLenum pname, GLint value);
-# 11002 "/usr/include/GL/glew.h" 3 4
+# 11002 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPROGRAMENVPARAMETERS4FVEXTPROC) (GLenum target, GLuint index, GLsizei count, const GLfloat* params);
 typedef void ( * PFNGLPROGRAMLOCALPARAMETERS4FVEXTPROC) (GLenum target, GLuint index, GLsizei count, const GLfloat* params);
-# 11044 "/usr/include/GL/glew.h" 3 4
+# 11044 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDFRAGDATALOCATIONEXTPROC) (GLuint program, GLuint color, const GLchar *name);
 typedef GLint ( * PFNGLGETFRAGDATALOCATIONEXTPROC) (GLuint program, const GLchar *name);
 typedef void ( * PFNGLGETUNIFORMUIVEXTPROC) (GLuint program, GLint location, GLuint *params);
@@ -41379,7 +41289,7 @@ typedef void ( * PFNGLVERTEXATTRIBI4UIEXTPROC) (GLuint index, GLuint x, GLuint y
 typedef void ( * PFNGLVERTEXATTRIBI4UIVEXTPROC) (GLuint index, const GLuint *v);
 typedef void ( * PFNGLVERTEXATTRIBI4USVEXTPROC) (GLuint index, const GLushort *v);
 typedef void ( * PFNGLVERTEXATTRIBIPOINTEREXTPROC) (GLuint index, GLint size, GLenum type, GLsizei stride, const void *pointer);
-# 11146 "/usr/include/GL/glew.h" 3 4
+# 11146 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETHISTOGRAMEXTPROC) (GLenum target, GLboolean reset, GLenum format, GLenum type, void *values);
 typedef void ( * PFNGLGETHISTOGRAMPARAMETERFVEXTPROC) (GLenum target, GLenum pname, GLfloat* params);
 typedef void ( * PFNGLGETHISTOGRAMPARAMETERIVEXTPROC) (GLenum target, GLenum pname, GLint* params);
@@ -41390,20 +41300,20 @@ typedef void ( * PFNGLHISTOGRAMEXTPROC) (GLenum target, GLsizei width, GLenum in
 typedef void ( * PFNGLMINMAXEXTPROC) (GLenum target, GLenum internalformat, GLboolean sink);
 typedef void ( * PFNGLRESETHISTOGRAMEXTPROC) (GLenum target);
 typedef void ( * PFNGLRESETMINMAXEXTPROC) (GLenum target);
-# 11186 "/usr/include/GL/glew.h" 3 4
+# 11186 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLINDEXFUNCEXTPROC) (GLenum func, GLfloat ref);
-# 11199 "/usr/include/GL/glew.h" 3 4
+# 11199 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLINDEXMATERIALEXTPROC) (GLenum face, GLenum mode);
-# 11223 "/usr/include/GL/glew.h" 3 4
+# 11223 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLVERTEXATTRIBDIVISOREXTPROC) (GLuint index, GLuint divisor);
-# 11246 "/usr/include/GL/glew.h" 3 4
+# 11246 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLAPPLYTEXTUREEXTPROC) (GLenum mode);
 typedef void ( * PFNGLTEXTURELIGHTEXTPROC) (GLenum pname);
 typedef void ( * PFNGLTEXTUREMATERIALEXTPROC) (GLenum face, GLenum mode);
-# 11270 "/usr/include/GL/glew.h" 3 4
+# 11270 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFLUSHMAPPEDBUFFERRANGEEXTPROC) (GLenum target, GLintptr offset, GLsizeiptr length);
 typedef void * ( * PFNGLMAPBUFFERRANGEEXTPROC) (GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
-# 11297 "/usr/include/GL/glew.h" 3 4
+# 11297 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBUFFERSTORAGEMEMEXTPROC) (GLenum target, GLsizeiptr size, GLuint memory, GLuint64 offset);
 typedef void ( * PFNGLCREATEMEMORYOBJECTSEXTPROC) (GLsizei n, GLuint* memoryObjects);
 typedef void ( * PFNGLDELETEMEMORYOBJECTSEXTPROC) (GLsizei n, const GLuint* memoryObjects);
@@ -41423,68 +41333,68 @@ typedef void ( * PFNGLTEXTURESTORAGEMEM2DEXTPROC) (GLuint texture, GLsizei level
 typedef void ( * PFNGLTEXTURESTORAGEMEM2DMULTISAMPLEEXTPROC) (GLuint texture, GLsizei samples, GLenum internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations, GLuint memory, GLuint64 offset);
 typedef void ( * PFNGLTEXTURESTORAGEMEM3DEXTPROC) (GLuint texture, GLsizei levels, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLuint memory, GLuint64 offset);
 typedef void ( * PFNGLTEXTURESTORAGEMEM3DMULTISAMPLEEXTPROC) (GLuint texture, GLsizei samples, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations, GLuint memory, GLuint64 offset);
-# 11348 "/usr/include/GL/glew.h" 3 4
+# 11348 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLIMPORTMEMORYFDEXTPROC) (GLuint memory, GLuint64 size, GLenum handleType, GLint fd);
-# 11373 "/usr/include/GL/glew.h" 3 4
+# 11373 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLIMPORTMEMORYWIN32HANDLEEXTPROC) (GLuint memory, GLuint64 size, GLenum handleType, void *handle);
 typedef void ( * PFNGLIMPORTMEMORYWIN32NAMEEXTPROC) (GLuint memory, GLuint64 size, GLenum handleType, const void *name);
-# 11455 "/usr/include/GL/glew.h" 3 4
+# 11455 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWMESHTASKSEXTPROC) (GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z);
 typedef void ( * PFNGLDRAWMESHTASKSINDIRECTEXTPROC) (GLintptr indirect);
 typedef void ( * PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTEXTPROC) (GLintptr indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
 typedef void ( * PFNGLMULTIDRAWMESHTASKSINDIRECTEXTPROC) (GLintptr indirect, GLsizei drawcount, GLsizei stride);
-# 11483 "/usr/include/GL/glew.h" 3 4
+# 11483 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIDRAWARRAYSEXTPROC) (GLenum mode, const GLint* first, const GLsizei *count, GLsizei primcount);
 typedef void ( * PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, GLsizei* count, GLenum type, const void *const *indices, GLsizei primcount);
-# 11498 "/usr/include/GL/glew.h" 3 4
+# 11498 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIDRAWARRAYSINDIRECTEXTPROC) (GLenum mode, const void *indirect, GLsizei drawcount, GLsizei stride);
 typedef void ( * PFNGLMULTIDRAWELEMENTSINDIRECTEXTPROC) (GLenum mode, GLenum type, const void *indirect, GLsizei drawcount, GLsizei stride);
-# 11540 "/usr/include/GL/glew.h" 3 4
+# 11540 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSAMPLEMASKEXTPROC) (GLclampf value, GLboolean invert);
 typedef void ( * PFNGLSAMPLEPATTERNEXTPROC) (GLenum pattern);
-# 11572 "/usr/include/GL/glew.h" 3 4
+# 11572 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEEXTPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
-# 11600 "/usr/include/GL/glew.h" 3 4
+# 11600 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWBUFFERSINDEXEDEXTPROC) (GLint n, const GLenum* location, const GLint *indices);
 typedef void ( * PFNGLGETINTEGERI_VEXTPROC) (GLenum target, GLuint index, GLint* data);
 typedef void ( * PFNGLREADBUFFERINDEXEDEXTPROC) (GLenum src, GLint index);
-# 11723 "/usr/include/GL/glew.h" 3 4
+# 11723 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLORTABLEEXTPROC) (GLenum target, GLenum internalFormat, GLsizei width, GLenum format, GLenum type, const void *data);
 typedef void ( * PFNGLGETCOLORTABLEEXTPROC) (GLenum target, GLenum format, GLenum type, void *data);
 typedef void ( * PFNGLGETCOLORTABLEPARAMETERFVEXTPROC) (GLenum target, GLenum pname, GLfloat* params);
 typedef void ( * PFNGLGETCOLORTABLEPARAMETERIVEXTPROC) (GLenum target, GLenum pname, GLint* params);
-# 11766 "/usr/include/GL/glew.h" 3 4
+# 11766 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETPIXELTRANSFORMPARAMETERFVEXTPROC) (GLenum target, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLGETPIXELTRANSFORMPARAMETERIVEXTPROC) (GLenum target, GLenum pname, const GLint* params);
 typedef void ( * PFNGLPIXELTRANSFORMPARAMETERFEXTPROC) (GLenum target, GLenum pname, const GLfloat param);
 typedef void ( * PFNGLPIXELTRANSFORMPARAMETERFVEXTPROC) (GLenum target, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLPIXELTRANSFORMPARAMETERIEXTPROC) (GLenum target, GLenum pname, const GLint param);
 typedef void ( * PFNGLPIXELTRANSFORMPARAMETERIVEXTPROC) (GLenum target, GLenum pname, const GLint* params);
-# 11803 "/usr/include/GL/glew.h" 3 4
+# 11803 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPOINTPARAMETERFEXTPROC) (GLenum pname, GLfloat param);
 typedef void ( * PFNGLPOINTPARAMETERFVEXTPROC) (GLenum pname, const GLfloat* params);
-# 11822 "/usr/include/GL/glew.h" 3 4
+# 11822 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPOLYGONOFFSETEXTPROC) (GLfloat factor, GLfloat bias);
-# 11837 "/usr/include/GL/glew.h" 3 4
+# 11837 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPOLYGONOFFSETCLAMPEXTPROC) (GLfloat factor, GLfloat units, GLfloat clamp);
-# 11861 "/usr/include/GL/glew.h" 3 4
+# 11861 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPRIMITIVEBOUNDINGBOXEXTPROC) (GLfloat minX, GLfloat minY, GLfloat minZ, GLfloat minW, GLfloat maxX, GLfloat maxY, GLfloat maxZ, GLfloat maxW);
-# 11891 "/usr/include/GL/glew.h" 3 4
+# 11891 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPROVOKINGVERTEXEXTPROC) (GLenum mode);
-# 11933 "/usr/include/GL/glew.h" 3 4
+# 11933 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOVERAGEMODULATIONNVPROC) (GLenum components);
 typedef void ( * PFNGLCOVERAGEMODULATIONTABLENVPROC) (GLsizei n, const GLfloat* v);
 typedef void ( * PFNGLGETCOVERAGEMODULATIONTABLENVPROC) (GLsizei bufsize, GLfloat* v);
 typedef void ( * PFNGLRASTERSAMPLESEXTPROC) (GLuint samples, GLboolean fixedsamplelocations);
-# 12002 "/usr/include/GL/glew.h" 3 4
+# 12002 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLenum ( * PFNGLGETGRAPHICSRESETSTATUSEXTPROC) (void);
 typedef void ( * PFNGLGETNUNIFORMFVEXTPROC) (GLuint program, GLint location, GLsizei bufSize, GLfloat* params);
 typedef void ( * PFNGLGETNUNIFORMIVEXTPROC) (GLuint program, GLint location, GLsizei bufSize, GLint* params);
 typedef void ( * PFNGLREADNPIXELSEXTPROC) (GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, void *data);
-# 12046 "/usr/include/GL/glew.h" 3 4
+# 12046 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINSCENEEXTPROC) (void);
 typedef void ( * PFNGLENDSCENEEXTPROC) (void);
-# 12069 "/usr/include/GL/glew.h" 3 4
+# 12069 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSECONDARYCOLOR3BEXTPROC) (GLbyte red, GLbyte green, GLbyte blue);
 typedef void ( * PFNGLSECONDARYCOLOR3BVEXTPROC) (const GLbyte *v);
 typedef void ( * PFNGLSECONDARYCOLOR3DEXTPROC) (GLdouble red, GLdouble green, GLdouble blue);
@@ -41502,7 +41412,7 @@ typedef void ( * PFNGLSECONDARYCOLOR3UIVEXTPROC) (const GLuint *v);
 typedef void ( * PFNGLSECONDARYCOLOR3USEXTPROC) (GLushort red, GLushort green, GLushort blue);
 typedef void ( * PFNGLSECONDARYCOLOR3USVEXTPROC) (const GLushort *v);
 typedef void ( * PFNGLSECONDARYCOLORPOINTEREXTPROC) (GLint size, GLenum type, GLsizei stride, const void *pointer);
-# 12124 "/usr/include/GL/glew.h" 3 4
+# 12124 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDELETESEMAPHORESEXTPROC) (GLsizei n, const GLuint* semaphores);
 typedef void ( * PFNGLGENSEMAPHORESEXTPROC) (GLsizei n, GLuint* semaphores);
 typedef void ( * PFNGLGETSEMAPHOREPARAMETERUI64VEXTPROC) (GLuint semaphore, GLenum pname, GLuint64* params);
@@ -41510,77 +41420,77 @@ typedef GLboolean ( * PFNGLISSEMAPHOREEXTPROC) (GLuint semaphore);
 typedef void ( * PFNGLSEMAPHOREPARAMETERUI64VEXTPROC) (GLuint semaphore, GLenum pname, const GLuint64* params);
 typedef void ( * PFNGLSIGNALSEMAPHOREEXTPROC) (GLuint semaphore, GLuint numBufferBarriers, const GLuint* buffers, GLuint numTextureBarriers, const GLuint *textures, const GLenum *dstLayouts);
 typedef void ( * PFNGLWAITSEMAPHOREEXTPROC) (GLuint semaphore, GLuint numBufferBarriers, const GLuint* buffers, GLuint numTextureBarriers, const GLuint *textures, const GLenum *srcLayouts);
-# 12149 "/usr/include/GL/glew.h" 3 4
+# 12149 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLIMPORTSEMAPHOREFDEXTPROC) (GLuint semaphore, GLenum handleType, GLint fd);
-# 12162 "/usr/include/GL/glew.h" 3 4
+# 12162 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLIMPORTSEMAPHOREWIN32HANDLEEXTPROC) (GLuint semaphore, GLenum handleType, void *handle);
 typedef void ( * PFNGLIMPORTSEMAPHOREWIN32NAMEEXTPROC) (GLuint semaphore, GLenum handleType, const void *name);
-# 12188 "/usr/include/GL/glew.h" 3 4
+# 12188 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLACTIVEPROGRAMEXTPROC) (GLuint program);
 typedef GLuint ( * PFNGLCREATESHADERPROGRAMEXTPROC) (GLenum type, const GLchar* string);
 typedef void ( * PFNGLUSESHADERPROGRAMEXTPROC) (GLenum type, GLuint program);
-# 12229 "/usr/include/GL/glew.h" 3 4
+# 12229 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERFETCHBARRIEREXTPROC) (void);
-# 12327 "/usr/include/GL/glew.h" 3 4
+# 12327 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDIMAGETEXTUREEXTPROC) (GLuint index, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLint format);
 typedef void ( * PFNGLMEMORYBARRIEREXTPROC) (GLbitfield barriers);
-# 12395 "/usr/include/GL/glew.h" 3 4
+# 12395 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLEARPIXELLOCALSTORAGEUIEXTPROC) (GLsizei offset, GLsizei n, const GLuint* values);
 typedef void ( * PFNGLFRAMEBUFFERPIXELLOCALSTORAGESIZEEXTPROC) (GLuint target, GLsizei size);
 typedef GLsizei ( * PFNGLGETFRAMEBUFFERPIXELLOCALSTORAGESIZEEXTPROC) (GLuint target);
-# 12499 "/usr/include/GL/glew.h" 3 4
+# 12499 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXPAGECOMMITMENTEXTPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLboolean commit);
-# 12545 "/usr/include/GL/glew.h" 3 4
+# 12545 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLACTIVESTENCILFACEEXTPROC) (GLenum face);
-# 12570 "/usr/include/GL/glew.h" 3 4
+# 12570 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXSUBIMAGE1DEXTPROC) (GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const void *pixels);
 typedef void ( * PFNGLTEXSUBIMAGE2DEXTPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const void *pixels);
 typedef void ( * PFNGLTEXSUBIMAGE3DEXTPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *pixels);
-# 12631 "/usr/include/GL/glew.h" 3 4
+# 12631 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPATCHPARAMETERIEXTPROC) (GLenum pname, GLint value);
-# 12759 "/usr/include/GL/glew.h" 3 4
+# 12759 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXIMAGE3DEXTPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const void *pixels);
-# 12781 "/usr/include/GL/glew.h" 3 4
+# 12781 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTURELAYEREXTPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
-# 12797 "/usr/include/GL/glew.h" 3 4
+# 12797 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETSAMPLERPARAMETERIIVEXTPROC) (GLuint sampler, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETSAMPLERPARAMETERIUIVEXTPROC) (GLuint sampler, GLenum pname, GLuint* params);
 typedef void ( * PFNGLSAMPLERPARAMETERIIVEXTPROC) (GLuint sampler, GLenum pname, const GLint* params);
 typedef void ( * PFNGLSAMPLERPARAMETERIUIVEXTPROC) (GLuint sampler, GLenum pname, const GLuint* params);
-# 12846 "/usr/include/GL/glew.h" 3 4
+# 12846 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXBUFFEREXTPROC) (GLenum target, GLenum internalformat, GLuint buffer);
-# 13168 "/usr/include/GL/glew.h" 3 4
+# 13168 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLEARCOLORIIEXTPROC) (GLint red, GLint green, GLint blue, GLint alpha);
 typedef void ( * PFNGLCLEARCOLORIUIEXTPROC) (GLuint red, GLuint green, GLuint blue, GLuint alpha);
 typedef void ( * PFNGLGETTEXPARAMETERIIVEXTPROC) (GLenum target, GLenum pname, GLint *params);
 typedef void ( * PFNGLGETTEXPARAMETERIUIVEXTPROC) (GLenum target, GLenum pname, GLuint *params);
 typedef void ( * PFNGLTEXPARAMETERIIVEXTPROC) (GLenum target, GLenum pname, const GLint *params);
 typedef void ( * PFNGLTEXPARAMETERIUIVEXTPROC) (GLenum target, GLenum pname, const GLuint *params);
-# 13252 "/usr/include/GL/glew.h" 3 4
+# 13252 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLboolean ( * PFNGLARETEXTURESRESIDENTEXTPROC) (GLsizei n, const GLuint* textures, GLboolean* residences);
 typedef void ( * PFNGLBINDTEXTUREEXTPROC) (GLenum target, GLuint texture);
 typedef void ( * PFNGLDELETETEXTURESEXTPROC) (GLsizei n, const GLuint* textures);
 typedef void ( * PFNGLGENTEXTURESEXTPROC) (GLsizei n, GLuint* textures);
 typedef GLboolean ( * PFNGLISTEXTUREEXTPROC) (GLuint texture);
 typedef void ( * PFNGLPRIORITIZETEXTURESEXTPROC) (GLsizei n, const GLuint* textures, const GLclampf* priorities);
-# 13278 "/usr/include/GL/glew.h" 3 4
+# 13278 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXTURENORMALEXTPROC) (GLenum mode);
-# 13471 "/usr/include/GL/glew.h" 3 4
+# 13471 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXSTORAGE1DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width);
 typedef void ( * PFNGLTEXSTORAGE2DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
 typedef void ( * PFNGLTEXSTORAGE3DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth);
 typedef void ( * PFNGLTEXTURESTORAGE1DEXTPROC) (GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width);
 typedef void ( * PFNGLTEXTURESTORAGE2DEXTPROC) (GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
 typedef void ( * PFNGLTEXTURESTORAGE3DEXTPROC) (GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth);
-# 13511 "/usr/include/GL/glew.h" 3 4
+# 13511 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXSTORAGEATTRIBS2DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, const GLint* attrib_list);
 typedef void ( * PFNGLTEXSTORAGEATTRIBS3DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, const GLint* attrib_list);
-# 13558 "/usr/include/GL/glew.h" 3 4
+# 13558 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXTUREVIEWEXTPROC) (GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers);
-# 13573 "/usr/include/GL/glew.h" 3 4
+# 13573 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETQUERYOBJECTI64VEXTPROC) (GLuint id, GLenum pname, GLint64EXT *params);
 typedef void ( * PFNGLGETQUERYOBJECTUI64VEXTPROC) (GLuint id, GLenum pname, GLuint64EXT *params);
-# 13604 "/usr/include/GL/glew.h" 3 4
+# 13604 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINTRANSFORMFEEDBACKEXTPROC) (GLenum primitiveMode);
 typedef void ( * PFNGLBINDBUFFERBASEEXTPROC) (GLenum target, GLuint index, GLuint buffer);
 typedef void ( * PFNGLBINDBUFFEROFFSETEXTPROC) (GLenum target, GLuint index, GLuint buffer, GLintptr offset);
@@ -41588,7 +41498,7 @@ typedef void ( * PFNGLBINDBUFFERRANGEEXTPROC) (GLenum target, GLuint index, GLui
 typedef void ( * PFNGLENDTRANSFORMFEEDBACKEXTPROC) (void);
 typedef void ( * PFNGLGETTRANSFORMFEEDBACKVARYINGEXTPROC) (GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLsizei *size, GLenum *type, GLchar *name);
 typedef void ( * PFNGLTRANSFORMFEEDBACKVARYINGSEXTPROC) (GLuint program, GLsizei count, const GLchar * const* varyings, GLenum bufferMode);
-# 13676 "/usr/include/GL/glew.h" 3 4
+# 13676 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLARRAYELEMENTEXTPROC) (GLint i);
 typedef void ( * PFNGLCOLORPOINTEREXTPROC) (GLint size, GLenum type, GLsizei stride, GLsizei count, const void *pointer);
 typedef void ( * PFNGLDRAWARRAYSEXTPROC) (GLenum mode, GLint first, GLsizei count);
@@ -41597,11 +41507,11 @@ typedef void ( * PFNGLINDEXPOINTEREXTPROC) (GLenum type, GLsizei stride, GLsizei
 typedef void ( * PFNGLNORMALPOINTEREXTPROC) (GLenum type, GLsizei stride, GLsizei count, const void *pointer);
 typedef void ( * PFNGLTEXCOORDPOINTEREXTPROC) (GLint size, GLenum type, GLsizei stride, GLsizei count, const void *pointer);
 typedef void ( * PFNGLVERTEXPOINTEREXTPROC) (GLint size, GLenum type, GLsizei stride, GLsizei count, const void *pointer);
-# 13714 "/usr/include/GL/glew.h" 3 4
+# 13714 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDARRAYSETEXTPROC) (const void *arrayset);
 typedef const void * ( * PFNGLCREATEARRAYSETEXTPROC) (void);
 typedef void ( * PFNGLDELETEARRAYSETSEXTPROC) (GLsizei n, const void *arrayset[]);
-# 13744 "/usr/include/GL/glew.h" 3 4
+# 13744 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETVERTEXATTRIBLDVEXTPROC) (GLuint index, GLenum pname, GLdouble* params);
 typedef void ( * PFNGLVERTEXARRAYVERTEXATTRIBLOFFSETEXTPROC) (GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLsizei stride, GLintptr offset);
 typedef void ( * PFNGLVERTEXATTRIBL1DEXTPROC) (GLuint index, GLdouble x);
@@ -41613,7 +41523,7 @@ typedef void ( * PFNGLVERTEXATTRIBL3DVEXTPROC) (GLuint index, const GLdouble* v)
 typedef void ( * PFNGLVERTEXATTRIBL4DEXTPROC) (GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 typedef void ( * PFNGLVERTEXATTRIBL4DVEXTPROC) (GLuint index, const GLdouble* v);
 typedef void ( * PFNGLVERTEXATTRIBLPOINTEREXTPROC) (GLuint index, GLint size, GLenum type, GLsizei stride, const void *pointer);
-# 13888 "/usr/include/GL/glew.h" 3 4
+# 13888 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINVERTEXSHADEREXTPROC) (void);
 typedef GLuint ( * PFNGLBINDLIGHTPARAMETEREXTPROC) (GLenum light, GLenum value);
 typedef GLuint ( * PFNGLBINDMATERIALPARAMETEREXTPROC) (GLenum face, GLenum value);
@@ -41656,32 +41566,32 @@ typedef void ( * PFNGLVARIANTUBVEXTPROC) (GLuint id, GLubyte *addr);
 typedef void ( * PFNGLVARIANTUIVEXTPROC) (GLuint id, GLuint *addr);
 typedef void ( * PFNGLVARIANTUSVEXTPROC) (GLuint id, GLushort *addr);
 typedef void ( * PFNGLWRITEMASKEXTPROC) (GLuint res, GLuint in, GLenum outX, GLenum outY, GLenum outZ, GLenum outW);
-# 13997 "/usr/include/GL/glew.h" 3 4
+# 13997 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLVERTEXWEIGHTPOINTEREXTPROC) (GLint size, GLenum type, GLsizei stride, void *pointer);
 typedef void ( * PFNGLVERTEXWEIGHTFEXTPROC) (GLfloat weight);
 typedef void ( * PFNGLVERTEXWEIGHTFVEXTPROC) (GLfloat* weight);
-# 14014 "/usr/include/GL/glew.h" 3 4
+# 14014 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLboolean ( * PFNGLACQUIREKEYEDMUTEXWIN32EXTPROC) (GLuint memory, GLuint64 key, GLuint timeout);
 typedef GLboolean ( * PFNGLRELEASEKEYEDMUTEXWIN32EXTPROC) (GLuint memory, GLuint64 key);
-# 14036 "/usr/include/GL/glew.h" 3 4
+# 14036 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLWINDOWRECTANGLESEXTPROC) (GLenum mode, GLsizei count, const GLint box[]);
-# 14051 "/usr/include/GL/glew.h" 3 4
+# 14051 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLsync ( * PFNGLIMPORTSYNCEXTPROC) (GLenum external_sync_type, GLintptr external_sync, GLbitfield flags);
-# 14075 "/usr/include/GL/glew.h" 3 4
+# 14075 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMETERMINATORGREMEDYPROC) (void);
-# 14088 "/usr/include/GL/glew.h" 3 4
+# 14088 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSTRINGMARKERGREMEDYPROC) (GLsizei len, const void *string);
-# 14110 "/usr/include/GL/glew.h" 3 4
+# 14110 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETIMAGETRANSFORMPARAMETERFVHPPROC) (GLenum target, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLGETIMAGETRANSFORMPARAMETERIVHPPROC) (GLenum target, GLenum pname, const GLint* params);
 typedef void ( * PFNGLIMAGETRANSFORMPARAMETERFHPPROC) (GLenum target, GLenum pname, const GLfloat param);
 typedef void ( * PFNGLIMAGETRANSFORMPARAMETERFVHPPROC) (GLenum target, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLIMAGETRANSFORMPARAMETERIHPPROC) (GLenum target, GLenum pname, const GLint param);
 typedef void ( * PFNGLIMAGETRANSFORMPARAMETERIVHPPROC) (GLenum target, GLenum pname, const GLint* params);
-# 14184 "/usr/include/GL/glew.h" 3 4
+# 14184 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIMODEDRAWARRAYSIBMPROC) (const GLenum* mode, const GLint *first, const GLsizei *count, GLsizei primcount, GLint modestride);
 typedef void ( * PFNGLMULTIMODEDRAWELEMENTSIBMPROC) (const GLenum* mode, const GLsizei *count, GLenum type, const void *const *indices, GLsizei primcount, GLint modestride);
-# 14250 "/usr/include/GL/glew.h" 3 4
+# 14250 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLORPOINTERLISTIBMPROC) (GLint size, GLenum type, GLint stride, const void** pointer, GLint ptrstride);
 typedef void ( * PFNGLEDGEFLAGPOINTERLISTIBMPROC) (GLint stride, const GLboolean ** pointer, GLint ptrstride);
 typedef void ( * PFNGLFOGCOORDPOINTERLISTIBMPROC) (GLenum type, GLint stride, const void** pointer, GLint ptrstride);
@@ -41690,31 +41600,31 @@ typedef void ( * PFNGLNORMALPOINTERLISTIBMPROC) (GLenum type, GLint stride, cons
 typedef void ( * PFNGLSECONDARYCOLORPOINTERLISTIBMPROC) (GLint size, GLenum type, GLint stride, const void** pointer, GLint ptrstride);
 typedef void ( * PFNGLTEXCOORDPOINTERLISTIBMPROC) (GLint size, GLenum type, GLint stride, const void** pointer, GLint ptrstride);
 typedef void ( * PFNGLVERTEXPOINTERLISTIBMPROC) (GLint size, GLenum type, GLint stride, const void** pointer, GLint ptrstride);
-# 14277 "/usr/include/GL/glew.h" 3 4
+# 14277 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLuint64 ( * PFNGLGETTEXTUREHANDLEIMGPROC) (GLuint texture);
 typedef GLuint64 ( * PFNGLGETTEXTURESAMPLERHANDLEIMGPROC) (GLuint texture, GLuint sampler);
 typedef void ( * PFNGLPROGRAMUNIFORMHANDLEUI64IMGPROC) (GLuint program, GLint location, GLuint64 value);
 typedef void ( * PFNGLPROGRAMUNIFORMHANDLEUI64VIMGPROC) (GLuint program, GLint location, GLsizei count, const GLuint64* values);
 typedef void ( * PFNGLUNIFORMHANDLEUI64IMGPROC) (GLint location, GLuint64 value);
 typedef void ( * PFNGLUNIFORMHANDLEUI64VIMGPROC) (GLint location, GLsizei count, const GLuint64* value);
-# 14305 "/usr/include/GL/glew.h" 3 4
+# 14305 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTURE2DDOWNSAMPLEIMGPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint xscale, GLint yscale);
 typedef void ( * PFNGLFRAMEBUFFERTEXTURELAYERDOWNSAMPLEIMGPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer, GLint xscale, GLint yscale);
-# 14325 "/usr/include/GL/glew.h" 3 4
+# 14325 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEIMGPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
 typedef void ( * PFNGLRENDERBUFFERSTORAGEMULTISAMPLEIMGPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-# 14514 "/usr/include/GL/glew.h" 3 4
+# 14514 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLAPPLYFRAMEBUFFERATTACHMENTCMAAINTELPROC) (void);
-# 14532 "/usr/include/GL/glew.h" 3 4
+# 14532 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void * ( * PFNGLMAPTEXTURE2DINTELPROC) (GLuint texture, GLint level, GLbitfield access, GLint* stride, GLenum *layout);
 typedef void ( * PFNGLSYNCTEXTUREINTELPROC) (GLuint texture);
 typedef void ( * PFNGLUNMAPTEXTURE2DINTELPROC) (GLuint texture, GLint level);
-# 14555 "/usr/include/GL/glew.h" 3 4
+# 14555 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLORPOINTERVINTELPROC) (GLint size, GLenum type, const void** pointer);
 typedef void ( * PFNGLNORMALPOINTERVINTELPROC) (GLenum type, const void** pointer);
 typedef void ( * PFNGLTEXCOORDPOINTERVINTELPROC) (GLint size, GLenum type, const void** pointer);
 typedef void ( * PFNGLVERTEXPOINTERVINTELPROC) (GLint size, GLenum type, const void** pointer);
-# 14595 "/usr/include/GL/glew.h" 3 4
+# 14595 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINPERFQUERYINTELPROC) (GLuint queryHandle);
 typedef void ( * PFNGLCREATEPERFQUERYINTELPROC) (GLuint queryId, GLuint* queryHandle);
 typedef void ( * PFNGLDELETEPERFQUERYINTELPROC) (GLuint queryHandle);
@@ -41725,12 +41635,12 @@ typedef void ( * PFNGLGETPERFCOUNTERINFOINTELPROC) (GLuint queryId, GLuint count
 typedef void ( * PFNGLGETPERFQUERYDATAINTELPROC) (GLuint queryHandle, GLuint flags, GLsizei dataSize, void *data, GLuint *bytesWritten);
 typedef void ( * PFNGLGETPERFQUERYIDBYNAMEINTELPROC) (GLchar* queryName, GLuint *queryId);
 typedef void ( * PFNGLGETPERFQUERYINFOINTELPROC) (GLuint queryId, GLuint queryNameLength, GLchar* queryName, GLuint *dataSize, GLuint *noCounters, GLuint *noInstances, GLuint *capsMask);
-# 14635 "/usr/include/GL/glew.h" 3 4
+# 14635 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXSCISSORFUNCINTELPROC) (GLenum target, GLenum lfunc, GLenum hfunc);
 typedef void ( * PFNGLTEXSCISSORINTELPROC) (GLenum target, GLclampf tlow, GLclampf thigh);
-# 14667 "/usr/include/GL/glew.h" 3 4
+# 14667 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDBARRIERKHRPROC) (void);
-# 14742 "/usr/include/GL/glew.h" 3 4
+# 14742 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( *GLDEBUGPROC)(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam);
 
 typedef void ( * PFNGLDEBUGMESSAGECALLBACKPROC) (GLDEBUGPROC callback, const void *userParam);
@@ -41743,25 +41653,25 @@ typedef void ( * PFNGLOBJECTLABELPROC) (GLenum identifier, GLuint name, GLsizei 
 typedef void ( * PFNGLOBJECTPTRLABELPROC) (void* ptr, GLsizei length, const GLchar* label);
 typedef void ( * PFNGLPOPDEBUGGROUPPROC) (void);
 typedef void ( * PFNGLPUSHDEBUGGROUPPROC) (GLenum source, GLuint id, GLsizei length, const GLchar * message);
-# 14789 "/usr/include/GL/glew.h" 3 4
+# 14789 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMAXSHADERCOMPILERTHREADSKHRPROC) (GLuint count);
-# 14820 "/usr/include/GL/glew.h" 3 4
+# 14820 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETNUNIFORMFVPROC) (GLuint program, GLint location, GLsizei bufSize, GLfloat* params);
 typedef void ( * PFNGLGETNUNIFORMIVPROC) (GLuint program, GLint location, GLsizei bufSize, GLint* params);
 typedef void ( * PFNGLGETNUNIFORMUIVPROC) (GLuint program, GLint location, GLsizei bufSize, GLuint* params);
 typedef void ( * PFNGLREADNPIXELSPROC) (GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, void *data);
-# 14991 "/usr/include/GL/glew.h" 3 4
+# 14991 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLuint ( * PFNGLBUFFERREGIONENABLEDPROC) (void);
 typedef void ( * PFNGLDELETEBUFFERREGIONPROC) (GLenum region);
 typedef void ( * PFNGLDRAWBUFFERREGIONPROC) (GLuint region, GLint x, GLint y, GLsizei width, GLsizei height, GLint xDest, GLint yDest);
 typedef GLuint ( * PFNGLNEWBUFFERREGIONPROC) (GLenum region);
 typedef void ( * PFNGLREADBUFFERREGIONPROC) (GLuint region, GLint x, GLint y, GLsizei width, GLsizei height);
-# 15053 "/usr/include/GL/glew.h" 3 4
+# 15053 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERPARAMETERIMESAPROC) (GLenum target, GLenum pname, GLint param);
 typedef void ( * PFNGLGETFRAMEBUFFERPARAMETERIVMESAPROC) (GLenum target, GLenum pname, GLint* params);
-# 15101 "/usr/include/GL/glew.h" 3 4
+# 15101 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLRESIZEBUFFERSMESAPROC) (void);
-# 15143 "/usr/include/GL/glew.h" 3 4
+# 15143 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLWINDOWPOS2DMESAPROC) (GLdouble x, GLdouble y);
 typedef void ( * PFNGLWINDOWPOS2DVMESAPROC) (const GLdouble* p);
 typedef void ( * PFNGLWINDOWPOS2FMESAPROC) (GLfloat x, GLfloat y);
@@ -41786,37 +41696,37 @@ typedef void ( * PFNGLWINDOWPOS4IMESAPROC) (GLint x, GLint y, GLint z, GLint w);
 typedef void ( * PFNGLWINDOWPOS4IVMESAPROC) (const GLint* p);
 typedef void ( * PFNGLWINDOWPOS4SMESAPROC) (GLshort x, GLshort y, GLshort z, GLshort w);
 typedef void ( * PFNGLWINDOWPOS4SVMESAPROC) (const GLshort* p);
-# 15224 "/usr/include/GL/glew.h" 3 4
+# 15224 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINCONDITIONALRENDERNVXPROC) (GLuint id);
 typedef void ( * PFNGLENDCONDITIONALRENDERNVXPROC) (void);
-# 15256 "/usr/include/GL/glew.h" 3 4
+# 15256 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLsync ( * PFNGLASYNCCOPYBUFFERSUBDATANVXPROC) (GLsizei waitSemaphoreCount, const GLuint* waitSemaphoreArray, const GLuint64 *fenceValueArray, GLuint readGpu, GLbitfield writeGpuMask, GLuint readBuffer, GLuint writeBuffer, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size, GLsizei signalSemaphoreCount, const GLuint *signalSemaphoreArray, const GLuint64 *signalValueArray);
 typedef GLuint ( * PFNGLASYNCCOPYIMAGESUBDATANVXPROC) (GLsizei waitSemaphoreCount, const GLuint* waitSemaphoreArray, const GLuint64 *waitValueArray, GLuint srcGpu, GLbitfield dstGpuMask, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth, GLsizei signalSemaphoreCount, const GLuint *signalSemaphoreArray, const GLuint64 *signalValueArray);
 typedef void ( * PFNGLMULTICASTSCISSORARRAYVNVXPROC) (GLuint gpu, GLuint first, GLsizei count, const GLint* v);
 typedef void ( * PFNGLMULTICASTVIEWPORTARRAYVNVXPROC) (GLuint gpu, GLuint first, GLsizei count, const GLfloat* v);
 typedef void ( * PFNGLMULTICASTVIEWPORTPOSITIONWSCALENVXPROC) (GLuint gpu, GLuint index, GLfloat xcoeff, GLfloat ycoeff);
 typedef void ( * PFNGLUPLOADGPUMASKNVXPROC) (GLbitfield mask);
-# 15282 "/usr/include/GL/glew.h" 3 4
+# 15282 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLLGPUCOPYIMAGESUBDATANVXPROC) (GLuint sourceGpu, GLbitfield destinationGpuMask, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srxY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 typedef void ( * PFNGLLGPUINTERLOCKNVXPROC) (void);
 typedef void ( * PFNGLLGPUNAMEDBUFFERSUBDATANVXPROC) (GLbitfield gpuMask, GLuint buffer, GLintptr offset, GLsizeiptr size, const void *data);
-# 15299 "/usr/include/GL/glew.h" 3 4
+# 15299 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLIENTWAITSEMAPHOREUI64NVXPROC) (GLsizei fenceObjectCount, const GLuint* semaphoreArray, const GLuint64 *fenceValueArray);
 typedef GLuint ( * PFNGLCREATEPROGRESSFENCENVXPROC) (void);
 typedef void ( * PFNGLSIGNALSEMAPHOREUI64NVXPROC) (GLuint signalGpu, GLsizei fenceObjectCount, const GLuint* semaphoreArray, const GLuint64 *fenceValueArray);
 typedef void ( * PFNGLWAITSEMAPHOREUI64NVXPROC) (GLuint waitGpu, GLsizei fenceObjectCount, const GLuint* semaphoreArray, const GLuint64 *fenceValueArray);
-# 15326 "/usr/include/GL/glew.h" 3 4
+# 15326 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSTEREOPARAMETERFNVPROC) (GLenum pname, GLfloat param);
 typedef void ( * PFNGLSTEREOPARAMETERINVPROC) (GLenum pname, GLint param);
-# 15360 "/usr/include/GL/glew.h" 3 4
+# 15360 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLALPHATOCOVERAGEDITHERCONTROLNVPROC) (GLenum mode);
-# 15384 "/usr/include/GL/glew.h" 3 4
+# 15384 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSNVPROC) (GLenum mode, const void *indirect, GLsizei drawCount, GLsizei stride, GLint vertexBufferCount);
 typedef void ( * PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSNVPROC) (GLenum mode, GLenum type, const void *indirect, GLsizei drawCount, GLsizei stride, GLint vertexBufferCount);
-# 15399 "/usr/include/GL/glew.h" 3 4
+# 15399 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNVPROC) (GLenum mode, const void *indirect, GLintptr drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
 typedef void ( * PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNVPROC) (GLenum mode, GLenum type, const void *indirect, GLintptr drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
-# 15414 "/usr/include/GL/glew.h" 3 4
+# 15414 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLuint64 ( * PFNGLGETIMAGEHANDLENVPROC) (GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum format);
 typedef GLuint64 ( * PFNGLGETTEXTUREHANDLENVPROC) (GLuint texture);
 typedef GLuint64 ( * PFNGLGETTEXTURESAMPLERHANDLENVPROC) (GLuint texture, GLuint sampler);
@@ -41830,12 +41740,12 @@ typedef void ( * PFNGLPROGRAMUNIFORMHANDLEUI64NVPROC) (GLuint program, GLint loc
 typedef void ( * PFNGLPROGRAMUNIFORMHANDLEUI64VNVPROC) (GLuint program, GLint location, GLsizei count, const GLuint64* values);
 typedef void ( * PFNGLUNIFORMHANDLEUI64NVPROC) (GLint location, GLuint64 value);
 typedef void ( * PFNGLUNIFORMHANDLEUI64VNVPROC) (GLint location, GLsizei count, const GLuint64* value);
-# 15502 "/usr/include/GL/glew.h" 3 4
+# 15502 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDBARRIERNVPROC) (void);
 typedef void ( * PFNGLBLENDPARAMETERINVPROC) (GLenum pname, GLint value);
-# 15551 "/usr/include/GL/glew.h" 3 4
+# 15551 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLVIEWPORTPOSITIONWSCALENVPROC) (GLuint index, GLfloat xcoeff, GLfloat ycoeff);
-# 15584 "/usr/include/GL/glew.h" 3 4
+# 15584 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCALLCOMMANDLISTNVPROC) (GLuint list);
 typedef void ( * PFNGLCOMMANDLISTSEGMENTSNVPROC) (GLuint list, GLuint segments);
 typedef void ( * PFNGLCOMPILECOMMANDLISTNVPROC) (GLuint list);
@@ -41853,31 +41763,31 @@ typedef GLboolean ( * PFNGLISCOMMANDLISTNVPROC) (GLuint list);
 typedef GLboolean ( * PFNGLISSTATENVPROC) (GLuint state);
 typedef void ( * PFNGLLISTDRAWCOMMANDSSTATESCLIENTNVPROC) (GLuint list, GLuint segment, const void** indirects, const GLsizei* sizes, const GLuint* states, const GLuint* fbos, GLuint count);
 typedef void ( * PFNGLSTATECAPTURENVPROC) (GLuint state, GLenum mode);
-# 15655 "/usr/include/GL/glew.h" 3 4
+# 15655 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINCONDITIONALRENDERNVPROC) (GLuint id, GLenum mode);
 typedef void ( * PFNGLENDCONDITIONALRENDERNVPROC) (void);
-# 15675 "/usr/include/GL/glew.h" 3 4
+# 15675 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSUBPIXELPRECISIONBIASNVPROC) (GLuint xbits, GLuint ybits);
-# 15692 "/usr/include/GL/glew.h" 3 4
+# 15692 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCONSERVATIVERASTERPARAMETERFNVPROC) (GLenum pname, GLfloat value);
-# 15720 "/usr/include/GL/glew.h" 3 4
+# 15720 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCONSERVATIVERASTERPARAMETERINVPROC) (GLenum pname, GLint param);
-# 15745 "/usr/include/GL/glew.h" 3 4
+# 15745 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYBUFFERSUBDATANVPROC) (GLenum readtarget, GLenum writetarget, GLintptr readoffset, GLintptr writeoffset, GLsizeiptr size);
-# 15770 "/usr/include/GL/glew.h" 3 4
+# 15770 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYIMAGESUBDATANVPROC) (GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
-# 15800 "/usr/include/GL/glew.h" 3 4
+# 15800 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLEARDEPTHDNVPROC) (GLdouble depth);
 typedef void ( * PFNGLDEPTHBOUNDSDNVPROC) (GLdouble zmin, GLdouble zmax);
 typedef void ( * PFNGLDEPTHRANGEDNVPROC) (GLdouble zNear, GLdouble zFar);
-# 15888 "/usr/include/GL/glew.h" 3 4
+# 15888 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWBUFFERSNVPROC) (GLsizei n, const GLenum* bufs);
-# 15901 "/usr/include/GL/glew.h" 3 4
+# 15901 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWARRAYSINSTANCEDNVPROC) (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
 typedef void ( * PFNGLDRAWELEMENTSINSTANCEDNVPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
-# 15916 "/usr/include/GL/glew.h" 3 4
+# 15916 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWTEXTURENVPROC) (GLuint texture, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1);
-# 15929 "/usr/include/GL/glew.h" 3 4
+# 15929 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( *GLVULKANPROCNV)(void);
 
 typedef void ( * PFNGLDRAWVKIMAGENVPROC) (GLuint64 vkImage, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1);
@@ -41885,7 +41795,7 @@ typedef GLVULKANPROCNV ( * PFNGLGETVKPROCADDRNVPROC) (const GLchar* name);
 typedef void ( * PFNGLSIGNALVKFENCENVPROC) (GLuint64 vkFence);
 typedef void ( * PFNGLSIGNALVKSEMAPHORENVPROC) (GLuint64 vkSemaphore);
 typedef void ( * PFNGLWAITVKSEMAPHORENVPROC) (GLuint64 vkSemaphore);
-# 15977 "/usr/include/GL/glew.h" 3 4
+# 15977 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLEVALMAPSNVPROC) (GLenum target, GLenum mode);
 typedef void ( * PFNGLGETMAPATTRIBPARAMETERFVNVPROC) (GLenum target, GLuint index, GLenum pname, GLfloat* params);
 typedef void ( * PFNGLGETMAPATTRIBPARAMETERIVNVPROC) (GLenum target, GLuint index, GLenum pname, GLint* params);
@@ -41895,11 +41805,11 @@ typedef void ( * PFNGLGETMAPPARAMETERIVNVPROC) (GLenum target, GLenum pname, GLi
 typedef void ( * PFNGLMAPCONTROLPOINTSNVPROC) (GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLint uorder, GLint vorder, GLboolean packed, const void *points);
 typedef void ( * PFNGLMAPPARAMETERFVNVPROC) (GLenum target, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLMAPPARAMETERIVNVPROC) (GLenum target, GLenum pname, const GLint* params);
-# 16026 "/usr/include/GL/glew.h" 3 4
+# 16026 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETMULTISAMPLEFVNVPROC) (GLenum pname, GLuint index, GLfloat* val);
 typedef void ( * PFNGLSAMPLEMASKINDEXEDNVPROC) (GLuint index, GLbitfield mask);
 typedef void ( * PFNGLTEXRENDERBUFFERNVPROC) (GLenum target, GLuint renderbuffer);
-# 16074 "/usr/include/GL/glew.h" 3 4
+# 16074 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDELETEFENCESNVPROC) (GLsizei n, const GLuint* fences);
 typedef void ( * PFNGLFINISHFENCENVPROC) (GLuint fence);
 typedef void ( * PFNGLGENFENCESNVPROC) (GLsizei n, GLuint* fences);
@@ -41907,24 +41817,24 @@ typedef void ( * PFNGLGETFENCEIVNVPROC) (GLuint fence, GLenum pname, GLint* para
 typedef GLboolean ( * PFNGLISFENCENVPROC) (GLuint fence);
 typedef void ( * PFNGLSETFENCENVPROC) (GLuint fence, GLenum condition);
 typedef GLboolean ( * PFNGLTESTFENCENVPROC) (GLuint fence);
-# 16151 "/usr/include/GL/glew.h" 3 4
+# 16151 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAGMENTCOVERAGECOLORNVPROC) (GLuint color);
-# 16171 "/usr/include/GL/glew.h" 3 4
+# 16171 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETPROGRAMNAMEDPARAMETERDVNVPROC) (GLuint id, GLsizei len, const GLubyte* name, GLdouble *params);
 typedef void ( * PFNGLGETPROGRAMNAMEDPARAMETERFVNVPROC) (GLuint id, GLsizei len, const GLubyte* name, GLfloat *params);
 typedef void ( * PFNGLPROGRAMNAMEDPARAMETER4DNVPROC) (GLuint id, GLsizei len, const GLubyte* name, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
 typedef void ( * PFNGLPROGRAMNAMEDPARAMETER4DVNVPROC) (GLuint id, GLsizei len, const GLubyte* name, const GLdouble v[]);
 typedef void ( * PFNGLPROGRAMNAMEDPARAMETER4FNVPROC) (GLuint id, GLsizei len, const GLubyte* name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 typedef void ( * PFNGLPROGRAMNAMEDPARAMETER4FVNVPROC) (GLuint id, GLsizei len, const GLubyte* name, const GLfloat v[]);
-# 16250 "/usr/include/GL/glew.h" 3 4
+# 16250 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLITFRAMEBUFFERNVPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
-# 16291 "/usr/include/GL/glew.h" 3 4
+# 16291 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLRENDERBUFFERSTORAGEMULTISAMPLENVPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-# 16309 "/usr/include/GL/glew.h" 3 4
+# 16309 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLRENDERBUFFERSTORAGEMULTISAMPLECOVERAGENVPROC) (GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height);
-# 16335 "/usr/include/GL/glew.h" 3 4
+# 16335 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPROGRAMVERTEXLIMITNVPROC) (GLenum target, GLint limit);
-# 16372 "/usr/include/GL/glew.h" 3 4
+# 16372 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTICASTBARRIERNVPROC) (void);
 typedef void ( * PFNGLMULTICASTBLITFRAMEBUFFERNVPROC) (GLuint srcGpu, GLuint dstGpu, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 typedef void ( * PFNGLMULTICASTBUFFERSUBDATANVPROC) (GLbitfield gpuMask, GLuint buffer, GLintptr offset, GLsizeiptr size, const void *data);
@@ -41937,7 +41847,7 @@ typedef void ( * PFNGLMULTICASTGETQUERYOBJECTUI64VNVPROC) (GLuint gpu, GLuint id
 typedef void ( * PFNGLMULTICASTGETQUERYOBJECTUIVNVPROC) (GLuint gpu, GLuint id, GLenum pname, GLuint* params);
 typedef void ( * PFNGLMULTICASTWAITSYNCNVPROC) (GLuint signalGpu, GLbitfield waitGpuMask);
 typedef void ( * PFNGLRENDERGPUMASKNVPROC) (GLbitfield mask);
-# 16416 "/usr/include/GL/glew.h" 3 4
+# 16416 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPROGRAMENVPARAMETERI4INVPROC) (GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w);
 typedef void ( * PFNGLPROGRAMENVPARAMETERI4IVNVPROC) (GLenum target, GLuint index, const GLint *params);
 typedef void ( * PFNGLPROGRAMENVPARAMETERI4UINVPROC) (GLenum target, GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
@@ -41950,7 +41860,7 @@ typedef void ( * PFNGLPROGRAMLOCALPARAMETERI4UINVPROC) (GLenum target, GLuint in
 typedef void ( * PFNGLPROGRAMLOCALPARAMETERI4UIVNVPROC) (GLenum target, GLuint index, const GLuint *params);
 typedef void ( * PFNGLPROGRAMLOCALPARAMETERSI4IVNVPROC) (GLenum target, GLuint index, GLsizei count, const GLint *params);
 typedef void ( * PFNGLPROGRAMLOCALPARAMETERSI4UIVNVPROC) (GLenum target, GLuint index, GLsizei count, const GLuint *params);
-# 16514 "/usr/include/GL/glew.h" 3 4
+# 16514 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETUNIFORMI64VNVPROC) (GLuint program, GLint location, GLint64EXT* params);
 typedef void ( * PFNGLGETUNIFORMUI64VNVPROC) (GLuint program, GLint location, GLuint64EXT* params);
 typedef void ( * PFNGLPROGRAMUNIFORM1I64NVPROC) (GLuint program, GLint location, GLint64EXT x);
@@ -41985,7 +41895,7 @@ typedef void ( * PFNGLUNIFORM4I64NVPROC) (GLint location, GLint64EXT x, GLint64E
 typedef void ( * PFNGLUNIFORM4I64VNVPROC) (GLint location, GLsizei count, const GLint64EXT* value);
 typedef void ( * PFNGLUNIFORM4UI64NVPROC) (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
 typedef void ( * PFNGLUNIFORM4UI64VNVPROC) (GLint location, GLsizei count, const GLuint64EXT* value);
-# 16595 "/usr/include/GL/glew.h" 3 4
+# 16595 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef unsigned short GLhalf;
 
 typedef void ( * PFNGLCOLOR3HNVPROC) (GLhalf red, GLhalf green, GLhalf blue);
@@ -42034,35 +41944,35 @@ typedef void ( * PFNGLVERTEXATTRIBS3HVNVPROC) (GLuint index, GLsizei n, const GL
 typedef void ( * PFNGLVERTEXATTRIBS4HVNVPROC) (GLuint index, GLsizei n, const GLhalf* v);
 typedef void ( * PFNGLVERTEXWEIGHTHNVPROC) (GLhalf weight);
 typedef void ( * PFNGLVERTEXWEIGHTHVNVPROC) (const GLhalf* weight);
-# 16711 "/usr/include/GL/glew.h" 3 4
+# 16711 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLVERTEXATTRIBDIVISORNVPROC) (GLuint index, GLuint divisor);
-# 16729 "/usr/include/GL/glew.h" 3 4
+# 16729 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETINTERNALFORMATSAMPLEIVNVPROC) (GLenum target, GLenum internalformat, GLsizei samples, GLenum pname, GLsizei bufSize, GLint* params);
-# 16765 "/usr/include/GL/glew.h" 3 4
+# 16765 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBUFFERATTACHMEMORYNVPROC) (GLenum target, GLuint memory, GLuint64 offset);
 typedef void ( * PFNGLGETMEMORYOBJECTDETACHEDRESOURCESUIVNVPROC) (GLuint memory, GLenum pname, GLint first, GLsizei count, GLuint* params);
 typedef void ( * PFNGLNAMEDBUFFERATTACHMEMORYNVPROC) (GLuint buffer, GLuint memory, GLuint64 offset);
 typedef void ( * PFNGLRESETMEMORYOBJECTPARAMETERNVPROC) (GLuint memory, GLenum pname);
 typedef void ( * PFNGLTEXATTACHMEMORYNVPROC) (GLenum target, GLuint memory, GLuint64 offset);
 typedef void ( * PFNGLTEXTUREATTACHMEMORYNVPROC) (GLuint texture, GLuint memory, GLuint64 offset);
-# 16788 "/usr/include/GL/glew.h" 3 4
+# 16788 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBUFFERPAGECOMMITMENTMEMNVPROC) (GLenum target, GLintptr offset, GLsizeiptr size, GLuint memory, GLuint64 memOffset, GLboolean commit);
 typedef void ( * PFNGLNAMEDBUFFERPAGECOMMITMENTMEMNVPROC) (GLuint buffer, GLintptr offset, GLsizeiptr size, GLuint memory, GLuint64 memOffset, GLboolean commit);
 typedef void ( * PFNGLTEXPAGECOMMITMENTMEMNVPROC) (GLenum target, GLint layer, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLuint memory, GLuint64 offset, GLboolean commit);
 typedef void ( * PFNGLTEXTUREPAGECOMMITMENTMEMNVPROC) (GLuint texture, GLint layer, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLuint memory, GLuint64 offset, GLboolean commit);
-# 16856 "/usr/include/GL/glew.h" 3 4
+# 16856 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDRAWMESHTASKSINDIRECTNVPROC) (GLintptr indirect);
 typedef void ( * PFNGLDRAWMESHTASKSNVPROC) (GLuint first, GLuint count);
 typedef void ( * PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC) (GLintptr indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
 typedef void ( * PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC) (GLintptr indirect, GLsizei drawcount, GLsizei stride);
-# 16904 "/usr/include/GL/glew.h" 3 4
+# 16904 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLUNIFORMMATRIX2X3FVNVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat* value);
 typedef void ( * PFNGLUNIFORMMATRIX2X4FVNVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat* value);
 typedef void ( * PFNGLUNIFORMMATRIX3X2FVNVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat* value);
 typedef void ( * PFNGLUNIFORMMATRIX3X4FVNVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat* value);
 typedef void ( * PFNGLUNIFORMMATRIX4X2FVNVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat* value);
 typedef void ( * PFNGLUNIFORMMATRIX4X3FVNVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat* value);
-# 16932 "/usr/include/GL/glew.h" 3 4
+# 16932 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINOCCLUSIONQUERYNVPROC) (GLuint id);
 typedef void ( * PFNGLDELETEOCCLUSIONQUERIESNVPROC) (GLsizei n, const GLuint* ids);
 typedef void ( * PFNGLENDOCCLUSIONQUERYNVPROC) (void);
@@ -42070,11 +41980,11 @@ typedef void ( * PFNGLGENOCCLUSIONQUERIESNVPROC) (GLsizei n, GLuint* ids);
 typedef void ( * PFNGLGETOCCLUSIONQUERYIVNVPROC) (GLuint id, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETOCCLUSIONQUERYUIVNVPROC) (GLuint id, GLenum pname, GLuint* params);
 typedef GLboolean ( * PFNGLISOCCLUSIONQUERYNVPROC) (GLuint id);
-# 17012 "/usr/include/GL/glew.h" 3 4
+# 17012 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPROGRAMBUFFERPARAMETERSIIVNVPROC) (GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLint *params);
 typedef void ( * PFNGLPROGRAMBUFFERPARAMETERSIUIVNVPROC) (GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLuint *params);
 typedef void ( * PFNGLPROGRAMBUFFERPARAMETERSFVNVPROC) (GLenum target, GLuint buffer, GLuint index, GLsizei count, const GLfloat *params);
-# 17188 "/usr/include/GL/glew.h" 3 4
+# 17188 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYPATHNVPROC) (GLuint resultPath, GLuint srcPath);
 typedef void ( * PFNGLCOVERFILLPATHINSTANCEDNVPROC) (GLsizei numPaths, GLenum pathNameType, const void *paths, GLuint pathBase, GLenum coverMode, GLenum transformType, const GLfloat *transformValues);
 typedef void ( * PFNGLCOVERFILLPATHNVPROC) (GLuint path, GLenum coverMode);
@@ -42139,27 +42049,27 @@ typedef void ( * PFNGLSTENCILTHENCOVERSTROKEPATHINSTANCEDNVPROC) (GLsizei numPat
 typedef void ( * PFNGLSTENCILTHENCOVERSTROKEPATHNVPROC) (GLuint path, GLint reference, GLuint mask, GLenum coverMode);
 typedef void ( * PFNGLTRANSFORMPATHNVPROC) (GLuint resultPath, GLuint srcPath, GLenum transformType, const GLfloat* transformValues);
 typedef void ( * PFNGLWEIGHTPATHSNVPROC) (GLuint resultPath, GLsizei numPaths, const GLuint paths[], const GLfloat weights[]);
-# 17359 "/usr/include/GL/glew.h" 3 4
+# 17359 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFLUSHPIXELDATARANGENVPROC) (GLenum target);
 typedef void ( * PFNGLPIXELDATARANGENVPROC) (GLenum target, GLsizei length, void *pointer);
-# 17389 "/usr/include/GL/glew.h" 3 4
+# 17389 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPOINTPARAMETERINVPROC) (GLenum pname, GLint param);
 typedef void ( * PFNGLPOINTPARAMETERIVNVPROC) (GLenum pname, const GLint* params);
-# 17411 "/usr/include/GL/glew.h" 3 4
+# 17411 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPOLYGONMODENVPROC) (GLenum face, GLenum mode);
-# 17431 "/usr/include/GL/glew.h" 3 4
+# 17431 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETVIDEOI64VNVPROC) (GLuint video_slot, GLenum pname, GLint64EXT* params);
 typedef void ( * PFNGLGETVIDEOIVNVPROC) (GLuint video_slot, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETVIDEOUI64VNVPROC) (GLuint video_slot, GLenum pname, GLuint64EXT* params);
 typedef void ( * PFNGLGETVIDEOUIVNVPROC) (GLuint video_slot, GLenum pname, GLuint* params);
 typedef void ( * PFNGLPRESENTFRAMEDUALFILLNVPROC) (GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLenum target1, GLuint fill1, GLenum target2, GLuint fill2, GLenum target3, GLuint fill3);
 typedef void ( * PFNGLPRESENTFRAMEKEYEDNVPROC) (GLuint video_slot, GLuint64EXT minPresentTime, GLuint beginPresentTimeId, GLuint presentDurationId, GLenum type, GLenum target0, GLuint fill0, GLuint key0, GLenum target1, GLuint fill1, GLuint key1);
-# 17457 "/usr/include/GL/glew.h" 3 4
+# 17457 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPRIMITIVERESTARTINDEXNVPROC) (GLuint index);
 typedef void ( * PFNGLPRIMITIVERESTARTNVPROC) (void);
-# 17495 "/usr/include/GL/glew.h" 3 4
+# 17495 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLREADBUFFERNVPROC) (GLenum mode);
-# 17598 "/usr/include/GL/glew.h" 3 4
+# 17598 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOMBINERINPUTNVPROC) (GLenum stage, GLenum portion, GLenum variable, GLenum input, GLenum mapping, GLenum componentUsage);
 typedef void ( * PFNGLCOMBINEROUTPUTNVPROC) (GLenum stage, GLenum portion, GLenum abOutput, GLenum cdOutput, GLenum sumOutput, GLenum scale, GLenum bias, GLboolean abDotProduct, GLboolean cdDotProduct, GLboolean muxSum);
 typedef void ( * PFNGLCOMBINERPARAMETERFNVPROC) (GLenum pname, GLfloat param);
@@ -42173,17 +42083,17 @@ typedef void ( * PFNGLGETCOMBINEROUTPUTPARAMETERFVNVPROC) (GLenum stage, GLenum 
 typedef void ( * PFNGLGETCOMBINEROUTPUTPARAMETERIVNVPROC) (GLenum stage, GLenum portion, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETFINALCOMBINERINPUTPARAMETERFVNVPROC) (GLenum variable, GLenum pname, GLfloat* params);
 typedef void ( * PFNGLGETFINALCOMBINERINPUTPARAMETERIVNVPROC) (GLenum variable, GLenum pname, GLint* params);
-# 17637 "/usr/include/GL/glew.h" 3 4
+# 17637 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOMBINERSTAGEPARAMETERFVNVPROC) (GLenum stage, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLGETCOMBINERSTAGEPARAMETERFVNVPROC) (GLenum stage, GLenum pname, GLfloat* params);
-# 17703 "/usr/include/GL/glew.h" 3 4
+# 17703 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERSAMPLELOCATIONSFVNVPROC) (GLenum target, GLuint start, GLsizei count, const GLfloat* v);
 typedef void ( * PFNGLNAMEDFRAMEBUFFERSAMPLELOCATIONSFVNVPROC) (GLuint framebuffer, GLuint start, GLsizei count, const GLfloat* v);
 typedef void ( * PFNGLRESOLVEDEPTHVALUESNVPROC) (void);
-# 17732 "/usr/include/GL/glew.h" 3 4
+# 17732 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSCISSOREXCLUSIVEARRAYVNVPROC) (GLuint first, GLsizei count, const GLint* v);
 typedef void ( * PFNGLSCISSOREXCLUSIVENVPROC) (GLint x, GLint y, GLsizei width, GLsizei height);
-# 17796 "/usr/include/GL/glew.h" 3 4
+# 17796 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETBUFFERPARAMETERUI64VNVPROC) (GLenum target, GLenum pname, GLuint64EXT* params);
 typedef void ( * PFNGLGETINTEGERUI64VNVPROC) (GLenum value, GLuint64EXT* result);
 typedef void ( * PFNGLGETNAMEDBUFFERPARAMETERUI64VNVPROC) (GLuint buffer, GLenum pname, GLuint64EXT* params);
@@ -42197,7 +42107,7 @@ typedef void ( * PFNGLPROGRAMUNIFORMUI64NVPROC) (GLuint program, GLint location,
 typedef void ( * PFNGLPROGRAMUNIFORMUI64VNVPROC) (GLuint program, GLint location, GLsizei count, const GLuint64EXT* value);
 typedef void ( * PFNGLUNIFORMUI64NVPROC) (GLint location, GLuint64EXT value);
 typedef void ( * PFNGLUNIFORMUI64VNVPROC) (GLint location, GLsizei count, const GLuint64EXT* value);
-# 17915 "/usr/include/GL/glew.h" 3 4
+# 17915 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDSHADINGRATEIMAGENVPROC) (GLuint texture);
 typedef void ( * PFNGLGETSHADINGRATEIMAGEPALETTENVPROC) (GLuint viewport, GLuint entry, GLenum* rate);
 typedef void ( * PFNGLGETSHADINGRATESAMPLELOCATIONIVNVPROC) (GLenum rate, GLuint samples, GLuint index, GLint* location);
@@ -42205,27 +42115,27 @@ typedef void ( * PFNGLSHADINGRATEIMAGEBARRIERNVPROC) (GLboolean synchronize);
 typedef void ( * PFNGLSHADINGRATEIMAGEPALETTENVPROC) (GLuint viewport, GLuint first, GLsizei count, const GLenum* rates);
 typedef void ( * PFNGLSHADINGRATESAMPLEORDERCUSTOMNVPROC) (GLenum rate, GLuint samples, const GLint* locations);
 typedef void ( * PFNGLSHADINGRATESAMPLEORDERNVPROC) (GLenum order);
-# 18019 "/usr/include/GL/glew.h" 3 4
+# 18019 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOMPRESSEDTEXIMAGE3DNVPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const void *data);
 typedef void ( * PFNGLCOMPRESSEDTEXSUBIMAGE3DNVPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const void *data);
 typedef void ( * PFNGLCOPYTEXSUBIMAGE3DNVPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 typedef void ( * PFNGLFRAMEBUFFERTEXTURELAYERNVPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
 typedef void ( * PFNGLTEXIMAGE3DNVPROC) (GLenum target, GLint level, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const void *pixels);
 typedef void ( * PFNGLTEXSUBIMAGE3DNVPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *pixels);
-# 18042 "/usr/include/GL/glew.h" 3 4
+# 18042 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXTUREBARRIERNVPROC) (void);
-# 18142 "/usr/include/GL/glew.h" 3 4
+# 18142 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXIMAGE2DMULTISAMPLECOVERAGENVPROC) (GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations);
 typedef void ( * PFNGLTEXIMAGE3DMULTISAMPLECOVERAGENVPROC) (GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations);
 typedef void ( * PFNGLTEXTUREIMAGE2DMULTISAMPLECOVERAGENVPROC) (GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations);
 typedef void ( * PFNGLTEXTUREIMAGE2DMULTISAMPLENVPROC) (GLuint texture, GLenum target, GLsizei samples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations);
 typedef void ( * PFNGLTEXTUREIMAGE3DMULTISAMPLECOVERAGENVPROC) (GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations);
 typedef void ( * PFNGLTEXTUREIMAGE3DMULTISAMPLENVPROC) (GLuint texture, GLenum target, GLsizei samples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations);
-# 18351 "/usr/include/GL/glew.h" 3 4
+# 18351 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCREATESEMAPHORESNVPROC) (GLsizei n, GLuint* semaphores);
 typedef void ( * PFNGLGETSEMAPHOREPARAMETERIVNVPROC) (GLuint semaphore, GLenum pname, GLint* params);
 typedef void ( * PFNGLSEMAPHOREPARAMETERIVNVPROC) (GLuint semaphore, GLenum pname, const GLint* params);
-# 18394 "/usr/include/GL/glew.h" 3 4
+# 18394 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLACTIVEVARYINGNVPROC) (GLuint program, const GLchar *name);
 typedef void ( * PFNGLBEGINTRANSFORMFEEDBACKNVPROC) (GLenum primitiveMode);
 typedef void ( * PFNGLBINDBUFFERBASENVPROC) (GLenum target, GLuint index, GLuint buffer);
@@ -42237,7 +42147,7 @@ typedef void ( * PFNGLGETTRANSFORMFEEDBACKVARYINGNVPROC) (GLuint program, GLuint
 typedef GLint ( * PFNGLGETVARYINGLOCATIONNVPROC) (GLuint program, const GLchar *name);
 typedef void ( * PFNGLTRANSFORMFEEDBACKATTRIBSNVPROC) (GLuint count, const GLint *attribs, GLenum bufferMode);
 typedef void ( * PFNGLTRANSFORMFEEDBACKVARYINGSNVPROC) (GLuint program, GLsizei count, const GLint *locations, GLenum bufferMode);
-# 18432 "/usr/include/GL/glew.h" 3 4
+# 18432 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDTRANSFORMFEEDBACKNVPROC) (GLenum target, GLuint id);
 typedef void ( * PFNGLDELETETRANSFORMFEEDBACKSNVPROC) (GLsizei n, const GLuint* ids);
 typedef void ( * PFNGLDRAWTRANSFORMFEEDBACKNVPROC) (GLenum mode, GLuint id);
@@ -42245,7 +42155,7 @@ typedef void ( * PFNGLGENTRANSFORMFEEDBACKSNVPROC) (GLsizei n, GLuint* ids);
 typedef GLboolean ( * PFNGLISTRANSFORMFEEDBACKNVPROC) (GLuint id);
 typedef void ( * PFNGLPAUSETRANSFORMFEEDBACKNVPROC) (void);
 typedef void ( * PFNGLRESUMETRANSFORMFEEDBACKNVPROC) (void);
-# 18484 "/usr/include/GL/glew.h" 3 4
+# 18484 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLintptr GLvdpauSurfaceNV;
 
 typedef void ( * PFNGLVDPAUFININVPROC) (void);
@@ -42258,12 +42168,12 @@ typedef GLvdpauSurfaceNV ( * PFNGLVDPAUREGISTERVIDEOSURFACENVPROC) (const void* 
 typedef void ( * PFNGLVDPAUSURFACEACCESSNVPROC) (GLvdpauSurfaceNV surface, GLenum access);
 typedef void ( * PFNGLVDPAUUNMAPSURFACESNVPROC) (GLsizei numSurface, const GLvdpauSurfaceNV* surfaces);
 typedef void ( * PFNGLVDPAUUNREGISTERSURFACENVPROC) (GLvdpauSurfaceNV surface);
-# 18517 "/usr/include/GL/glew.h" 3 4
+# 18517 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLvdpauSurfaceNV ( * PFNGLVDPAUREGISTERVIDEOSURFACEWITHPICTURESTRUCTURENVPROC) (const void *vdpSurface, GLenum target, GLsizei numTextureNames, const GLuint *textureNames, GLboolean isFrameStructure);
-# 18536 "/usr/include/GL/glew.h" 3 4
+# 18536 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFLUSHVERTEXARRAYRANGENVPROC) (void);
 typedef void ( * PFNGLVERTEXARRAYRANGENVPROC) (GLsizei length, void *pointer);
-# 18565 "/usr/include/GL/glew.h" 3 4
+# 18565 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETVERTEXATTRIBLI64VNVPROC) (GLuint index, GLenum pname, GLint64EXT* params);
 typedef void ( * PFNGLGETVERTEXATTRIBLUI64VNVPROC) (GLuint index, GLenum pname, GLuint64EXT* params);
 typedef void ( * PFNGLVERTEXATTRIBL1I64NVPROC) (GLuint index, GLint64EXT x);
@@ -42283,7 +42193,7 @@ typedef void ( * PFNGLVERTEXATTRIBL4I64VNVPROC) (GLuint index, const GLint64EXT*
 typedef void ( * PFNGLVERTEXATTRIBL4UI64NVPROC) (GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
 typedef void ( * PFNGLVERTEXATTRIBL4UI64VNVPROC) (GLuint index, const GLuint64EXT* v);
 typedef void ( * PFNGLVERTEXATTRIBLFORMATNVPROC) (GLuint index, GLint size, GLenum type, GLsizei stride);
-# 18640 "/usr/include/GL/glew.h" 3 4
+# 18640 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBUFFERADDRESSRANGENVPROC) (GLenum pname, GLuint index, GLuint64EXT address, GLsizeiptr length);
 typedef void ( * PFNGLCOLORFORMATNVPROC) (GLint size, GLenum type, GLsizei stride);
 typedef void ( * PFNGLEDGEFLAGFORMATNVPROC) (GLsizei stride);
@@ -42296,7 +42206,7 @@ typedef void ( * PFNGLTEXCOORDFORMATNVPROC) (GLint size, GLenum type, GLsizei st
 typedef void ( * PFNGLVERTEXATTRIBFORMATNVPROC) (GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride);
 typedef void ( * PFNGLVERTEXATTRIBIFORMATNVPROC) (GLuint index, GLint size, GLenum type, GLsizei stride);
 typedef void ( * PFNGLVERTEXFORMATNVPROC) (GLint size, GLenum type, GLsizei stride);
-# 18759 "/usr/include/GL/glew.h" 3 4
+# 18759 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLboolean ( * PFNGLAREPROGRAMSRESIDENTNVPROC) (GLsizei n, const GLuint* ids, GLboolean *residences);
 typedef void ( * PFNGLBINDPROGRAMNVPROC) (GLenum target, GLuint id);
 typedef void ( * PFNGLDELETEPROGRAMSNVPROC) (GLsizei n, const GLuint* ids);
@@ -42361,7 +42271,7 @@ typedef void ( * PFNGLVERTEXATTRIBS4DVNVPROC) (GLuint index, GLsizei n, const GL
 typedef void ( * PFNGLVERTEXATTRIBS4FVNVPROC) (GLuint index, GLsizei n, const GLfloat* v);
 typedef void ( * PFNGLVERTEXATTRIBS4SVNVPROC) (GLuint index, GLsizei n, const GLshort* v);
 typedef void ( * PFNGLVERTEXATTRIBS4UBVNVPROC) (GLuint index, GLsizei n, const GLubyte* v);
-# 18980 "/usr/include/GL/glew.h" 3 4
+# 18980 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBEGINVIDEOCAPTURENVPROC) (GLuint video_capture_slot);
 typedef void ( * PFNGLBINDVIDEOCAPTURESTREAMBUFFERNVPROC) (GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLintptrARB offset);
 typedef void ( * PFNGLBINDVIDEOCAPTURESTREAMTEXTURENVPROC) (GLuint video_capture_slot, GLuint stream, GLenum frame_region, GLenum target, GLuint texture);
@@ -42374,7 +42284,7 @@ typedef GLenum ( * PFNGLVIDEOCAPTURENVPROC) (GLuint video_capture_slot, GLuint* 
 typedef void ( * PFNGLVIDEOCAPTURESTREAMPARAMETERDVNVPROC) (GLuint video_capture_slot, GLuint stream, GLenum pname, const GLdouble* params);
 typedef void ( * PFNGLVIDEOCAPTURESTREAMPARAMETERFVNVPROC) (GLuint video_capture_slot, GLuint stream, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLVIDEOCAPTURESTREAMPARAMETERIVNVPROC) (GLuint video_capture_slot, GLuint stream, GLenum pname, const GLint* params);
-# 19024 "/usr/include/GL/glew.h" 3 4
+# 19024 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDEPTHRANGEARRAYFVNVPROC) (GLuint first, GLsizei count, const GLfloat * v);
 typedef void ( * PFNGLDEPTHRANGEINDEXEDFNVPROC) (GLuint index, GLfloat n, GLfloat f);
 typedef void ( * PFNGLDISABLEINVPROC) (GLenum target, GLuint index);
@@ -42387,20 +42297,20 @@ typedef void ( * PFNGLSCISSORINDEXEDVNVPROC) (GLuint index, const GLint * v);
 typedef void ( * PFNGLVIEWPORTARRAYVNVPROC) (GLuint first, GLsizei count, const GLfloat * v);
 typedef void ( * PFNGLVIEWPORTINDEXEDFNVPROC) (GLuint index, GLfloat x, GLfloat y, GLfloat w, GLfloat h);
 typedef void ( * PFNGLVIEWPORTINDEXEDFVNVPROC) (GLuint index, const GLfloat * v);
-# 19081 "/usr/include/GL/glew.h" 3 4
+# 19081 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLVIEWPORTSWIZZLENVPROC) (GLuint index, GLenum swizzlex, GLenum swizzley, GLenum swizzlez, GLenum swizzlew);
-# 19094 "/usr/include/GL/glew.h" 3 4
+# 19094 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC) (GLenum target, GLeglImageOES image);
 typedef void ( * PFNGLEGLIMAGETARGETTEXTURE2DOESPROC) (GLenum target, GLeglImageOES image);
-# 19135 "/usr/include/GL/glew.h" 3 4
+# 19135 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONSEPARATEOESPROC) (GLenum modeRGB, GLenum modeAlpha);
-# 19153 "/usr/include/GL/glew.h" 3 4
+# 19153 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDFUNCSEPARATEOESPROC) (GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
-# 19171 "/usr/include/GL/glew.h" 3 4
+# 19171 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONOESPROC) (GLenum mode);
-# 19224 "/usr/include/GL/glew.h" 3 4
+# 19224 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOPYIMAGESUBDATAOESPROC) (GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth);
-# 19287 "/usr/include/GL/glew.h" 3 4
+# 19287 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBLENDEQUATIONSEPARATEIOESPROC) (GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 typedef void ( * PFNGLBLENDEQUATIONIOESPROC) (GLuint buf, GLenum mode);
 typedef void ( * PFNGLBLENDFUNCSEPARATEIOESPROC) (GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
@@ -42409,7 +42319,7 @@ typedef void ( * PFNGLCOLORMASKIOESPROC) (GLuint buf, GLboolean r, GLboolean g, 
 typedef void ( * PFNGLDISABLEIOESPROC) (GLenum target, GLuint index);
 typedef void ( * PFNGLENABLEIOESPROC) (GLenum target, GLuint index);
 typedef GLboolean ( * PFNGLISENABLEDIOESPROC) (GLenum target, GLuint index);
-# 19403 "/usr/include/GL/glew.h" 3 4
+# 19403 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDFRAMEBUFFEROESPROC) (GLenum target, GLuint framebuffer);
 typedef void ( * PFNGLBINDRENDERBUFFEROESPROC) (GLenum target, GLuint renderbuffer);
 typedef GLenum ( * PFNGLCHECKFRAMEBUFFERSTATUSOESPROC) (GLenum target);
@@ -42425,35 +42335,35 @@ typedef void ( * PFNGLGETRENDERBUFFERPARAMETERIVOESPROC) (GLenum target, GLenum 
 typedef GLboolean ( * PFNGLISFRAMEBUFFEROESPROC) (GLuint framebuffer);
 typedef GLboolean ( * PFNGLISRENDERBUFFEROESPROC) (GLuint renderbuffer);
 typedef void ( * PFNGLRENDERBUFFERSTORAGEOESPROC) (GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
-# 19534 "/usr/include/GL/glew.h" 3 4
+# 19534 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETPROGRAMBINARYOESPROC) (GLuint program, GLsizei bufSize, GLsizei* length, GLenum *binaryFormat, void*binary);
 typedef void ( * PFNGLPROGRAMBINARYOESPROC) (GLuint program, GLenum binaryFormat, const void *binary, GLint length);
-# 19563 "/usr/include/GL/glew.h" 3 4
+# 19563 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETBUFFERPOINTERVOESPROC) (GLenum target, GLenum pname, void** params);
 typedef void * ( * PFNGLMAPBUFFEROESPROC) (GLenum target, GLenum access);
 typedef GLboolean ( * PFNGLUNMAPBUFFEROESPROC) (GLenum target);
-# 19610 "/usr/include/GL/glew.h" 3 4
+# 19610 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCURRENTPALETTEMATRIXOESPROC) (GLuint index);
 typedef void ( * PFNGLLOADPALETTEFROMMODELVIEWMATRIXOESPROC) (void);
 typedef void ( * PFNGLMATRIXINDEXPOINTEROESPROC) (GLint size, GLenum type, GLsizei stride, void *pointer);
 typedef void ( * PFNGLWEIGHTPOINTEROESPROC) (GLint size, GLenum type, GLsizei stride, void *pointer);
-# 19721 "/usr/include/GL/glew.h" 3 4
+# 19721 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMINSAMPLESHADINGOESPROC) (GLfloat value);
-# 19774 "/usr/include/GL/glew.h" 3 4
+# 19774 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLEARDEPTHFOESPROC) (GLclampf depth);
 typedef void ( * PFNGLCLIPPLANEFOESPROC) (GLenum plane, const GLfloat* equation);
 typedef void ( * PFNGLDEPTHRANGEFOESPROC) (GLclampf n, GLclampf f);
 typedef void ( * PFNGLFRUSTUMFOESPROC) (GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f);
 typedef void ( * PFNGLGETCLIPPLANEFOESPROC) (GLenum plane, GLfloat* equation);
 typedef void ( * PFNGLORTHOFOESPROC) (GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f);
-# 19963 "/usr/include/GL/glew.h" 3 4
+# 19963 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOMPRESSEDTEXIMAGE3DOESPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const void *data);
 typedef void ( * PFNGLCOMPRESSEDTEXSUBIMAGE3DOESPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const void *data);
 typedef void ( * PFNGLCOPYTEXSUBIMAGE3DOESPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 typedef void ( * PFNGLFRAMEBUFFERTEXTURE3DOESPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset);
 typedef void ( * PFNGLTEXIMAGE3DOESPROC) (GLenum target, GLint level, GLenum internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const void *pixels);
 typedef void ( * PFNGLTEXSUBIMAGE3DOESPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *pixels);
-# 19989 "/usr/include/GL/glew.h" 3 4
+# 19989 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETSAMPLERPARAMETERIIVOESPROC) (GLuint sampler, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETSAMPLERPARAMETERIUIVOESPROC) (GLuint sampler, GLenum pname, GLuint* params);
 typedef void ( * PFNGLGETTEXPARAMETERIIVOESPROC) (GLenum target, GLenum pname, GLint* params);
@@ -42462,10 +42372,10 @@ typedef void ( * PFNGLSAMPLERPARAMETERIIVOESPROC) (GLuint sampler, GLenum pname,
 typedef void ( * PFNGLSAMPLERPARAMETERIUIVOESPROC) (GLuint sampler, GLenum pname, const GLuint* params);
 typedef void ( * PFNGLTEXPARAMETERIIVOESPROC) (GLenum target, GLenum pname, const GLint* params);
 typedef void ( * PFNGLTEXPARAMETERIUIVOESPROC) (GLenum target, GLenum pname, const GLuint* params);
-# 20031 "/usr/include/GL/glew.h" 3 4
+# 20031 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXBUFFEROESPROC) (GLenum target, GLenum internalformat, GLuint buffer);
 typedef void ( * PFNGLTEXBUFFERRANGEOESPROC) (GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
-# 20118 "/usr/include/GL/glew.h" 3 4
+# 20118 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETTEXGENFVOESPROC) (GLenum coord, GLenum pname, GLfloat* params);
 typedef void ( * PFNGLGETTEXGENIVOESPROC) (GLenum coord, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETTEXGENXVOESPROC) (GLenum coord, GLenum pname, GLfixed* params);
@@ -42475,28 +42385,28 @@ typedef void ( * PFNGLTEXGENIOESPROC) (GLenum coord, GLenum pname, GLint param);
 typedef void ( * PFNGLTEXGENIVOESPROC) (GLenum coord, GLenum pname, const GLint* params);
 typedef void ( * PFNGLTEXGENXOESPROC) (GLenum coord, GLenum pname, GLfixed param);
 typedef void ( * PFNGLTEXGENXVOESPROC) (GLenum coord, GLenum pname, const GLfixed* params);
-# 20213 "/usr/include/GL/glew.h" 3 4
+# 20213 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXSTORAGE3DMULTISAMPLEOESPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
-# 20232 "/usr/include/GL/glew.h" 3 4
+# 20232 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXTUREVIEWOESPROC) (GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers);
-# 20247 "/usr/include/GL/glew.h" 3 4
+# 20247 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLBINDVERTEXARRAYOESPROC) (GLuint array);
 typedef void ( * PFNGLDELETEVERTEXARRAYSOESPROC) (GLsizei n, const GLuint* arrays);
 typedef void ( * PFNGLGENVERTEXARRAYSOESPROC) (GLsizei n, GLuint* arrays);
 typedef GLboolean ( * PFNGLISVERTEXARRAYOESPROC) (GLuint array);
-# 20334 "/usr/include/GL/glew.h" 3 4
+# 20334 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTUREMULTIVIEWOVRPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLint baseViewIndex, GLsizei numViews);
 typedef void ( * PFNGLNAMEDFRAMEBUFFERTEXTUREMULTIVIEWOVRPROC) (GLuint framebuffer, GLenum attachment, GLuint texture, GLint level, GLint baseViewIndex, GLsizei numViews);
-# 20358 "/usr/include/GL/glew.h" 3 4
+# 20358 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERTEXTUREMULTISAMPLEMULTIVIEWOVRPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLsizei samples, GLint baseViewIndex, GLsizei numViews);
-# 20446 "/usr/include/GL/glew.h" 3 4
+# 20446 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLALPHAFUNCQCOMPROC) (GLenum func, GLclampf ref);
-# 20474 "/usr/include/GL/glew.h" 3 4
+# 20474 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDISABLEDRIVERCONTROLQCOMPROC) (GLuint driverControl);
 typedef void ( * PFNGLENABLEDRIVERCONTROLQCOMPROC) (GLuint driverControl);
 typedef void ( * PFNGLGETDRIVERCONTROLSTRINGQCOMPROC) (GLuint driverControl, GLsizei bufSize, GLsizei* length, GLchar *driverControlString);
 typedef void ( * PFNGLGETDRIVERCONTROLSQCOMPROC) (GLint* num, GLsizei size, GLuint *driverControls);
-# 20505 "/usr/include/GL/glew.h" 3 4
+# 20505 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLEXTGETBUFFERPOINTERVQCOMPROC) (GLenum target, void** params);
 typedef void ( * PFNGLEXTGETBUFFERSQCOMPROC) (GLuint* buffers, GLint maxBuffers, GLint* numBuffers);
 typedef void ( * PFNGLEXTGETFRAMEBUFFERSQCOMPROC) (GLuint* framebuffers, GLint maxFramebuffers, GLint* numFramebuffers);
@@ -42505,29 +42415,29 @@ typedef void ( * PFNGLEXTGETTEXLEVELPARAMETERIVQCOMPROC) (GLuint texture, GLenum
 typedef void ( * PFNGLEXTGETTEXSUBIMAGEQCOMPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, void *texels);
 typedef void ( * PFNGLEXTGETTEXTURESQCOMPROC) (GLuint* textures, GLint maxTextures, GLint* numTextures);
 typedef void ( * PFNGLEXTTEXOBJECTSTATEOVERRIDEIQCOMPROC) (GLenum target, GLenum pname, GLint param);
-# 20532 "/usr/include/GL/glew.h" 3 4
+# 20532 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLEXTGETPROGRAMBINARYSOURCEQCOMPROC) (GLuint program, GLenum shadertype, GLchar* source, GLint* length);
 typedef void ( * PFNGLEXTGETPROGRAMSQCOMPROC) (GLuint* programs, GLint maxPrograms, GLint* numPrograms);
 typedef void ( * PFNGLEXTGETSHADERSQCOMPROC) (GLuint* shaders, GLint maxShaders, GLint* numShaders);
 typedef GLboolean ( * PFNGLEXTISPROGRAMBINARYQCOMPROC) (GLuint program);
-# 20551 "/usr/include/GL/glew.h" 3 4
+# 20551 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLEXTRAPOLATETEX2DQCOMPROC) (GLuint src1, GLuint src2, GLuint output, GLfloat scaleFactor);
-# 20567 "/usr/include/GL/glew.h" 3 4
+# 20567 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERFOVEATIONCONFIGQCOMPROC) (GLuint fbo, GLuint numLayers, GLuint focalPointsPerLayer, GLuint requestedFeatures, GLuint* providedFeatures);
 typedef void ( * PFNGLFRAMEBUFFERFOVEATIONPARAMETERSQCOMPROC) (GLuint fbo, GLuint layer, GLuint focalPoint, GLfloat focalX, GLfloat focalY, GLfloat gainX, GLfloat gainY, GLfloat foveaArea);
-# 20585 "/usr/include/GL/glew.h" 3 4
+# 20585 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXESTIMATEMOTIONQCOMPROC) (GLuint ref, GLuint target, GLuint output);
 typedef void ( * PFNGLTEXESTIMATEMOTIONREGIONSQCOMPROC) (GLuint ref, GLuint target, GLuint output, GLuint mask);
-# 20633 "/usr/include/GL/glew.h" 3 4
+# 20633 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEBUFFERFETCHBARRIERQCOMPROC) (void);
-# 20664 "/usr/include/GL/glew.h" 3 4
+# 20664 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSHADINGRATEQCOMPROC) (GLenum rate);
-# 20685 "/usr/include/GL/glew.h" 3 4
+# 20685 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXTUREFOVEATIONPARAMETERSQCOMPROC) (GLuint texture, GLuint layer, GLuint focalPoint, GLfloat focalX, GLfloat focalY, GLfloat gainX, GLfloat gainY, GLfloat foveaArea);
-# 20765 "/usr/include/GL/glew.h" 3 4
+# 20765 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLENDTILINGQCOMPROC) (GLbitfield preserveMask);
 typedef void ( * PFNGLSTARTTILINGQCOMPROC) (GLuint x, GLuint y, GLuint width, GLuint height, GLbitfield preserveMask);
-# 20803 "/usr/include/GL/glew.h" 3 4
+# 20803 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef int GLclampx;
 
 typedef void ( * PFNGLALPHAFUNCXPROC) (GLenum func, GLclampx ref);
@@ -42561,7 +42471,7 @@ typedef void ( * PFNGLTEXENVXPROC) (GLenum target, GLenum pname, GLfixed param);
 typedef void ( * PFNGLTEXENVXVPROC) (GLenum target, GLenum pname, const GLfixed* params);
 typedef void ( * PFNGLTEXPARAMETERXPROC) (GLenum target, GLenum pname, GLfixed param);
 typedef void ( * PFNGLTRANSLATEXPROC) (GLfixed x, GLfixed y, GLfixed z);
-# 20878 "/usr/include/GL/glew.h" 3 4
+# 20878 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCLIPPLANEFPROC) (GLenum plane, const GLfloat* equation);
 typedef void ( * PFNGLCLIPPLANEXPROC) (GLenum plane, const GLfixed* equation);
 typedef void ( * PFNGLGETCLIPPLANEFPROC) (GLenum pname, GLfloat eqn[4]);
@@ -42575,60 +42485,60 @@ typedef void ( * PFNGLPOINTPARAMETERXPROC) (GLenum pname, GLfixed param);
 typedef void ( * PFNGLPOINTPARAMETERXVPROC) (GLenum pname, const GLfixed* params);
 typedef void ( * PFNGLPOINTSIZEPOINTEROESPROC) (GLenum type, GLsizei stride, const void *pointer);
 typedef void ( * PFNGLTEXPARAMETERXVPROC) (GLenum target, GLenum pname, const GLfixed* params);
-# 20935 "/usr/include/GL/glew.h" 3 4
+# 20935 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef const GLchar* ( * PFNGLERRORSTRINGREGALPROC) (GLenum error);
-# 20948 "/usr/include/GL/glew.h" 3 4
+# 20948 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLboolean ( * PFNGLGETEXTENSIONREGALPROC) (const GLchar* ext);
 typedef GLboolean ( * PFNGLISSUPPORTEDREGALPROC) (const GLchar* ext);
-# 20973 "/usr/include/GL/glew.h" 3 4
+# 20973 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( *GLLOGPROCREGAL)(GLenum stream, GLsizei length, const GLchar *message, void *context);
 
 typedef void ( * PFNGLLOGMESSAGECALLBACKREGALPROC) (GLLOGPROCREGAL callback);
-# 20988 "/usr/include/GL/glew.h" 3 4
+# 20988 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void * ( * PFNGLGETPROCADDRESSREGALPROC) (const GLchar *name);
-# 21057 "/usr/include/GL/glew.h" 3 4
+# 21057 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDETAILTEXFUNCSGISPROC) (GLenum target, GLsizei n, const GLfloat* points);
 typedef void ( * PFNGLGETDETAILTEXFUNCSGISPROC) (GLenum target, GLfloat* points);
-# 21072 "/usr/include/GL/glew.h" 3 4
+# 21072 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFOGFUNCSGISPROC) (GLsizei n, const GLfloat* points);
 typedef void ( * PFNGLGETFOGFUNCSGISPROC) (GLfloat* points);
-# 21125 "/usr/include/GL/glew.h" 3 4
+# 21125 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSAMPLEMASKSGISPROC) (GLclampf value, GLboolean invert);
 typedef void ( * PFNGLSAMPLEPATTERNSGISPROC) (GLenum pattern);
-# 21152 "/usr/include/GL/glew.h" 3 4
+# 21152 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLINTERLEAVEDTEXTURECOORDSETSSGISPROC) (GLint factor);
 typedef void ( * PFNGLSELECTTEXTURECOORDSETSGISPROC) (GLenum target);
 typedef void ( * PFNGLSELECTTEXTURESGISPROC) (GLenum target);
 typedef void ( * PFNGLSELECTTEXTURETRANSFORMSGISPROC) (GLenum target);
-# 21198 "/usr/include/GL/glew.h" 3 4
+# 21198 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMULTISAMPLESUBRECTPOSSGISPROC) (GLint x, GLint y);
-# 21211 "/usr/include/GL/glew.h" 3 4
+# 21211 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETSHARPENTEXFUNCSGISPROC) (GLenum target, GLfloat* points);
 typedef void ( * PFNGLSHARPENTEXFUNCSGISPROC) (GLenum target, GLsizei n, const GLfloat* points);
-# 21226 "/usr/include/GL/glew.h" 3 4
+# 21226 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXIMAGE4DSGISPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLsizei extent, GLint border, GLenum format, GLenum type, const void *pixels);
 typedef void ( * PFNGLTEXSUBIMAGE4DSGISPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint woffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei extent, GLenum format, GLenum type, const void *pixels);
-# 21263 "/usr/include/GL/glew.h" 3 4
+# 21263 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETTEXFILTERFUNCSGISPROC) (GLenum target, GLenum filter, GLfloat* weights);
 typedef void ( * PFNGLTEXFILTERFUNCSGISPROC) (GLenum target, GLenum filter, GLsizei n, const GLfloat* weights);
-# 21303 "/usr/include/GL/glew.h" 3 4
+# 21303 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLASYNCMARKERSGIXPROC) (GLuint marker);
 typedef void ( * PFNGLDELETEASYNCMARKERSSGIXPROC) (GLuint marker, GLsizei range);
 typedef GLint ( * PFNGLFINISHASYNCSGIXPROC) (GLuint* markerp);
 typedef GLuint ( * PFNGLGENASYNCMARKERSSGIXPROC) (GLsizei range);
 typedef GLboolean ( * PFNGLISASYNCMARKERSGIXPROC) (GLuint marker);
 typedef GLint ( * PFNGLPOLLASYNCSGIXPROC) (GLuint* markerp);
-# 21513 "/usr/include/GL/glew.h" 3 4
+# 21513 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLADDRESSSPACEPROC) (GLenum space, GLbitfield mask);
 typedef GLint ( * PFNGLDATAPIPEPROC) (GLenum space);
-# 21572 "/usr/include/GL/glew.h" 3 4
+# 21572 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFLUSHRASTERSGIXPROC) (void);
-# 21613 "/usr/include/GL/glew.h" 3 4
+# 21613 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFOGLAYERSSGIXPROC) (GLsizei n, const GLfloat* points);
 typedef void ( * PFNGLGETFOGLAYERSSGIXPROC) (GLfloat* points);
-# 21661 "/usr/include/GL/glew.h" 3 4
+# 21661 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTEXTUREFOGSGIXPROC) (GLenum pname);
-# 21688 "/usr/include/GL/glew.h" 3 4
+# 21688 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAGMENTCOLORMATERIALSGIXPROC) (GLenum face, GLenum mode);
 typedef void ( * PFNGLFRAGMENTLIGHTMODELFSGIXPROC) (GLenum pname, GLfloat param);
 typedef void ( * PFNGLFRAGMENTLIGHTMODELFVSGIXPROC) (GLenum pname, GLfloat* params);
@@ -42646,11 +42556,11 @@ typedef void ( * PFNGLGETFRAGMENTLIGHTFVSGIXPROC) (GLenum light, GLenum value, G
 typedef void ( * PFNGLGETFRAGMENTLIGHTIVSGIXPROC) (GLenum light, GLenum value, GLint* data);
 typedef void ( * PFNGLGETFRAGMENTMATERIALFVSGIXPROC) (GLenum face, GLenum pname, GLfloat* data);
 typedef void ( * PFNGLGETFRAGMENTMATERIALIVSGIXPROC) (GLenum face, GLenum pname, GLint* data);
-# 21746 "/usr/include/GL/glew.h" 3 4
+# 21746 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFRAMEZOOMSGIXPROC) (GLint factor);
-# 21790 "/usr/include/GL/glew.h" 3 4
+# 21790 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLIGLOOINTERFACESGIXPROC) (GLenum pname, void *param);
-# 21870 "/usr/include/GL/glew.h" 3 4
+# 21870 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLALLOCMPEGPREDICTORSSGIXPROC) (GLsizei width, GLsizei height, GLsizei n, GLuint* predictors);
 typedef void ( * PFNGLDELETEMPEGPREDICTORSSGIXPROC) (GLsizei n, GLuint* predictors);
 typedef void ( * PFNGLGENMPEGPREDICTORSSGIXPROC) (GLsizei n, GLuint* predictors);
@@ -42662,39 +42572,39 @@ typedef GLboolean ( * PFNGLISMPEGPREDICTORSGIXPROC) (GLuint predictor);
 typedef void ( * PFNGLMPEGPREDICTORSGIXPROC) (GLenum target, GLenum format, GLenum type, void *pixels);
 typedef void ( * PFNGLMPEGQUANTTABLEUBVPROC) (GLenum target, GLubyte* values);
 typedef void ( * PFNGLSWAPMPEGPREDICTORSSGIXPROC) (GLenum target0, GLenum target1);
-# 21912 "/usr/include/GL/glew.h" 3 4
+# 21912 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETNONLINLIGHTFVSGIXPROC) (GLenum light, GLenum pname, GLint* terms, GLfloat *data);
 typedef void ( * PFNGLGETNONLINMATERIALFVSGIXPROC) (GLenum face, GLenum pname, GLint* terms, const GLfloat *data);
 typedef void ( * PFNGLNONLINLIGHTFVSGIXPROC) (GLenum light, GLenum pname, GLint terms, GLfloat* params);
 typedef void ( * PFNGLNONLINMATERIALFVSGIXPROC) (GLenum face, GLenum pname, GLint terms, const GLfloat* params);
-# 21981 "/usr/include/GL/glew.h" 3 4
+# 21981 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLPIXELTEXGENSGIXPROC) (GLenum mode);
-# 22024 "/usr/include/GL/glew.h" 3 4
+# 22024 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLDEFORMSGIXPROC) (GLbitfield mask);
 typedef void ( * PFNGLLOADIDENTITYDEFORMATIONMAPSGIXPROC) (GLbitfield mask);
-# 22039 "/usr/include/GL/glew.h" 3 4
+# 22039 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLMESHBREADTHSGIXPROC) (GLint breadth);
 typedef void ( * PFNGLMESHSTRIDESGIXPROC) (GLint stride);
-# 22054 "/usr/include/GL/glew.h" 3 4
+# 22054 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLREFERENCEPLANESGIXPROC) (const GLdouble* equation);
-# 22143 "/usr/include/GL/glew.h" 3 4
+# 22143 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLSPRITEPARAMETERFSGIXPROC) (GLenum pname, GLfloat param);
 typedef void ( * PFNGLSPRITEPARAMETERFVSGIXPROC) (GLenum pname, GLfloat* params);
 typedef void ( * PFNGLSPRITEPARAMETERISGIXPROC) (GLenum pname, GLint param);
 typedef void ( * PFNGLSPRITEPARAMETERIVSGIXPROC) (GLenum pname, GLint* params);
-# 22186 "/usr/include/GL/glew.h" 3 4
+# 22186 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLTAGSAMPLEBUFFERSGIXPROC) (void);
-# 22325 "/usr/include/GL/glew.h" 3 4
+# 22325 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETVECTOROPERATIONSGIXPROC) (GLenum operation);
 typedef void ( * PFNGLVECTOROPERATIONSGIXPROC) (GLenum operation);
-# 22340 "/usr/include/GL/glew.h" 3 4
+# 22340 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef GLboolean ( * PFNGLAREVERTEXARRAYSRESIDENTSGIXPROC) (GLsizei n, const GLuint* arrays, GLboolean* residences);
 typedef void ( * PFNGLBINDVERTEXARRAYSGIXPROC) (GLuint array);
 typedef void ( * PFNGLDELETEVERTEXARRAYSSGIXPROC) (GLsizei n, const GLuint* arrays);
 typedef void ( * PFNGLGENVERTEXARRAYSSGIXPROC) (GLsizei n, GLuint* arrays);
 typedef GLboolean ( * PFNGLISVERTEXARRAYSGIXPROC) (GLuint array);
 typedef void ( * PFNGLPRIORITIZEVERTEXARRAYSSGIXPROC) (GLsizei n, const GLuint* arrays, const GLclampf* priorities);
-# 22455 "/usr/include/GL/glew.h" 3 4
+# 22455 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLORTABLEPARAMETERFVSGIPROC) (GLenum target, GLenum pname, const GLfloat* params);
 typedef void ( * PFNGLCOLORTABLEPARAMETERIVSGIPROC) (GLenum target, GLenum pname, const GLint* params);
 typedef void ( * PFNGLCOLORTABLESGIPROC) (GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, const void *table);
@@ -42702,7 +42612,7 @@ typedef void ( * PFNGLCOPYCOLORTABLESGIPROC) (GLenum target, GLenum internalform
 typedef void ( * PFNGLGETCOLORTABLEPARAMETERFVSGIPROC) (GLenum target, GLenum pname, GLfloat* params);
 typedef void ( * PFNGLGETCOLORTABLEPARAMETERIVSGIPROC) (GLenum target, GLenum pname, GLint* params);
 typedef void ( * PFNGLGETCOLORTABLESGIPROC) (GLenum target, GLenum format, GLenum type, void *table);
-# 22512 "/usr/include/GL/glew.h" 3 4
+# 22512 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGETPIXELTRANSFORMPARAMETERFVSGIPROC) (GLenum target, GLenum pname, GLfloat* params);
 typedef void ( * PFNGLGETPIXELTRANSFORMPARAMETERIVSGIPROC) (GLenum target, GLenum pname, GLint* params);
 typedef void ( * PFNGLPIXELTRANSFORMPARAMETERFSGIPROC) (GLenum target, GLenum pname, GLfloat param);
@@ -42710,9 +42620,9 @@ typedef void ( * PFNGLPIXELTRANSFORMPARAMETERFVSGIPROC) (GLenum target, GLenum p
 typedef void ( * PFNGLPIXELTRANSFORMPARAMETERISGIPROC) (GLenum target, GLenum pname, GLint param);
 typedef void ( * PFNGLPIXELTRANSFORMPARAMETERIVSGIPROC) (GLenum target, GLenum pname, const GLint* params);
 typedef void ( * PFNGLPIXELTRANSFORMSGIPROC) (GLenum target);
-# 22552 "/usr/include/GL/glew.h" 3 4
+# 22552 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLFINISHTEXTURESUNXPROC) (void);
-# 22579 "/usr/include/GL/glew.h" 3 4
+# 22579 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLGLOBALALPHAFACTORBSUNPROC) (GLbyte factor);
 typedef void ( * PFNGLGLOBALALPHAFACTORDSUNPROC) (GLdouble factor);
 typedef void ( * PFNGLGLOBALALPHAFACTORFSUNPROC) (GLfloat factor);
@@ -42721,9 +42631,9 @@ typedef void ( * PFNGLGLOBALALPHAFACTORSSUNPROC) (GLshort factor);
 typedef void ( * PFNGLGLOBALALPHAFACTORUBSUNPROC) (GLubyte factor);
 typedef void ( * PFNGLGLOBALALPHAFACTORUISUNPROC) (GLuint factor);
 typedef void ( * PFNGLGLOBALALPHAFACTORUSSUNPROC) (GLushort factor);
-# 22618 "/usr/include/GL/glew.h" 3 4
+# 22618 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLREADVIDEOPIXELSSUNPROC) (GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, void* pixels);
-# 22660 "/usr/include/GL/glew.h" 3 4
+# 22660 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLREPLACEMENTCODEPOINTERSUNPROC) (GLenum type, GLsizei stride, const void *pointer);
 typedef void ( * PFNGLREPLACEMENTCODEUBSUNPROC) (GLubyte code);
 typedef void ( * PFNGLREPLACEMENTCODEUBVSUNPROC) (const GLubyte* code);
@@ -42731,7 +42641,7 @@ typedef void ( * PFNGLREPLACEMENTCODEUISUNPROC) (GLuint code);
 typedef void ( * PFNGLREPLACEMENTCODEUIVSUNPROC) (const GLuint* code);
 typedef void ( * PFNGLREPLACEMENTCODEUSSUNPROC) (GLushort code);
 typedef void ( * PFNGLREPLACEMENTCODEUSVSUNPROC) (const GLushort* code);
-# 22685 "/usr/include/GL/glew.h" 3 4
+# 22685 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLCOLOR3FVERTEX3FSUNPROC) (GLfloat r, GLfloat g, GLfloat b, GLfloat x, GLfloat y, GLfloat z);
 typedef void ( * PFNGLCOLOR3FVERTEX3FVSUNPROC) (const GLfloat* c, const GLfloat *v);
 typedef void ( * PFNGLCOLOR4FNORMAL3FVERTEX3FSUNPROC) (GLfloat r, GLfloat g, GLfloat b, GLfloat a, GLfloat nx, GLfloat ny, GLfloat nz, GLfloat x, GLfloat y, GLfloat z);
@@ -42772,4171 +42682,4171 @@ typedef void ( * PFNGLTEXCOORD4FCOLOR4FNORMAL3FVERTEX4FSUNPROC) (GLfloat s, GLfl
 typedef void ( * PFNGLTEXCOORD4FCOLOR4FNORMAL3FVERTEX4FVSUNPROC) (const GLfloat* tc, const GLfloat *c, const GLfloat *n, const GLfloat *v);
 typedef void ( * PFNGLTEXCOORD4FVERTEX4FSUNPROC) (GLfloat s, GLfloat t, GLfloat p, GLfloat q, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 typedef void ( * PFNGLTEXCOORD4FVERTEX4FVSUNPROC) (const GLfloat* tc, const GLfloat *v);
-# 22819 "/usr/include/GL/glew.h" 3 4
+# 22819 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
 typedef void ( * PFNGLADDSWAPHINTRECTWINPROC) (GLint x, GLint y, GLsizei width, GLsizei height);
-# 22831 "/usr/include/GL/glew.h" 3 4
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXSUBIMAGE3DPROC __glewCopyTexSubImage3D;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWRANGEELEMENTSPROC __glewDrawRangeElements;
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE3DPROC __glewTexImage3D;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSUBIMAGE3DPROC __glewTexSubImage3D;
-
-extern __attribute__ ((visibility("default"))) PFNGLACTIVETEXTUREPROC __glewActiveTexture;
-extern __attribute__ ((visibility("default"))) PFNGLCLIENTACTIVETEXTUREPROC __glewClientActiveTexture;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXIMAGE1DPROC __glewCompressedTexImage1D;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXIMAGE2DPROC __glewCompressedTexImage2D;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXIMAGE3DPROC __glewCompressedTexImage3D;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC __glewCompressedTexSubImage1D;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC __glewCompressedTexSubImage2D;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC __glewCompressedTexSubImage3D;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMPRESSEDTEXIMAGEPROC __glewGetCompressedTexImage;
-extern __attribute__ ((visibility("default"))) PFNGLLOADTRANSPOSEMATRIXDPROC __glewLoadTransposeMatrixd;
-extern __attribute__ ((visibility("default"))) PFNGLLOADTRANSPOSEMATRIXFPROC __glewLoadTransposeMatrixf;
-extern __attribute__ ((visibility("default"))) PFNGLMULTTRANSPOSEMATRIXDPROC __glewMultTransposeMatrixd;
-extern __attribute__ ((visibility("default"))) PFNGLMULTTRANSPOSEMATRIXFPROC __glewMultTransposeMatrixf;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1DPROC __glewMultiTexCoord1d;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1DVPROC __glewMultiTexCoord1dv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1FPROC __glewMultiTexCoord1f;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1FVPROC __glewMultiTexCoord1fv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1IPROC __glewMultiTexCoord1i;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1IVPROC __glewMultiTexCoord1iv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1SPROC __glewMultiTexCoord1s;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1SVPROC __glewMultiTexCoord1sv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2DPROC __glewMultiTexCoord2d;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2DVPROC __glewMultiTexCoord2dv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2FPROC __glewMultiTexCoord2f;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2FVPROC __glewMultiTexCoord2fv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2IPROC __glewMultiTexCoord2i;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2IVPROC __glewMultiTexCoord2iv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2SPROC __glewMultiTexCoord2s;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2SVPROC __glewMultiTexCoord2sv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3DPROC __glewMultiTexCoord3d;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3DVPROC __glewMultiTexCoord3dv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3FPROC __glewMultiTexCoord3f;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3FVPROC __glewMultiTexCoord3fv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3IPROC __glewMultiTexCoord3i;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3IVPROC __glewMultiTexCoord3iv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3SPROC __glewMultiTexCoord3s;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3SVPROC __glewMultiTexCoord3sv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4DPROC __glewMultiTexCoord4d;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4DVPROC __glewMultiTexCoord4dv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4FPROC __glewMultiTexCoord4f;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4FVPROC __glewMultiTexCoord4fv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4IPROC __glewMultiTexCoord4i;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4IVPROC __glewMultiTexCoord4iv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4SPROC __glewMultiTexCoord4s;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4SVPROC __glewMultiTexCoord4sv;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLECOVERAGEPROC __glewSampleCoverage;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDCOLORPROC __glewBlendColor;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONPROC __glewBlendEquation;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCSEPARATEPROC __glewBlendFuncSeparate;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDPOINTERPROC __glewFogCoordPointer;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDDPROC __glewFogCoordd;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDDVPROC __glewFogCoorddv;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDFPROC __glewFogCoordf;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDFVPROC __glewFogCoordfv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSPROC __glewMultiDrawArrays;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSPROC __glewMultiDrawElements;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERFPROC __glewPointParameterf;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERFVPROC __glewPointParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERIPROC __glewPointParameteri;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERIVPROC __glewPointParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3BPROC __glewSecondaryColor3b;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3BVPROC __glewSecondaryColor3bv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3DPROC __glewSecondaryColor3d;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3DVPROC __glewSecondaryColor3dv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3FPROC __glewSecondaryColor3f;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3FVPROC __glewSecondaryColor3fv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3IPROC __glewSecondaryColor3i;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3IVPROC __glewSecondaryColor3iv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3SPROC __glewSecondaryColor3s;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3SVPROC __glewSecondaryColor3sv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3UBPROC __glewSecondaryColor3ub;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3UBVPROC __glewSecondaryColor3ubv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3UIPROC __glewSecondaryColor3ui;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3UIVPROC __glewSecondaryColor3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3USPROC __glewSecondaryColor3us;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3USVPROC __glewSecondaryColor3usv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLORPOINTERPROC __glewSecondaryColorPointer;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2DPROC __glewWindowPos2d;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2DVPROC __glewWindowPos2dv;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2FPROC __glewWindowPos2f;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2FVPROC __glewWindowPos2fv;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2IPROC __glewWindowPos2i;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2IVPROC __glewWindowPos2iv;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2SPROC __glewWindowPos2s;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2SVPROC __glewWindowPos2sv;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3DPROC __glewWindowPos3d;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3DVPROC __glewWindowPos3dv;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3FPROC __glewWindowPos3f;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3FVPROC __glewWindowPos3fv;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3IPROC __glewWindowPos3i;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3IVPROC __glewWindowPos3iv;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3SPROC __glewWindowPos3s;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3SVPROC __glewWindowPos3sv;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINQUERYPROC __glewBeginQuery;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERPROC __glewBindBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERDATAPROC __glewBufferData;
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERSUBDATAPROC __glewBufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEBUFFERSPROC __glewDeleteBuffers;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEQUERIESPROC __glewDeleteQueries;
-extern __attribute__ ((visibility("default"))) PFNGLENDQUERYPROC __glewEndQuery;
-extern __attribute__ ((visibility("default"))) PFNGLGENBUFFERSPROC __glewGenBuffers;
-extern __attribute__ ((visibility("default"))) PFNGLGENQUERIESPROC __glewGenQueries;
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERPARAMETERIVPROC __glewGetBufferParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERPOINTERVPROC __glewGetBufferPointerv;
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERSUBDATAPROC __glewGetBufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTIVPROC __glewGetQueryObjectiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTUIVPROC __glewGetQueryObjectuiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYIVPROC __glewGetQueryiv;
-extern __attribute__ ((visibility("default"))) PFNGLISBUFFERPROC __glewIsBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLISQUERYPROC __glewIsQuery;
-extern __attribute__ ((visibility("default"))) PFNGLMAPBUFFERPROC __glewMapBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLUNMAPBUFFERPROC __glewUnmapBuffer;
-
-extern __attribute__ ((visibility("default"))) PFNGLATTACHSHADERPROC __glewAttachShader;
-extern __attribute__ ((visibility("default"))) PFNGLBINDATTRIBLOCATIONPROC __glewBindAttribLocation;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONSEPARATEPROC __glewBlendEquationSeparate;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPILESHADERPROC __glewCompileShader;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEPROGRAMPROC __glewCreateProgram;
-extern __attribute__ ((visibility("default"))) PFNGLCREATESHADERPROC __glewCreateShader;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEPROGRAMPROC __glewDeleteProgram;
-extern __attribute__ ((visibility("default"))) PFNGLDELETESHADERPROC __glewDeleteShader;
-extern __attribute__ ((visibility("default"))) PFNGLDETACHSHADERPROC __glewDetachShader;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEVERTEXATTRIBARRAYPROC __glewDisableVertexAttribArray;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWBUFFERSPROC __glewDrawBuffers;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEVERTEXATTRIBARRAYPROC __glewEnableVertexAttribArray;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEATTRIBPROC __glewGetActiveAttrib;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEUNIFORMPROC __glewGetActiveUniform;
-extern __attribute__ ((visibility("default"))) PFNGLGETATTACHEDSHADERSPROC __glewGetAttachedShaders;
-extern __attribute__ ((visibility("default"))) PFNGLGETATTRIBLOCATIONPROC __glewGetAttribLocation;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMINFOLOGPROC __glewGetProgramInfoLog;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMIVPROC __glewGetProgramiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETSHADERINFOLOGPROC __glewGetShaderInfoLog;
-extern __attribute__ ((visibility("default"))) PFNGLGETSHADERSOURCEPROC __glewGetShaderSource;
-extern __attribute__ ((visibility("default"))) PFNGLGETSHADERIVPROC __glewGetShaderiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMLOCATIONPROC __glewGetUniformLocation;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMFVPROC __glewGetUniformfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMIVPROC __glewGetUniformiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBPOINTERVPROC __glewGetVertexAttribPointerv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBDVPROC __glewGetVertexAttribdv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBFVPROC __glewGetVertexAttribfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBIVPROC __glewGetVertexAttribiv;
-extern __attribute__ ((visibility("default"))) PFNGLISPROGRAMPROC __glewIsProgram;
-extern __attribute__ ((visibility("default"))) PFNGLISSHADERPROC __glewIsShader;
-extern __attribute__ ((visibility("default"))) PFNGLLINKPROGRAMPROC __glewLinkProgram;
-extern __attribute__ ((visibility("default"))) PFNGLSHADERSOURCEPROC __glewShaderSource;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILFUNCSEPARATEPROC __glewStencilFuncSeparate;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILMASKSEPARATEPROC __glewStencilMaskSeparate;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILOPSEPARATEPROC __glewStencilOpSeparate;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1FPROC __glewUniform1f;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1FVPROC __glewUniform1fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1IPROC __glewUniform1i;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1IVPROC __glewUniform1iv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2FPROC __glewUniform2f;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2FVPROC __glewUniform2fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2IPROC __glewUniform2i;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2IVPROC __glewUniform2iv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3FPROC __glewUniform3f;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3FVPROC __glewUniform3fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3IPROC __glewUniform3i;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3IVPROC __glewUniform3iv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4FPROC __glewUniform4f;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4FVPROC __glewUniform4fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4IPROC __glewUniform4i;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4IVPROC __glewUniform4iv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2FVPROC __glewUniformMatrix2fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3FVPROC __glewUniformMatrix3fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4FVPROC __glewUniformMatrix4fv;
-extern __attribute__ ((visibility("default"))) PFNGLUSEPROGRAMPROC __glewUseProgram;
-extern __attribute__ ((visibility("default"))) PFNGLVALIDATEPROGRAMPROC __glewValidateProgram;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1DPROC __glewVertexAttrib1d;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1DVPROC __glewVertexAttrib1dv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1FPROC __glewVertexAttrib1f;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1FVPROC __glewVertexAttrib1fv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1SPROC __glewVertexAttrib1s;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1SVPROC __glewVertexAttrib1sv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2DPROC __glewVertexAttrib2d;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2DVPROC __glewVertexAttrib2dv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2FPROC __glewVertexAttrib2f;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2FVPROC __glewVertexAttrib2fv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2SPROC __glewVertexAttrib2s;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2SVPROC __glewVertexAttrib2sv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3DPROC __glewVertexAttrib3d;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3DVPROC __glewVertexAttrib3dv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3FPROC __glewVertexAttrib3f;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3FVPROC __glewVertexAttrib3fv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3SPROC __glewVertexAttrib3s;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3SVPROC __glewVertexAttrib3sv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NBVPROC __glewVertexAttrib4Nbv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NIVPROC __glewVertexAttrib4Niv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NSVPROC __glewVertexAttrib4Nsv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NUBPROC __glewVertexAttrib4Nub;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NUBVPROC __glewVertexAttrib4Nubv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NUIVPROC __glewVertexAttrib4Nuiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NUSVPROC __glewVertexAttrib4Nusv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4BVPROC __glewVertexAttrib4bv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4DPROC __glewVertexAttrib4d;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4DVPROC __glewVertexAttrib4dv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4FPROC __glewVertexAttrib4f;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4FVPROC __glewVertexAttrib4fv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4IVPROC __glewVertexAttrib4iv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4SPROC __glewVertexAttrib4s;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4SVPROC __glewVertexAttrib4sv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4UBVPROC __glewVertexAttrib4ubv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4UIVPROC __glewVertexAttrib4uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4USVPROC __glewVertexAttrib4usv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBPOINTERPROC __glewVertexAttribPointer;
-
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2X3FVPROC __glewUniformMatrix2x3fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2X4FVPROC __glewUniformMatrix2x4fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3X2FVPROC __glewUniformMatrix3x2fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3X4FVPROC __glewUniformMatrix3x4fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4X2FVPROC __glewUniformMatrix4x2fv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4X3FVPROC __glewUniformMatrix4x3fv;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINCONDITIONALRENDERPROC __glewBeginConditionalRender;
-extern __attribute__ ((visibility("default"))) PFNGLBEGINTRANSFORMFEEDBACKPROC __glewBeginTransformFeedback;
-extern __attribute__ ((visibility("default"))) PFNGLBINDFRAGDATALOCATIONPROC __glewBindFragDataLocation;
-extern __attribute__ ((visibility("default"))) PFNGLCLAMPCOLORPROC __glewClampColor;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARBUFFERFIPROC __glewClearBufferfi;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARBUFFERFVPROC __glewClearBufferfv;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARBUFFERIVPROC __glewClearBufferiv;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARBUFFERUIVPROC __glewClearBufferuiv;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORMASKIPROC __glewColorMaski;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEIPROC __glewDisablei;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEIPROC __glewEnablei;
-extern __attribute__ ((visibility("default"))) PFNGLENDCONDITIONALRENDERPROC __glewEndConditionalRender;
-extern __attribute__ ((visibility("default"))) PFNGLENDTRANSFORMFEEDBACKPROC __glewEndTransformFeedback;
-extern __attribute__ ((visibility("default"))) PFNGLGETBOOLEANI_VPROC __glewGetBooleani_v;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGDATALOCATIONPROC __glewGetFragDataLocation;
-extern __attribute__ ((visibility("default"))) PFNGLGETSTRINGIPROC __glewGetStringi;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXPARAMETERIIVPROC __glewGetTexParameterIiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXPARAMETERIUIVPROC __glewGetTexParameterIuiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTRANSFORMFEEDBACKVARYINGPROC __glewGetTransformFeedbackVarying;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMUIVPROC __glewGetUniformuiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBIIVPROC __glewGetVertexAttribIiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBIUIVPROC __glewGetVertexAttribIuiv;
-extern __attribute__ ((visibility("default"))) PFNGLISENABLEDIPROC __glewIsEnabledi;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPARAMETERIIVPROC __glewTexParameterIiv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPARAMETERIUIVPROC __glewTexParameterIuiv;
-extern __attribute__ ((visibility("default"))) PFNGLTRANSFORMFEEDBACKVARYINGSPROC __glewTransformFeedbackVaryings;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1UIPROC __glewUniform1ui;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1UIVPROC __glewUniform1uiv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2UIPROC __glewUniform2ui;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2UIVPROC __glewUniform2uiv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3UIPROC __glewUniform3ui;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3UIVPROC __glewUniform3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4UIPROC __glewUniform4ui;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4UIVPROC __glewUniform4uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI1IPROC __glewVertexAttribI1i;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI1IVPROC __glewVertexAttribI1iv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI1UIPROC __glewVertexAttribI1ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI1UIVPROC __glewVertexAttribI1uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI2IPROC __glewVertexAttribI2i;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI2IVPROC __glewVertexAttribI2iv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI2UIPROC __glewVertexAttribI2ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI2UIVPROC __glewVertexAttribI2uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI3IPROC __glewVertexAttribI3i;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI3IVPROC __glewVertexAttribI3iv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI3UIPROC __glewVertexAttribI3ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI3UIVPROC __glewVertexAttribI3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4BVPROC __glewVertexAttribI4bv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4IPROC __glewVertexAttribI4i;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4IVPROC __glewVertexAttribI4iv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4SVPROC __glewVertexAttribI4sv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4UBVPROC __glewVertexAttribI4ubv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4UIPROC __glewVertexAttribI4ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4UIVPROC __glewVertexAttribI4uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4USVPROC __glewVertexAttribI4usv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBIPOINTERPROC __glewVertexAttribIPointer;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSINSTANCEDPROC __glewDrawArraysInstanced;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDPROC __glewDrawElementsInstanced;
-extern __attribute__ ((visibility("default"))) PFNGLPRIMITIVERESTARTINDEXPROC __glewPrimitiveRestartIndex;
-extern __attribute__ ((visibility("default"))) PFNGLTEXBUFFERPROC __glewTexBuffer;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTUREPROC __glewFramebufferTexture;
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERPARAMETERI64VPROC __glewGetBufferParameteri64v;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGER64I_VPROC __glewGetInteger64i_v;
-
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBDIVISORPROC __glewVertexAttribDivisor;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONSEPARATEIPROC __glewBlendEquationSeparatei;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONIPROC __glewBlendEquationi;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCSEPARATEIPROC __glewBlendFuncSeparatei;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCIPROC __glewBlendFunci;
-extern __attribute__ ((visibility("default"))) PFNGLMINSAMPLESHADINGPROC __glewMinSampleShading;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETGRAPHICSRESETSTATUSPROC __glewGetGraphicsResetStatus;
-extern __attribute__ ((visibility("default"))) PFNGLGETNCOMPRESSEDTEXIMAGEPROC __glewGetnCompressedTexImage;
-extern __attribute__ ((visibility("default"))) PFNGLGETNTEXIMAGEPROC __glewGetnTexImage;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMDVPROC __glewGetnUniformdv;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC __glewMultiDrawArraysIndirectCount;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC __glewMultiDrawElementsIndirectCount;
-extern __attribute__ ((visibility("default"))) PFNGLSPECIALIZESHADERPROC __glewSpecializeShader;
-
-extern __attribute__ ((visibility("default"))) PFNGLTBUFFERMASK3DFXPROC __glewTbufferMask3DFX;
-
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGECALLBACKAMDPROC __glewDebugMessageCallbackAMD;
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGEENABLEAMDPROC __glewDebugMessageEnableAMD;
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGEINSERTAMDPROC __glewDebugMessageInsertAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETDEBUGMESSAGELOGAMDPROC __glewGetDebugMessageLogAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONINDEXEDAMDPROC __glewBlendEquationIndexedAMD;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONSEPARATEINDEXEDAMDPROC __glewBlendEquationSeparateIndexedAMD;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCINDEXEDAMDPROC __glewBlendFuncIndexedAMD;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCSEPARATEINDEXEDAMDPROC __glewBlendFuncSeparateIndexedAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC __glewNamedRenderbufferStorageMultisampleAdvancedAMD;
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC __glewRenderbufferStorageMultisampleAdvancedAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERSAMPLEPOSITIONSFVAMDPROC __glewFramebufferSamplePositionsfvAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAMEBUFFERPARAMETERFVAMDPROC __glewGetFramebufferParameterfvAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDFRAMEBUFFERPARAMETERFVAMDPROC __glewGetNamedFramebufferParameterfvAMD;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERSAMPLEPOSITIONSFVAMDPROC __glewNamedFramebufferSamplePositionsfvAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBPARAMETERIAMDPROC __glewVertexAttribParameteriAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSINDIRECTAMDPROC __glewMultiDrawArraysIndirectAMD;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSINDIRECTAMDPROC __glewMultiDrawElementsIndirectAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLDELETENAMESAMDPROC __glewDeleteNamesAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGENNAMESAMDPROC __glewGenNamesAMD;
-extern __attribute__ ((visibility("default"))) PFNGLISNAMEAMDPROC __glewIsNameAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLQUERYOBJECTPARAMETERUIAMDPROC __glewQueryObjectParameteruiAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINPERFMONITORAMDPROC __glewBeginPerfMonitorAMD;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEPERFMONITORSAMDPROC __glewDeletePerfMonitorsAMD;
-extern __attribute__ ((visibility("default"))) PFNGLENDPERFMONITORAMDPROC __glewEndPerfMonitorAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGENPERFMONITORSAMDPROC __glewGenPerfMonitorsAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFMONITORCOUNTERDATAAMDPROC __glewGetPerfMonitorCounterDataAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFMONITORCOUNTERINFOAMDPROC __glewGetPerfMonitorCounterInfoAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFMONITORCOUNTERSTRINGAMDPROC __glewGetPerfMonitorCounterStringAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFMONITORCOUNTERSAMDPROC __glewGetPerfMonitorCountersAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFMONITORGROUPSTRINGAMDPROC __glewGetPerfMonitorGroupStringAMD;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFMONITORGROUPSAMDPROC __glewGetPerfMonitorGroupsAMD;
-extern __attribute__ ((visibility("default"))) PFNGLSELECTPERFMONITORCOUNTERSAMDPROC __glewSelectPerfMonitorCountersAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLSETMULTISAMPLEFVAMDPROC __glewSetMultisamplefvAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGESPARSEAMDPROC __glewTexStorageSparseAMD;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGESPARSEAMDPROC __glewTextureStorageSparseAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILOPVALUEAMDPROC __glewStencilOpValueAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLTESSELLATIONFACTORAMDPROC __glewTessellationFactorAMD;
-extern __attribute__ ((visibility("default"))) PFNGLTESSELLATIONMODEAMDPROC __glewTessellationModeAMD;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLITFRAMEBUFFERANGLEPROC __glewBlitFramebufferANGLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEMULTISAMPLEANGLEPROC __glewRenderbufferStorageMultisampleANGLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSINSTANCEDANGLEPROC __glewDrawArraysInstancedANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDANGLEPROC __glewDrawElementsInstancedANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBDIVISORANGLEPROC __glewVertexAttribDivisorANGLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINQUERYANGLEPROC __glewBeginQueryANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEQUERIESANGLEPROC __glewDeleteQueriesANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLENDQUERYANGLEPROC __glewEndQueryANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLGENQUERIESANGLEPROC __glewGenQueriesANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTI64VANGLEPROC __glewGetQueryObjecti64vANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTIVANGLEPROC __glewGetQueryObjectivANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTUI64VANGLEPROC __glewGetQueryObjectui64vANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTUIVANGLEPROC __glewGetQueryObjectuivANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYIVANGLEPROC __glewGetQueryivANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLISQUERYANGLEPROC __glewIsQueryANGLE;
-extern __attribute__ ((visibility("default"))) PFNGLQUERYCOUNTERANGLEPROC __glewQueryCounterANGLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETTRANSLATEDSHADERSOURCEANGLEPROC __glewGetTranslatedShaderSourceANGLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTURELEVELSAPPLEPROC __glewCopyTextureLevelsAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTARRAYAPPLEPROC __glewDrawElementArrayAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWRANGEELEMENTARRAYAPPLEPROC __glewDrawRangeElementArrayAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLELEMENTPOINTERAPPLEPROC __glewElementPointerAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTARRAYAPPLEPROC __glewMultiDrawElementArrayAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWRANGEELEMENTARRAYAPPLEPROC __glewMultiDrawRangeElementArrayAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLDELETEFENCESAPPLEPROC __glewDeleteFencesAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLFINISHFENCEAPPLEPROC __glewFinishFenceAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLFINISHOBJECTAPPLEPROC __glewFinishObjectAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLGENFENCESAPPLEPROC __glewGenFencesAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLISFENCEAPPLEPROC __glewIsFenceAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLSETFENCEAPPLEPROC __glewSetFenceAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLTESTFENCEAPPLEPROC __glewTestFenceAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLTESTOBJECTAPPLEPROC __glewTestObjectAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERPARAMETERIAPPLEPROC __glewBufferParameteriAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHMAPPEDBUFFERRANGEAPPLEPROC __glewFlushMappedBufferRangeAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEMULTISAMPLEAPPLEPROC __glewRenderbufferStorageMultisampleAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLRESOLVEMULTISAMPLEFRAMEBUFFERAPPLEPROC __glewResolveMultisampleFramebufferAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETOBJECTPARAMETERIVAPPLEPROC __glewGetObjectParameterivAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLOBJECTPURGEABLEAPPLEPROC __glewObjectPurgeableAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLOBJECTUNPURGEABLEAPPLEPROC __glewObjectUnpurgeableAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLIENTWAITSYNCAPPLEPROC __glewClientWaitSyncAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLDELETESYNCAPPLEPROC __glewDeleteSyncAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLFENCESYNCAPPLEPROC __glewFenceSyncAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGER64VAPPLEPROC __glewGetInteger64vAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLGETSYNCIVAPPLEPROC __glewGetSyncivAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLISSYNCAPPLEPROC __glewIsSyncAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLWAITSYNCAPPLEPROC __glewWaitSyncAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXPARAMETERPOINTERVAPPLEPROC __glewGetTexParameterPointervAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURERANGEAPPLEPROC __glewTextureRangeAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDVERTEXARRAYAPPLEPROC __glewBindVertexArrayAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEVERTEXARRAYSAPPLEPROC __glewDeleteVertexArraysAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLGENVERTEXARRAYSAPPLEPROC __glewGenVertexArraysAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLISVERTEXARRAYAPPLEPROC __glewIsVertexArrayAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHVERTEXARRAYRANGEAPPLEPROC __glewFlushVertexArrayRangeAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYPARAMETERIAPPLEPROC __glewVertexArrayParameteriAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYRANGEAPPLEPROC __glewVertexArrayRangeAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEVERTEXATTRIBAPPLEPROC __glewDisableVertexAttribAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEVERTEXATTRIBAPPLEPROC __glewEnableVertexAttribAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLISVERTEXATTRIBENABLEDAPPLEPROC __glewIsVertexAttribEnabledAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLMAPVERTEXATTRIB1DAPPLEPROC __glewMapVertexAttrib1dAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLMAPVERTEXATTRIB1FAPPLEPROC __glewMapVertexAttrib1fAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLMAPVERTEXATTRIB2DAPPLEPROC __glewMapVertexAttrib2dAPPLE;
-extern __attribute__ ((visibility("default"))) PFNGLMAPVERTEXATTRIB2FAPPLEPROC __glewMapVertexAttrib2fAPPLE;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLEARDEPTHFPROC __glewClearDepthf;
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHRANGEFPROC __glewDepthRangef;
-extern __attribute__ ((visibility("default"))) PFNGLGETSHADERPRECISIONFORMATPROC __glewGetShaderPrecisionFormat;
-extern __attribute__ ((visibility("default"))) PFNGLRELEASESHADERCOMPILERPROC __glewReleaseShaderCompiler;
-extern __attribute__ ((visibility("default"))) PFNGLSHADERBINARYPROC __glewShaderBinary;
-
-extern __attribute__ ((visibility("default"))) PFNGLMEMORYBARRIERBYREGIONPROC __glewMemoryBarrierByRegion;
-
-extern __attribute__ ((visibility("default"))) PFNGLPRIMITIVEBOUNDINGBOXARBPROC __glewPrimitiveBoundingBoxARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC __glewDrawArraysInstancedBaseInstance;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC __glewDrawElementsInstancedBaseInstance;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC __glewDrawElementsInstancedBaseVertexBaseInstance;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETIMAGEHANDLEARBPROC __glewGetImageHandleARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREHANDLEARBPROC __glewGetTextureHandleARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTURESAMPLERHANDLEARBPROC __glewGetTextureSamplerHandleARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBLUI64VARBPROC __glewGetVertexAttribLui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLISIMAGEHANDLERESIDENTARBPROC __glewIsImageHandleResidentARB;
-extern __attribute__ ((visibility("default"))) PFNGLISTEXTUREHANDLERESIDENTARBPROC __glewIsTextureHandleResidentARB;
-extern __attribute__ ((visibility("default"))) PFNGLMAKEIMAGEHANDLENONRESIDENTARBPROC __glewMakeImageHandleNonResidentARB;
-extern __attribute__ ((visibility("default"))) PFNGLMAKEIMAGEHANDLERESIDENTARBPROC __glewMakeImageHandleResidentARB;
-extern __attribute__ ((visibility("default"))) PFNGLMAKETEXTUREHANDLENONRESIDENTARBPROC __glewMakeTextureHandleNonResidentARB;
-extern __attribute__ ((visibility("default"))) PFNGLMAKETEXTUREHANDLERESIDENTARBPROC __glewMakeTextureHandleResidentARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMHANDLEUI64ARBPROC __glewProgramUniformHandleui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMHANDLEUI64VARBPROC __glewProgramUniformHandleui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMHANDLEUI64ARBPROC __glewUniformHandleui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMHANDLEUI64VARBPROC __glewUniformHandleui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1UI64ARBPROC __glewVertexAttribL1ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1UI64VARBPROC __glewVertexAttribL1ui64vARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDFRAGDATALOCATIONINDEXEDPROC __glewBindFragDataLocationIndexed;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGDATAINDEXPROC __glewGetFragDataIndex;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERSTORAGEPROC __glewBufferStorage;
-
-extern __attribute__ ((visibility("default"))) PFNGLCREATESYNCFROMCLEVENTARBPROC __glewCreateSyncFromCLeventARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLEARBUFFERDATAPROC __glewClearBufferData;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARBUFFERSUBDATAPROC __glewClearBufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARNAMEDBUFFERDATAEXTPROC __glewClearNamedBufferDataEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARNAMEDBUFFERSUBDATAEXTPROC __glewClearNamedBufferSubDataEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLEARTEXIMAGEPROC __glewClearTexImage;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARTEXSUBIMAGEPROC __glewClearTexSubImage;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLIPCONTROLPROC __glewClipControl;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLAMPCOLORARBPROC __glewClampColorARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLDISPATCHCOMPUTEPROC __glewDispatchCompute;
-extern __attribute__ ((visibility("default"))) PFNGLDISPATCHCOMPUTEINDIRECTPROC __glewDispatchComputeIndirect;
-
-extern __attribute__ ((visibility("default"))) PFNGLDISPATCHCOMPUTEGROUPSIZEARBPROC __glewDispatchComputeGroupSizeARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYBUFFERSUBDATAPROC __glewCopyBufferSubData;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYIMAGESUBDATAPROC __glewCopyImageSubData;
-
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGECALLBACKARBPROC __glewDebugMessageCallbackARB;
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGECONTROLARBPROC __glewDebugMessageControlARB;
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGEINSERTARBPROC __glewDebugMessageInsertARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETDEBUGMESSAGELOGARBPROC __glewGetDebugMessageLogARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDTEXTUREUNITPROC __glewBindTextureUnit;
-extern __attribute__ ((visibility("default"))) PFNGLBLITNAMEDFRAMEBUFFERPROC __glewBlitNamedFramebuffer;
-extern __attribute__ ((visibility("default"))) PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC __glewCheckNamedFramebufferStatus;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARNAMEDBUFFERDATAPROC __glewClearNamedBufferData;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARNAMEDBUFFERSUBDATAPROC __glewClearNamedBufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARNAMEDFRAMEBUFFERFIPROC __glewClearNamedFramebufferfi;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARNAMEDFRAMEBUFFERFVPROC __glewClearNamedFramebufferfv;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARNAMEDFRAMEBUFFERIVPROC __glewClearNamedFramebufferiv;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC __glewClearNamedFramebufferuiv;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC __glewCompressedTextureSubImage1D;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC __glewCompressedTextureSubImage2D;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC __glewCompressedTextureSubImage3D;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYNAMEDBUFFERSUBDATAPROC __glewCopyNamedBufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTURESUBIMAGE1DPROC __glewCopyTextureSubImage1D;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTURESUBIMAGE2DPROC __glewCopyTextureSubImage2D;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTURESUBIMAGE3DPROC __glewCopyTextureSubImage3D;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEBUFFERSPROC __glewCreateBuffers;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEFRAMEBUFFERSPROC __glewCreateFramebuffers;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEPROGRAMPIPELINESPROC __glewCreateProgramPipelines;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEQUERIESPROC __glewCreateQueries;
-extern __attribute__ ((visibility("default"))) PFNGLCREATERENDERBUFFERSPROC __glewCreateRenderbuffers;
-extern __attribute__ ((visibility("default"))) PFNGLCREATESAMPLERSPROC __glewCreateSamplers;
-extern __attribute__ ((visibility("default"))) PFNGLCREATETEXTURESPROC __glewCreateTextures;
-extern __attribute__ ((visibility("default"))) PFNGLCREATETRANSFORMFEEDBACKSPROC __glewCreateTransformFeedbacks;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEVERTEXARRAYSPROC __glewCreateVertexArrays;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEVERTEXARRAYATTRIBPROC __glewDisableVertexArrayAttrib;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEVERTEXARRAYATTRIBPROC __glewEnableVertexArrayAttrib;
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC __glewFlushMappedNamedBufferRange;
-extern __attribute__ ((visibility("default"))) PFNGLGENERATETEXTUREMIPMAPPROC __glewGenerateTextureMipmap;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC __glewGetCompressedTextureImage;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDBUFFERPARAMETERI64VPROC __glewGetNamedBufferParameteri64v;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDBUFFERPARAMETERIVPROC __glewGetNamedBufferParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDBUFFERPOINTERVPROC __glewGetNamedBufferPointerv;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDBUFFERSUBDATAPROC __glewGetNamedBufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC __glewGetNamedFramebufferAttachmentParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC __glewGetNamedFramebufferParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC __glewGetNamedRenderbufferParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYBUFFEROBJECTI64VPROC __glewGetQueryBufferObjecti64v;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYBUFFEROBJECTIVPROC __glewGetQueryBufferObjectiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYBUFFEROBJECTUI64VPROC __glewGetQueryBufferObjectui64v;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYBUFFEROBJECTUIVPROC __glewGetQueryBufferObjectuiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREIMAGEPROC __glewGetTextureImage;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTURELEVELPARAMETERFVPROC __glewGetTextureLevelParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTURELEVELPARAMETERIVPROC __glewGetTextureLevelParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREPARAMETERIIVPROC __glewGetTextureParameterIiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREPARAMETERIUIVPROC __glewGetTextureParameterIuiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREPARAMETERFVPROC __glewGetTextureParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREPARAMETERIVPROC __glewGetTextureParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTRANSFORMFEEDBACKI64_VPROC __glewGetTransformFeedbacki64_v;
-extern __attribute__ ((visibility("default"))) PFNGLGETTRANSFORMFEEDBACKI_VPROC __glewGetTransformFeedbacki_v;
-extern __attribute__ ((visibility("default"))) PFNGLGETTRANSFORMFEEDBACKIVPROC __glewGetTransformFeedbackiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXARRAYINDEXED64IVPROC __glewGetVertexArrayIndexed64iv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXARRAYINDEXEDIVPROC __glewGetVertexArrayIndexediv;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXARRAYIVPROC __glewGetVertexArrayiv;
-extern __attribute__ ((visibility("default"))) PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC __glewInvalidateNamedFramebufferData;
-extern __attribute__ ((visibility("default"))) PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC __glewInvalidateNamedFramebufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLMAPNAMEDBUFFERPROC __glewMapNamedBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLMAPNAMEDBUFFERRANGEPROC __glewMapNamedBufferRange;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERDATAPROC __glewNamedBufferData;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERSTORAGEPROC __glewNamedBufferStorage;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERSUBDATAPROC __glewNamedBufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC __glewNamedFramebufferDrawBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC __glewNamedFramebufferDrawBuffers;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC __glewNamedFramebufferParameteri;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC __glewNamedFramebufferReadBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC __glewNamedFramebufferRenderbuffer;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTUREPROC __glewNamedFramebufferTexture;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC __glewNamedFramebufferTextureLayer;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDRENDERBUFFERSTORAGEPROC __glewNamedRenderbufferStorage;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC __glewNamedRenderbufferStorageMultisample;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREBUFFERPROC __glewTextureBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREBUFFERRANGEPROC __glewTextureBufferRange;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERIIVPROC __glewTextureParameterIiv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERIUIVPROC __glewTextureParameterIuiv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERFPROC __glewTextureParameterf;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERFVPROC __glewTextureParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERIPROC __glewTextureParameteri;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERIVPROC __glewTextureParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE1DPROC __glewTextureStorage1D;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE2DPROC __glewTextureStorage2D;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC __glewTextureStorage2DMultisample;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE3DPROC __glewTextureStorage3D;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC __glewTextureStorage3DMultisample;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESUBIMAGE1DPROC __glewTextureSubImage1D;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESUBIMAGE2DPROC __glewTextureSubImage2D;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESUBIMAGE3DPROC __glewTextureSubImage3D;
-extern __attribute__ ((visibility("default"))) PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC __glewTransformFeedbackBufferBase;
-extern __attribute__ ((visibility("default"))) PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC __glewTransformFeedbackBufferRange;
-extern __attribute__ ((visibility("default"))) PFNGLUNMAPNAMEDBUFFERPROC __glewUnmapNamedBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYATTRIBBINDINGPROC __glewVertexArrayAttribBinding;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYATTRIBFORMATPROC __glewVertexArrayAttribFormat;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYATTRIBIFORMATPROC __glewVertexArrayAttribIFormat;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYATTRIBLFORMATPROC __glewVertexArrayAttribLFormat;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYBINDINGDIVISORPROC __glewVertexArrayBindingDivisor;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYELEMENTBUFFERPROC __glewVertexArrayElementBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXBUFFERPROC __glewVertexArrayVertexBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXBUFFERSPROC __glewVertexArrayVertexBuffers;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWBUFFERSARBPROC __glewDrawBuffersARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONSEPARATEIARBPROC __glewBlendEquationSeparateiARB;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONIARBPROC __glewBlendEquationiARB;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCSEPARATEIARBPROC __glewBlendFuncSeparateiARB;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCIARBPROC __glewBlendFunciARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSBASEVERTEXPROC __glewDrawElementsBaseVertex;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC __glewDrawElementsInstancedBaseVertex;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC __glewDrawRangeElementsBaseVertex;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC __glewMultiDrawElementsBaseVertex;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSINDIRECTPROC __glewDrawArraysIndirect;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINDIRECTPROC __glewDrawElementsIndirect;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERPARAMETERIPROC __glewFramebufferParameteri;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAMEBUFFERPARAMETERIVPROC __glewGetFramebufferParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVEXTPROC __glewGetNamedFramebufferParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERPARAMETERIEXTPROC __glewNamedFramebufferParameteriEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDFRAMEBUFFERPROC __glewBindFramebuffer;
-extern __attribute__ ((visibility("default"))) PFNGLBINDRENDERBUFFERPROC __glewBindRenderbuffer;
-extern __attribute__ ((visibility("default"))) PFNGLBLITFRAMEBUFFERPROC __glewBlitFramebuffer;
-extern __attribute__ ((visibility("default"))) PFNGLCHECKFRAMEBUFFERSTATUSPROC __glewCheckFramebufferStatus;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEFRAMEBUFFERSPROC __glewDeleteFramebuffers;
-extern __attribute__ ((visibility("default"))) PFNGLDELETERENDERBUFFERSPROC __glewDeleteRenderbuffers;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERRENDERBUFFERPROC __glewFramebufferRenderbuffer;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE1DPROC __glewFramebufferTexture1D;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE2DPROC __glewFramebufferTexture2D;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE3DPROC __glewFramebufferTexture3D;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURELAYERPROC __glewFramebufferTextureLayer;
-extern __attribute__ ((visibility("default"))) PFNGLGENFRAMEBUFFERSPROC __glewGenFramebuffers;
-extern __attribute__ ((visibility("default"))) PFNGLGENRENDERBUFFERSPROC __glewGenRenderbuffers;
-extern __attribute__ ((visibility("default"))) PFNGLGENERATEMIPMAPPROC __glewGenerateMipmap;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC __glewGetFramebufferAttachmentParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETRENDERBUFFERPARAMETERIVPROC __glewGetRenderbufferParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLISFRAMEBUFFERPROC __glewIsFramebuffer;
-extern __attribute__ ((visibility("default"))) PFNGLISRENDERBUFFERPROC __glewIsRenderbuffer;
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEPROC __glewRenderbufferStorage;
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC __glewRenderbufferStorageMultisample;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTUREARBPROC __glewFramebufferTextureARB;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTUREFACEARBPROC __glewFramebufferTextureFaceARB;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURELAYERARBPROC __glewFramebufferTextureLayerARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETERIARBPROC __glewProgramParameteriARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMBINARYPROC __glewGetProgramBinary;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMBINARYPROC __glewProgramBinary;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETERIPROC __glewProgramParameteri;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC __glewGetCompressedTextureSubImage;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTURESUBIMAGEPROC __glewGetTextureSubImage;
-
-extern __attribute__ ((visibility("default"))) PFNGLSPECIALIZESHADERARBPROC __glewSpecializeShaderARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMDVPROC __glewGetUniformdv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1DPROC __glewUniform1d;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1DVPROC __glewUniform1dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2DPROC __glewUniform2d;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2DVPROC __glewUniform2dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3DPROC __glewUniform3d;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3DVPROC __glewUniform3dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4DPROC __glewUniform4d;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4DVPROC __glewUniform4dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2DVPROC __glewUniformMatrix2dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2X3DVPROC __glewUniformMatrix2x3dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2X4DVPROC __glewUniformMatrix2x4dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3DVPROC __glewUniformMatrix3dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3X2DVPROC __glewUniformMatrix3x2dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3X4DVPROC __glewUniformMatrix3x4dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4DVPROC __glewUniformMatrix4dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4X2DVPROC __glewUniformMatrix4x2dv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4X3DVPROC __glewUniformMatrix4x3dv;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMI64VARBPROC __glewGetUniformi64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMUI64VARBPROC __glewGetUniformui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMI64VARBPROC __glewGetnUniformi64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMUI64VARBPROC __glewGetnUniformui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1I64ARBPROC __glewProgramUniform1i64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1I64VARBPROC __glewProgramUniform1i64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1UI64ARBPROC __glewProgramUniform1ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1UI64VARBPROC __glewProgramUniform1ui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2I64ARBPROC __glewProgramUniform2i64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2I64VARBPROC __glewProgramUniform2i64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2UI64ARBPROC __glewProgramUniform2ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2UI64VARBPROC __glewProgramUniform2ui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3I64ARBPROC __glewProgramUniform3i64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3I64VARBPROC __glewProgramUniform3i64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3UI64ARBPROC __glewProgramUniform3ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3UI64VARBPROC __glewProgramUniform3ui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4I64ARBPROC __glewProgramUniform4i64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4I64VARBPROC __glewProgramUniform4i64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4UI64ARBPROC __glewProgramUniform4ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4UI64VARBPROC __glewProgramUniform4ui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1I64ARBPROC __glewUniform1i64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1I64VARBPROC __glewUniform1i64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1UI64ARBPROC __glewUniform1ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1UI64VARBPROC __glewUniform1ui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2I64ARBPROC __glewUniform2i64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2I64VARBPROC __glewUniform2i64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2UI64ARBPROC __glewUniform2ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2UI64VARBPROC __glewUniform2ui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3I64ARBPROC __glewUniform3i64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3I64VARBPROC __glewUniform3i64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3UI64ARBPROC __glewUniform3ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3UI64VARBPROC __glewUniform3ui64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4I64ARBPROC __glewUniform4i64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4I64VARBPROC __glewUniform4i64vARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4UI64ARBPROC __glewUniform4ui64ARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4UI64VARBPROC __glewUniform4ui64vARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLORSUBTABLEPROC __glewColorSubTable;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORTABLEPROC __glewColorTable;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORTABLEPARAMETERFVPROC __glewColorTableParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORTABLEPARAMETERIVPROC __glewColorTableParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONFILTER1DPROC __glewConvolutionFilter1D;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONFILTER2DPROC __glewConvolutionFilter2D;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONPARAMETERFPROC __glewConvolutionParameterf;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONPARAMETERFVPROC __glewConvolutionParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONPARAMETERIPROC __glewConvolutionParameteri;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONPARAMETERIVPROC __glewConvolutionParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYCOLORSUBTABLEPROC __glewCopyColorSubTable;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYCOLORTABLEPROC __glewCopyColorTable;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYCONVOLUTIONFILTER1DPROC __glewCopyConvolutionFilter1D;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYCONVOLUTIONFILTER2DPROC __glewCopyConvolutionFilter2D;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLEPROC __glewGetColorTable;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLEPARAMETERFVPROC __glewGetColorTableParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLEPARAMETERIVPROC __glewGetColorTableParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETCONVOLUTIONFILTERPROC __glewGetConvolutionFilter;
-extern __attribute__ ((visibility("default"))) PFNGLGETCONVOLUTIONPARAMETERFVPROC __glewGetConvolutionParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETCONVOLUTIONPARAMETERIVPROC __glewGetConvolutionParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETHISTOGRAMPROC __glewGetHistogram;
-extern __attribute__ ((visibility("default"))) PFNGLGETHISTOGRAMPARAMETERFVPROC __glewGetHistogramParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETHISTOGRAMPARAMETERIVPROC __glewGetHistogramParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETMINMAXPROC __glewGetMinmax;
-extern __attribute__ ((visibility("default"))) PFNGLGETMINMAXPARAMETERFVPROC __glewGetMinmaxParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETMINMAXPARAMETERIVPROC __glewGetMinmaxParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLGETSEPARABLEFILTERPROC __glewGetSeparableFilter;
-extern __attribute__ ((visibility("default"))) PFNGLHISTOGRAMPROC __glewHistogram;
-extern __attribute__ ((visibility("default"))) PFNGLMINMAXPROC __glewMinmax;
-extern __attribute__ ((visibility("default"))) PFNGLRESETHISTOGRAMPROC __glewResetHistogram;
-extern __attribute__ ((visibility("default"))) PFNGLRESETMINMAXPROC __glewResetMinmax;
-extern __attribute__ ((visibility("default"))) PFNGLSEPARABLEFILTER2DPROC __glewSeparableFilter2D;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC __glewMultiDrawArraysIndirectCountARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC __glewMultiDrawElementsIndirectCountARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSINSTANCEDARBPROC __glewDrawArraysInstancedARB;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDARBPROC __glewDrawElementsInstancedARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBDIVISORARBPROC __glewVertexAttribDivisorARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETINTERNALFORMATIVPROC __glewGetInternalformativ;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETINTERNALFORMATI64VPROC __glewGetInternalformati64v;
-
-extern __attribute__ ((visibility("default"))) PFNGLINVALIDATEBUFFERDATAPROC __glewInvalidateBufferData;
-extern __attribute__ ((visibility("default"))) PFNGLINVALIDATEBUFFERSUBDATAPROC __glewInvalidateBufferSubData;
-extern __attribute__ ((visibility("default"))) PFNGLINVALIDATEFRAMEBUFFERPROC __glewInvalidateFramebuffer;
-extern __attribute__ ((visibility("default"))) PFNGLINVALIDATESUBFRAMEBUFFERPROC __glewInvalidateSubFramebuffer;
-extern __attribute__ ((visibility("default"))) PFNGLINVALIDATETEXIMAGEPROC __glewInvalidateTexImage;
-extern __attribute__ ((visibility("default"))) PFNGLINVALIDATETEXSUBIMAGEPROC __glewInvalidateTexSubImage;
-
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHMAPPEDBUFFERRANGEPROC __glewFlushMappedBufferRange;
-extern __attribute__ ((visibility("default"))) PFNGLMAPBUFFERRANGEPROC __glewMapBufferRange;
-
-extern __attribute__ ((visibility("default"))) PFNGLCURRENTPALETTEMATRIXARBPROC __glewCurrentPaletteMatrixARB;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXINDEXPOINTERARBPROC __glewMatrixIndexPointerARB;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXINDEXUBVARBPROC __glewMatrixIndexubvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXINDEXUIVARBPROC __glewMatrixIndexuivARB;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXINDEXUSVARBPROC __glewMatrixIndexusvARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERSBASEPROC __glewBindBuffersBase;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERSRANGEPROC __glewBindBuffersRange;
-extern __attribute__ ((visibility("default"))) PFNGLBINDIMAGETEXTURESPROC __glewBindImageTextures;
-extern __attribute__ ((visibility("default"))) PFNGLBINDSAMPLERSPROC __glewBindSamplers;
-extern __attribute__ ((visibility("default"))) PFNGLBINDTEXTURESPROC __glewBindTextures;
-extern __attribute__ ((visibility("default"))) PFNGLBINDVERTEXBUFFERSPROC __glewBindVertexBuffers;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSINDIRECTPROC __glewMultiDrawArraysIndirect;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSINDIRECTPROC __glewMultiDrawElementsIndirect;
-
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLECOVERAGEARBPROC __glewSampleCoverageARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLACTIVETEXTUREARBPROC __glewActiveTextureARB;
-extern __attribute__ ((visibility("default"))) PFNGLCLIENTACTIVETEXTUREARBPROC __glewClientActiveTextureARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1DARBPROC __glewMultiTexCoord1dARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1DVARBPROC __glewMultiTexCoord1dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1FARBPROC __glewMultiTexCoord1fARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1FVARBPROC __glewMultiTexCoord1fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1IARBPROC __glewMultiTexCoord1iARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1IVARBPROC __glewMultiTexCoord1ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1SARBPROC __glewMultiTexCoord1sARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1SVARBPROC __glewMultiTexCoord1svARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2DARBPROC __glewMultiTexCoord2dARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2DVARBPROC __glewMultiTexCoord2dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2FARBPROC __glewMultiTexCoord2fARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2FVARBPROC __glewMultiTexCoord2fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2IARBPROC __glewMultiTexCoord2iARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2IVARBPROC __glewMultiTexCoord2ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2SARBPROC __glewMultiTexCoord2sARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2SVARBPROC __glewMultiTexCoord2svARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3DARBPROC __glewMultiTexCoord3dARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3DVARBPROC __glewMultiTexCoord3dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3FARBPROC __glewMultiTexCoord3fARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3FVARBPROC __glewMultiTexCoord3fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3IARBPROC __glewMultiTexCoord3iARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3IVARBPROC __glewMultiTexCoord3ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3SARBPROC __glewMultiTexCoord3sARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3SVARBPROC __glewMultiTexCoord3svARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4DARBPROC __glewMultiTexCoord4dARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4DVARBPROC __glewMultiTexCoord4dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4FARBPROC __glewMultiTexCoord4fARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4FVARBPROC __glewMultiTexCoord4fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4IARBPROC __glewMultiTexCoord4iARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4IVARBPROC __glewMultiTexCoord4ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4SARBPROC __glewMultiTexCoord4sARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4SVARBPROC __glewMultiTexCoord4svARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINQUERYARBPROC __glewBeginQueryARB;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEQUERIESARBPROC __glewDeleteQueriesARB;
-extern __attribute__ ((visibility("default"))) PFNGLENDQUERYARBPROC __glewEndQueryARB;
-extern __attribute__ ((visibility("default"))) PFNGLGENQUERIESARBPROC __glewGenQueriesARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTIVARBPROC __glewGetQueryObjectivARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTUIVARBPROC __glewGetQueryObjectuivARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYIVARBPROC __glewGetQueryivARB;
-extern __attribute__ ((visibility("default"))) PFNGLISQUERYARBPROC __glewIsQueryARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLMAXSHADERCOMPILERTHREADSARBPROC __glewMaxShaderCompilerThreadsARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERFARBPROC __glewPointParameterfARB;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERFVARBPROC __glewPointParameterfvARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLPOLYGONOFFSETCLAMPPROC __glewPolygonOffsetClamp;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMINTERFACEIVPROC __glewGetProgramInterfaceiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMRESOURCEINDEXPROC __glewGetProgramResourceIndex;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMRESOURCELOCATIONPROC __glewGetProgramResourceLocation;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC __glewGetProgramResourceLocationIndex;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMRESOURCENAMEPROC __glewGetProgramResourceName;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMRESOURCEIVPROC __glewGetProgramResourceiv;
-
-extern __attribute__ ((visibility("default"))) PFNGLPROVOKINGVERTEXPROC __glewProvokingVertex;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETGRAPHICSRESETSTATUSARBPROC __glewGetGraphicsResetStatusARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNCOLORTABLEARBPROC __glewGetnColorTableARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNCOMPRESSEDTEXIMAGEARBPROC __glewGetnCompressedTexImageARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNCONVOLUTIONFILTERARBPROC __glewGetnConvolutionFilterARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNHISTOGRAMARBPROC __glewGetnHistogramARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNMAPDVARBPROC __glewGetnMapdvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNMAPFVARBPROC __glewGetnMapfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNMAPIVARBPROC __glewGetnMapivARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNMINMAXARBPROC __glewGetnMinmaxARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNPIXELMAPFVARBPROC __glewGetnPixelMapfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNPIXELMAPUIVARBPROC __glewGetnPixelMapuivARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNPIXELMAPUSVARBPROC __glewGetnPixelMapusvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNPOLYGONSTIPPLEARBPROC __glewGetnPolygonStippleARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNSEPARABLEFILTERARBPROC __glewGetnSeparableFilterARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNTEXIMAGEARBPROC __glewGetnTexImageARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMDVARBPROC __glewGetnUniformdvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMFVARBPROC __glewGetnUniformfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMIVARBPROC __glewGetnUniformivARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMUIVARBPROC __glewGetnUniformuivARB;
-extern __attribute__ ((visibility("default"))) PFNGLREADNPIXELSARBPROC __glewReadnPixelsARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLEVALUATEDEPTHVALUESARBPROC __glewEvaluateDepthValuesARB;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERSAMPLELOCATIONSFVARBPROC __glewFramebufferSampleLocationsfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERSAMPLELOCATIONSFVARBPROC __glewNamedFramebufferSampleLocationsfvARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLMINSAMPLESHADINGARBPROC __glewMinSampleShadingARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDSAMPLERPROC __glewBindSampler;
-extern __attribute__ ((visibility("default"))) PFNGLDELETESAMPLERSPROC __glewDeleteSamplers;
-extern __attribute__ ((visibility("default"))) PFNGLGENSAMPLERSPROC __glewGenSamplers;
-extern __attribute__ ((visibility("default"))) PFNGLGETSAMPLERPARAMETERIIVPROC __glewGetSamplerParameterIiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETSAMPLERPARAMETERIUIVPROC __glewGetSamplerParameterIuiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETSAMPLERPARAMETERFVPROC __glewGetSamplerParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETSAMPLERPARAMETERIVPROC __glewGetSamplerParameteriv;
-extern __attribute__ ((visibility("default"))) PFNGLISSAMPLERPROC __glewIsSampler;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERIIVPROC __glewSamplerParameterIiv;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERIUIVPROC __glewSamplerParameterIuiv;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERFPROC __glewSamplerParameterf;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERFVPROC __glewSamplerParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERIPROC __glewSamplerParameteri;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERIVPROC __glewSamplerParameteriv;
-
-extern __attribute__ ((visibility("default"))) PFNGLACTIVESHADERPROGRAMPROC __glewActiveShaderProgram;
-extern __attribute__ ((visibility("default"))) PFNGLBINDPROGRAMPIPELINEPROC __glewBindProgramPipeline;
-extern __attribute__ ((visibility("default"))) PFNGLCREATESHADERPROGRAMVPROC __glewCreateShaderProgramv;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEPROGRAMPIPELINESPROC __glewDeleteProgramPipelines;
-extern __attribute__ ((visibility("default"))) PFNGLGENPROGRAMPIPELINESPROC __glewGenProgramPipelines;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMPIPELINEINFOLOGPROC __glewGetProgramPipelineInfoLog;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMPIPELINEIVPROC __glewGetProgramPipelineiv;
-extern __attribute__ ((visibility("default"))) PFNGLISPROGRAMPIPELINEPROC __glewIsProgramPipeline;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1DPROC __glewProgramUniform1d;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1DVPROC __glewProgramUniform1dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1FPROC __glewProgramUniform1f;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1FVPROC __glewProgramUniform1fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1IPROC __glewProgramUniform1i;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1IVPROC __glewProgramUniform1iv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1UIPROC __glewProgramUniform1ui;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1UIVPROC __glewProgramUniform1uiv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2DPROC __glewProgramUniform2d;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2DVPROC __glewProgramUniform2dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2FPROC __glewProgramUniform2f;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2FVPROC __glewProgramUniform2fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2IPROC __glewProgramUniform2i;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2IVPROC __glewProgramUniform2iv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2UIPROC __glewProgramUniform2ui;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2UIVPROC __glewProgramUniform2uiv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3DPROC __glewProgramUniform3d;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3DVPROC __glewProgramUniform3dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3FPROC __glewProgramUniform3f;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3FVPROC __glewProgramUniform3fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3IPROC __glewProgramUniform3i;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3IVPROC __glewProgramUniform3iv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3UIPROC __glewProgramUniform3ui;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3UIVPROC __glewProgramUniform3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4DPROC __glewProgramUniform4d;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4DVPROC __glewProgramUniform4dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4FPROC __glewProgramUniform4f;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4FVPROC __glewProgramUniform4fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4IPROC __glewProgramUniform4i;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4IVPROC __glewProgramUniform4iv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4UIPROC __glewProgramUniform4ui;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4UIVPROC __glewProgramUniform4uiv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2DVPROC __glewProgramUniformMatrix2dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2FVPROC __glewProgramUniformMatrix2fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC __glewProgramUniformMatrix2x3dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC __glewProgramUniformMatrix2x3fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC __glewProgramUniformMatrix2x4dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC __glewProgramUniformMatrix2x4fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3DVPROC __glewProgramUniformMatrix3dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3FVPROC __glewProgramUniformMatrix3fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC __glewProgramUniformMatrix3x2dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC __glewProgramUniformMatrix3x2fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC __glewProgramUniformMatrix3x4dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC __glewProgramUniformMatrix3x4fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4DVPROC __glewProgramUniformMatrix4dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4FVPROC __glewProgramUniformMatrix4fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC __glewProgramUniformMatrix4x2dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC __glewProgramUniformMatrix4x2fv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC __glewProgramUniformMatrix4x3dv;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC __glewProgramUniformMatrix4x3fv;
-extern __attribute__ ((visibility("default"))) PFNGLUSEPROGRAMSTAGESPROC __glewUseProgramStages;
-extern __attribute__ ((visibility("default"))) PFNGLVALIDATEPROGRAMPIPELINEPROC __glewValidateProgramPipeline;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC __glewGetActiveAtomicCounterBufferiv;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDIMAGETEXTUREPROC __glewBindImageTexture;
-extern __attribute__ ((visibility("default"))) PFNGLMEMORYBARRIERPROC __glewMemoryBarrier;
-
-extern __attribute__ ((visibility("default"))) PFNGLATTACHOBJECTARBPROC __glewAttachObjectARB;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPILESHADERARBPROC __glewCompileShaderARB;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEPROGRAMOBJECTARBPROC __glewCreateProgramObjectARB;
-extern __attribute__ ((visibility("default"))) PFNGLCREATESHADEROBJECTARBPROC __glewCreateShaderObjectARB;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEOBJECTARBPROC __glewDeleteObjectARB;
-extern __attribute__ ((visibility("default"))) PFNGLDETACHOBJECTARBPROC __glewDetachObjectARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEUNIFORMARBPROC __glewGetActiveUniformARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETATTACHEDOBJECTSARBPROC __glewGetAttachedObjectsARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETHANDLEARBPROC __glewGetHandleARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETINFOLOGARBPROC __glewGetInfoLogARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETOBJECTPARAMETERFVARBPROC __glewGetObjectParameterfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETOBJECTPARAMETERIVARBPROC __glewGetObjectParameterivARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETSHADERSOURCEARBPROC __glewGetShaderSourceARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMLOCATIONARBPROC __glewGetUniformLocationARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMFVARBPROC __glewGetUniformfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMIVARBPROC __glewGetUniformivARB;
-extern __attribute__ ((visibility("default"))) PFNGLLINKPROGRAMARBPROC __glewLinkProgramARB;
-extern __attribute__ ((visibility("default"))) PFNGLSHADERSOURCEARBPROC __glewShaderSourceARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1FARBPROC __glewUniform1fARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1FVARBPROC __glewUniform1fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1IARBPROC __glewUniform1iARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1IVARBPROC __glewUniform1ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2FARBPROC __glewUniform2fARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2FVARBPROC __glewUniform2fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2IARBPROC __glewUniform2iARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2IVARBPROC __glewUniform2ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3FARBPROC __glewUniform3fARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3FVARBPROC __glewUniform3fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3IARBPROC __glewUniform3iARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3IVARBPROC __glewUniform3ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4FARBPROC __glewUniform4fARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4FVARBPROC __glewUniform4fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4IARBPROC __glewUniform4iARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4IVARBPROC __glewUniform4ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2FVARBPROC __glewUniformMatrix2fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3FVARBPROC __glewUniformMatrix3fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4FVARBPROC __glewUniformMatrix4fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLUSEPROGRAMOBJECTARBPROC __glewUseProgramObjectARB;
-extern __attribute__ ((visibility("default"))) PFNGLVALIDATEPROGRAMARBPROC __glewValidateProgramARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLSHADERSTORAGEBLOCKBINDINGPROC __glewShaderStorageBlockBinding;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVESUBROUTINENAMEPROC __glewGetActiveSubroutineName;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC __glewGetActiveSubroutineUniformName;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC __glewGetActiveSubroutineUniformiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMSTAGEIVPROC __glewGetProgramStageiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETSUBROUTINEINDEXPROC __glewGetSubroutineIndex;
-extern __attribute__ ((visibility("default"))) PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC __glewGetSubroutineUniformLocation;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMSUBROUTINEUIVPROC __glewGetUniformSubroutineuiv;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMSUBROUTINESUIVPROC __glewUniformSubroutinesuiv;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOMPILESHADERINCLUDEARBPROC __glewCompileShaderIncludeARB;
-extern __attribute__ ((visibility("default"))) PFNGLDELETENAMEDSTRINGARBPROC __glewDeleteNamedStringARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDSTRINGARBPROC __glewGetNamedStringARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDSTRINGIVARBPROC __glewGetNamedStringivARB;
-extern __attribute__ ((visibility("default"))) PFNGLISNAMEDSTRINGARBPROC __glewIsNamedStringARB;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDSTRINGARBPROC __glewNamedStringARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERPAGECOMMITMENTARBPROC __glewBufferPageCommitmentARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXPAGECOMMITMENTARBPROC __glewTexPageCommitmentARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLIENTWAITSYNCPROC __glewClientWaitSync;
-extern __attribute__ ((visibility("default"))) PFNGLDELETESYNCPROC __glewDeleteSync;
-extern __attribute__ ((visibility("default"))) PFNGLFENCESYNCPROC __glewFenceSync;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGER64VPROC __glewGetInteger64v;
-extern __attribute__ ((visibility("default"))) PFNGLGETSYNCIVPROC __glewGetSynciv;
-extern __attribute__ ((visibility("default"))) PFNGLISSYNCPROC __glewIsSync;
-extern __attribute__ ((visibility("default"))) PFNGLWAITSYNCPROC __glewWaitSync;
-
-extern __attribute__ ((visibility("default"))) PFNGLPATCHPARAMETERFVPROC __glewPatchParameterfv;
-extern __attribute__ ((visibility("default"))) PFNGLPATCHPARAMETERIPROC __glewPatchParameteri;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREBARRIERPROC __glewTextureBarrier;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXBUFFERARBPROC __glewTexBufferARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXBUFFERRANGEPROC __glewTexBufferRange;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREBUFFERRANGEEXTPROC __glewTextureBufferRangeEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXIMAGE1DARBPROC __glewCompressedTexImage1DARB;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXIMAGE2DARBPROC __glewCompressedTexImage2DARB;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXIMAGE3DARBPROC __glewCompressedTexImage3DARB;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXSUBIMAGE1DARBPROC __glewCompressedTexSubImage1DARB;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXSUBIMAGE2DARBPROC __glewCompressedTexSubImage2DARB;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXSUBIMAGE3DARBPROC __glewCompressedTexSubImage3DARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMPRESSEDTEXIMAGEARBPROC __glewGetCompressedTexImageARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTISAMPLEFVPROC __glewGetMultisamplefv;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLEMASKIPROC __glewSampleMaski;
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE2DMULTISAMPLEPROC __glewTexImage2DMultisample;
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE3DMULTISAMPLEPROC __glewTexImage3DMultisample;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE1DPROC __glewTexStorage1D;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE2DPROC __glewTexStorage2D;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE3DPROC __glewTexStorage3D;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE2DMULTISAMPLEPROC __glewTexStorage2DMultisample;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE3DMULTISAMPLEPROC __glewTexStorage3DMultisample;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE2DMULTISAMPLEEXTPROC __glewTextureStorage2DMultisampleEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE3DMULTISAMPLEEXTPROC __glewTextureStorage3DMultisampleEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREVIEWPROC __glewTextureView;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTI64VPROC __glewGetQueryObjecti64v;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTUI64VPROC __glewGetQueryObjectui64v;
-extern __attribute__ ((visibility("default"))) PFNGLQUERYCOUNTERPROC __glewQueryCounter;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDTRANSFORMFEEDBACKPROC __glewBindTransformFeedback;
-extern __attribute__ ((visibility("default"))) PFNGLDELETETRANSFORMFEEDBACKSPROC __glewDeleteTransformFeedbacks;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWTRANSFORMFEEDBACKPROC __glewDrawTransformFeedback;
-extern __attribute__ ((visibility("default"))) PFNGLGENTRANSFORMFEEDBACKSPROC __glewGenTransformFeedbacks;
-extern __attribute__ ((visibility("default"))) PFNGLISTRANSFORMFEEDBACKPROC __glewIsTransformFeedback;
-extern __attribute__ ((visibility("default"))) PFNGLPAUSETRANSFORMFEEDBACKPROC __glewPauseTransformFeedback;
-extern __attribute__ ((visibility("default"))) PFNGLRESUMETRANSFORMFEEDBACKPROC __glewResumeTransformFeedback;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINQUERYINDEXEDPROC __glewBeginQueryIndexed;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC __glewDrawTransformFeedbackStream;
-extern __attribute__ ((visibility("default"))) PFNGLENDQUERYINDEXEDPROC __glewEndQueryIndexed;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYINDEXEDIVPROC __glewGetQueryIndexediv;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC __glewDrawTransformFeedbackInstanced;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC __glewDrawTransformFeedbackStreamInstanced;
-
-extern __attribute__ ((visibility("default"))) PFNGLLOADTRANSPOSEMATRIXDARBPROC __glewLoadTransposeMatrixdARB;
-extern __attribute__ ((visibility("default"))) PFNGLLOADTRANSPOSEMATRIXFARBPROC __glewLoadTransposeMatrixfARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTTRANSPOSEMATRIXDARBPROC __glewMultTransposeMatrixdARB;
-extern __attribute__ ((visibility("default"))) PFNGLMULTTRANSPOSEMATRIXFARBPROC __glewMultTransposeMatrixfARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERBASEPROC __glewBindBufferBase;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERRANGEPROC __glewBindBufferRange;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC __glewGetActiveUniformBlockName;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEUNIFORMBLOCKIVPROC __glewGetActiveUniformBlockiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEUNIFORMNAMEPROC __glewGetActiveUniformName;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEUNIFORMSIVPROC __glewGetActiveUniformsiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGERI_VPROC __glewGetIntegeri_v;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMBLOCKINDEXPROC __glewGetUniformBlockIndex;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMINDICESPROC __glewGetUniformIndices;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMBLOCKBINDINGPROC __glewUniformBlockBinding;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDVERTEXARRAYPROC __glewBindVertexArray;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEVERTEXARRAYSPROC __glewDeleteVertexArrays;
-extern __attribute__ ((visibility("default"))) PFNGLGENVERTEXARRAYSPROC __glewGenVertexArrays;
-extern __attribute__ ((visibility("default"))) PFNGLISVERTEXARRAYPROC __glewIsVertexArray;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBLDVPROC __glewGetVertexAttribLdv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1DPROC __glewVertexAttribL1d;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1DVPROC __glewVertexAttribL1dv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL2DPROC __glewVertexAttribL2d;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL2DVPROC __glewVertexAttribL2dv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL3DPROC __glewVertexAttribL3d;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL3DVPROC __glewVertexAttribL3dv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL4DPROC __glewVertexAttribL4d;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL4DVPROC __glewVertexAttribL4dv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBLPOINTERPROC __glewVertexAttribLPointer;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDVERTEXBUFFERPROC __glewBindVertexBuffer;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYBINDVERTEXBUFFEREXTPROC __glewVertexArrayBindVertexBufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXATTRIBBINDINGEXTPROC __glewVertexArrayVertexAttribBindingEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXATTRIBFORMATEXTPROC __glewVertexArrayVertexAttribFormatEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXATTRIBIFORMATEXTPROC __glewVertexArrayVertexAttribIFormatEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXATTRIBLFORMATEXTPROC __glewVertexArrayVertexAttribLFormatEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXBINDINGDIVISOREXTPROC __glewVertexArrayVertexBindingDivisorEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBBINDINGPROC __glewVertexAttribBinding;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBFORMATPROC __glewVertexAttribFormat;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBIFORMATPROC __glewVertexAttribIFormat;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBLFORMATPROC __glewVertexAttribLFormat;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXBINDINGDIVISORPROC __glewVertexBindingDivisor;
-
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXBLENDARBPROC __glewVertexBlendARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTPOINTERARBPROC __glewWeightPointerARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTBVARBPROC __glewWeightbvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTDVARBPROC __glewWeightdvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTFVARBPROC __glewWeightfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTIVARBPROC __glewWeightivARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTSVARBPROC __glewWeightsvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTUBVARBPROC __glewWeightubvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTUIVARBPROC __glewWeightuivARB;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTUSVARBPROC __glewWeightusvARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERARBPROC __glewBindBufferARB;
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERDATAARBPROC __glewBufferDataARB;
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERSUBDATAARBPROC __glewBufferSubDataARB;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEBUFFERSARBPROC __glewDeleteBuffersARB;
-extern __attribute__ ((visibility("default"))) PFNGLGENBUFFERSARBPROC __glewGenBuffersARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERPARAMETERIVARBPROC __glewGetBufferParameterivARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERPOINTERVARBPROC __glewGetBufferPointervARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERSUBDATAARBPROC __glewGetBufferSubDataARB;
-extern __attribute__ ((visibility("default"))) PFNGLISBUFFERARBPROC __glewIsBufferARB;
-extern __attribute__ ((visibility("default"))) PFNGLMAPBUFFERARBPROC __glewMapBufferARB;
-extern __attribute__ ((visibility("default"))) PFNGLUNMAPBUFFERARBPROC __glewUnmapBufferARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDPROGRAMARBPROC __glewBindProgramARB;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEPROGRAMSARBPROC __glewDeleteProgramsARB;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEVERTEXATTRIBARRAYARBPROC __glewDisableVertexAttribArrayARB;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEVERTEXATTRIBARRAYARBPROC __glewEnableVertexAttribArrayARB;
-extern __attribute__ ((visibility("default"))) PFNGLGENPROGRAMSARBPROC __glewGenProgramsARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMENVPARAMETERDVARBPROC __glewGetProgramEnvParameterdvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMENVPARAMETERFVARBPROC __glewGetProgramEnvParameterfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMLOCALPARAMETERDVARBPROC __glewGetProgramLocalParameterdvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMLOCALPARAMETERFVARBPROC __glewGetProgramLocalParameterfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMSTRINGARBPROC __glewGetProgramStringARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMIVARBPROC __glewGetProgramivARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBPOINTERVARBPROC __glewGetVertexAttribPointervARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBDVARBPROC __glewGetVertexAttribdvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBFVARBPROC __glewGetVertexAttribfvARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBIVARBPROC __glewGetVertexAttribivARB;
-extern __attribute__ ((visibility("default"))) PFNGLISPROGRAMARBPROC __glewIsProgramARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETER4DARBPROC __glewProgramEnvParameter4dARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETER4DVARBPROC __glewProgramEnvParameter4dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETER4FARBPROC __glewProgramEnvParameter4fARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETER4FVARBPROC __glewProgramEnvParameter4fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETER4DARBPROC __glewProgramLocalParameter4dARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETER4DVARBPROC __glewProgramLocalParameter4dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETER4FARBPROC __glewProgramLocalParameter4fARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETER4FVARBPROC __glewProgramLocalParameter4fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMSTRINGARBPROC __glewProgramStringARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1DARBPROC __glewVertexAttrib1dARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1DVARBPROC __glewVertexAttrib1dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1FARBPROC __glewVertexAttrib1fARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1FVARBPROC __glewVertexAttrib1fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1SARBPROC __glewVertexAttrib1sARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1SVARBPROC __glewVertexAttrib1svARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2DARBPROC __glewVertexAttrib2dARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2DVARBPROC __glewVertexAttrib2dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2FARBPROC __glewVertexAttrib2fARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2FVARBPROC __glewVertexAttrib2fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2SARBPROC __glewVertexAttrib2sARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2SVARBPROC __glewVertexAttrib2svARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3DARBPROC __glewVertexAttrib3dARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3DVARBPROC __glewVertexAttrib3dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3FARBPROC __glewVertexAttrib3fARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3FVARBPROC __glewVertexAttrib3fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3SARBPROC __glewVertexAttrib3sARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3SVARBPROC __glewVertexAttrib3svARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NBVARBPROC __glewVertexAttrib4NbvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NIVARBPROC __glewVertexAttrib4NivARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NSVARBPROC __glewVertexAttrib4NsvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NUBARBPROC __glewVertexAttrib4NubARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NUBVARBPROC __glewVertexAttrib4NubvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NUIVARBPROC __glewVertexAttrib4NuivARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4NUSVARBPROC __glewVertexAttrib4NusvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4BVARBPROC __glewVertexAttrib4bvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4DARBPROC __glewVertexAttrib4dARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4DVARBPROC __glewVertexAttrib4dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4FARBPROC __glewVertexAttrib4fARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4FVARBPROC __glewVertexAttrib4fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4IVARBPROC __glewVertexAttrib4ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4SARBPROC __glewVertexAttrib4sARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4SVARBPROC __glewVertexAttrib4svARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4UBVARBPROC __glewVertexAttrib4ubvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4UIVARBPROC __glewVertexAttrib4uivARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4USVARBPROC __glewVertexAttrib4usvARB;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBPOINTERARBPROC __glewVertexAttribPointerARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDATTRIBLOCATIONARBPROC __glewBindAttribLocationARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEATTRIBARBPROC __glewGetActiveAttribARB;
-extern __attribute__ ((visibility("default"))) PFNGLGETATTRIBLOCATIONARBPROC __glewGetAttribLocationARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLORP3UIPROC __glewColorP3ui;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORP3UIVPROC __glewColorP3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORP4UIPROC __glewColorP4ui;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORP4UIVPROC __glewColorP4uiv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDP1UIPROC __glewMultiTexCoordP1ui;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDP1UIVPROC __glewMultiTexCoordP1uiv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDP2UIPROC __glewMultiTexCoordP2ui;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDP2UIVPROC __glewMultiTexCoordP2uiv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDP3UIPROC __glewMultiTexCoordP3ui;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDP3UIVPROC __glewMultiTexCoordP3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDP4UIPROC __glewMultiTexCoordP4ui;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDP4UIVPROC __glewMultiTexCoordP4uiv;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALP3UIPROC __glewNormalP3ui;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALP3UIVPROC __glewNormalP3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLORP3UIPROC __glewSecondaryColorP3ui;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLORP3UIVPROC __glewSecondaryColorP3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDP1UIPROC __glewTexCoordP1ui;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDP1UIVPROC __glewTexCoordP1uiv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDP2UIPROC __glewTexCoordP2ui;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDP2UIVPROC __glewTexCoordP2uiv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDP3UIPROC __glewTexCoordP3ui;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDP3UIVPROC __glewTexCoordP3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDP4UIPROC __glewTexCoordP4ui;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDP4UIVPROC __glewTexCoordP4uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBP1UIPROC __glewVertexAttribP1ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBP1UIVPROC __glewVertexAttribP1uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBP2UIPROC __glewVertexAttribP2ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBP2UIVPROC __glewVertexAttribP2uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBP3UIPROC __glewVertexAttribP3ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBP3UIVPROC __glewVertexAttribP3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBP4UIPROC __glewVertexAttribP4ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBP4UIVPROC __glewVertexAttribP4uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXP2UIPROC __glewVertexP2ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXP2UIVPROC __glewVertexP2uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXP3UIPROC __glewVertexP3ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXP3UIVPROC __glewVertexP3uiv;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXP4UIPROC __glewVertexP4ui;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXP4UIVPROC __glewVertexP4uiv;
-
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHRANGEARRAYVPROC __glewDepthRangeArrayv;
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHRANGEINDEXEDPROC __glewDepthRangeIndexed;
-extern __attribute__ ((visibility("default"))) PFNGLGETDOUBLEI_VPROC __glewGetDoublei_v;
-extern __attribute__ ((visibility("default"))) PFNGLGETFLOATI_VPROC __glewGetFloati_v;
-extern __attribute__ ((visibility("default"))) PFNGLSCISSORARRAYVPROC __glewScissorArrayv;
-extern __attribute__ ((visibility("default"))) PFNGLSCISSORINDEXEDPROC __glewScissorIndexed;
-extern __attribute__ ((visibility("default"))) PFNGLSCISSORINDEXEDVPROC __glewScissorIndexedv;
-extern __attribute__ ((visibility("default"))) PFNGLVIEWPORTARRAYVPROC __glewViewportArrayv;
-extern __attribute__ ((visibility("default"))) PFNGLVIEWPORTINDEXEDFPROC __glewViewportIndexedf;
-extern __attribute__ ((visibility("default"))) PFNGLVIEWPORTINDEXEDFVPROC __glewViewportIndexedfv;
-
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2DARBPROC __glewWindowPos2dARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2DVARBPROC __glewWindowPos2dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2FARBPROC __glewWindowPos2fARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2FVARBPROC __glewWindowPos2fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2IARBPROC __glewWindowPos2iARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2IVARBPROC __glewWindowPos2ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2SARBPROC __glewWindowPos2sARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2SVARBPROC __glewWindowPos2svARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3DARBPROC __glewWindowPos3dARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3DVARBPROC __glewWindowPos3dvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3FARBPROC __glewWindowPos3fARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3FVARBPROC __glewWindowPos3fvARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3IARBPROC __glewWindowPos3iARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3IVARBPROC __glewWindowPos3ivARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3SARBPROC __glewWindowPos3sARB;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3SVARBPROC __glewWindowPos3svARB;
-
-extern __attribute__ ((visibility("default"))) PFNGLMAXACTIVESHADERCORESARMPROC __glewMaxActiveShaderCoresARM;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWBUFFERSATIPROC __glewDrawBuffersATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTARRAYATIPROC __glewDrawElementArrayATI;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWRANGEELEMENTARRAYATIPROC __glewDrawRangeElementArrayATI;
-extern __attribute__ ((visibility("default"))) PFNGLELEMENTPOINTERATIPROC __glewElementPointerATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXBUMPPARAMETERFVATIPROC __glewGetTexBumpParameterfvATI;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXBUMPPARAMETERIVATIPROC __glewGetTexBumpParameterivATI;
-extern __attribute__ ((visibility("default"))) PFNGLTEXBUMPPARAMETERFVATIPROC __glewTexBumpParameterfvATI;
-extern __attribute__ ((visibility("default"))) PFNGLTEXBUMPPARAMETERIVATIPROC __glewTexBumpParameterivATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLALPHAFRAGMENTOP1ATIPROC __glewAlphaFragmentOp1ATI;
-extern __attribute__ ((visibility("default"))) PFNGLALPHAFRAGMENTOP2ATIPROC __glewAlphaFragmentOp2ATI;
-extern __attribute__ ((visibility("default"))) PFNGLALPHAFRAGMENTOP3ATIPROC __glewAlphaFragmentOp3ATI;
-extern __attribute__ ((visibility("default"))) PFNGLBEGINFRAGMENTSHADERATIPROC __glewBeginFragmentShaderATI;
-extern __attribute__ ((visibility("default"))) PFNGLBINDFRAGMENTSHADERATIPROC __glewBindFragmentShaderATI;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORFRAGMENTOP1ATIPROC __glewColorFragmentOp1ATI;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORFRAGMENTOP2ATIPROC __glewColorFragmentOp2ATI;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORFRAGMENTOP3ATIPROC __glewColorFragmentOp3ATI;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEFRAGMENTSHADERATIPROC __glewDeleteFragmentShaderATI;
-extern __attribute__ ((visibility("default"))) PFNGLENDFRAGMENTSHADERATIPROC __glewEndFragmentShaderATI;
-extern __attribute__ ((visibility("default"))) PFNGLGENFRAGMENTSHADERSATIPROC __glewGenFragmentShadersATI;
-extern __attribute__ ((visibility("default"))) PFNGLPASSTEXCOORDATIPROC __glewPassTexCoordATI;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLEMAPATIPROC __glewSampleMapATI;
-extern __attribute__ ((visibility("default"))) PFNGLSETFRAGMENTSHADERCONSTANTATIPROC __glewSetFragmentShaderConstantATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLMAPOBJECTBUFFERATIPROC __glewMapObjectBufferATI;
-extern __attribute__ ((visibility("default"))) PFNGLUNMAPOBJECTBUFFERATIPROC __glewUnmapObjectBufferATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLPNTRIANGLESFATIPROC __glewPNTrianglesfATI;
-extern __attribute__ ((visibility("default"))) PFNGLPNTRIANGLESIATIPROC __glewPNTrianglesiATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILFUNCSEPARATEATIPROC __glewStencilFuncSeparateATI;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILOPSEPARATEATIPROC __glewStencilOpSeparateATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLARRAYOBJECTATIPROC __glewArrayObjectATI;
-extern __attribute__ ((visibility("default"))) PFNGLFREEOBJECTBUFFERATIPROC __glewFreeObjectBufferATI;
-extern __attribute__ ((visibility("default"))) PFNGLGETARRAYOBJECTFVATIPROC __glewGetArrayObjectfvATI;
-extern __attribute__ ((visibility("default"))) PFNGLGETARRAYOBJECTIVATIPROC __glewGetArrayObjectivATI;
-extern __attribute__ ((visibility("default"))) PFNGLGETOBJECTBUFFERFVATIPROC __glewGetObjectBufferfvATI;
-extern __attribute__ ((visibility("default"))) PFNGLGETOBJECTBUFFERIVATIPROC __glewGetObjectBufferivATI;
-extern __attribute__ ((visibility("default"))) PFNGLGETVARIANTARRAYOBJECTFVATIPROC __glewGetVariantArrayObjectfvATI;
-extern __attribute__ ((visibility("default"))) PFNGLGETVARIANTARRAYOBJECTIVATIPROC __glewGetVariantArrayObjectivATI;
-extern __attribute__ ((visibility("default"))) PFNGLISOBJECTBUFFERATIPROC __glewIsObjectBufferATI;
-extern __attribute__ ((visibility("default"))) PFNGLNEWOBJECTBUFFERATIPROC __glewNewObjectBufferATI;
-extern __attribute__ ((visibility("default"))) PFNGLUPDATEOBJECTBUFFERATIPROC __glewUpdateObjectBufferATI;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTARRAYOBJECTATIPROC __glewVariantArrayObjectATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBARRAYOBJECTFVATIPROC __glewGetVertexAttribArrayObjectfvATI;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBARRAYOBJECTIVATIPROC __glewGetVertexAttribArrayObjectivATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBARRAYOBJECTATIPROC __glewVertexAttribArrayObjectATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLIENTACTIVEVERTEXSTREAMATIPROC __glewClientActiveVertexStreamATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3BATIPROC __glewNormalStream3bATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3BVATIPROC __glewNormalStream3bvATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3DATIPROC __glewNormalStream3dATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3DVATIPROC __glewNormalStream3dvATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3FATIPROC __glewNormalStream3fATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3FVATIPROC __glewNormalStream3fvATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3IATIPROC __glewNormalStream3iATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3IVATIPROC __glewNormalStream3ivATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3SATIPROC __glewNormalStream3sATI;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALSTREAM3SVATIPROC __glewNormalStream3svATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXBLENDENVFATIPROC __glewVertexBlendEnvfATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXBLENDENVIATIPROC __glewVertexBlendEnviATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM1DATIPROC __glewVertexStream1dATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM1DVATIPROC __glewVertexStream1dvATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM1FATIPROC __glewVertexStream1fATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM1FVATIPROC __glewVertexStream1fvATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM1IATIPROC __glewVertexStream1iATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM1IVATIPROC __glewVertexStream1ivATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM1SATIPROC __glewVertexStream1sATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM1SVATIPROC __glewVertexStream1svATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM2DATIPROC __glewVertexStream2dATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM2DVATIPROC __glewVertexStream2dvATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM2FATIPROC __glewVertexStream2fATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM2FVATIPROC __glewVertexStream2fvATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM2IATIPROC __glewVertexStream2iATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM2IVATIPROC __glewVertexStream2ivATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM2SATIPROC __glewVertexStream2sATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM2SVATIPROC __glewVertexStream2svATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM3DATIPROC __glewVertexStream3dATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM3DVATIPROC __glewVertexStream3dvATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM3FATIPROC __glewVertexStream3fATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM3FVATIPROC __glewVertexStream3fvATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM3IATIPROC __glewVertexStream3iATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM3IVATIPROC __glewVertexStream3ivATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM3SATIPROC __glewVertexStream3sATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM3SVATIPROC __glewVertexStream3svATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM4DATIPROC __glewVertexStream4dATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM4DVATIPROC __glewVertexStream4dvATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM4FATIPROC __glewVertexStream4fATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM4FVATIPROC __glewVertexStream4fvATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM4IATIPROC __glewVertexStream4iATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM4IVATIPROC __glewVertexStream4ivATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM4SATIPROC __glewVertexStream4sATI;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXSTREAM4SVATIPROC __glewVertexStream4svATI;
-
-extern __attribute__ ((visibility("default"))) PFNGLEGLIMAGETARGETTEXSTORAGEEXTPROC __glewEGLImageTargetTexStorageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLEGLIMAGETARGETTEXTURESTORAGEEXTPROC __glewEGLImageTargetTextureStorageEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEEXTPROC __glewDrawArraysInstancedBaseInstanceEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEEXTPROC __glewDrawElementsInstancedBaseInstanceEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEEXTPROC __glewDrawElementsInstancedBaseVertexBaseInstanceEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMBUFFERSIZEEXTPROC __glewGetUniformBufferSizeEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMOFFSETEXTPROC __glewGetUniformOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMBUFFEREXTPROC __glewUniformBufferEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDCOLOREXTPROC __glewBlendColorEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONSEPARATEEXTPROC __glewBlendEquationSeparateEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDFRAGDATALOCATIONINDEXEDEXTPROC __glewBindFragDataLocationIndexedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGDATAINDEXEXTPROC __glewGetFragDataIndexEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMRESOURCELOCATIONINDEXEXTPROC __glewGetProgramResourceLocationIndexEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCSEPARATEEXTPROC __glewBlendFuncSeparateEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONEXTPROC __glewBlendEquationEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERSTORAGEEXTPROC __glewBufferStorageEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLEARTEXIMAGEEXTPROC __glewClearTexImageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARTEXSUBIMAGEEXTPROC __glewClearTexSubImageEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLIPCONTROLEXTPROC __glewClipControlEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLORSUBTABLEEXTPROC __glewColorSubTableEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYCOLORSUBTABLEEXTPROC __glewCopyColorSubTableEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLLOCKARRAYSEXTPROC __glewLockArraysEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNLOCKARRAYSEXTPROC __glewUnlockArraysEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONFILTER1DEXTPROC __glewConvolutionFilter1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONFILTER2DEXTPROC __glewConvolutionFilter2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONPARAMETERFEXTPROC __glewConvolutionParameterfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONPARAMETERFVEXTPROC __glewConvolutionParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONPARAMETERIEXTPROC __glewConvolutionParameteriEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCONVOLUTIONPARAMETERIVEXTPROC __glewConvolutionParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYCONVOLUTIONFILTER1DEXTPROC __glewCopyConvolutionFilter1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYCONVOLUTIONFILTER2DEXTPROC __glewCopyConvolutionFilter2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETCONVOLUTIONFILTEREXTPROC __glewGetConvolutionFilterEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETCONVOLUTIONPARAMETERFVEXTPROC __glewGetConvolutionParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETCONVOLUTIONPARAMETERIVEXTPROC __glewGetConvolutionParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETSEPARABLEFILTEREXTPROC __glewGetSeparableFilterEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSEPARABLEFILTER2DEXTPROC __glewSeparableFilter2DEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINORMALPOINTEREXTPROC __glewBinormalPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTANGENTPOINTEREXTPROC __glewTangentPointerEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYIMAGESUBDATAEXTPROC __glewCopyImageSubDataEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXIMAGE1DEXTPROC __glewCopyTexImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXIMAGE2DEXTPROC __glewCopyTexImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXSUBIMAGE1DEXTPROC __glewCopyTexSubImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXSUBIMAGE2DEXTPROC __glewCopyTexSubImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXSUBIMAGE3DEXTPROC __glewCopyTexSubImage3DEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCULLPARAMETERDVEXTPROC __glewCullParameterdvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCULLPARAMETERFVEXTPROC __glewCullParameterfvEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETOBJECTLABELEXTPROC __glewGetObjectLabelEXT;
-extern __attribute__ ((visibility("default"))) PFNGLLABELOBJECTEXTPROC __glewLabelObjectEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLINSERTEVENTMARKEREXTPROC __glewInsertEventMarkerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPOPGROUPMARKEREXTPROC __glewPopGroupMarkerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPUSHGROUPMARKEREXTPROC __glewPushGroupMarkerEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHBOUNDSEXTPROC __glewDepthBoundsEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDMULTITEXTUREEXTPROC __glewBindMultiTextureEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCHECKNAMEDFRAMEBUFFERSTATUSEXTPROC __glewCheckNamedFramebufferStatusEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCLIENTATTRIBDEFAULTEXTPROC __glewClientAttribDefaultEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDMULTITEXIMAGE1DEXTPROC __glewCompressedMultiTexImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDMULTITEXIMAGE2DEXTPROC __glewCompressedMultiTexImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDMULTITEXIMAGE3DEXTPROC __glewCompressedMultiTexImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDMULTITEXSUBIMAGE1DEXTPROC __glewCompressedMultiTexSubImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDMULTITEXSUBIMAGE2DEXTPROC __glewCompressedMultiTexSubImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDMULTITEXSUBIMAGE3DEXTPROC __glewCompressedMultiTexSubImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTUREIMAGE1DEXTPROC __glewCompressedTextureImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTUREIMAGE2DEXTPROC __glewCompressedTextureImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTUREIMAGE3DEXTPROC __glewCompressedTextureImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTURESUBIMAGE1DEXTPROC __glewCompressedTextureSubImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTURESUBIMAGE2DEXTPROC __glewCompressedTextureSubImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXTURESUBIMAGE3DEXTPROC __glewCompressedTextureSubImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYMULTITEXIMAGE1DEXTPROC __glewCopyMultiTexImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYMULTITEXIMAGE2DEXTPROC __glewCopyMultiTexImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYMULTITEXSUBIMAGE1DEXTPROC __glewCopyMultiTexSubImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYMULTITEXSUBIMAGE2DEXTPROC __glewCopyMultiTexSubImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYMULTITEXSUBIMAGE3DEXTPROC __glewCopyMultiTexSubImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTUREIMAGE1DEXTPROC __glewCopyTextureImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTUREIMAGE2DEXTPROC __glewCopyTextureImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTURESUBIMAGE1DEXTPROC __glewCopyTextureSubImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTURESUBIMAGE2DEXTPROC __glewCopyTextureSubImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXTURESUBIMAGE3DEXTPROC __glewCopyTextureSubImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLECLIENTSTATEINDEXEDEXTPROC __glewDisableClientStateIndexedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLECLIENTSTATEIEXTPROC __glewDisableClientStateiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEVERTEXARRAYATTRIBEXTPROC __glewDisableVertexArrayAttribEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEVERTEXARRAYEXTPROC __glewDisableVertexArrayEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENABLECLIENTSTATEINDEXEDEXTPROC __glewEnableClientStateIndexedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENABLECLIENTSTATEIEXTPROC __glewEnableClientStateiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEVERTEXARRAYATTRIBEXTPROC __glewEnableVertexArrayAttribEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEVERTEXARRAYEXTPROC __glewEnableVertexArrayEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEEXTPROC __glewFlushMappedNamedBufferRangeEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERDRAWBUFFEREXTPROC __glewFramebufferDrawBufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERDRAWBUFFERSEXTPROC __glewFramebufferDrawBuffersEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERREADBUFFEREXTPROC __glewFramebufferReadBufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENERATEMULTITEXMIPMAPEXTPROC __glewGenerateMultiTexMipmapEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENERATETEXTUREMIPMAPEXTPROC __glewGenerateTextureMipmapEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMPRESSEDMULTITEXIMAGEEXTPROC __glewGetCompressedMultiTexImageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMPRESSEDTEXTUREIMAGEEXTPROC __glewGetCompressedTextureImageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETDOUBLEINDEXEDVEXTPROC __glewGetDoubleIndexedvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETDOUBLEI_VEXTPROC __glewGetDoublei_vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFLOATINDEXEDVEXTPROC __glewGetFloatIndexedvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFLOATI_VEXTPROC __glewGetFloati_vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAMEBUFFERPARAMETERIVEXTPROC __glewGetFramebufferParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXENVFVEXTPROC __glewGetMultiTexEnvfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXENVIVEXTPROC __glewGetMultiTexEnvivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXGENDVEXTPROC __glewGetMultiTexGendvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXGENFVEXTPROC __glewGetMultiTexGenfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXGENIVEXTPROC __glewGetMultiTexGenivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXIMAGEEXTPROC __glewGetMultiTexImageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXLEVELPARAMETERFVEXTPROC __glewGetMultiTexLevelParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXLEVELPARAMETERIVEXTPROC __glewGetMultiTexLevelParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXPARAMETERIIVEXTPROC __glewGetMultiTexParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXPARAMETERIUIVEXTPROC __glewGetMultiTexParameterIuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXPARAMETERFVEXTPROC __glewGetMultiTexParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTITEXPARAMETERIVEXTPROC __glewGetMultiTexParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDBUFFERPARAMETERIVEXTPROC __glewGetNamedBufferParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDBUFFERPOINTERVEXTPROC __glewGetNamedBufferPointervEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDBUFFERSUBDATAEXTPROC __glewGetNamedBufferSubDataEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVEXTPROC __glewGetNamedFramebufferAttachmentParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDPROGRAMLOCALPARAMETERIIVEXTPROC __glewGetNamedProgramLocalParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDPROGRAMLOCALPARAMETERIUIVEXTPROC __glewGetNamedProgramLocalParameterIuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDPROGRAMLOCALPARAMETERDVEXTPROC __glewGetNamedProgramLocalParameterdvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDPROGRAMLOCALPARAMETERFVEXTPROC __glewGetNamedProgramLocalParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDPROGRAMSTRINGEXTPROC __glewGetNamedProgramStringEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDPROGRAMIVEXTPROC __glewGetNamedProgramivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDRENDERBUFFERPARAMETERIVEXTPROC __glewGetNamedRenderbufferParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETPOINTERINDEXEDVEXTPROC __glewGetPointerIndexedvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETPOINTERI_VEXTPROC __glewGetPointeri_vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREIMAGEEXTPROC __glewGetTextureImageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTURELEVELPARAMETERFVEXTPROC __glewGetTextureLevelParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTURELEVELPARAMETERIVEXTPROC __glewGetTextureLevelParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREPARAMETERIIVEXTPROC __glewGetTextureParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREPARAMETERIUIVEXTPROC __glewGetTextureParameterIuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREPARAMETERFVEXTPROC __glewGetTextureParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREPARAMETERIVEXTPROC __glewGetTextureParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXARRAYINTEGERI_VEXTPROC __glewGetVertexArrayIntegeri_vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXARRAYINTEGERVEXTPROC __glewGetVertexArrayIntegervEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXARRAYPOINTERI_VEXTPROC __glewGetVertexArrayPointeri_vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXARRAYPOINTERVEXTPROC __glewGetVertexArrayPointervEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMAPNAMEDBUFFEREXTPROC __glewMapNamedBufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMAPNAMEDBUFFERRANGEEXTPROC __glewMapNamedBufferRangeEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXFRUSTUMEXTPROC __glewMatrixFrustumEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXLOADIDENTITYEXTPROC __glewMatrixLoadIdentityEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXLOADTRANSPOSEDEXTPROC __glewMatrixLoadTransposedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXLOADTRANSPOSEFEXTPROC __glewMatrixLoadTransposefEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXLOADDEXTPROC __glewMatrixLoaddEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXLOADFEXTPROC __glewMatrixLoadfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXMULTTRANSPOSEDEXTPROC __glewMatrixMultTransposedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXMULTTRANSPOSEFEXTPROC __glewMatrixMultTransposefEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXMULTDEXTPROC __glewMatrixMultdEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXMULTFEXTPROC __glewMatrixMultfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXORTHOEXTPROC __glewMatrixOrthoEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXPOPEXTPROC __glewMatrixPopEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXPUSHEXTPROC __glewMatrixPushEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXROTATEDEXTPROC __glewMatrixRotatedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXROTATEFEXTPROC __glewMatrixRotatefEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXSCALEDEXTPROC __glewMatrixScaledEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXSCALEFEXTPROC __glewMatrixScalefEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXTRANSLATEDEXTPROC __glewMatrixTranslatedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXTRANSLATEFEXTPROC __glewMatrixTranslatefEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXBUFFEREXTPROC __glewMultiTexBufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORDPOINTEREXTPROC __glewMultiTexCoordPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXENVFEXTPROC __glewMultiTexEnvfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXENVFVEXTPROC __glewMultiTexEnvfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXENVIEXTPROC __glewMultiTexEnviEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXENVIVEXTPROC __glewMultiTexEnvivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXGENDEXTPROC __glewMultiTexGendEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXGENDVEXTPROC __glewMultiTexGendvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXGENFEXTPROC __glewMultiTexGenfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXGENFVEXTPROC __glewMultiTexGenfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXGENIEXTPROC __glewMultiTexGeniEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXGENIVEXTPROC __glewMultiTexGenivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXIMAGE1DEXTPROC __glewMultiTexImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXIMAGE2DEXTPROC __glewMultiTexImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXIMAGE3DEXTPROC __glewMultiTexImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXPARAMETERIIVEXTPROC __glewMultiTexParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXPARAMETERIUIVEXTPROC __glewMultiTexParameterIuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXPARAMETERFEXTPROC __glewMultiTexParameterfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXPARAMETERFVEXTPROC __glewMultiTexParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXPARAMETERIEXTPROC __glewMultiTexParameteriEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXPARAMETERIVEXTPROC __glewMultiTexParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXRENDERBUFFEREXTPROC __glewMultiTexRenderbufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXSUBIMAGE1DEXTPROC __glewMultiTexSubImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXSUBIMAGE2DEXTPROC __glewMultiTexSubImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXSUBIMAGE3DEXTPROC __glewMultiTexSubImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERDATAEXTPROC __glewNamedBufferDataEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERSTORAGEEXTPROC __glewNamedBufferStorageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERSUBDATAEXTPROC __glewNamedBufferSubDataEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDCOPYBUFFERSUBDATAEXTPROC __glewNamedCopyBufferSubDataEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERRENDERBUFFEREXTPROC __glewNamedFramebufferRenderbufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTURE1DEXTPROC __glewNamedFramebufferTexture1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTURE2DEXTPROC __glewNamedFramebufferTexture2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTURE3DEXTPROC __glewNamedFramebufferTexture3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTUREEXTPROC __glewNamedFramebufferTextureEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTUREFACEEXTPROC __glewNamedFramebufferTextureFaceEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTURELAYEREXTPROC __glewNamedFramebufferTextureLayerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETER4DEXTPROC __glewNamedProgramLocalParameter4dEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETER4DVEXTPROC __glewNamedProgramLocalParameter4dvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETER4FEXTPROC __glewNamedProgramLocalParameter4fEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETER4FVEXTPROC __glewNamedProgramLocalParameter4fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETERI4IEXTPROC __glewNamedProgramLocalParameterI4iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETERI4IVEXTPROC __glewNamedProgramLocalParameterI4ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETERI4UIEXTPROC __glewNamedProgramLocalParameterI4uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETERI4UIVEXTPROC __glewNamedProgramLocalParameterI4uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETERS4FVEXTPROC __glewNamedProgramLocalParameters4fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETERSI4IVEXTPROC __glewNamedProgramLocalParametersI4ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMLOCALPARAMETERSI4UIVEXTPROC __glewNamedProgramLocalParametersI4uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDPROGRAMSTRINGEXTPROC __glewNamedProgramStringEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDRENDERBUFFERSTORAGEEXTPROC __glewNamedRenderbufferStorageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLECOVERAGEEXTPROC __glewNamedRenderbufferStorageMultisampleCoverageEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC __glewNamedRenderbufferStorageMultisampleEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1FEXTPROC __glewProgramUniform1fEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1FVEXTPROC __glewProgramUniform1fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1IEXTPROC __glewProgramUniform1iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1IVEXTPROC __glewProgramUniform1ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1UIEXTPROC __glewProgramUniform1uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1UIVEXTPROC __glewProgramUniform1uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2FEXTPROC __glewProgramUniform2fEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2FVEXTPROC __glewProgramUniform2fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2IEXTPROC __glewProgramUniform2iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2IVEXTPROC __glewProgramUniform2ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2UIEXTPROC __glewProgramUniform2uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2UIVEXTPROC __glewProgramUniform2uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3FEXTPROC __glewProgramUniform3fEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3FVEXTPROC __glewProgramUniform3fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3IEXTPROC __glewProgramUniform3iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3IVEXTPROC __glewProgramUniform3ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3UIEXTPROC __glewProgramUniform3uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3UIVEXTPROC __glewProgramUniform3uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4FEXTPROC __glewProgramUniform4fEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4FVEXTPROC __glewProgramUniform4fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4IEXTPROC __glewProgramUniform4iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4IVEXTPROC __glewProgramUniform4ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4UIEXTPROC __glewProgramUniform4uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4UIVEXTPROC __glewProgramUniform4uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2FVEXTPROC __glewProgramUniformMatrix2fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2X3FVEXTPROC __glewProgramUniformMatrix2x3fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX2X4FVEXTPROC __glewProgramUniformMatrix2x4fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3FVEXTPROC __glewProgramUniformMatrix3fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3X2FVEXTPROC __glewProgramUniformMatrix3x2fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX3X4FVEXTPROC __glewProgramUniformMatrix3x4fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4FVEXTPROC __glewProgramUniformMatrix4fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4X2FVEXTPROC __glewProgramUniformMatrix4x2fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMMATRIX4X3FVEXTPROC __glewProgramUniformMatrix4x3fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPUSHCLIENTATTRIBDEFAULTEXTPROC __glewPushClientAttribDefaultEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREBUFFEREXTPROC __glewTextureBufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREIMAGE1DEXTPROC __glewTextureImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREIMAGE2DEXTPROC __glewTextureImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREIMAGE3DEXTPROC __glewTextureImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPAGECOMMITMENTEXTPROC __glewTexturePageCommitmentEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERIIVEXTPROC __glewTextureParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERIUIVEXTPROC __glewTextureParameterIuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERFEXTPROC __glewTextureParameterfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERFVEXTPROC __glewTextureParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERIEXTPROC __glewTextureParameteriEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPARAMETERIVEXTPROC __glewTextureParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURERENDERBUFFEREXTPROC __glewTextureRenderbufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESUBIMAGE1DEXTPROC __glewTextureSubImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESUBIMAGE2DEXTPROC __glewTextureSubImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESUBIMAGE3DEXTPROC __glewTextureSubImage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNMAPNAMEDBUFFEREXTPROC __glewUnmapNamedBufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYCOLOROFFSETEXTPROC __glewVertexArrayColorOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYEDGEFLAGOFFSETEXTPROC __glewVertexArrayEdgeFlagOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYFOGCOORDOFFSETEXTPROC __glewVertexArrayFogCoordOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYINDEXOFFSETEXTPROC __glewVertexArrayIndexOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYMULTITEXCOORDOFFSETEXTPROC __glewVertexArrayMultiTexCoordOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYNORMALOFFSETEXTPROC __glewVertexArrayNormalOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYSECONDARYCOLOROFFSETEXTPROC __glewVertexArraySecondaryColorOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYTEXCOORDOFFSETEXTPROC __glewVertexArrayTexCoordOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXATTRIBDIVISOREXTPROC __glewVertexArrayVertexAttribDivisorEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXATTRIBIOFFSETEXTPROC __glewVertexArrayVertexAttribIOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXATTRIBOFFSETEXTPROC __glewVertexArrayVertexAttribOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXOFFSETEXTPROC __glewVertexArrayVertexOffsetEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDISCARDFRAMEBUFFEREXTPROC __glewDiscardFramebufferEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINQUERYEXTPROC __glewBeginQueryEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEQUERIESEXTPROC __glewDeleteQueriesEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENDQUERYEXTPROC __glewEndQueryEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENQUERIESEXTPROC __glewGenQueriesEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGER64VEXTPROC __glewGetInteger64vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTIVEXTPROC __glewGetQueryObjectivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTUIVEXTPROC __glewGetQueryObjectuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYIVEXTPROC __glewGetQueryivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISQUERYEXTPROC __glewIsQueryEXT;
-extern __attribute__ ((visibility("default"))) PFNGLQUERYCOUNTEREXTPROC __glewQueryCounterEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWBUFFERSEXTPROC __glewDrawBuffersEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLORMASKINDEXEDEXTPROC __glewColorMaskIndexedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEINDEXEDEXTPROC __glewDisableIndexedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEINDEXEDEXTPROC __glewEnableIndexedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETBOOLEANINDEXEDVEXTPROC __glewGetBooleanIndexedvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGERINDEXEDVEXTPROC __glewGetIntegerIndexedvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISENABLEDINDEXEDEXTPROC __glewIsEnabledIndexedEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONSEPARATEIEXTPROC __glewBlendEquationSeparateiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONIEXTPROC __glewBlendEquationiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCSEPARATEIEXTPROC __glewBlendFuncSeparateiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCIEXTPROC __glewBlendFunciEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORMASKIEXTPROC __glewColorMaskiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEIEXTPROC __glewDisableiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEIEXTPROC __glewEnableiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISENABLEDIEXTPROC __glewIsEnablediEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSBASEVERTEXEXTPROC __glewDrawElementsBaseVertexEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXEXTPROC __glewDrawElementsInstancedBaseVertexEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWRANGEELEMENTSBASEVERTEXEXTPROC __glewDrawRangeElementsBaseVertexEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSBASEVERTEXEXTPROC __glewMultiDrawElementsBaseVertexEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSINSTANCEDEXTPROC __glewDrawArraysInstancedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDEXTPROC __glewDrawElementsInstancedEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWRANGEELEMENTSEXTPROC __glewDrawRangeElementsEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWTRANSFORMFEEDBACKEXTPROC __glewDrawTransformFeedbackEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDEXTPROC __glewDrawTransformFeedbackInstancedEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERSTORAGEEXTERNALEXTPROC __glewBufferStorageExternalEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERSTORAGEEXTERNALEXTPROC __glewNamedBufferStorageExternalEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDPOINTEREXTPROC __glewFogCoordPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDDEXTPROC __glewFogCoorddEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDDVEXTPROC __glewFogCoorddvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDFEXTPROC __glewFogCoordfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDFVEXTPROC __glewFogCoordfvEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTCOLORMATERIALEXTPROC __glewFragmentColorMaterialEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTMODELFEXTPROC __glewFragmentLightModelfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTMODELFVEXTPROC __glewFragmentLightModelfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTMODELIEXTPROC __glewFragmentLightModeliEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTMODELIVEXTPROC __glewFragmentLightModelivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTFEXTPROC __glewFragmentLightfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTFVEXTPROC __glewFragmentLightfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTIEXTPROC __glewFragmentLightiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTIVEXTPROC __glewFragmentLightivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTMATERIALFEXTPROC __glewFragmentMaterialfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTMATERIALFVEXTPROC __glewFragmentMaterialfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTMATERIALIEXTPROC __glewFragmentMaterialiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTMATERIALIVEXTPROC __glewFragmentMaterialivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTLIGHTFVEXTPROC __glewGetFragmentLightfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTLIGHTIVEXTPROC __glewGetFragmentLightivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTMATERIALFVEXTPROC __glewGetFragmentMaterialfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTMATERIALIVEXTPROC __glewGetFragmentMaterialivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLLIGHTENVIEXTPROC __glewLightEnviEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERSHADINGRATEEXTPROC __glewFramebufferShadingRateEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTSHADINGRATESEXTPROC __glewGetFragmentShadingRatesEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSHADINGRATECOMBINEROPSEXTPROC __glewShadingRateCombinerOpsEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSHADINGRATEEXTPROC __glewShadingRateEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLITFRAMEBUFFEREXTPROC __glewBlitFramebufferEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLITFRAMEBUFFERLAYEREXTPROC __glewBlitFramebufferLayerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBLITFRAMEBUFFERLAYERSEXTPROC __glewBlitFramebufferLayersEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC __glewRenderbufferStorageMultisampleEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDFRAMEBUFFEREXTPROC __glewBindFramebufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDRENDERBUFFEREXTPROC __glewBindRenderbufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCHECKFRAMEBUFFERSTATUSEXTPROC __glewCheckFramebufferStatusEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEFRAMEBUFFERSEXTPROC __glewDeleteFramebuffersEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDELETERENDERBUFFERSEXTPROC __glewDeleteRenderbuffersEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERRENDERBUFFEREXTPROC __glewFramebufferRenderbufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE1DEXTPROC __glewFramebufferTexture1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE2DEXTPROC __glewFramebufferTexture2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE3DEXTPROC __glewFramebufferTexture3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENFRAMEBUFFERSEXTPROC __glewGenFramebuffersEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENRENDERBUFFERSEXTPROC __glewGenRenderbuffersEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENERATEMIPMAPEXTPROC __glewGenerateMipmapEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVEXTPROC __glewGetFramebufferAttachmentParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETRENDERBUFFERPARAMETERIVEXTPROC __glewGetRenderbufferParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISFRAMEBUFFEREXTPROC __glewIsFramebufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISRENDERBUFFEREXTPROC __glewIsRenderbufferEXT;
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEEXTPROC __glewRenderbufferStorageEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTUREEXTPROC __glewFramebufferTextureEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTUREFACEEXTPROC __glewFramebufferTextureFaceEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETERIEXTPROC __glewProgramParameteriEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETERS4FVEXTPROC __glewProgramEnvParameters4fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETERS4FVEXTPROC __glewProgramLocalParameters4fvEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDFRAGDATALOCATIONEXTPROC __glewBindFragDataLocationEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGDATALOCATIONEXTPROC __glewGetFragDataLocationEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMUIVEXTPROC __glewGetUniformuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBIIVEXTPROC __glewGetVertexAttribIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBIUIVEXTPROC __glewGetVertexAttribIuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1UIEXTPROC __glewUniform1uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1UIVEXTPROC __glewUniform1uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2UIEXTPROC __glewUniform2uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2UIVEXTPROC __glewUniform2uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3UIEXTPROC __glewUniform3uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3UIVEXTPROC __glewUniform3uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4UIEXTPROC __glewUniform4uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4UIVEXTPROC __glewUniform4uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI1IEXTPROC __glewVertexAttribI1iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI1IVEXTPROC __glewVertexAttribI1ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI1UIEXTPROC __glewVertexAttribI1uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI1UIVEXTPROC __glewVertexAttribI1uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI2IEXTPROC __glewVertexAttribI2iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI2IVEXTPROC __glewVertexAttribI2ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI2UIEXTPROC __glewVertexAttribI2uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI2UIVEXTPROC __glewVertexAttribI2uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI3IEXTPROC __glewVertexAttribI3iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI3IVEXTPROC __glewVertexAttribI3ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI3UIEXTPROC __glewVertexAttribI3uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI3UIVEXTPROC __glewVertexAttribI3uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4BVEXTPROC __glewVertexAttribI4bvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4IEXTPROC __glewVertexAttribI4iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4IVEXTPROC __glewVertexAttribI4ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4SVEXTPROC __glewVertexAttribI4svEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4UBVEXTPROC __glewVertexAttribI4ubvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4UIEXTPROC __glewVertexAttribI4uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4UIVEXTPROC __glewVertexAttribI4uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBI4USVEXTPROC __glewVertexAttribI4usvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBIPOINTEREXTPROC __glewVertexAttribIPointerEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETHISTOGRAMEXTPROC __glewGetHistogramEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETHISTOGRAMPARAMETERFVEXTPROC __glewGetHistogramParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETHISTOGRAMPARAMETERIVEXTPROC __glewGetHistogramParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMINMAXEXTPROC __glewGetMinmaxEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMINMAXPARAMETERFVEXTPROC __glewGetMinmaxParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMINMAXPARAMETERIVEXTPROC __glewGetMinmaxParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLHISTOGRAMEXTPROC __glewHistogramEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMINMAXEXTPROC __glewMinmaxEXT;
-extern __attribute__ ((visibility("default"))) PFNGLRESETHISTOGRAMEXTPROC __glewResetHistogramEXT;
-extern __attribute__ ((visibility("default"))) PFNGLRESETMINMAXEXTPROC __glewResetMinmaxEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLINDEXFUNCEXTPROC __glewIndexFuncEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLINDEXMATERIALEXTPROC __glewIndexMaterialEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBDIVISOREXTPROC __glewVertexAttribDivisorEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLAPPLYTEXTUREEXTPROC __glewApplyTextureEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURELIGHTEXTPROC __glewTextureLightEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREMATERIALEXTPROC __glewTextureMaterialEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHMAPPEDBUFFERRANGEEXTPROC __glewFlushMappedBufferRangeEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMAPBUFFERRANGEEXTPROC __glewMapBufferRangeEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERSTORAGEMEMEXTPROC __glewBufferStorageMemEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEMEMORYOBJECTSEXTPROC __glewCreateMemoryObjectsEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEMEMORYOBJECTSEXTPROC __glewDeleteMemoryObjectsEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETMEMORYOBJECTPARAMETERIVEXTPROC __glewGetMemoryObjectParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNSIGNEDBYTEI_VEXTPROC __glewGetUnsignedBytei_vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNSIGNEDBYTEVEXTPROC __glewGetUnsignedBytevEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISMEMORYOBJECTEXTPROC __glewIsMemoryObjectEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMEMORYOBJECTPARAMETERIVEXTPROC __glewMemoryObjectParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERSTORAGEMEMEXTPROC __glewNamedBufferStorageMemEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGEMEM1DEXTPROC __glewTexStorageMem1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGEMEM2DEXTPROC __glewTexStorageMem2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGEMEM2DMULTISAMPLEEXTPROC __glewTexStorageMem2DMultisampleEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGEMEM3DEXTPROC __glewTexStorageMem3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGEMEM3DMULTISAMPLEEXTPROC __glewTexStorageMem3DMultisampleEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGEMEM1DEXTPROC __glewTextureStorageMem1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGEMEM2DEXTPROC __glewTextureStorageMem2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGEMEM2DMULTISAMPLEEXTPROC __glewTextureStorageMem2DMultisampleEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGEMEM3DEXTPROC __glewTextureStorageMem3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGEMEM3DMULTISAMPLEEXTPROC __glewTextureStorageMem3DMultisampleEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLIMPORTMEMORYFDEXTPROC __glewImportMemoryFdEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLIMPORTMEMORYWIN32HANDLEEXTPROC __glewImportMemoryWin32HandleEXT;
-extern __attribute__ ((visibility("default"))) PFNGLIMPORTMEMORYWIN32NAMEEXTPROC __glewImportMemoryWin32NameEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWMESHTASKSEXTPROC __glewDrawMeshTasksEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWMESHTASKSINDIRECTEXTPROC __glewDrawMeshTasksIndirectEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTEXTPROC __glewMultiDrawMeshTasksIndirectCountEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWMESHTASKSINDIRECTEXTPROC __glewMultiDrawMeshTasksIndirectEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSEXTPROC __glewMultiDrawArraysEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSEXTPROC __glewMultiDrawElementsEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSINDIRECTEXTPROC __glewMultiDrawArraysIndirectEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSINDIRECTEXTPROC __glewMultiDrawElementsIndirectEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLEMASKEXTPROC __glewSampleMaskEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLEPATTERNEXTPROC __glewSamplePatternEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEEXTPROC __glewFramebufferTexture2DMultisampleEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWBUFFERSINDEXEDEXTPROC __glewDrawBuffersIndexedEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGERI_VEXTPROC __glewGetIntegeri_vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLREADBUFFERINDEXEDEXTPROC __glewReadBufferIndexedEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLORTABLEEXTPROC __glewColorTableEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLEEXTPROC __glewGetColorTableEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLEPARAMETERFVEXTPROC __glewGetColorTableParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLEPARAMETERIVEXTPROC __glewGetColorTableParameterivEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETPIXELTRANSFORMPARAMETERFVEXTPROC __glewGetPixelTransformParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETPIXELTRANSFORMPARAMETERIVEXTPROC __glewGetPixelTransformParameterivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMPARAMETERFEXTPROC __glewPixelTransformParameterfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMPARAMETERFVEXTPROC __glewPixelTransformParameterfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMPARAMETERIEXTPROC __glewPixelTransformParameteriEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMPARAMETERIVEXTPROC __glewPixelTransformParameterivEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERFEXTPROC __glewPointParameterfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERFVEXTPROC __glewPointParameterfvEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLPOLYGONOFFSETEXTPROC __glewPolygonOffsetEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLPOLYGONOFFSETCLAMPEXTPROC __glewPolygonOffsetClampEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLPRIMITIVEBOUNDINGBOXEXTPROC __glewPrimitiveBoundingBoxEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLPROVOKINGVERTEXEXTPROC __glewProvokingVertexEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOVERAGEMODULATIONNVPROC __glewCoverageModulationNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOVERAGEMODULATIONTABLENVPROC __glewCoverageModulationTableNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOVERAGEMODULATIONTABLENVPROC __glewGetCoverageModulationTableNV;
-extern __attribute__ ((visibility("default"))) PFNGLRASTERSAMPLESEXTPROC __glewRasterSamplesEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETGRAPHICSRESETSTATUSEXTPROC __glewGetGraphicsResetStatusEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMFVEXTPROC __glewGetnUniformfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMIVEXTPROC __glewGetnUniformivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLREADNPIXELSEXTPROC __glewReadnPixelsEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINSCENEEXTPROC __glewBeginSceneEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENDSCENEEXTPROC __glewEndSceneEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3BEXTPROC __glewSecondaryColor3bEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3BVEXTPROC __glewSecondaryColor3bvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3DEXTPROC __glewSecondaryColor3dEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3DVEXTPROC __glewSecondaryColor3dvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3FEXTPROC __glewSecondaryColor3fEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3FVEXTPROC __glewSecondaryColor3fvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3IEXTPROC __glewSecondaryColor3iEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3IVEXTPROC __glewSecondaryColor3ivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3SEXTPROC __glewSecondaryColor3sEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3SVEXTPROC __glewSecondaryColor3svEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3UBEXTPROC __glewSecondaryColor3ubEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3UBVEXTPROC __glewSecondaryColor3ubvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3UIEXTPROC __glewSecondaryColor3uiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3UIVEXTPROC __glewSecondaryColor3uivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3USEXTPROC __glewSecondaryColor3usEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3USVEXTPROC __glewSecondaryColor3usvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLORPOINTEREXTPROC __glewSecondaryColorPointerEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLDELETESEMAPHORESEXTPROC __glewDeleteSemaphoresEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENSEMAPHORESEXTPROC __glewGenSemaphoresEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETSEMAPHOREPARAMETERUI64VEXTPROC __glewGetSemaphoreParameterui64vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISSEMAPHOREEXTPROC __glewIsSemaphoreEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSEMAPHOREPARAMETERUI64VEXTPROC __glewSemaphoreParameterui64vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSIGNALSEMAPHOREEXTPROC __glewSignalSemaphoreEXT;
-extern __attribute__ ((visibility("default"))) PFNGLWAITSEMAPHOREEXTPROC __glewWaitSemaphoreEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLIMPORTSEMAPHOREFDEXTPROC __glewImportSemaphoreFdEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLIMPORTSEMAPHOREWIN32HANDLEEXTPROC __glewImportSemaphoreWin32HandleEXT;
-extern __attribute__ ((visibility("default"))) PFNGLIMPORTSEMAPHOREWIN32NAMEEXTPROC __glewImportSemaphoreWin32NameEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLACTIVEPROGRAMEXTPROC __glewActiveProgramEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCREATESHADERPROGRAMEXTPROC __glewCreateShaderProgramEXT;
-extern __attribute__ ((visibility("default"))) PFNGLUSESHADERPROGRAMEXTPROC __glewUseShaderProgramEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERFETCHBARRIEREXTPROC __glewFramebufferFetchBarrierEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDIMAGETEXTUREEXTPROC __glewBindImageTextureEXT;
-extern __attribute__ ((visibility("default"))) PFNGLMEMORYBARRIEREXTPROC __glewMemoryBarrierEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLEARPIXELLOCALSTORAGEUIEXTPROC __glewClearPixelLocalStorageuiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERPIXELLOCALSTORAGESIZEEXTPROC __glewFramebufferPixelLocalStorageSizeEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAMEBUFFERPIXELLOCALSTORAGESIZEEXTPROC __glewGetFramebufferPixelLocalStorageSizeEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXPAGECOMMITMENTEXTPROC __glewTexPageCommitmentEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLACTIVESTENCILFACEEXTPROC __glewActiveStencilFaceEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXSUBIMAGE1DEXTPROC __glewTexSubImage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSUBIMAGE2DEXTPROC __glewTexSubImage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSUBIMAGE3DEXTPROC __glewTexSubImage3DEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLPATCHPARAMETERIEXTPROC __glewPatchParameteriEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE3DEXTPROC __glewTexImage3DEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURELAYEREXTPROC __glewFramebufferTextureLayerEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETSAMPLERPARAMETERIIVEXTPROC __glewGetSamplerParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETSAMPLERPARAMETERIUIVEXTPROC __glewGetSamplerParameterIuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERIIVEXTPROC __glewSamplerParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERIUIVEXTPROC __glewSamplerParameterIuivEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXBUFFEREXTPROC __glewTexBufferEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLEARCOLORIIEXTPROC __glewClearColorIiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARCOLORIUIEXTPROC __glewClearColorIuiEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXPARAMETERIIVEXTPROC __glewGetTexParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXPARAMETERIUIVEXTPROC __glewGetTexParameterIuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPARAMETERIIVEXTPROC __glewTexParameterIivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPARAMETERIUIVEXTPROC __glewTexParameterIuivEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLARETEXTURESRESIDENTEXTPROC __glewAreTexturesResidentEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDTEXTUREEXTPROC __glewBindTextureEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDELETETEXTURESEXTPROC __glewDeleteTexturesEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENTEXTURESEXTPROC __glewGenTexturesEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISTEXTUREEXTPROC __glewIsTextureEXT;
-extern __attribute__ ((visibility("default"))) PFNGLPRIORITIZETEXTURESEXTPROC __glewPrioritizeTexturesEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURENORMALEXTPROC __glewTextureNormalEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE1DEXTPROC __glewTexStorage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE2DEXTPROC __glewTexStorage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE3DEXTPROC __glewTexStorage3DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE1DEXTPROC __glewTextureStorage1DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE2DEXTPROC __glewTextureStorage2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTURESTORAGE3DEXTPROC __glewTextureStorage3DEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGEATTRIBS2DEXTPROC __glewTexStorageAttribs2DEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGEATTRIBS3DEXTPROC __glewTexStorageAttribs3DEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREVIEWEXTPROC __glewTextureViewEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTI64VEXTPROC __glewGetQueryObjecti64vEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETQUERYOBJECTUI64VEXTPROC __glewGetQueryObjectui64vEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINTRANSFORMFEEDBACKEXTPROC __glewBeginTransformFeedbackEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERBASEEXTPROC __glewBindBufferBaseEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFEROFFSETEXTPROC __glewBindBufferOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERRANGEEXTPROC __glewBindBufferRangeEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENDTRANSFORMFEEDBACKEXTPROC __glewEndTransformFeedbackEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETTRANSFORMFEEDBACKVARYINGEXTPROC __glewGetTransformFeedbackVaryingEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTRANSFORMFEEDBACKVARYINGSEXTPROC __glewTransformFeedbackVaryingsEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLARRAYELEMENTEXTPROC __glewArrayElementEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORPOINTEREXTPROC __glewColorPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSEXTPROC __glewDrawArraysEXT;
-extern __attribute__ ((visibility("default"))) PFNGLEDGEFLAGPOINTEREXTPROC __glewEdgeFlagPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLINDEXPOINTEREXTPROC __glewIndexPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALPOINTEREXTPROC __glewNormalPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDPOINTEREXTPROC __glewTexCoordPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXPOINTEREXTPROC __glewVertexPointerEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDARRAYSETEXTPROC __glewBindArraySetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEARRAYSETEXTPROC __glewCreateArraySetExt;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEARRAYSETSEXTPROC __glewDeleteArraySetsEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBLDVEXTPROC __glewGetVertexAttribLdvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYVERTEXATTRIBLOFFSETEXTPROC __glewVertexArrayVertexAttribLOffsetEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1DEXTPROC __glewVertexAttribL1dEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1DVEXTPROC __glewVertexAttribL1dvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL2DEXTPROC __glewVertexAttribL2dEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL2DVEXTPROC __glewVertexAttribL2dvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL3DEXTPROC __glewVertexAttribL3dEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL3DVEXTPROC __glewVertexAttribL3dvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL4DEXTPROC __glewVertexAttribL4dEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL4DVEXTPROC __glewVertexAttribL4dvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBLPOINTEREXTPROC __glewVertexAttribLPointerEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINVERTEXSHADEREXTPROC __glewBeginVertexShaderEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDLIGHTPARAMETEREXTPROC __glewBindLightParameterEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDMATERIALPARAMETEREXTPROC __glewBindMaterialParameterEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDPARAMETEREXTPROC __glewBindParameterEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDTEXGENPARAMETEREXTPROC __glewBindTexGenParameterEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDTEXTUREUNITPARAMETEREXTPROC __glewBindTextureUnitParameterEXT;
-extern __attribute__ ((visibility("default"))) PFNGLBINDVERTEXSHADEREXTPROC __glewBindVertexShaderEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEVERTEXSHADEREXTPROC __glewDeleteVertexShaderEXT;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEVARIANTCLIENTSTATEEXTPROC __glewDisableVariantClientStateEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEVARIANTCLIENTSTATEEXTPROC __glewEnableVariantClientStateEXT;
-extern __attribute__ ((visibility("default"))) PFNGLENDVERTEXSHADEREXTPROC __glewEndVertexShaderEXT;
-extern __attribute__ ((visibility("default"))) PFNGLEXTRACTCOMPONENTEXTPROC __glewExtractComponentEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENSYMBOLSEXTPROC __glewGenSymbolsEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGENVERTEXSHADERSEXTPROC __glewGenVertexShadersEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETINVARIANTBOOLEANVEXTPROC __glewGetInvariantBooleanvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETINVARIANTFLOATVEXTPROC __glewGetInvariantFloatvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETINVARIANTINTEGERVEXTPROC __glewGetInvariantIntegervEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETLOCALCONSTANTBOOLEANVEXTPROC __glewGetLocalConstantBooleanvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETLOCALCONSTANTFLOATVEXTPROC __glewGetLocalConstantFloatvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETLOCALCONSTANTINTEGERVEXTPROC __glewGetLocalConstantIntegervEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVARIANTBOOLEANVEXTPROC __glewGetVariantBooleanvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVARIANTFLOATVEXTPROC __glewGetVariantFloatvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVARIANTINTEGERVEXTPROC __glewGetVariantIntegervEXT;
-extern __attribute__ ((visibility("default"))) PFNGLGETVARIANTPOINTERVEXTPROC __glewGetVariantPointervEXT;
-extern __attribute__ ((visibility("default"))) PFNGLINSERTCOMPONENTEXTPROC __glewInsertComponentEXT;
-extern __attribute__ ((visibility("default"))) PFNGLISVARIANTENABLEDEXTPROC __glewIsVariantEnabledEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSETINVARIANTEXTPROC __glewSetInvariantEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSETLOCALCONSTANTEXTPROC __glewSetLocalConstantEXT;
-extern __attribute__ ((visibility("default"))) PFNGLSHADEROP1EXTPROC __glewShaderOp1EXT;
-extern __attribute__ ((visibility("default"))) PFNGLSHADEROP2EXTPROC __glewShaderOp2EXT;
-extern __attribute__ ((visibility("default"))) PFNGLSHADEROP3EXTPROC __glewShaderOp3EXT;
-extern __attribute__ ((visibility("default"))) PFNGLSWIZZLEEXTPROC __glewSwizzleEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTPOINTEREXTPROC __glewVariantPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTBVEXTPROC __glewVariantbvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTDVEXTPROC __glewVariantdvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTFVEXTPROC __glewVariantfvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTIVEXTPROC __glewVariantivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTSVEXTPROC __glewVariantsvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTUBVEXTPROC __glewVariantubvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTUIVEXTPROC __glewVariantuivEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVARIANTUSVEXTPROC __glewVariantusvEXT;
-extern __attribute__ ((visibility("default"))) PFNGLWRITEMASKEXTPROC __glewWriteMaskEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXWEIGHTPOINTEREXTPROC __glewVertexWeightPointerEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXWEIGHTFEXTPROC __glewVertexWeightfEXT;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXWEIGHTFVEXTPROC __glewVertexWeightfvEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLACQUIREKEYEDMUTEXWIN32EXTPROC __glewAcquireKeyedMutexWin32EXT;
-extern __attribute__ ((visibility("default"))) PFNGLRELEASEKEYEDMUTEXWIN32EXTPROC __glewReleaseKeyedMutexWin32EXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWRECTANGLESEXTPROC __glewWindowRectanglesEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLIMPORTSYNCEXTPROC __glewImportSyncEXT;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMETERMINATORGREMEDYPROC __glewFrameTerminatorGREMEDY;
-
-extern __attribute__ ((visibility("default"))) PFNGLSTRINGMARKERGREMEDYPROC __glewStringMarkerGREMEDY;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETIMAGETRANSFORMPARAMETERFVHPPROC __glewGetImageTransformParameterfvHP;
-extern __attribute__ ((visibility("default"))) PFNGLGETIMAGETRANSFORMPARAMETERIVHPPROC __glewGetImageTransformParameterivHP;
-extern __attribute__ ((visibility("default"))) PFNGLIMAGETRANSFORMPARAMETERFHPPROC __glewImageTransformParameterfHP;
-extern __attribute__ ((visibility("default"))) PFNGLIMAGETRANSFORMPARAMETERFVHPPROC __glewImageTransformParameterfvHP;
-extern __attribute__ ((visibility("default"))) PFNGLIMAGETRANSFORMPARAMETERIHPPROC __glewImageTransformParameteriHP;
-extern __attribute__ ((visibility("default"))) PFNGLIMAGETRANSFORMPARAMETERIVHPPROC __glewImageTransformParameterivHP;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIMODEDRAWARRAYSIBMPROC __glewMultiModeDrawArraysIBM;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIMODEDRAWELEMENTSIBMPROC __glewMultiModeDrawElementsIBM;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLORPOINTERLISTIBMPROC __glewColorPointerListIBM;
-extern __attribute__ ((visibility("default"))) PFNGLEDGEFLAGPOINTERLISTIBMPROC __glewEdgeFlagPointerListIBM;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDPOINTERLISTIBMPROC __glewFogCoordPointerListIBM;
-extern __attribute__ ((visibility("default"))) PFNGLINDEXPOINTERLISTIBMPROC __glewIndexPointerListIBM;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALPOINTERLISTIBMPROC __glewNormalPointerListIBM;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLORPOINTERLISTIBMPROC __glewSecondaryColorPointerListIBM;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDPOINTERLISTIBMPROC __glewTexCoordPointerListIBM;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXPOINTERLISTIBMPROC __glewVertexPointerListIBM;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREHANDLEIMGPROC __glewGetTextureHandleIMG;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTURESAMPLERHANDLEIMGPROC __glewGetTextureSamplerHandleIMG;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMHANDLEUI64IMGPROC __glewProgramUniformHandleui64IMG;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMHANDLEUI64VIMGPROC __glewProgramUniformHandleui64vIMG;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMHANDLEUI64IMGPROC __glewUniformHandleui64IMG;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMHANDLEUI64VIMGPROC __glewUniformHandleui64vIMG;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE2DDOWNSAMPLEIMGPROC __glewFramebufferTexture2DDownsampleIMG;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURELAYERDOWNSAMPLEIMGPROC __glewFramebufferTextureLayerDownsampleIMG;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEIMGPROC __glewFramebufferTexture2DMultisampleIMG;
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEMULTISAMPLEIMGPROC __glewRenderbufferStorageMultisampleIMG;
-
-extern __attribute__ ((visibility("default"))) PFNGLAPPLYFRAMEBUFFERATTACHMENTCMAAINTELPROC __glewApplyFramebufferAttachmentCMAAINTEL;
-
-extern __attribute__ ((visibility("default"))) PFNGLMAPTEXTURE2DINTELPROC __glewMapTexture2DINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLSYNCTEXTUREINTELPROC __glewSyncTextureINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLUNMAPTEXTURE2DINTELPROC __glewUnmapTexture2DINTEL;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLORPOINTERVINTELPROC __glewColorPointervINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALPOINTERVINTELPROC __glewNormalPointervINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDPOINTERVINTELPROC __glewTexCoordPointervINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXPOINTERVINTELPROC __glewVertexPointervINTEL;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINPERFQUERYINTELPROC __glewBeginPerfQueryINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEPERFQUERYINTELPROC __glewCreatePerfQueryINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEPERFQUERYINTELPROC __glewDeletePerfQueryINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLENDPERFQUERYINTELPROC __glewEndPerfQueryINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLGETFIRSTPERFQUERYIDINTELPROC __glewGetFirstPerfQueryIdINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLGETNEXTPERFQUERYIDINTELPROC __glewGetNextPerfQueryIdINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFCOUNTERINFOINTELPROC __glewGetPerfCounterInfoINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFQUERYDATAINTELPROC __glewGetPerfQueryDataINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFQUERYIDBYNAMEINTELPROC __glewGetPerfQueryIdByNameINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLGETPERFQUERYINFOINTELPROC __glewGetPerfQueryInfoINTEL;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXSCISSORFUNCINTELPROC __glewTexScissorFuncINTEL;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSCISSORINTELPROC __glewTexScissorINTEL;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDBARRIERKHRPROC __glewBlendBarrierKHR;
-
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGECALLBACKPROC __glewDebugMessageCallback;
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGECONTROLPROC __glewDebugMessageControl;
-extern __attribute__ ((visibility("default"))) PFNGLDEBUGMESSAGEINSERTPROC __glewDebugMessageInsert;
-extern __attribute__ ((visibility("default"))) PFNGLGETDEBUGMESSAGELOGPROC __glewGetDebugMessageLog;
-extern __attribute__ ((visibility("default"))) PFNGLGETOBJECTLABELPROC __glewGetObjectLabel;
-extern __attribute__ ((visibility("default"))) PFNGLGETOBJECTPTRLABELPROC __glewGetObjectPtrLabel;
-extern __attribute__ ((visibility("default"))) PFNGLOBJECTLABELPROC __glewObjectLabel;
-extern __attribute__ ((visibility("default"))) PFNGLOBJECTPTRLABELPROC __glewObjectPtrLabel;
-extern __attribute__ ((visibility("default"))) PFNGLPOPDEBUGGROUPPROC __glewPopDebugGroup;
-extern __attribute__ ((visibility("default"))) PFNGLPUSHDEBUGGROUPPROC __glewPushDebugGroup;
-
-extern __attribute__ ((visibility("default"))) PFNGLMAXSHADERCOMPILERTHREADSKHRPROC __glewMaxShaderCompilerThreadsKHR;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMFVPROC __glewGetnUniformfv;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMIVPROC __glewGetnUniformiv;
-extern __attribute__ ((visibility("default"))) PFNGLGETNUNIFORMUIVPROC __glewGetnUniformuiv;
-extern __attribute__ ((visibility("default"))) PFNGLREADNPIXELSPROC __glewReadnPixels;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERREGIONENABLEDPROC __glewBufferRegionEnabled;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEBUFFERREGIONPROC __glewDeleteBufferRegion;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWBUFFERREGIONPROC __glewDrawBufferRegion;
-extern __attribute__ ((visibility("default"))) PFNGLNEWBUFFERREGIONPROC __glewNewBufferRegion;
-extern __attribute__ ((visibility("default"))) PFNGLREADBUFFERREGIONPROC __glewReadBufferRegion;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERPARAMETERIMESAPROC __glewFramebufferParameteriMESA;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAMEBUFFERPARAMETERIVMESAPROC __glewGetFramebufferParameterivMESA;
-
-extern __attribute__ ((visibility("default"))) PFNGLRESIZEBUFFERSMESAPROC __glewResizeBuffersMESA;
-
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2DMESAPROC __glewWindowPos2dMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2DVMESAPROC __glewWindowPos2dvMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2FMESAPROC __glewWindowPos2fMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2FVMESAPROC __glewWindowPos2fvMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2IMESAPROC __glewWindowPos2iMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2IVMESAPROC __glewWindowPos2ivMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2SMESAPROC __glewWindowPos2sMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS2SVMESAPROC __glewWindowPos2svMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3DMESAPROC __glewWindowPos3dMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3DVMESAPROC __glewWindowPos3dvMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3FMESAPROC __glewWindowPos3fMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3FVMESAPROC __glewWindowPos3fvMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3IMESAPROC __glewWindowPos3iMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3IVMESAPROC __glewWindowPos3ivMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3SMESAPROC __glewWindowPos3sMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS3SVMESAPROC __glewWindowPos3svMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS4DMESAPROC __glewWindowPos4dMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS4DVMESAPROC __glewWindowPos4dvMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS4FMESAPROC __glewWindowPos4fMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS4FVMESAPROC __glewWindowPos4fvMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS4IMESAPROC __glewWindowPos4iMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS4IVMESAPROC __glewWindowPos4ivMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS4SMESAPROC __glewWindowPos4sMESA;
-extern __attribute__ ((visibility("default"))) PFNGLWINDOWPOS4SVMESAPROC __glewWindowPos4svMESA;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINCONDITIONALRENDERNVXPROC __glewBeginConditionalRenderNVX;
-extern __attribute__ ((visibility("default"))) PFNGLENDCONDITIONALRENDERNVXPROC __glewEndConditionalRenderNVX;
-
-extern __attribute__ ((visibility("default"))) PFNGLASYNCCOPYBUFFERSUBDATANVXPROC __glewAsyncCopyBufferSubDataNVX;
-extern __attribute__ ((visibility("default"))) PFNGLASYNCCOPYIMAGESUBDATANVXPROC __glewAsyncCopyImageSubDataNVX;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTSCISSORARRAYVNVXPROC __glewMulticastScissorArrayvNVX;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTVIEWPORTARRAYVNVXPROC __glewMulticastViewportArrayvNVX;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTVIEWPORTPOSITIONWSCALENVXPROC __glewMulticastViewportPositionWScaleNVX;
-extern __attribute__ ((visibility("default"))) PFNGLUPLOADGPUMASKNVXPROC __glewUploadGpuMaskNVX;
-
-extern __attribute__ ((visibility("default"))) PFNGLLGPUCOPYIMAGESUBDATANVXPROC __glewLGPUCopyImageSubDataNVX;
-extern __attribute__ ((visibility("default"))) PFNGLLGPUINTERLOCKNVXPROC __glewLGPUInterlockNVX;
-extern __attribute__ ((visibility("default"))) PFNGLLGPUNAMEDBUFFERSUBDATANVXPROC __glewLGPUNamedBufferSubDataNVX;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLIENTWAITSEMAPHOREUI64NVXPROC __glewClientWaitSemaphoreui64NVX;
-extern __attribute__ ((visibility("default"))) PFNGLCREATEPROGRESSFENCENVXPROC __glewCreateProgressFenceNVX;
-extern __attribute__ ((visibility("default"))) PFNGLSIGNALSEMAPHOREUI64NVXPROC __glewSignalSemaphoreui64NVX;
-extern __attribute__ ((visibility("default"))) PFNGLWAITSEMAPHOREUI64NVXPROC __glewWaitSemaphoreui64NVX;
-
-extern __attribute__ ((visibility("default"))) PFNGLSTEREOPARAMETERFNVPROC __glewStereoParameterfNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTEREOPARAMETERINVPROC __glewStereoParameteriNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLALPHATOCOVERAGEDITHERCONTROLNVPROC __glewAlphaToCoverageDitherControlNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSNVPROC __glewMultiDrawArraysIndirectBindlessNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSNVPROC __glewMultiDrawElementsIndirectBindlessNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNVPROC __glewMultiDrawArraysIndirectBindlessCountNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNVPROC __glewMultiDrawElementsIndirectBindlessCountNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETIMAGEHANDLENVPROC __glewGetImageHandleNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTUREHANDLENVPROC __glewGetTextureHandleNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXTURESAMPLERHANDLENVPROC __glewGetTextureSamplerHandleNV;
-extern __attribute__ ((visibility("default"))) PFNGLISIMAGEHANDLERESIDENTNVPROC __glewIsImageHandleResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLISTEXTUREHANDLERESIDENTNVPROC __glewIsTextureHandleResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAKEIMAGEHANDLENONRESIDENTNVPROC __glewMakeImageHandleNonResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAKEIMAGEHANDLERESIDENTNVPROC __glewMakeImageHandleResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAKETEXTUREHANDLENONRESIDENTNVPROC __glewMakeTextureHandleNonResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAKETEXTUREHANDLERESIDENTNVPROC __glewMakeTextureHandleResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMHANDLEUI64NVPROC __glewProgramUniformHandleui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMHANDLEUI64VNVPROC __glewProgramUniformHandleui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMHANDLEUI64NVPROC __glewUniformHandleui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMHANDLEUI64VNVPROC __glewUniformHandleui64vNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDBARRIERNVPROC __glewBlendBarrierNV;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDPARAMETERINVPROC __glewBlendParameteriNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLVIEWPORTPOSITIONWSCALENVPROC __glewViewportPositionWScaleNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCALLCOMMANDLISTNVPROC __glewCallCommandListNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOMMANDLISTSEGMENTSNVPROC __glewCommandListSegmentsNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPILECOMMANDLISTNVPROC __glewCompileCommandListNV;
-extern __attribute__ ((visibility("default"))) PFNGLCREATECOMMANDLISTSNVPROC __glewCreateCommandListsNV;
-extern __attribute__ ((visibility("default"))) PFNGLCREATESTATESNVPROC __glewCreateStatesNV;
-extern __attribute__ ((visibility("default"))) PFNGLDELETECOMMANDLISTSNVPROC __glewDeleteCommandListsNV;
-extern __attribute__ ((visibility("default"))) PFNGLDELETESTATESNVPROC __glewDeleteStatesNV;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWCOMMANDSADDRESSNVPROC __glewDrawCommandsAddressNV;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWCOMMANDSNVPROC __glewDrawCommandsNV;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWCOMMANDSSTATESADDRESSNVPROC __glewDrawCommandsStatesAddressNV;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWCOMMANDSSTATESNVPROC __glewDrawCommandsStatesNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMMANDHEADERNVPROC __glewGetCommandHeaderNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETSTAGEINDEXNVPROC __glewGetStageIndexNV;
-extern __attribute__ ((visibility("default"))) PFNGLISCOMMANDLISTNVPROC __glewIsCommandListNV;
-extern __attribute__ ((visibility("default"))) PFNGLISSTATENVPROC __glewIsStateNV;
-extern __attribute__ ((visibility("default"))) PFNGLLISTDRAWCOMMANDSSTATESCLIENTNVPROC __glewListDrawCommandsStatesClientNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTATECAPTURENVPROC __glewStateCaptureNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINCONDITIONALRENDERNVPROC __glewBeginConditionalRenderNV;
-extern __attribute__ ((visibility("default"))) PFNGLENDCONDITIONALRENDERNVPROC __glewEndConditionalRenderNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLSUBPIXELPRECISIONBIASNVPROC __glewSubpixelPrecisionBiasNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCONSERVATIVERASTERPARAMETERFNVPROC __glewConservativeRasterParameterfNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCONSERVATIVERASTERPARAMETERINVPROC __glewConservativeRasterParameteriNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYBUFFERSUBDATANVPROC __glewCopyBufferSubDataNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYIMAGESUBDATANVPROC __glewCopyImageSubDataNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLEARDEPTHDNVPROC __glewClearDepthdNV;
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHBOUNDSDNVPROC __glewDepthBoundsdNV;
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHRANGEDNVPROC __glewDepthRangedNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWBUFFERSNVPROC __glewDrawBuffersNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWARRAYSINSTANCEDNVPROC __glewDrawArraysInstancedNV;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWELEMENTSINSTANCEDNVPROC __glewDrawElementsInstancedNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWTEXTURENVPROC __glewDrawTextureNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWVKIMAGENVPROC __glewDrawVkImageNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVKPROCADDRNVPROC __glewGetVkProcAddrNV;
-extern __attribute__ ((visibility("default"))) PFNGLSIGNALVKFENCENVPROC __glewSignalVkFenceNV;
-extern __attribute__ ((visibility("default"))) PFNGLSIGNALVKSEMAPHORENVPROC __glewSignalVkSemaphoreNV;
-extern __attribute__ ((visibility("default"))) PFNGLWAITVKSEMAPHORENVPROC __glewWaitVkSemaphoreNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLEVALMAPSNVPROC __glewEvalMapsNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETMAPATTRIBPARAMETERFVNVPROC __glewGetMapAttribParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETMAPATTRIBPARAMETERIVNVPROC __glewGetMapAttribParameterivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETMAPCONTROLPOINTSNVPROC __glewGetMapControlPointsNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETMAPPARAMETERFVNVPROC __glewGetMapParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETMAPPARAMETERIVNVPROC __glewGetMapParameterivNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAPCONTROLPOINTSNVPROC __glewMapControlPointsNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAPPARAMETERFVNVPROC __glewMapParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAPPARAMETERIVNVPROC __glewMapParameterivNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETMULTISAMPLEFVNVPROC __glewGetMultisamplefvNV;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLEMASKINDEXEDNVPROC __glewSampleMaskIndexedNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXRENDERBUFFERNVPROC __glewTexRenderbufferNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLDELETEFENCESNVPROC __glewDeleteFencesNV;
-extern __attribute__ ((visibility("default"))) PFNGLFINISHFENCENVPROC __glewFinishFenceNV;
-extern __attribute__ ((visibility("default"))) PFNGLGENFENCESNVPROC __glewGenFencesNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETFENCEIVNVPROC __glewGetFenceivNV;
-extern __attribute__ ((visibility("default"))) PFNGLISFENCENVPROC __glewIsFenceNV;
-extern __attribute__ ((visibility("default"))) PFNGLSETFENCENVPROC __glewSetFenceNV;
-extern __attribute__ ((visibility("default"))) PFNGLTESTFENCENVPROC __glewTestFenceNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTCOVERAGECOLORNVPROC __glewFragmentCoverageColorNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMNAMEDPARAMETERDVNVPROC __glewGetProgramNamedParameterdvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMNAMEDPARAMETERFVNVPROC __glewGetProgramNamedParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMNAMEDPARAMETER4DNVPROC __glewProgramNamedParameter4dNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMNAMEDPARAMETER4DVNVPROC __glewProgramNamedParameter4dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMNAMEDPARAMETER4FNVPROC __glewProgramNamedParameter4fNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMNAMEDPARAMETER4FVNVPROC __glewProgramNamedParameter4fvNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLITFRAMEBUFFERNVPROC __glewBlitFramebufferNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEMULTISAMPLENVPROC __glewRenderbufferStorageMultisampleNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEMULTISAMPLECOVERAGENVPROC __glewRenderbufferStorageMultisampleCoverageNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMVERTEXLIMITNVPROC __glewProgramVertexLimitNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTBARRIERNVPROC __glewMulticastBarrierNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTBLITFRAMEBUFFERNVPROC __glewMulticastBlitFramebufferNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTBUFFERSUBDATANVPROC __glewMulticastBufferSubDataNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTCOPYBUFFERSUBDATANVPROC __glewMulticastCopyBufferSubDataNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTCOPYIMAGESUBDATANVPROC __glewMulticastCopyImageSubDataNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTFRAMEBUFFERSAMPLELOCATIONSFVNVPROC __glewMulticastFramebufferSampleLocationsfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTGETQUERYOBJECTI64VNVPROC __glewMulticastGetQueryObjecti64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTGETQUERYOBJECTIVNVPROC __glewMulticastGetQueryObjectivNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTGETQUERYOBJECTUI64VNVPROC __glewMulticastGetQueryObjectui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTGETQUERYOBJECTUIVNVPROC __glewMulticastGetQueryObjectuivNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTICASTWAITSYNCNVPROC __glewMulticastWaitSyncNV;
-extern __attribute__ ((visibility("default"))) PFNGLRENDERGPUMASKNVPROC __glewRenderGpuMaskNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETERI4INVPROC __glewProgramEnvParameterI4iNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETERI4IVNVPROC __glewProgramEnvParameterI4ivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETERI4UINVPROC __glewProgramEnvParameterI4uiNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETERI4UIVNVPROC __glewProgramEnvParameterI4uivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETERSI4IVNVPROC __glewProgramEnvParametersI4ivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMENVPARAMETERSI4UIVNVPROC __glewProgramEnvParametersI4uivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETERI4INVPROC __glewProgramLocalParameterI4iNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETERI4IVNVPROC __glewProgramLocalParameterI4ivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETERI4UINVPROC __glewProgramLocalParameterI4uiNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETERI4UIVNVPROC __glewProgramLocalParameterI4uivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETERSI4IVNVPROC __glewProgramLocalParametersI4ivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMLOCALPARAMETERSI4UIVNVPROC __glewProgramLocalParametersI4uivNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMI64VNVPROC __glewGetUniformi64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETUNIFORMUI64VNVPROC __glewGetUniformui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1I64NVPROC __glewProgramUniform1i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1I64VNVPROC __glewProgramUniform1i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1UI64NVPROC __glewProgramUniform1ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM1UI64VNVPROC __glewProgramUniform1ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2I64NVPROC __glewProgramUniform2i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2I64VNVPROC __glewProgramUniform2i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2UI64NVPROC __glewProgramUniform2ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM2UI64VNVPROC __glewProgramUniform2ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3I64NVPROC __glewProgramUniform3i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3I64VNVPROC __glewProgramUniform3i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3UI64NVPROC __glewProgramUniform3ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM3UI64VNVPROC __glewProgramUniform3ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4I64NVPROC __glewProgramUniform4i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4I64VNVPROC __glewProgramUniform4i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4UI64NVPROC __glewProgramUniform4ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORM4UI64VNVPROC __glewProgramUniform4ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1I64NVPROC __glewUniform1i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1I64VNVPROC __glewUniform1i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1UI64NVPROC __glewUniform1ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM1UI64VNVPROC __glewUniform1ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2I64NVPROC __glewUniform2i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2I64VNVPROC __glewUniform2i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2UI64NVPROC __glewUniform2ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM2UI64VNVPROC __glewUniform2ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3I64NVPROC __glewUniform3i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3I64VNVPROC __glewUniform3i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3UI64NVPROC __glewUniform3ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM3UI64VNVPROC __glewUniform3ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4I64NVPROC __glewUniform4i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4I64VNVPROC __glewUniform4i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4UI64NVPROC __glewUniform4ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORM4UI64VNVPROC __glewUniform4ui64vNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR3HNVPROC __glewColor3hNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR3HVNVPROC __glewColor3hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4HNVPROC __glewColor4hNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4HVNVPROC __glewColor4hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDHNVPROC __glewFogCoordhNV;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDHVNVPROC __glewFogCoordhvNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1HNVPROC __glewMultiTexCoord1hNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD1HVNVPROC __glewMultiTexCoord1hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2HNVPROC __glewMultiTexCoord2hNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD2HVNVPROC __glewMultiTexCoord2hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3HNVPROC __glewMultiTexCoord3hNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD3HVNVPROC __glewMultiTexCoord3hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4HNVPROC __glewMultiTexCoord4hNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4HVNVPROC __glewMultiTexCoord4hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLNORMAL3HNVPROC __glewNormal3hNV;
-extern __attribute__ ((visibility("default"))) PFNGLNORMAL3HVNVPROC __glewNormal3hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3HNVPROC __glewSecondaryColor3hNV;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLOR3HVNVPROC __glewSecondaryColor3hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD1HNVPROC __glewTexCoord1hNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD1HVNVPROC __glewTexCoord1hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2HNVPROC __glewTexCoord2hNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2HVNVPROC __glewTexCoord2hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD3HNVPROC __glewTexCoord3hNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD3HVNVPROC __glewTexCoord3hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD4HNVPROC __glewTexCoord4hNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD4HVNVPROC __glewTexCoord4hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEX2HNVPROC __glewVertex2hNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEX2HVNVPROC __glewVertex2hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEX3HNVPROC __glewVertex3hNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEX3HVNVPROC __glewVertex3hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEX4HNVPROC __glewVertex4hNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEX4HVNVPROC __glewVertex4hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1HNVPROC __glewVertexAttrib1hNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1HVNVPROC __glewVertexAttrib1hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2HNVPROC __glewVertexAttrib2hNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2HVNVPROC __glewVertexAttrib2hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3HNVPROC __glewVertexAttrib3hNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3HVNVPROC __glewVertexAttrib3hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4HNVPROC __glewVertexAttrib4hNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4HVNVPROC __glewVertexAttrib4hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS1HVNVPROC __glewVertexAttribs1hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS2HVNVPROC __glewVertexAttribs2hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS3HVNVPROC __glewVertexAttribs3hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS4HVNVPROC __glewVertexAttribs4hvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXWEIGHTHNVPROC __glewVertexWeighthNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXWEIGHTHVNVPROC __glewVertexWeighthvNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBDIVISORNVPROC __glewVertexAttribDivisorNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETINTERNALFORMATSAMPLEIVNVPROC __glewGetInternalformatSampleivNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERATTACHMEMORYNVPROC __glewBufferAttachMemoryNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETMEMORYOBJECTDETACHEDRESOURCESUIVNVPROC __glewGetMemoryObjectDetachedResourcesuivNV;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERATTACHMEMORYNVPROC __glewNamedBufferAttachMemoryNV;
-extern __attribute__ ((visibility("default"))) PFNGLRESETMEMORYOBJECTPARAMETERNVPROC __glewResetMemoryObjectParameterNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXATTACHMEMORYNVPROC __glewTexAttachMemoryNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREATTACHMEMORYNVPROC __glewTextureAttachMemoryNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERPAGECOMMITMENTMEMNVPROC __glewBufferPageCommitmentMemNV;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDBUFFERPAGECOMMITMENTMEMNVPROC __glewNamedBufferPageCommitmentMemNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPAGECOMMITMENTMEMNVPROC __glewTexPageCommitmentMemNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREPAGECOMMITMENTMEMNVPROC __glewTexturePageCommitmentMemNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLDRAWMESHTASKSINDIRECTNVPROC __glewDrawMeshTasksIndirectNV;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWMESHTASKSNVPROC __glewDrawMeshTasksNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC __glewMultiDrawMeshTasksIndirectCountNV;
-extern __attribute__ ((visibility("default"))) PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC __glewMultiDrawMeshTasksIndirectNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2X3FVNVPROC __glewUniformMatrix2x3fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX2X4FVNVPROC __glewUniformMatrix2x4fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3X2FVNVPROC __glewUniformMatrix3x2fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX3X4FVNVPROC __glewUniformMatrix3x4fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4X2FVNVPROC __glewUniformMatrix4x2fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMMATRIX4X3FVNVPROC __glewUniformMatrix4x3fvNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINOCCLUSIONQUERYNVPROC __glewBeginOcclusionQueryNV;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEOCCLUSIONQUERIESNVPROC __glewDeleteOcclusionQueriesNV;
-extern __attribute__ ((visibility("default"))) PFNGLENDOCCLUSIONQUERYNVPROC __glewEndOcclusionQueryNV;
-extern __attribute__ ((visibility("default"))) PFNGLGENOCCLUSIONQUERIESNVPROC __glewGenOcclusionQueriesNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETOCCLUSIONQUERYIVNVPROC __glewGetOcclusionQueryivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETOCCLUSIONQUERYUIVNVPROC __glewGetOcclusionQueryuivNV;
-extern __attribute__ ((visibility("default"))) PFNGLISOCCLUSIONQUERYNVPROC __glewIsOcclusionQueryNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMBUFFERPARAMETERSIIVNVPROC __glewProgramBufferParametersIivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMBUFFERPARAMETERSIUIVNVPROC __glewProgramBufferParametersIuivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMBUFFERPARAMETERSFVNVPROC __glewProgramBufferParametersfvNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYPATHNVPROC __glewCopyPathNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOVERFILLPATHINSTANCEDNVPROC __glewCoverFillPathInstancedNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOVERFILLPATHNVPROC __glewCoverFillPathNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOVERSTROKEPATHINSTANCEDNVPROC __glewCoverStrokePathInstancedNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOVERSTROKEPATHNVPROC __glewCoverStrokePathNV;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEPATHSNVPROC __glewDeletePathsNV;
-extern __attribute__ ((visibility("default"))) PFNGLGENPATHSNVPROC __glewGenPathsNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHCOLORGENFVNVPROC __glewGetPathColorGenfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHCOLORGENIVNVPROC __glewGetPathColorGenivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHCOMMANDSNVPROC __glewGetPathCommandsNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHCOORDSNVPROC __glewGetPathCoordsNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHDASHARRAYNVPROC __glewGetPathDashArrayNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHLENGTHNVPROC __glewGetPathLengthNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHMETRICRANGENVPROC __glewGetPathMetricRangeNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHMETRICSNVPROC __glewGetPathMetricsNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHPARAMETERFVNVPROC __glewGetPathParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHPARAMETERIVNVPROC __glewGetPathParameterivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHSPACINGNVPROC __glewGetPathSpacingNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHTEXGENFVNVPROC __glewGetPathTexGenfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPATHTEXGENIVNVPROC __glewGetPathTexGenivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMRESOURCEFVNVPROC __glewGetProgramResourcefvNV;
-extern __attribute__ ((visibility("default"))) PFNGLINTERPOLATEPATHSNVPROC __glewInterpolatePathsNV;
-extern __attribute__ ((visibility("default"))) PFNGLISPATHNVPROC __glewIsPathNV;
-extern __attribute__ ((visibility("default"))) PFNGLISPOINTINFILLPATHNVPROC __glewIsPointInFillPathNV;
-extern __attribute__ ((visibility("default"))) PFNGLISPOINTINSTROKEPATHNVPROC __glewIsPointInStrokePathNV;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXLOAD3X2FNVPROC __glewMatrixLoad3x2fNV;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXLOAD3X3FNVPROC __glewMatrixLoad3x3fNV;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXLOADTRANSPOSE3X3FNVPROC __glewMatrixLoadTranspose3x3fNV;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXMULT3X2FNVPROC __glewMatrixMult3x2fNV;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXMULT3X3FNVPROC __glewMatrixMult3x3fNV;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXMULTTRANSPOSE3X3FNVPROC __glewMatrixMultTranspose3x3fNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHCOLORGENNVPROC __glewPathColorGenNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHCOMMANDSNVPROC __glewPathCommandsNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHCOORDSNVPROC __glewPathCoordsNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHCOVERDEPTHFUNCNVPROC __glewPathCoverDepthFuncNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHDASHARRAYNVPROC __glewPathDashArrayNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHFOGGENNVPROC __glewPathFogGenNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHGLYPHINDEXARRAYNVPROC __glewPathGlyphIndexArrayNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHGLYPHINDEXRANGENVPROC __glewPathGlyphIndexRangeNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHGLYPHRANGENVPROC __glewPathGlyphRangeNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHGLYPHSNVPROC __glewPathGlyphsNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHMEMORYGLYPHINDEXARRAYNVPROC __glewPathMemoryGlyphIndexArrayNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHPARAMETERFNVPROC __glewPathParameterfNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHPARAMETERFVNVPROC __glewPathParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHPARAMETERINVPROC __glewPathParameteriNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHPARAMETERIVNVPROC __glewPathParameterivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHSTENCILDEPTHOFFSETNVPROC __glewPathStencilDepthOffsetNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHSTENCILFUNCNVPROC __glewPathStencilFuncNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHSTRINGNVPROC __glewPathStringNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHSUBCOMMANDSNVPROC __glewPathSubCommandsNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHSUBCOORDSNVPROC __glewPathSubCoordsNV;
-extern __attribute__ ((visibility("default"))) PFNGLPATHTEXGENNVPROC __glewPathTexGenNV;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTALONGPATHNVPROC __glewPointAlongPathNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPATHFRAGMENTINPUTGENNVPROC __glewProgramPathFragmentInputGenNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILFILLPATHINSTANCEDNVPROC __glewStencilFillPathInstancedNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILFILLPATHNVPROC __glewStencilFillPathNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILSTROKEPATHINSTANCEDNVPROC __glewStencilStrokePathInstancedNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILSTROKEPATHNVPROC __glewStencilStrokePathNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILTHENCOVERFILLPATHINSTANCEDNVPROC __glewStencilThenCoverFillPathInstancedNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILTHENCOVERFILLPATHNVPROC __glewStencilThenCoverFillPathNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILTHENCOVERSTROKEPATHINSTANCEDNVPROC __glewStencilThenCoverStrokePathInstancedNV;
-extern __attribute__ ((visibility("default"))) PFNGLSTENCILTHENCOVERSTROKEPATHNVPROC __glewStencilThenCoverStrokePathNV;
-extern __attribute__ ((visibility("default"))) PFNGLTRANSFORMPATHNVPROC __glewTransformPathNV;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTPATHSNVPROC __glewWeightPathsNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHPIXELDATARANGENVPROC __glewFlushPixelDataRangeNV;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELDATARANGENVPROC __glewPixelDataRangeNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERINVPROC __glewPointParameteriNV;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERIVNVPROC __glewPointParameterivNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLPOLYGONMODENVPROC __glewPolygonModeNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETVIDEOI64VNVPROC __glewGetVideoi64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVIDEOIVNVPROC __glewGetVideoivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVIDEOUI64VNVPROC __glewGetVideoui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVIDEOUIVNVPROC __glewGetVideouivNV;
-extern __attribute__ ((visibility("default"))) PFNGLPRESENTFRAMEDUALFILLNVPROC __glewPresentFrameDualFillNV;
-extern __attribute__ ((visibility("default"))) PFNGLPRESENTFRAMEKEYEDNVPROC __glewPresentFrameKeyedNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLPRIMITIVERESTARTINDEXNVPROC __glewPrimitiveRestartIndexNV;
-extern __attribute__ ((visibility("default"))) PFNGLPRIMITIVERESTARTNVPROC __glewPrimitiveRestartNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLREADBUFFERNVPROC __glewReadBufferNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOMBINERINPUTNVPROC __glewCombinerInputNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOMBINEROUTPUTNVPROC __glewCombinerOutputNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOMBINERPARAMETERFNVPROC __glewCombinerParameterfNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOMBINERPARAMETERFVNVPROC __glewCombinerParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOMBINERPARAMETERINVPROC __glewCombinerParameteriNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOMBINERPARAMETERIVNVPROC __glewCombinerParameterivNV;
-extern __attribute__ ((visibility("default"))) PFNGLFINALCOMBINERINPUTNVPROC __glewFinalCombinerInputNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMBINERINPUTPARAMETERFVNVPROC __glewGetCombinerInputParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMBINERINPUTPARAMETERIVNVPROC __glewGetCombinerInputParameterivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMBINEROUTPUTPARAMETERFVNVPROC __glewGetCombinerOutputParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMBINEROUTPUTPARAMETERIVNVPROC __glewGetCombinerOutputParameterivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETFINALCOMBINERINPUTPARAMETERFVNVPROC __glewGetFinalCombinerInputParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETFINALCOMBINERINPUTPARAMETERIVNVPROC __glewGetFinalCombinerInputParameterivNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOMBINERSTAGEPARAMETERFVNVPROC __glewCombinerStageParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOMBINERSTAGEPARAMETERFVNVPROC __glewGetCombinerStageParameterfvNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERSAMPLELOCATIONSFVNVPROC __glewFramebufferSampleLocationsfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERSAMPLELOCATIONSFVNVPROC __glewNamedFramebufferSampleLocationsfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLRESOLVEDEPTHVALUESNVPROC __glewResolveDepthValuesNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLSCISSOREXCLUSIVEARRAYVNVPROC __glewScissorExclusiveArrayvNV;
-extern __attribute__ ((visibility("default"))) PFNGLSCISSOREXCLUSIVENVPROC __glewScissorExclusiveNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERPARAMETERUI64VNVPROC __glewGetBufferParameterui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGERUI64VNVPROC __glewGetIntegerui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETNAMEDBUFFERPARAMETERUI64VNVPROC __glewGetNamedBufferParameterui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLISBUFFERRESIDENTNVPROC __glewIsBufferResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLISNAMEDBUFFERRESIDENTNVPROC __glewIsNamedBufferResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAKEBUFFERNONRESIDENTNVPROC __glewMakeBufferNonResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAKEBUFFERRESIDENTNVPROC __glewMakeBufferResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAKENAMEDBUFFERNONRESIDENTNVPROC __glewMakeNamedBufferNonResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLMAKENAMEDBUFFERRESIDENTNVPROC __glewMakeNamedBufferResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMUI64NVPROC __glewProgramUniformui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMUNIFORMUI64VNVPROC __glewProgramUniformui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMUI64NVPROC __glewUniformui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLUNIFORMUI64VNVPROC __glewUniformui64vNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDSHADINGRATEIMAGENVPROC __glewBindShadingRateImageNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETSHADINGRATEIMAGEPALETTENVPROC __glewGetShadingRateImagePaletteNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETSHADINGRATESAMPLELOCATIONIVNVPROC __glewGetShadingRateSampleLocationivNV;
-extern __attribute__ ((visibility("default"))) PFNGLSHADINGRATEIMAGEBARRIERNVPROC __glewShadingRateImageBarrierNV;
-extern __attribute__ ((visibility("default"))) PFNGLSHADINGRATEIMAGEPALETTENVPROC __glewShadingRateImagePaletteNV;
-extern __attribute__ ((visibility("default"))) PFNGLSHADINGRATESAMPLEORDERCUSTOMNVPROC __glewShadingRateSampleOrderCustomNV;
-extern __attribute__ ((visibility("default"))) PFNGLSHADINGRATESAMPLEORDERNVPROC __glewShadingRateSampleOrderNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXIMAGE3DNVPROC __glewCompressedTexImage3DNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXSUBIMAGE3DNVPROC __glewCompressedTexSubImage3DNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXSUBIMAGE3DNVPROC __glewCopyTexSubImage3DNV;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURELAYERNVPROC __glewFramebufferTextureLayerNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE3DNVPROC __glewTexImage3DNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSUBIMAGE3DNVPROC __glewTexSubImage3DNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREBARRIERNVPROC __glewTextureBarrierNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE2DMULTISAMPLECOVERAGENVPROC __glewTexImage2DMultisampleCoverageNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE3DMULTISAMPLECOVERAGENVPROC __glewTexImage3DMultisampleCoverageNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREIMAGE2DMULTISAMPLECOVERAGENVPROC __glewTextureImage2DMultisampleCoverageNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREIMAGE2DMULTISAMPLENVPROC __glewTextureImage2DMultisampleNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREIMAGE3DMULTISAMPLECOVERAGENVPROC __glewTextureImage3DMultisampleCoverageNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREIMAGE3DMULTISAMPLENVPROC __glewTextureImage3DMultisampleNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLCREATESEMAPHORESNVPROC __glewCreateSemaphoresNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETSEMAPHOREPARAMETERIVNVPROC __glewGetSemaphoreParameterivNV;
-extern __attribute__ ((visibility("default"))) PFNGLSEMAPHOREPARAMETERIVNVPROC __glewSemaphoreParameterivNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLACTIVEVARYINGNVPROC __glewActiveVaryingNV;
-extern __attribute__ ((visibility("default"))) PFNGLBEGINTRANSFORMFEEDBACKNVPROC __glewBeginTransformFeedbackNV;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERBASENVPROC __glewBindBufferBaseNV;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFEROFFSETNVPROC __glewBindBufferOffsetNV;
-extern __attribute__ ((visibility("default"))) PFNGLBINDBUFFERRANGENVPROC __glewBindBufferRangeNV;
-extern __attribute__ ((visibility("default"))) PFNGLENDTRANSFORMFEEDBACKNVPROC __glewEndTransformFeedbackNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETACTIVEVARYINGNVPROC __glewGetActiveVaryingNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETTRANSFORMFEEDBACKVARYINGNVPROC __glewGetTransformFeedbackVaryingNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVARYINGLOCATIONNVPROC __glewGetVaryingLocationNV;
-extern __attribute__ ((visibility("default"))) PFNGLTRANSFORMFEEDBACKATTRIBSNVPROC __glewTransformFeedbackAttribsNV;
-extern __attribute__ ((visibility("default"))) PFNGLTRANSFORMFEEDBACKVARYINGSNVPROC __glewTransformFeedbackVaryingsNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDTRANSFORMFEEDBACKNVPROC __glewBindTransformFeedbackNV;
-extern __attribute__ ((visibility("default"))) PFNGLDELETETRANSFORMFEEDBACKSNVPROC __glewDeleteTransformFeedbacksNV;
-extern __attribute__ ((visibility("default"))) PFNGLDRAWTRANSFORMFEEDBACKNVPROC __glewDrawTransformFeedbackNV;
-extern __attribute__ ((visibility("default"))) PFNGLGENTRANSFORMFEEDBACKSNVPROC __glewGenTransformFeedbacksNV;
-extern __attribute__ ((visibility("default"))) PFNGLISTRANSFORMFEEDBACKNVPROC __glewIsTransformFeedbackNV;
-extern __attribute__ ((visibility("default"))) PFNGLPAUSETRANSFORMFEEDBACKNVPROC __glewPauseTransformFeedbackNV;
-extern __attribute__ ((visibility("default"))) PFNGLRESUMETRANSFORMFEEDBACKNVPROC __glewResumeTransformFeedbackNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUFININVPROC __glewVDPAUFiniNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUGETSURFACEIVNVPROC __glewVDPAUGetSurfaceivNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUINITNVPROC __glewVDPAUInitNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUISSURFACENVPROC __glewVDPAUIsSurfaceNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUMAPSURFACESNVPROC __glewVDPAUMapSurfacesNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUREGISTEROUTPUTSURFACENVPROC __glewVDPAURegisterOutputSurfaceNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUREGISTERVIDEOSURFACENVPROC __glewVDPAURegisterVideoSurfaceNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUSURFACEACCESSNVPROC __glewVDPAUSurfaceAccessNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUUNMAPSURFACESNVPROC __glewVDPAUUnmapSurfacesNV;
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUUNREGISTERSURFACENVPROC __glewVDPAUUnregisterSurfaceNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLVDPAUREGISTERVIDEOSURFACEWITHPICTURESTRUCTURENVPROC __glewVDPAURegisterVideoSurfaceWithPictureStructureNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHVERTEXARRAYRANGENVPROC __glewFlushVertexArrayRangeNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXARRAYRANGENVPROC __glewVertexArrayRangeNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBLI64VNVPROC __glewGetVertexAttribLi64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBLUI64VNVPROC __glewGetVertexAttribLui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1I64NVPROC __glewVertexAttribL1i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1I64VNVPROC __glewVertexAttribL1i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1UI64NVPROC __glewVertexAttribL1ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL1UI64VNVPROC __glewVertexAttribL1ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL2I64NVPROC __glewVertexAttribL2i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL2I64VNVPROC __glewVertexAttribL2i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL2UI64NVPROC __glewVertexAttribL2ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL2UI64VNVPROC __glewVertexAttribL2ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL3I64NVPROC __glewVertexAttribL3i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL3I64VNVPROC __glewVertexAttribL3i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL3UI64NVPROC __glewVertexAttribL3ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL3UI64VNVPROC __glewVertexAttribL3ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL4I64NVPROC __glewVertexAttribL4i64NV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL4I64VNVPROC __glewVertexAttribL4i64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL4UI64NVPROC __glewVertexAttribL4ui64NV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBL4UI64VNVPROC __glewVertexAttribL4ui64vNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBLFORMATNVPROC __glewVertexAttribLFormatNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBUFFERADDRESSRANGENVPROC __glewBufferAddressRangeNV;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORFORMATNVPROC __glewColorFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLEDGEFLAGFORMATNVPROC __glewEdgeFlagFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLFOGCOORDFORMATNVPROC __glewFogCoordFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETINTEGERUI64I_VNVPROC __glewGetIntegerui64i_vNV;
-extern __attribute__ ((visibility("default"))) PFNGLINDEXFORMATNVPROC __glewIndexFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLNORMALFORMATNVPROC __glewNormalFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLSECONDARYCOLORFORMATNVPROC __glewSecondaryColorFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORDFORMATNVPROC __glewTexCoordFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBFORMATNVPROC __glewVertexAttribFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBIFORMATNVPROC __glewVertexAttribIFormatNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXFORMATNVPROC __glewVertexFormatNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLAREPROGRAMSRESIDENTNVPROC __glewAreProgramsResidentNV;
-extern __attribute__ ((visibility("default"))) PFNGLBINDPROGRAMNVPROC __glewBindProgramNV;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEPROGRAMSNVPROC __glewDeleteProgramsNV;
-extern __attribute__ ((visibility("default"))) PFNGLEXECUTEPROGRAMNVPROC __glewExecuteProgramNV;
-extern __attribute__ ((visibility("default"))) PFNGLGENPROGRAMSNVPROC __glewGenProgramsNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMPARAMETERDVNVPROC __glewGetProgramParameterdvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMPARAMETERFVNVPROC __glewGetProgramParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMSTRINGNVPROC __glewGetProgramStringNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMIVNVPROC __glewGetProgramivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETTRACKMATRIXIVNVPROC __glewGetTrackMatrixivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBPOINTERVNVPROC __glewGetVertexAttribPointervNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBDVNVPROC __glewGetVertexAttribdvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBFVNVPROC __glewGetVertexAttribfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVERTEXATTRIBIVNVPROC __glewGetVertexAttribivNV;
-extern __attribute__ ((visibility("default"))) PFNGLISPROGRAMNVPROC __glewIsProgramNV;
-extern __attribute__ ((visibility("default"))) PFNGLLOADPROGRAMNVPROC __glewLoadProgramNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETER4DNVPROC __glewProgramParameter4dNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETER4DVNVPROC __glewProgramParameter4dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETER4FNVPROC __glewProgramParameter4fNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETER4FVNVPROC __glewProgramParameter4fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETERS4DVNVPROC __glewProgramParameters4dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMPARAMETERS4FVNVPROC __glewProgramParameters4fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLREQUESTRESIDENTPROGRAMSNVPROC __glewRequestResidentProgramsNV;
-extern __attribute__ ((visibility("default"))) PFNGLTRACKMATRIXNVPROC __glewTrackMatrixNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1DNVPROC __glewVertexAttrib1dNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1DVNVPROC __glewVertexAttrib1dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1FNVPROC __glewVertexAttrib1fNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1FVNVPROC __glewVertexAttrib1fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1SNVPROC __glewVertexAttrib1sNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB1SVNVPROC __glewVertexAttrib1svNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2DNVPROC __glewVertexAttrib2dNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2DVNVPROC __glewVertexAttrib2dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2FNVPROC __glewVertexAttrib2fNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2FVNVPROC __glewVertexAttrib2fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2SNVPROC __glewVertexAttrib2sNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB2SVNVPROC __glewVertexAttrib2svNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3DNVPROC __glewVertexAttrib3dNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3DVNVPROC __glewVertexAttrib3dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3FNVPROC __glewVertexAttrib3fNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3FVNVPROC __glewVertexAttrib3fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3SNVPROC __glewVertexAttrib3sNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB3SVNVPROC __glewVertexAttrib3svNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4DNVPROC __glewVertexAttrib4dNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4DVNVPROC __glewVertexAttrib4dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4FNVPROC __glewVertexAttrib4fNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4FVNVPROC __glewVertexAttrib4fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4SNVPROC __glewVertexAttrib4sNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4SVNVPROC __glewVertexAttrib4svNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4UBNVPROC __glewVertexAttrib4ubNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIB4UBVNVPROC __glewVertexAttrib4ubvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBPOINTERNVPROC __glewVertexAttribPointerNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS1DVNVPROC __glewVertexAttribs1dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS1FVNVPROC __glewVertexAttribs1fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS1SVNVPROC __glewVertexAttribs1svNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS2DVNVPROC __glewVertexAttribs2dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS2FVNVPROC __glewVertexAttribs2fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS2SVNVPROC __glewVertexAttribs2svNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS3DVNVPROC __glewVertexAttribs3dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS3FVNVPROC __glewVertexAttribs3fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS3SVNVPROC __glewVertexAttribs3svNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS4DVNVPROC __glewVertexAttribs4dvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS4FVNVPROC __glewVertexAttribs4fvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS4SVNVPROC __glewVertexAttribs4svNV;
-extern __attribute__ ((visibility("default"))) PFNGLVERTEXATTRIBS4UBVNVPROC __glewVertexAttribs4ubvNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLBEGINVIDEOCAPTURENVPROC __glewBeginVideoCaptureNV;
-extern __attribute__ ((visibility("default"))) PFNGLBINDVIDEOCAPTURESTREAMBUFFERNVPROC __glewBindVideoCaptureStreamBufferNV;
-extern __attribute__ ((visibility("default"))) PFNGLBINDVIDEOCAPTURESTREAMTEXTURENVPROC __glewBindVideoCaptureStreamTextureNV;
-extern __attribute__ ((visibility("default"))) PFNGLENDVIDEOCAPTURENVPROC __glewEndVideoCaptureNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVIDEOCAPTURESTREAMDVNVPROC __glewGetVideoCaptureStreamdvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVIDEOCAPTURESTREAMFVNVPROC __glewGetVideoCaptureStreamfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVIDEOCAPTURESTREAMIVNVPROC __glewGetVideoCaptureStreamivNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETVIDEOCAPTUREIVNVPROC __glewGetVideoCaptureivNV;
-extern __attribute__ ((visibility("default"))) PFNGLVIDEOCAPTURENVPROC __glewVideoCaptureNV;
-extern __attribute__ ((visibility("default"))) PFNGLVIDEOCAPTURESTREAMPARAMETERDVNVPROC __glewVideoCaptureStreamParameterdvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVIDEOCAPTURESTREAMPARAMETERFVNVPROC __glewVideoCaptureStreamParameterfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVIDEOCAPTURESTREAMPARAMETERIVNVPROC __glewVideoCaptureStreamParameterivNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHRANGEARRAYFVNVPROC __glewDepthRangeArrayfvNV;
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHRANGEINDEXEDFNVPROC __glewDepthRangeIndexedfNV;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEINVPROC __glewDisableiNV;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEINVPROC __glewEnableiNV;
-extern __attribute__ ((visibility("default"))) PFNGLGETFLOATI_VNVPROC __glewGetFloati_vNV;
-extern __attribute__ ((visibility("default"))) PFNGLISENABLEDINVPROC __glewIsEnablediNV;
-extern __attribute__ ((visibility("default"))) PFNGLSCISSORARRAYVNVPROC __glewScissorArrayvNV;
-extern __attribute__ ((visibility("default"))) PFNGLSCISSORINDEXEDNVPROC __glewScissorIndexedNV;
-extern __attribute__ ((visibility("default"))) PFNGLSCISSORINDEXEDVNVPROC __glewScissorIndexedvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVIEWPORTARRAYVNVPROC __glewViewportArrayvNV;
-extern __attribute__ ((visibility("default"))) PFNGLVIEWPORTINDEXEDFNVPROC __glewViewportIndexedfNV;
-extern __attribute__ ((visibility("default"))) PFNGLVIEWPORTINDEXEDFVNVPROC __glewViewportIndexedfvNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLVIEWPORTSWIZZLENVPROC __glewViewportSwizzleNV;
-
-extern __attribute__ ((visibility("default"))) PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC __glewEGLImageTargetRenderbufferStorageOES;
-extern __attribute__ ((visibility("default"))) PFNGLEGLIMAGETARGETTEXTURE2DOESPROC __glewEGLImageTargetTexture2DOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONSEPARATEOESPROC __glewBlendEquationSeparateOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCSEPARATEOESPROC __glewBlendFuncSeparateOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONOESPROC __glewBlendEquationOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOPYIMAGESUBDATAOESPROC __glewCopyImageSubDataOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONSEPARATEIOESPROC __glewBlendEquationSeparateiOES;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDEQUATIONIOESPROC __glewBlendEquationiOES;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCSEPARATEIOESPROC __glewBlendFuncSeparateiOES;
-extern __attribute__ ((visibility("default"))) PFNGLBLENDFUNCIOESPROC __glewBlendFunciOES;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORMASKIOESPROC __glewColorMaskiOES;
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEIOESPROC __glewDisableiOES;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEIOESPROC __glewEnableiOES;
-extern __attribute__ ((visibility("default"))) PFNGLISENABLEDIOESPROC __glewIsEnablediOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDFRAMEBUFFEROESPROC __glewBindFramebufferOES;
-extern __attribute__ ((visibility("default"))) PFNGLBINDRENDERBUFFEROESPROC __glewBindRenderbufferOES;
-extern __attribute__ ((visibility("default"))) PFNGLCHECKFRAMEBUFFERSTATUSOESPROC __glewCheckFramebufferStatusOES;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEFRAMEBUFFERSOESPROC __glewDeleteFramebuffersOES;
-extern __attribute__ ((visibility("default"))) PFNGLDELETERENDERBUFFERSOESPROC __glewDeleteRenderbuffersOES;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERRENDERBUFFEROESPROC __glewFramebufferRenderbufferOES;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE2DOESPROC __glewFramebufferTexture2DOES;
-extern __attribute__ ((visibility("default"))) PFNGLGENFRAMEBUFFERSOESPROC __glewGenFramebuffersOES;
-extern __attribute__ ((visibility("default"))) PFNGLGENRENDERBUFFERSOESPROC __glewGenRenderbuffersOES;
-extern __attribute__ ((visibility("default"))) PFNGLGENERATEMIPMAPOESPROC __glewGenerateMipmapOES;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVOESPROC __glewGetFramebufferAttachmentParameterivOES;
-extern __attribute__ ((visibility("default"))) PFNGLGETRENDERBUFFERPARAMETERIVOESPROC __glewGetRenderbufferParameterivOES;
-extern __attribute__ ((visibility("default"))) PFNGLISFRAMEBUFFEROESPROC __glewIsFramebufferOES;
-extern __attribute__ ((visibility("default"))) PFNGLISRENDERBUFFEROESPROC __glewIsRenderbufferOES;
-extern __attribute__ ((visibility("default"))) PFNGLRENDERBUFFERSTORAGEOESPROC __glewRenderbufferStorageOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETPROGRAMBINARYOESPROC __glewGetProgramBinaryOES;
-extern __attribute__ ((visibility("default"))) PFNGLPROGRAMBINARYOESPROC __glewProgramBinaryOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETBUFFERPOINTERVOESPROC __glewGetBufferPointervOES;
-extern __attribute__ ((visibility("default"))) PFNGLMAPBUFFEROESPROC __glewMapBufferOES;
-extern __attribute__ ((visibility("default"))) PFNGLUNMAPBUFFEROESPROC __glewUnmapBufferOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLCURRENTPALETTEMATRIXOESPROC __glewCurrentPaletteMatrixOES;
-extern __attribute__ ((visibility("default"))) PFNGLLOADPALETTEFROMMODELVIEWMATRIXOESPROC __glewLoadPaletteFromModelViewMatrixOES;
-extern __attribute__ ((visibility("default"))) PFNGLMATRIXINDEXPOINTEROESPROC __glewMatrixIndexPointerOES;
-extern __attribute__ ((visibility("default"))) PFNGLWEIGHTPOINTEROESPROC __glewWeightPointerOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLMINSAMPLESHADINGOESPROC __glewMinSampleShadingOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLEARDEPTHFOESPROC __glewClearDepthfOES;
-extern __attribute__ ((visibility("default"))) PFNGLCLIPPLANEFOESPROC __glewClipPlanefOES;
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHRANGEFOESPROC __glewDepthRangefOES;
-extern __attribute__ ((visibility("default"))) PFNGLFRUSTUMFOESPROC __glewFrustumfOES;
-extern __attribute__ ((visibility("default"))) PFNGLGETCLIPPLANEFOESPROC __glewGetClipPlanefOES;
-extern __attribute__ ((visibility("default"))) PFNGLORTHOFOESPROC __glewOrthofOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXIMAGE3DOESPROC __glewCompressedTexImage3DOES;
-extern __attribute__ ((visibility("default"))) PFNGLCOMPRESSEDTEXSUBIMAGE3DOESPROC __glewCompressedTexSubImage3DOES;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYTEXSUBIMAGE3DOESPROC __glewCopyTexSubImage3DOES;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTURE3DOESPROC __glewFramebufferTexture3DOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE3DOESPROC __glewTexImage3DOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSUBIMAGE3DOESPROC __glewTexSubImage3DOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETSAMPLERPARAMETERIIVOESPROC __glewGetSamplerParameterIivOES;
-extern __attribute__ ((visibility("default"))) PFNGLGETSAMPLERPARAMETERIUIVOESPROC __glewGetSamplerParameterIuivOES;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXPARAMETERIIVOESPROC __glewGetTexParameterIivOES;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXPARAMETERIUIVOESPROC __glewGetTexParameterIuivOES;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERIIVOESPROC __glewSamplerParameterIivOES;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLERPARAMETERIUIVOESPROC __glewSamplerParameterIuivOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPARAMETERIIVOESPROC __glewTexParameterIivOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPARAMETERIUIVOESPROC __glewTexParameterIuivOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXBUFFEROESPROC __glewTexBufferOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXBUFFERRANGEOESPROC __glewTexBufferRangeOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXGENFVOESPROC __glewGetTexGenfvOES;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXGENIVOESPROC __glewGetTexGenivOES;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXGENXVOESPROC __glewGetTexGenxvOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXGENFOESPROC __glewTexGenfOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXGENFVOESPROC __glewTexGenfvOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXGENIOESPROC __glewTexGeniOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXGENIVOESPROC __glewTexGenivOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXGENXOESPROC __glewTexGenxOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXGENXVOESPROC __glewTexGenxvOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXSTORAGE3DMULTISAMPLEOESPROC __glewTexStorage3DMultisampleOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREVIEWOESPROC __glewTextureViewOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLBINDVERTEXARRAYOESPROC __glewBindVertexArrayOES;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEVERTEXARRAYSOESPROC __glewDeleteVertexArraysOES;
-extern __attribute__ ((visibility("default"))) PFNGLGENVERTEXARRAYSOESPROC __glewGenVertexArraysOES;
-extern __attribute__ ((visibility("default"))) PFNGLISVERTEXARRAYOESPROC __glewIsVertexArrayOES;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTUREMULTIVIEWOVRPROC __glewFramebufferTextureMultiviewOVR;
-extern __attribute__ ((visibility("default"))) PFNGLNAMEDFRAMEBUFFERTEXTUREMULTIVIEWOVRPROC __glewNamedFramebufferTextureMultiviewOVR;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERTEXTUREMULTISAMPLEMULTIVIEWOVRPROC __glewFramebufferTextureMultisampleMultiviewOVR;
-
-extern __attribute__ ((visibility("default"))) PFNGLALPHAFUNCQCOMPROC __glewAlphaFuncQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLDISABLEDRIVERCONTROLQCOMPROC __glewDisableDriverControlQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLENABLEDRIVERCONTROLQCOMPROC __glewEnableDriverControlQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLGETDRIVERCONTROLSTRINGQCOMPROC __glewGetDriverControlStringQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLGETDRIVERCONTROLSQCOMPROC __glewGetDriverControlsQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETBUFFERPOINTERVQCOMPROC __glewExtGetBufferPointervQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETBUFFERSQCOMPROC __glewExtGetBuffersQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETFRAMEBUFFERSQCOMPROC __glewExtGetFramebuffersQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETRENDERBUFFERSQCOMPROC __glewExtGetRenderbuffersQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETTEXLEVELPARAMETERIVQCOMPROC __glewExtGetTexLevelParameterivQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETTEXSUBIMAGEQCOMPROC __glewExtGetTexSubImageQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETTEXTURESQCOMPROC __glewExtGetTexturesQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTTEXOBJECTSTATEOVERRIDEIQCOMPROC __glewExtTexObjectStateOverrideiQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETPROGRAMBINARYSOURCEQCOMPROC __glewExtGetProgramBinarySourceQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETPROGRAMSQCOMPROC __glewExtGetProgramsQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTGETSHADERSQCOMPROC __glewExtGetShadersQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLEXTISPROGRAMBINARYQCOMPROC __glewExtIsProgramBinaryQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLEXTRAPOLATETEX2DQCOMPROC __glewExtrapolateTex2DQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERFOVEATIONCONFIGQCOMPROC __glewFramebufferFoveationConfigQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERFOVEATIONPARAMETERSQCOMPROC __glewFramebufferFoveationParametersQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXESTIMATEMOTIONQCOMPROC __glewTexEstimateMotionQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLTEXESTIMATEMOTIONREGIONSQCOMPROC __glewTexEstimateMotionRegionsQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEBUFFERFETCHBARRIERQCOMPROC __glewFramebufferFetchBarrierQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLSHADINGRATEQCOMPROC __glewShadingRateQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREFOVEATIONPARAMETERSQCOMPROC __glewTextureFoveationParametersQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLENDTILINGQCOMPROC __glewEndTilingQCOM;
-extern __attribute__ ((visibility("default"))) PFNGLSTARTTILINGQCOMPROC __glewStartTilingQCOM;
-
-extern __attribute__ ((visibility("default"))) PFNGLALPHAFUNCXPROC __glewAlphaFuncx;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARCOLORXPROC __glewClearColorx;
-extern __attribute__ ((visibility("default"))) PFNGLCLEARDEPTHXPROC __glewClearDepthx;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4XPROC __glewColor4x;
-extern __attribute__ ((visibility("default"))) PFNGLDEPTHRANGEXPROC __glewDepthRangex;
-extern __attribute__ ((visibility("default"))) PFNGLFOGXPROC __glewFogx;
-extern __attribute__ ((visibility("default"))) PFNGLFOGXVPROC __glewFogxv;
-extern __attribute__ ((visibility("default"))) PFNGLFRUSTUMFPROC __glewFrustumf;
-extern __attribute__ ((visibility("default"))) PFNGLFRUSTUMXPROC __glewFrustumx;
-extern __attribute__ ((visibility("default"))) PFNGLLIGHTMODELXPROC __glewLightModelx;
-extern __attribute__ ((visibility("default"))) PFNGLLIGHTMODELXVPROC __glewLightModelxv;
-extern __attribute__ ((visibility("default"))) PFNGLLIGHTXPROC __glewLightx;
-extern __attribute__ ((visibility("default"))) PFNGLLIGHTXVPROC __glewLightxv;
-extern __attribute__ ((visibility("default"))) PFNGLLINEWIDTHXPROC __glewLineWidthx;
-extern __attribute__ ((visibility("default"))) PFNGLLOADMATRIXXPROC __glewLoadMatrixx;
-extern __attribute__ ((visibility("default"))) PFNGLMATERIALXPROC __glewMaterialx;
-extern __attribute__ ((visibility("default"))) PFNGLMATERIALXVPROC __glewMaterialxv;
-extern __attribute__ ((visibility("default"))) PFNGLMULTMATRIXXPROC __glewMultMatrixx;
-extern __attribute__ ((visibility("default"))) PFNGLMULTITEXCOORD4XPROC __glewMultiTexCoord4x;
-extern __attribute__ ((visibility("default"))) PFNGLNORMAL3XPROC __glewNormal3x;
-extern __attribute__ ((visibility("default"))) PFNGLORTHOFPROC __glewOrthof;
-extern __attribute__ ((visibility("default"))) PFNGLORTHOXPROC __glewOrthox;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTSIZEXPROC __glewPointSizex;
-extern __attribute__ ((visibility("default"))) PFNGLPOLYGONOFFSETXPROC __glewPolygonOffsetx;
-extern __attribute__ ((visibility("default"))) PFNGLROTATEXPROC __glewRotatex;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLECOVERAGEXPROC __glewSampleCoveragex;
-extern __attribute__ ((visibility("default"))) PFNGLSCALEXPROC __glewScalex;
-extern __attribute__ ((visibility("default"))) PFNGLTEXENVXPROC __glewTexEnvx;
-extern __attribute__ ((visibility("default"))) PFNGLTEXENVXVPROC __glewTexEnvxv;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPARAMETERXPROC __glewTexParameterx;
-extern __attribute__ ((visibility("default"))) PFNGLTRANSLATEXPROC __glewTranslatex;
-
-extern __attribute__ ((visibility("default"))) PFNGLCLIPPLANEFPROC __glewClipPlanef;
-extern __attribute__ ((visibility("default"))) PFNGLCLIPPLANEXPROC __glewClipPlanex;
-extern __attribute__ ((visibility("default"))) PFNGLGETCLIPPLANEFPROC __glewGetClipPlanef;
-extern __attribute__ ((visibility("default"))) PFNGLGETCLIPPLANEXPROC __glewGetClipPlanex;
-extern __attribute__ ((visibility("default"))) PFNGLGETFIXEDVPROC __glewGetFixedv;
-extern __attribute__ ((visibility("default"))) PFNGLGETLIGHTXVPROC __glewGetLightxv;
-extern __attribute__ ((visibility("default"))) PFNGLGETMATERIALXVPROC __glewGetMaterialxv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXENVXVPROC __glewGetTexEnvxv;
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXPARAMETERXVPROC __glewGetTexParameterxv;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERXPROC __glewPointParameterx;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTPARAMETERXVPROC __glewPointParameterxv;
-extern __attribute__ ((visibility("default"))) PFNGLPOINTSIZEPOINTEROESPROC __glewPointSizePointerOES;
-extern __attribute__ ((visibility("default"))) PFNGLTEXPARAMETERXVPROC __glewTexParameterxv;
-
-extern __attribute__ ((visibility("default"))) PFNGLERRORSTRINGREGALPROC __glewErrorStringREGAL;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETEXTENSIONREGALPROC __glewGetExtensionREGAL;
-extern __attribute__ ((visibility("default"))) PFNGLISSUPPORTEDREGALPROC __glewIsSupportedREGAL;
-
-extern __attribute__ ((visibility("default"))) PFNGLLOGMESSAGECALLBACKREGALPROC __glewLogMessageCallbackREGAL;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETPROCADDRESSREGALPROC __glewGetProcAddressREGAL;
-
-extern __attribute__ ((visibility("default"))) PFNGLDETAILTEXFUNCSGISPROC __glewDetailTexFuncSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLGETDETAILTEXFUNCSGISPROC __glewGetDetailTexFuncSGIS;
-
-extern __attribute__ ((visibility("default"))) PFNGLFOGFUNCSGISPROC __glewFogFuncSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLGETFOGFUNCSGISPROC __glewGetFogFuncSGIS;
-
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLEMASKSGISPROC __glewSampleMaskSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLSAMPLEPATTERNSGISPROC __glewSamplePatternSGIS;
-
-extern __attribute__ ((visibility("default"))) PFNGLINTERLEAVEDTEXTURECOORDSETSSGISPROC __glewInterleavedTextureCoordSetsSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLSELECTTEXTURECOORDSETSGISPROC __glewSelectTextureCoordSetSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLSELECTTEXTURESGISPROC __glewSelectTextureSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLSELECTTEXTURETRANSFORMSGISPROC __glewSelectTextureTransformSGIS;
-
-extern __attribute__ ((visibility("default"))) PFNGLMULTISAMPLESUBRECTPOSSGISPROC __glewMultisampleSubRectPosSGIS;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETSHARPENTEXFUNCSGISPROC __glewGetSharpenTexFuncSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLSHARPENTEXFUNCSGISPROC __glewSharpenTexFuncSGIS;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXIMAGE4DSGISPROC __glewTexImage4DSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLTEXSUBIMAGE4DSGISPROC __glewTexSubImage4DSGIS;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETTEXFILTERFUNCSGISPROC __glewGetTexFilterFuncSGIS;
-extern __attribute__ ((visibility("default"))) PFNGLTEXFILTERFUNCSGISPROC __glewTexFilterFuncSGIS;
-
-extern __attribute__ ((visibility("default"))) PFNGLASYNCMARKERSGIXPROC __glewAsyncMarkerSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEASYNCMARKERSSGIXPROC __glewDeleteAsyncMarkersSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFINISHASYNCSGIXPROC __glewFinishAsyncSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGENASYNCMARKERSSGIXPROC __glewGenAsyncMarkersSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLISASYNCMARKERSGIXPROC __glewIsAsyncMarkerSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLPOLLASYNCSGIXPROC __glewPollAsyncSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLADDRESSSPACEPROC __glewAddressSpace;
-extern __attribute__ ((visibility("default"))) PFNGLDATAPIPEPROC __glewDataPipe;
-
-extern __attribute__ ((visibility("default"))) PFNGLFLUSHRASTERSGIXPROC __glewFlushRasterSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLFOGLAYERSSGIXPROC __glewFogLayersSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETFOGLAYERSSGIXPROC __glewGetFogLayersSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLTEXTUREFOGSGIXPROC __glewTextureFogSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTCOLORMATERIALSGIXPROC __glewFragmentColorMaterialSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTMODELFSGIXPROC __glewFragmentLightModelfSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTMODELFVSGIXPROC __glewFragmentLightModelfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTMODELISGIXPROC __glewFragmentLightModeliSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTMODELIVSGIXPROC __glewFragmentLightModelivSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTFSGIXPROC __glewFragmentLightfSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTFVSGIXPROC __glewFragmentLightfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTISGIXPROC __glewFragmentLightiSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTLIGHTIVSGIXPROC __glewFragmentLightivSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTMATERIALFSGIXPROC __glewFragmentMaterialfSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTMATERIALFVSGIXPROC __glewFragmentMaterialfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTMATERIALISGIXPROC __glewFragmentMaterialiSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLFRAGMENTMATERIALIVSGIXPROC __glewFragmentMaterialivSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTLIGHTFVSGIXPROC __glewGetFragmentLightfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTLIGHTIVSGIXPROC __glewGetFragmentLightivSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTMATERIALFVSGIXPROC __glewGetFragmentMaterialfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETFRAGMENTMATERIALIVSGIXPROC __glewGetFragmentMaterialivSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLFRAMEZOOMSGIXPROC __glewFrameZoomSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLIGLOOINTERFACESGIXPROC __glewIglooInterfaceSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLALLOCMPEGPREDICTORSSGIXPROC __glewAllocMPEGPredictorsSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEMPEGPREDICTORSSGIXPROC __glewDeleteMPEGPredictorsSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGENMPEGPREDICTORSSGIXPROC __glewGenMPEGPredictorsSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETMPEGPARAMETERFVSGIXPROC __glewGetMPEGParameterfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETMPEGPARAMETERIVSGIXPROC __glewGetMPEGParameterivSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETMPEGPREDICTORSGIXPROC __glewGetMPEGPredictorSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETMPEGQUANTTABLEUBVPROC __glewGetMPEGQuantTableubv;
-extern __attribute__ ((visibility("default"))) PFNGLISMPEGPREDICTORSGIXPROC __glewIsMPEGPredictorSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLMPEGPREDICTORSGIXPROC __glewMPEGPredictorSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLMPEGQUANTTABLEUBVPROC __glewMPEGQuantTableubv;
-extern __attribute__ ((visibility("default"))) PFNGLSWAPMPEGPREDICTORSSGIXPROC __glewSwapMPEGPredictorsSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETNONLINLIGHTFVSGIXPROC __glewGetNonlinLightfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGETNONLINMATERIALFVSGIXPROC __glewGetNonlinMaterialfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLNONLINLIGHTFVSGIXPROC __glewNonlinLightfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLNONLINMATERIALFVSGIXPROC __glewNonlinMaterialfvSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTEXGENSGIXPROC __glewPixelTexGenSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLDEFORMSGIXPROC __glewDeformSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLLOADIDENTITYDEFORMATIONMAPSGIXPROC __glewLoadIdentityDeformationMapSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLMESHBREADTHSGIXPROC __glewMeshBreadthSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLMESHSTRIDESGIXPROC __glewMeshStrideSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLREFERENCEPLANESGIXPROC __glewReferencePlaneSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLSPRITEPARAMETERFSGIXPROC __glewSpriteParameterfSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLSPRITEPARAMETERFVSGIXPROC __glewSpriteParameterfvSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLSPRITEPARAMETERISGIXPROC __glewSpriteParameteriSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLSPRITEPARAMETERIVSGIXPROC __glewSpriteParameterivSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLTAGSAMPLEBUFFERSGIXPROC __glewTagSampleBufferSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETVECTOROPERATIONSGIXPROC __glewGetVectorOperationSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLVECTOROPERATIONSGIXPROC __glewVectorOperationSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLAREVERTEXARRAYSRESIDENTSGIXPROC __glewAreVertexArraysResidentSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLBINDVERTEXARRAYSGIXPROC __glewBindVertexArraySGIX;
-extern __attribute__ ((visibility("default"))) PFNGLDELETEVERTEXARRAYSSGIXPROC __glewDeleteVertexArraysSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLGENVERTEXARRAYSSGIXPROC __glewGenVertexArraysSGIX;
-extern __attribute__ ((visibility("default"))) PFNGLISVERTEXARRAYSGIXPROC __glewIsVertexArraySGIX;
-extern __attribute__ ((visibility("default"))) PFNGLPRIORITIZEVERTEXARRAYSSGIXPROC __glewPrioritizeVertexArraysSGIX;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLORTABLEPARAMETERFVSGIPROC __glewColorTableParameterfvSGI;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORTABLEPARAMETERIVSGIPROC __glewColorTableParameterivSGI;
-extern __attribute__ ((visibility("default"))) PFNGLCOLORTABLESGIPROC __glewColorTableSGI;
-extern __attribute__ ((visibility("default"))) PFNGLCOPYCOLORTABLESGIPROC __glewCopyColorTableSGI;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLEPARAMETERFVSGIPROC __glewGetColorTableParameterfvSGI;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLEPARAMETERIVSGIPROC __glewGetColorTableParameterivSGI;
-extern __attribute__ ((visibility("default"))) PFNGLGETCOLORTABLESGIPROC __glewGetColorTableSGI;
-
-extern __attribute__ ((visibility("default"))) PFNGLGETPIXELTRANSFORMPARAMETERFVSGIPROC __glewGetPixelTransformParameterfvSGI;
-extern __attribute__ ((visibility("default"))) PFNGLGETPIXELTRANSFORMPARAMETERIVSGIPROC __glewGetPixelTransformParameterivSGI;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMPARAMETERFSGIPROC __glewPixelTransformParameterfSGI;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMPARAMETERFVSGIPROC __glewPixelTransformParameterfvSGI;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMPARAMETERISGIPROC __glewPixelTransformParameteriSGI;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMPARAMETERIVSGIPROC __glewPixelTransformParameterivSGI;
-extern __attribute__ ((visibility("default"))) PFNGLPIXELTRANSFORMSGIPROC __glewPixelTransformSGI;
-
-extern __attribute__ ((visibility("default"))) PFNGLFINISHTEXTURESUNXPROC __glewFinishTextureSUNX;
-
-extern __attribute__ ((visibility("default"))) PFNGLGLOBALALPHAFACTORBSUNPROC __glewGlobalAlphaFactorbSUN;
-extern __attribute__ ((visibility("default"))) PFNGLGLOBALALPHAFACTORDSUNPROC __glewGlobalAlphaFactordSUN;
-extern __attribute__ ((visibility("default"))) PFNGLGLOBALALPHAFACTORFSUNPROC __glewGlobalAlphaFactorfSUN;
-extern __attribute__ ((visibility("default"))) PFNGLGLOBALALPHAFACTORISUNPROC __glewGlobalAlphaFactoriSUN;
-extern __attribute__ ((visibility("default"))) PFNGLGLOBALALPHAFACTORSSUNPROC __glewGlobalAlphaFactorsSUN;
-extern __attribute__ ((visibility("default"))) PFNGLGLOBALALPHAFACTORUBSUNPROC __glewGlobalAlphaFactorubSUN;
-extern __attribute__ ((visibility("default"))) PFNGLGLOBALALPHAFACTORUISUNPROC __glewGlobalAlphaFactoruiSUN;
-extern __attribute__ ((visibility("default"))) PFNGLGLOBALALPHAFACTORUSSUNPROC __glewGlobalAlphaFactorusSUN;
-
-extern __attribute__ ((visibility("default"))) PFNGLREADVIDEOPIXELSSUNPROC __glewReadVideoPixelsSUN;
-
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEPOINTERSUNPROC __glewReplacementCodePointerSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUBSUNPROC __glewReplacementCodeubSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUBVSUNPROC __glewReplacementCodeubvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUISUNPROC __glewReplacementCodeuiSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUIVSUNPROC __glewReplacementCodeuivSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUSSUNPROC __glewReplacementCodeusSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUSVSUNPROC __glewReplacementCodeusvSUN;
-
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR3FVERTEX3FSUNPROC __glewColor3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR3FVERTEX3FVSUNPROC __glewColor3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4FNORMAL3FVERTEX3FSUNPROC __glewColor4fNormal3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4FNORMAL3FVERTEX3FVSUNPROC __glewColor4fNormal3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4UBVERTEX2FSUNPROC __glewColor4ubVertex2fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4UBVERTEX2FVSUNPROC __glewColor4ubVertex2fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4UBVERTEX3FSUNPROC __glewColor4ubVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLCOLOR4UBVERTEX3FVSUNPROC __glewColor4ubVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLNORMAL3FVERTEX3FSUNPROC __glewNormal3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLNORMAL3FVERTEX3FVSUNPROC __glewNormal3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUICOLOR3FVERTEX3FSUNPROC __glewReplacementCodeuiColor3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUICOLOR3FVERTEX3FVSUNPROC __glewReplacementCodeuiColor3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUICOLOR4FNORMAL3FVERTEX3FSUNPROC __glewReplacementCodeuiColor4fNormal3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUICOLOR4FNORMAL3FVERTEX3FVSUNPROC __glewReplacementCodeuiColor4fNormal3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUICOLOR4UBVERTEX3FSUNPROC __glewReplacementCodeuiColor4ubVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUICOLOR4UBVERTEX3FVSUNPROC __glewReplacementCodeuiColor4ubVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUINORMAL3FVERTEX3FSUNPROC __glewReplacementCodeuiNormal3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUINORMAL3FVERTEX3FVSUNPROC __glewReplacementCodeuiNormal3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUITEXCOORD2FCOLOR4FNORMAL3FVERTEX3FSUNPROC __glewReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUITEXCOORD2FCOLOR4FNORMAL3FVERTEX3FVSUNPROC __glewReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUITEXCOORD2FNORMAL3FVERTEX3FSUNPROC __glewReplacementCodeuiTexCoord2fNormal3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUITEXCOORD2FNORMAL3FVERTEX3FVSUNPROC __glewReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUITEXCOORD2FVERTEX3FSUNPROC __glewReplacementCodeuiTexCoord2fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUITEXCOORD2FVERTEX3FVSUNPROC __glewReplacementCodeuiTexCoord2fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUIVERTEX3FSUNPROC __glewReplacementCodeuiVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLREPLACEMENTCODEUIVERTEX3FVSUNPROC __glewReplacementCodeuiVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FCOLOR3FVERTEX3FSUNPROC __glewTexCoord2fColor3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FCOLOR3FVERTEX3FVSUNPROC __glewTexCoord2fColor3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FCOLOR4FNORMAL3FVERTEX3FSUNPROC __glewTexCoord2fColor4fNormal3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FCOLOR4FNORMAL3FVERTEX3FVSUNPROC __glewTexCoord2fColor4fNormal3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FCOLOR4UBVERTEX3FSUNPROC __glewTexCoord2fColor4ubVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FCOLOR4UBVERTEX3FVSUNPROC __glewTexCoord2fColor4ubVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FNORMAL3FVERTEX3FSUNPROC __glewTexCoord2fNormal3fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FNORMAL3FVERTEX3FVSUNPROC __glewTexCoord2fNormal3fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FVERTEX3FSUNPROC __glewTexCoord2fVertex3fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD2FVERTEX3FVSUNPROC __glewTexCoord2fVertex3fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD4FCOLOR4FNORMAL3FVERTEX4FSUNPROC __glewTexCoord4fColor4fNormal3fVertex4fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD4FCOLOR4FNORMAL3FVERTEX4FVSUNPROC __glewTexCoord4fColor4fNormal3fVertex4fvSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD4FVERTEX4FSUNPROC __glewTexCoord4fVertex4fSUN;
-extern __attribute__ ((visibility("default"))) PFNGLTEXCOORD4FVERTEX4FVSUNPROC __glewTexCoord4fVertex4fvSUN;
-
-extern __attribute__ ((visibility("default"))) PFNGLADDSWAPHINTRECTWINPROC __glewAddSwapHintRectWIN;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_1_1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_1_2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_1_2_1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_1_3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_1_4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_1_5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_2_0;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_2_1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_3_0;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_3_1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_3_2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_3_3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_4_0;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_4_1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_4_2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_4_3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_4_4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_4_5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VERSION_4_6;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_3DFX_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_3DFX_tbuffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_3DFX_texture_compression_FXT1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_blend_minmax_factor;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_compressed_3DC_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_compressed_ATC_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_conservative_depth;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_debug_output;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_depth_clamp_separate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_draw_buffers_blend;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_framebuffer_multisample_advanced;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_framebuffer_sample_positions;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_gcn_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_gpu_shader_half_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_gpu_shader_half_float_fetch;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_gpu_shader_int16;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_gpu_shader_int64;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_interleaved_elements;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_multi_draw_indirect;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_name_gen_delete;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_occlusion_query_event;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_performance_monitor;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_pinned_memory;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_program_binary_Z400;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_query_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_sample_positions;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_seamless_cubemap_per_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_shader_atomic_counter_ops;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_shader_ballot;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_shader_explicit_vertex_parameter;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_shader_image_load_store_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_shader_stencil_export;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_shader_stencil_value_export;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_shader_trinary_minmax;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_sparse_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_stencil_operation_extended;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_texture_gather_bias_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_texture_texture4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_transform_feedback3_lines_triangles;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_transform_feedback4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_vertex_shader_layer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_vertex_shader_tessellator;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_AMD_vertex_shader_viewport_index;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANDROID_extension_pack_es31a;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_depth_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_framebuffer_blit;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_framebuffer_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_instanced_arrays;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_pack_reverse_row_order;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_program_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_texture_compression_dxt1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_texture_compression_dxt3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_texture_compression_dxt5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_texture_usage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_timer_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ANGLE_translated_shader_source;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_aux_depth_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_client_storage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_clip_distance;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_color_buffer_packed_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_copy_texture_levels;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_element_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_fence;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_float_pixels;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_flush_buffer_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_framebuffer_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_object_purgeable;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_pixel_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_rgb_422;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_row_bytes;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_specular_vector;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_sync;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_texture_2D_limited_npot;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_texture_format_BGRA8888;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_texture_max_level;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_texture_packed_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_texture_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_transform_hint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_vertex_array_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_vertex_array_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_vertex_program_evaluators;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_APPLE_ycbcr_422;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_ES2_compatibility;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_ES3_1_compatibility;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_ES3_2_compatibility;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_ES3_compatibility;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_arrays_of_arrays;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_base_instance;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_bindless_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_blend_func_extended;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_buffer_storage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_cl_event;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_clear_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_clear_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_clip_control;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_color_buffer_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_compatibility;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_compressed_texture_pixel_storage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_compute_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_compute_variable_group_size;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_conditional_render_inverted;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_conservative_depth;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_copy_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_copy_image;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_cull_distance;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_debug_output;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_depth_buffer_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_depth_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_depth_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_derivative_control;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_direct_state_access;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_draw_buffers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_draw_buffers_blend;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_draw_elements_base_vertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_draw_indirect;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_draw_instanced;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_enhanced_layouts;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_explicit_attrib_location;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_explicit_uniform_location;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_fragment_coord_conventions;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_fragment_layer_viewport;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_fragment_program;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_fragment_program_shadow;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_fragment_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_fragment_shader_interlock;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_framebuffer_no_attachments;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_framebuffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_framebuffer_sRGB;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_geometry_shader4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_get_program_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_get_texture_sub_image;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_gl_spirv;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_gpu_shader5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_gpu_shader_fp64;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_gpu_shader_int64;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_half_float_pixel;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_half_float_vertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_imaging;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_indirect_parameters;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_instanced_arrays;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_internalformat_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_internalformat_query2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_invalidate_subdata;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_map_buffer_alignment;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_map_buffer_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_matrix_palette;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_multi_bind;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_multi_draw_indirect;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_multitexture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_occlusion_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_occlusion_query2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_parallel_shader_compile;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_pipeline_statistics_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_pixel_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_point_parameters;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_point_sprite;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_polygon_offset_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_post_depth_coverage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_program_interface_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_provoking_vertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_query_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_robust_buffer_access_behavior;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_robustness;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_robustness_application_isolation;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_robustness_share_group_isolation;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_sample_locations;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_sample_shading;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_sampler_objects;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_seamless_cube_map;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_seamless_cubemap_per_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_separate_shader_objects;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_atomic_counter_ops;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_atomic_counters;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_ballot;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_bit_encoding;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_clock;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_draw_parameters;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_group_vote;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_image_load_store;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_image_size;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_objects;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_precision;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_stencil_export;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_storage_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_subroutine;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_texture_image_samples;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_texture_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shader_viewport_layer_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shading_language_100;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shading_language_420pack;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shading_language_include;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shading_language_packing;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shadow;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_shadow_ambient;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_sparse_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_sparse_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_sparse_texture2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_sparse_texture_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_spirv_extensions;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_stencil_texturing;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_sync;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_tessellation_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_barrier;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_border_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_buffer_object_rgb32;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_buffer_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_compression;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_compression_bptc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_compression_rgtc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_cube_map;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_cube_map_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_env_add;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_env_combine;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_env_crossbar;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_env_dot3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_filter_anisotropic;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_filter_minmax;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_gather;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_mirror_clamp_to_edge;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_mirrored_repeat;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_non_power_of_two;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_query_levels;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_query_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_rectangle;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_rg;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_rgb10_a2ui;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_stencil8;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_storage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_storage_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_swizzle;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_texture_view;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_timer_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_transform_feedback2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_transform_feedback3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_transform_feedback_instanced;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_transform_feedback_overflow_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_transpose_matrix;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_uniform_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_array_bgra;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_array_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_attrib_64bit;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_attrib_binding;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_blend;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_program;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_type_10f_11f_11f_rev;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_vertex_type_2_10_10_10_rev;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_viewport_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARB_window_pos;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARM_mali_program_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARM_mali_shader_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARM_rgba8;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARM_shader_core_properties;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARM_shader_framebuffer_fetch;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARM_shader_framebuffer_fetch_depth_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ARM_texture_unnormalized_coordinates;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATIX_point_sprites;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATIX_texture_env_combine3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATIX_texture_env_route;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATIX_vertex_shader_output_point_size;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_draw_buffers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_element_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_envmap_bumpmap;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_fragment_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_map_object_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_meminfo;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_pn_triangles;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_separate_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_shader_texture_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_text_fragment_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_texture_compression_3dc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_texture_env_combine3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_texture_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_texture_mirror_once;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_vertex_array_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_vertex_attrib_array_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_ATI_vertex_streams;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_DMP_program_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_DMP_shader_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_422_pixels;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_Cg_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_EGL_image_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_EGL_image_external_wrap_modes;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_EGL_image_storage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_EGL_image_storage_compression;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_EGL_sync;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_YUV_target;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_abgr;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_base_instance;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_bgra;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_bindable_uniform;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_blend_color;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_blend_equation_separate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_blend_func_extended;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_blend_func_separate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_blend_logic_op;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_blend_minmax;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_blend_subtract;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_buffer_storage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_clear_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_clip_control;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_clip_cull_distance;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_clip_volume_hint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_cmyka;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_color_buffer_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_color_buffer_half_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_color_subtable;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_compiled_vertex_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_compressed_ETC1_RGB8_sub_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_conservative_depth;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_convolution;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_coordinate_frame;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_copy_image;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_copy_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_cull_vertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_debug_label;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_debug_marker;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_depth_bounds_test;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_depth_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_direct_state_access;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_discard_framebuffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_disjoint_timer_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_draw_buffers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_draw_buffers2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_draw_buffers_indexed;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_draw_elements_base_vertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_draw_instanced;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_draw_range_elements;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_draw_transform_feedback;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_external_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_float_blend;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_fog_coord;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_frag_depth;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_fragment_lighting;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_fragment_shading_rate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_fragment_shading_rate_attachment;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_fragment_shading_rate_primitive;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_framebuffer_blit;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_framebuffer_blit_layers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_framebuffer_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_framebuffer_multisample_blit_scaled;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_framebuffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_framebuffer_sRGB;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_geometry_point_size;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_geometry_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_geometry_shader4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_gpu_program_parameters;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_gpu_shader4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_gpu_shader5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_histogram;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_index_array_formats;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_index_func;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_index_material;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_index_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_instanced_arrays;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_light_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_map_buffer_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_memory_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_memory_object_fd;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_memory_object_win32;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_mesh_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_misc_attribute;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multi_draw_arrays;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multi_draw_indirect;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multiple_textures;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multisample_compatibility;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multisampled_render_to_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multisampled_render_to_texture2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multiview_draw_buffers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multiview_tessellation_geometry_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multiview_texture_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_multiview_timer_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_occlusion_query_boolean;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_packed_depth_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_packed_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_packed_pixels;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_paletted_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_pixel_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_pixel_transform;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_pixel_transform_color_table;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_point_parameters;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_polygon_offset;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_polygon_offset_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_post_depth_coverage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_primitive_bounding_box;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_protected_textures;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_provoking_vertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_pvrtc_sRGB;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_raster_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_read_format_bgra;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_render_snorm;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_rescale_normal;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_robustness;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_sRGB;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_sRGB_write_control;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_scene_marker;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_secondary_color;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_semaphore;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_semaphore_fd;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_semaphore_win32;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_separate_depth_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_separate_shader_objects;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_separate_specular_color;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_clock;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_framebuffer_fetch;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_framebuffer_fetch_non_coherent;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_group_vote;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_image_load_formatted;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_image_load_store;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_implicit_conversions;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_integer_mix;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_io_blocks;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_non_constant_global_initializers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_pixel_local_storage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_pixel_local_storage2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_realtime_clock;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_samples_identical;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_texture_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shader_texture_samples;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shadow_funcs;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shadow_samplers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_shared_texture_palette;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_sparse_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_sparse_texture2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_static_vertex_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_stencil_clear_tag;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_stencil_two_side;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_stencil_wrap;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_subtexture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_tessellation_point_size;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_tessellation_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture3D;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_border_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_compression_astc_decode_mode;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_compression_astc_decode_mode_rgb9e5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_compression_bptc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_compression_dxt1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_compression_latc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_compression_rgtc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_compression_s3tc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_compression_s3tc_srgb;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_cube_map;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_cube_map_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_edge_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_env;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_env_add;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_env_combine;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_env_dot3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_filter_anisotropic;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_filter_minmax;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_format_BGRA8888;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_format_sRGB_override;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_integer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_lod_bias;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_mirror_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_mirror_clamp_to_edge;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_norm16;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_perturb_normal;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_query_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_rectangle;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_rg;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_sRGB;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_sRGB_R8;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_sRGB_RG8;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_sRGB_decode;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_shadow_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_shared_exponent;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_snorm;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_storage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_storage_compression;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_swizzle;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_type_2_10_10_10_REV;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_texture_view;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_timer_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_transform_feedback;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_unpack_subimage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_vertex_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_vertex_array_bgra;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_vertex_array_setXXX;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_vertex_attrib_64bit;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_vertex_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_vertex_weighting;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_win32_keyed_mutex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_window_rectangles;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_EXT_x11_sync_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_FJ_shader_binary_GCCSO;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_GREMEDY_frame_terminator;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_GREMEDY_string_marker;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_HP_convolution_border_modes;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_HP_image_transform;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_HP_occlusion_test;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_HP_texture_lighting;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_HUAWEI_program_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_HUAWEI_shader_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IBM_cull_vertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IBM_multimode_draw_arrays;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IBM_rasterpos_clip;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IBM_static_data;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IBM_texture_mirrored_repeat;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IBM_vertex_array_lists;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_bindless_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_framebuffer_downsample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_multisampled_render_to_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_program_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_pvric_end_to_end_signature;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_read_format;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_shader_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_texture_compression_pvrtc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_texture_compression_pvrtc2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_texture_env_enhanced_fixed_function;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_texture_filter_cubic;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_IMG_tile_region_protection;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INGR_color_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INGR_interlace_read;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_blackhole_render;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_conservative_rasterization;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_fragment_shader_ordering;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_framebuffer_CMAA;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_map_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_parallel_arrays;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_performance_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_shader_integer_functions2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_INTEL_texture_scissor;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_blend_equation_advanced;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_blend_equation_advanced_coherent;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_context_flush_control;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_debug;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_no_error;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_parallel_shader_compile;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_robust_buffer_access_behavior;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_robustness;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_shader_subgroup;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_texture_compression_astc_hdr;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_texture_compression_astc_ldr;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KHR_texture_compression_astc_sliced_3d;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_KTX_buffer_region;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESAX_texture_stack;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_bgra;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_framebuffer_flip_x;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_framebuffer_flip_y;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_framebuffer_swap_xy;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_pack_invert;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_program_binary_formats;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_resize_buffers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_shader_integer_functions;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_texture_const_bandwidth;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_tile_raster_order;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_window_pos;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_MESA_ycbcr_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NVX_blend_equation_advanced_multi_draw_buffers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NVX_conditional_render;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NVX_gpu_memory_info;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NVX_gpu_multicast2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NVX_linked_gpu_multicast;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NVX_progress_fence;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_3dvision_settings;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_EGL_stream_consumer_external;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_alpha_to_coverage_dither_control;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_bgr;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_bindless_multi_draw_indirect;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_bindless_multi_draw_indirect_count;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_bindless_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_blend_equation_advanced;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_blend_equation_advanced_coherent;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_blend_minmax_factor;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_blend_square;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_clip_space_w_scaling;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_command_list;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_compute_program5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_compute_shader_derivatives;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_conditional_render;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_conservative_raster;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_conservative_raster_dilate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_conservative_raster_pre_snap;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_conservative_raster_pre_snap_triangles;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_conservative_raster_underestimation;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_copy_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_copy_depth_to_color;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_copy_image;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_deep_texture3D;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_depth_buffer_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_depth_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_depth_nonlinear;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_depth_range_unclamped;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_draw_buffers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_draw_instanced;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_draw_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_draw_vulkan_image;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_evaluators;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_explicit_attrib_location;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_explicit_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fbo_color_attachments;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fence;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fill_rectangle;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_float_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fog_distance;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fragment_coverage_to_color;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fragment_program;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fragment_program2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fragment_program4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fragment_program_option;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fragment_shader_barycentric;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_fragment_shader_interlock;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_framebuffer_blit;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_framebuffer_mixed_samples;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_framebuffer_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_framebuffer_multisample_coverage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_generate_mipmap_sRGB;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_geometry_program4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_geometry_shader4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_geometry_shader_passthrough;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_gpu_multicast;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_gpu_program4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_gpu_program5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_gpu_program5_mem_extended;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_gpu_program_fp64;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_gpu_shader5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_half_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_image_formats;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_instanced_arrays;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_internalformat_sample_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_light_max_exponent;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_memory_attachment;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_memory_object_sparse;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_mesh_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_multisample_coverage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_multisample_filter_hint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_non_square_matrices;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_occlusion_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_pack_subimage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_packed_depth_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_packed_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_packed_float_linear;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_parameter_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_parameter_buffer_object2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_path_rendering;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_path_rendering_shared_edge;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_pixel_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_pixel_data_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_platform_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_point_sprite;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_polygon_mode;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_present_video;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_primitive_restart;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_primitive_shading_rate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_query_resource_tag;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_read_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_read_buffer_front;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_read_depth;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_read_depth_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_read_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_register_combiners;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_register_combiners2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_representative_fragment_test;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_robustness_video_memory_purge;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_sRGB_formats;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_sample_locations;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_sample_mask_override_coverage;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_scissor_exclusive;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_atomic_counters;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_atomic_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_atomic_float64;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_atomic_fp16_vector;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_atomic_int64;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_buffer_load;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_noperspective_interpolation;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_storage_buffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_subgroup_partitioned;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_texture_footprint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_thread_group;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shader_thread_shuffle;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shading_rate_image;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shadow_samplers_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_shadow_samplers_cube;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_stereo_view_rendering;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_tessellation_program5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texgen_emboss;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texgen_reflection;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_barrier;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_border_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_compression_latc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_compression_s3tc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_compression_s3tc_update;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_compression_vtc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_env_combine4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_expand_normal;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_npot_2D_mipmap;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_rectangle;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_rectangle_compressed;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_shader2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_texture_shader3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_timeline_semaphore;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_transform_feedback;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_transform_feedback2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_uniform_buffer_std430_layout;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_uniform_buffer_unified_memory;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vdpau_interop;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vdpau_interop2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_array_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_array_range2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_attrib_integer_64bit;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_buffer_unified_memory;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_program;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_program1_1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_program2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_program2_option;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_program3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_vertex_program4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_video_capture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_viewport_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_viewport_array2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_NV_viewport_swizzle;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_EGL_image;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_EGL_image_external;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_EGL_image_external_essl3;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_blend_equation_separate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_blend_func_separate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_blend_subtract;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_byte_coordinates;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_compressed_ETC1_RGB8_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_compressed_paletted_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_copy_image;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_depth24;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_depth32;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_depth_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_depth_texture_cube_map;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_draw_buffers_indexed;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_draw_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_element_index_uint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_extended_matrix_palette;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_fbo_render_mipmap;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_fragment_precision_high;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_framebuffer_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_geometry_point_size;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_geometry_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_get_program_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_gpu_shader5;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_mapbuffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_matrix_get;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_matrix_palette;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_packed_depth_stencil;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_point_size_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_point_sprite;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_read_format;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_required_internalformat;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_rgb8_rgba8;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_sample_shading;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_sample_variables;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_shader_image_atomic;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_shader_io_blocks;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_shader_multisample_interpolation;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_single_precision;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_standard_derivatives;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_stencil1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_stencil4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_stencil8;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_surfaceless_context;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_tessellation_point_size;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_tessellation_shader;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_3D;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_border_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_compression_astc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_cube_map;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_cube_map_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_env_crossbar;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_mirrored_repeat;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_npot;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_stencil8;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_storage_multisample_2d_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_texture_view;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_vertex_array_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_vertex_half_float;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OES_vertex_type_10_10_10_2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OML_interlace;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OML_resample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OML_subsample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OVR_multiview;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OVR_multiview2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_OVR_multiview_multisampled_render_to_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_PGI_misc_hints;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_PGI_vertex_hints;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_YUV_texture_gather;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_alpha_test;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_binning_control;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_driver_control;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_extended_get;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_extended_get2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_frame_extrapolation;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_framebuffer_foveated;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_motion_estimation;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_perfmon_global_mode;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_render_sRGB_R8_RG8;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_render_shared_exponent;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_shader_framebuffer_fetch_noncoherent;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_shader_framebuffer_fetch_rate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_shading_rate;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_texture_foveated;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_texture_foveated2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_texture_foveated_subsampled_layout;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_texture_lod_bias;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_tiled_rendering;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_writeonly_rendering;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_QCOM_ycbcr_degamma;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_REGAL_ES1_0_compatibility;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_REGAL_ES1_1_compatibility;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_REGAL_enable;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_REGAL_error_string;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_REGAL_extension_query;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_REGAL_log;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_REGAL_proc_address;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_REND_screen_coordinates;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_S3_s3tc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_clip_band_hint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_color_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_detail_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_fog_function;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_generate_mipmap;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_line_texgen;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_multitexture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_pixel_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_point_line_texgen;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_shared_multisample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_sharpen_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_texture4D;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_texture_border_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_texture_edge_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_texture_filter4;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_texture_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIS_texture_select;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_async;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_async_histogram;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_async_pixel;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_bali_g_instruments;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_bali_r_instruments;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_bali_timer_instruments;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_blend_alpha_minmax;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_blend_cadd;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_blend_cmultiply;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_calligraphic_fragment;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_clipmap;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_color_matrix_accuracy;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_color_table_index_mode;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_complex_polar;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_convolution_accuracy;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_cube_map;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_cylinder_texgen;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_datapipe;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_decimation;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_depth_pass_instrument;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_depth_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_dvc;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_flush_raster;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fog_blend;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fog_factor_to_alpha;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fog_layers;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fog_offset;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fog_patchy;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fog_scale;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fog_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fragment_lighting_space;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fragment_specular_lighting;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_fragments_instrument;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_framezoom;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_icc_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_igloo_interface;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_image_compression;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_impact_pixel_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_instrument_error;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_interlace;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_ir_instrument1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_line_quality_hint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_list_priority;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_mpeg1;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_mpeg2;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_nonlinear_lighting_pervertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_nurbs_eval;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_occlusion_instrument;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_packed_6bytes;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_pixel_texture;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_pixel_texture_bits;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_pixel_texture_lod;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_pixel_tiles;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_polynomial_ffd;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_quad_mesh;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_reference_plane;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_resample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_scalebias_hint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_shadow;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_shadow_ambient;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_slim;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_spotlight_cutoff;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_sprite;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_subdiv_patch;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_subsample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_tag_sample_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_add_env;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_coordinate_clamp;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_lod_bias;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_mipmap_anisotropic;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_multi_buffer;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_phase;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_range;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_scale_bias;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_texture_supersample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_vector_ops;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_vertex_array_object;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_vertex_preclip;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_vertex_preclip_hint;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_ycrcb;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_ycrcb_subsample;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGIX_ycrcba;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGI_color_matrix;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGI_color_table;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGI_complex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGI_complex_type;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGI_fft;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SGI_texture_color_table;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SUNX_constant_data;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SUN_convolution_border_modes;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SUN_global_alpha;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SUN_mesh_array;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SUN_read_video_pixels;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SUN_slice_accum;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SUN_triangle_list;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_SUN_vertex;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_VIV_shader_binary;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_WIN_phong_shading;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_WIN_scene_markerXXX;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_WIN_specular_fog;
-extern __attribute__ ((visibility("default"))) GLboolean __GLEW_WIN_swap_hint;
-# 27012 "/usr/include/GL/glew.h" 3 4
-extern __attribute__ ((visibility("default"))) GLenum glewInit (void);
-extern __attribute__ ((visibility("default"))) GLenum glewContextInit (void);
-extern __attribute__ ((visibility("default"))) GLboolean glewIsSupported (const char *name);
-# 27025 "/usr/include/GL/glew.h" 3 4
-extern __attribute__ ((visibility("default"))) GLboolean glewExperimental;
-extern __attribute__ ((visibility("default"))) GLboolean glewGetExtension (const char *name);
-extern __attribute__ ((visibility("default"))) const GLubyte * glewGetErrorString (GLenum error);
-extern __attribute__ ((visibility("default"))) const GLubyte * glewGetString (GLenum name);
+# 22831 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
+extern PFNGLCOPYTEXSUBIMAGE3DPROC __glewCopyTexSubImage3D;
+extern PFNGLDRAWRANGEELEMENTSPROC __glewDrawRangeElements;
+extern PFNGLTEXIMAGE3DPROC __glewTexImage3D;
+extern PFNGLTEXSUBIMAGE3DPROC __glewTexSubImage3D;
+
+extern PFNGLACTIVETEXTUREPROC __glewActiveTexture;
+extern PFNGLCLIENTACTIVETEXTUREPROC __glewClientActiveTexture;
+extern PFNGLCOMPRESSEDTEXIMAGE1DPROC __glewCompressedTexImage1D;
+extern PFNGLCOMPRESSEDTEXIMAGE2DPROC __glewCompressedTexImage2D;
+extern PFNGLCOMPRESSEDTEXIMAGE3DPROC __glewCompressedTexImage3D;
+extern PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC __glewCompressedTexSubImage1D;
+extern PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC __glewCompressedTexSubImage2D;
+extern PFNGLCOMPRESSEDTEXSUBIMAGE3DPROC __glewCompressedTexSubImage3D;
+extern PFNGLGETCOMPRESSEDTEXIMAGEPROC __glewGetCompressedTexImage;
+extern PFNGLLOADTRANSPOSEMATRIXDPROC __glewLoadTransposeMatrixd;
+extern PFNGLLOADTRANSPOSEMATRIXFPROC __glewLoadTransposeMatrixf;
+extern PFNGLMULTTRANSPOSEMATRIXDPROC __glewMultTransposeMatrixd;
+extern PFNGLMULTTRANSPOSEMATRIXFPROC __glewMultTransposeMatrixf;
+extern PFNGLMULTITEXCOORD1DPROC __glewMultiTexCoord1d;
+extern PFNGLMULTITEXCOORD1DVPROC __glewMultiTexCoord1dv;
+extern PFNGLMULTITEXCOORD1FPROC __glewMultiTexCoord1f;
+extern PFNGLMULTITEXCOORD1FVPROC __glewMultiTexCoord1fv;
+extern PFNGLMULTITEXCOORD1IPROC __glewMultiTexCoord1i;
+extern PFNGLMULTITEXCOORD1IVPROC __glewMultiTexCoord1iv;
+extern PFNGLMULTITEXCOORD1SPROC __glewMultiTexCoord1s;
+extern PFNGLMULTITEXCOORD1SVPROC __glewMultiTexCoord1sv;
+extern PFNGLMULTITEXCOORD2DPROC __glewMultiTexCoord2d;
+extern PFNGLMULTITEXCOORD2DVPROC __glewMultiTexCoord2dv;
+extern PFNGLMULTITEXCOORD2FPROC __glewMultiTexCoord2f;
+extern PFNGLMULTITEXCOORD2FVPROC __glewMultiTexCoord2fv;
+extern PFNGLMULTITEXCOORD2IPROC __glewMultiTexCoord2i;
+extern PFNGLMULTITEXCOORD2IVPROC __glewMultiTexCoord2iv;
+extern PFNGLMULTITEXCOORD2SPROC __glewMultiTexCoord2s;
+extern PFNGLMULTITEXCOORD2SVPROC __glewMultiTexCoord2sv;
+extern PFNGLMULTITEXCOORD3DPROC __glewMultiTexCoord3d;
+extern PFNGLMULTITEXCOORD3DVPROC __glewMultiTexCoord3dv;
+extern PFNGLMULTITEXCOORD3FPROC __glewMultiTexCoord3f;
+extern PFNGLMULTITEXCOORD3FVPROC __glewMultiTexCoord3fv;
+extern PFNGLMULTITEXCOORD3IPROC __glewMultiTexCoord3i;
+extern PFNGLMULTITEXCOORD3IVPROC __glewMultiTexCoord3iv;
+extern PFNGLMULTITEXCOORD3SPROC __glewMultiTexCoord3s;
+extern PFNGLMULTITEXCOORD3SVPROC __glewMultiTexCoord3sv;
+extern PFNGLMULTITEXCOORD4DPROC __glewMultiTexCoord4d;
+extern PFNGLMULTITEXCOORD4DVPROC __glewMultiTexCoord4dv;
+extern PFNGLMULTITEXCOORD4FPROC __glewMultiTexCoord4f;
+extern PFNGLMULTITEXCOORD4FVPROC __glewMultiTexCoord4fv;
+extern PFNGLMULTITEXCOORD4IPROC __glewMultiTexCoord4i;
+extern PFNGLMULTITEXCOORD4IVPROC __glewMultiTexCoord4iv;
+extern PFNGLMULTITEXCOORD4SPROC __glewMultiTexCoord4s;
+extern PFNGLMULTITEXCOORD4SVPROC __glewMultiTexCoord4sv;
+extern PFNGLSAMPLECOVERAGEPROC __glewSampleCoverage;
+
+extern PFNGLBLENDCOLORPROC __glewBlendColor;
+extern PFNGLBLENDEQUATIONPROC __glewBlendEquation;
+extern PFNGLBLENDFUNCSEPARATEPROC __glewBlendFuncSeparate;
+extern PFNGLFOGCOORDPOINTERPROC __glewFogCoordPointer;
+extern PFNGLFOGCOORDDPROC __glewFogCoordd;
+extern PFNGLFOGCOORDDVPROC __glewFogCoorddv;
+extern PFNGLFOGCOORDFPROC __glewFogCoordf;
+extern PFNGLFOGCOORDFVPROC __glewFogCoordfv;
+extern PFNGLMULTIDRAWARRAYSPROC __glewMultiDrawArrays;
+extern PFNGLMULTIDRAWELEMENTSPROC __glewMultiDrawElements;
+extern PFNGLPOINTPARAMETERFPROC __glewPointParameterf;
+extern PFNGLPOINTPARAMETERFVPROC __glewPointParameterfv;
+extern PFNGLPOINTPARAMETERIPROC __glewPointParameteri;
+extern PFNGLPOINTPARAMETERIVPROC __glewPointParameteriv;
+extern PFNGLSECONDARYCOLOR3BPROC __glewSecondaryColor3b;
+extern PFNGLSECONDARYCOLOR3BVPROC __glewSecondaryColor3bv;
+extern PFNGLSECONDARYCOLOR3DPROC __glewSecondaryColor3d;
+extern PFNGLSECONDARYCOLOR3DVPROC __glewSecondaryColor3dv;
+extern PFNGLSECONDARYCOLOR3FPROC __glewSecondaryColor3f;
+extern PFNGLSECONDARYCOLOR3FVPROC __glewSecondaryColor3fv;
+extern PFNGLSECONDARYCOLOR3IPROC __glewSecondaryColor3i;
+extern PFNGLSECONDARYCOLOR3IVPROC __glewSecondaryColor3iv;
+extern PFNGLSECONDARYCOLOR3SPROC __glewSecondaryColor3s;
+extern PFNGLSECONDARYCOLOR3SVPROC __glewSecondaryColor3sv;
+extern PFNGLSECONDARYCOLOR3UBPROC __glewSecondaryColor3ub;
+extern PFNGLSECONDARYCOLOR3UBVPROC __glewSecondaryColor3ubv;
+extern PFNGLSECONDARYCOLOR3UIPROC __glewSecondaryColor3ui;
+extern PFNGLSECONDARYCOLOR3UIVPROC __glewSecondaryColor3uiv;
+extern PFNGLSECONDARYCOLOR3USPROC __glewSecondaryColor3us;
+extern PFNGLSECONDARYCOLOR3USVPROC __glewSecondaryColor3usv;
+extern PFNGLSECONDARYCOLORPOINTERPROC __glewSecondaryColorPointer;
+extern PFNGLWINDOWPOS2DPROC __glewWindowPos2d;
+extern PFNGLWINDOWPOS2DVPROC __glewWindowPos2dv;
+extern PFNGLWINDOWPOS2FPROC __glewWindowPos2f;
+extern PFNGLWINDOWPOS2FVPROC __glewWindowPos2fv;
+extern PFNGLWINDOWPOS2IPROC __glewWindowPos2i;
+extern PFNGLWINDOWPOS2IVPROC __glewWindowPos2iv;
+extern PFNGLWINDOWPOS2SPROC __glewWindowPos2s;
+extern PFNGLWINDOWPOS2SVPROC __glewWindowPos2sv;
+extern PFNGLWINDOWPOS3DPROC __glewWindowPos3d;
+extern PFNGLWINDOWPOS3DVPROC __glewWindowPos3dv;
+extern PFNGLWINDOWPOS3FPROC __glewWindowPos3f;
+extern PFNGLWINDOWPOS3FVPROC __glewWindowPos3fv;
+extern PFNGLWINDOWPOS3IPROC __glewWindowPos3i;
+extern PFNGLWINDOWPOS3IVPROC __glewWindowPos3iv;
+extern PFNGLWINDOWPOS3SPROC __glewWindowPos3s;
+extern PFNGLWINDOWPOS3SVPROC __glewWindowPos3sv;
+
+extern PFNGLBEGINQUERYPROC __glewBeginQuery;
+extern PFNGLBINDBUFFERPROC __glewBindBuffer;
+extern PFNGLBUFFERDATAPROC __glewBufferData;
+extern PFNGLBUFFERSUBDATAPROC __glewBufferSubData;
+extern PFNGLDELETEBUFFERSPROC __glewDeleteBuffers;
+extern PFNGLDELETEQUERIESPROC __glewDeleteQueries;
+extern PFNGLENDQUERYPROC __glewEndQuery;
+extern PFNGLGENBUFFERSPROC __glewGenBuffers;
+extern PFNGLGENQUERIESPROC __glewGenQueries;
+extern PFNGLGETBUFFERPARAMETERIVPROC __glewGetBufferParameteriv;
+extern PFNGLGETBUFFERPOINTERVPROC __glewGetBufferPointerv;
+extern PFNGLGETBUFFERSUBDATAPROC __glewGetBufferSubData;
+extern PFNGLGETQUERYOBJECTIVPROC __glewGetQueryObjectiv;
+extern PFNGLGETQUERYOBJECTUIVPROC __glewGetQueryObjectuiv;
+extern PFNGLGETQUERYIVPROC __glewGetQueryiv;
+extern PFNGLISBUFFERPROC __glewIsBuffer;
+extern PFNGLISQUERYPROC __glewIsQuery;
+extern PFNGLMAPBUFFERPROC __glewMapBuffer;
+extern PFNGLUNMAPBUFFERPROC __glewUnmapBuffer;
+
+extern PFNGLATTACHSHADERPROC __glewAttachShader;
+extern PFNGLBINDATTRIBLOCATIONPROC __glewBindAttribLocation;
+extern PFNGLBLENDEQUATIONSEPARATEPROC __glewBlendEquationSeparate;
+extern PFNGLCOMPILESHADERPROC __glewCompileShader;
+extern PFNGLCREATEPROGRAMPROC __glewCreateProgram;
+extern PFNGLCREATESHADERPROC __glewCreateShader;
+extern PFNGLDELETEPROGRAMPROC __glewDeleteProgram;
+extern PFNGLDELETESHADERPROC __glewDeleteShader;
+extern PFNGLDETACHSHADERPROC __glewDetachShader;
+extern PFNGLDISABLEVERTEXATTRIBARRAYPROC __glewDisableVertexAttribArray;
+extern PFNGLDRAWBUFFERSPROC __glewDrawBuffers;
+extern PFNGLENABLEVERTEXATTRIBARRAYPROC __glewEnableVertexAttribArray;
+extern PFNGLGETACTIVEATTRIBPROC __glewGetActiveAttrib;
+extern PFNGLGETACTIVEUNIFORMPROC __glewGetActiveUniform;
+extern PFNGLGETATTACHEDSHADERSPROC __glewGetAttachedShaders;
+extern PFNGLGETATTRIBLOCATIONPROC __glewGetAttribLocation;
+extern PFNGLGETPROGRAMINFOLOGPROC __glewGetProgramInfoLog;
+extern PFNGLGETPROGRAMIVPROC __glewGetProgramiv;
+extern PFNGLGETSHADERINFOLOGPROC __glewGetShaderInfoLog;
+extern PFNGLGETSHADERSOURCEPROC __glewGetShaderSource;
+extern PFNGLGETSHADERIVPROC __glewGetShaderiv;
+extern PFNGLGETUNIFORMLOCATIONPROC __glewGetUniformLocation;
+extern PFNGLGETUNIFORMFVPROC __glewGetUniformfv;
+extern PFNGLGETUNIFORMIVPROC __glewGetUniformiv;
+extern PFNGLGETVERTEXATTRIBPOINTERVPROC __glewGetVertexAttribPointerv;
+extern PFNGLGETVERTEXATTRIBDVPROC __glewGetVertexAttribdv;
+extern PFNGLGETVERTEXATTRIBFVPROC __glewGetVertexAttribfv;
+extern PFNGLGETVERTEXATTRIBIVPROC __glewGetVertexAttribiv;
+extern PFNGLISPROGRAMPROC __glewIsProgram;
+extern PFNGLISSHADERPROC __glewIsShader;
+extern PFNGLLINKPROGRAMPROC __glewLinkProgram;
+extern PFNGLSHADERSOURCEPROC __glewShaderSource;
+extern PFNGLSTENCILFUNCSEPARATEPROC __glewStencilFuncSeparate;
+extern PFNGLSTENCILMASKSEPARATEPROC __glewStencilMaskSeparate;
+extern PFNGLSTENCILOPSEPARATEPROC __glewStencilOpSeparate;
+extern PFNGLUNIFORM1FPROC __glewUniform1f;
+extern PFNGLUNIFORM1FVPROC __glewUniform1fv;
+extern PFNGLUNIFORM1IPROC __glewUniform1i;
+extern PFNGLUNIFORM1IVPROC __glewUniform1iv;
+extern PFNGLUNIFORM2FPROC __glewUniform2f;
+extern PFNGLUNIFORM2FVPROC __glewUniform2fv;
+extern PFNGLUNIFORM2IPROC __glewUniform2i;
+extern PFNGLUNIFORM2IVPROC __glewUniform2iv;
+extern PFNGLUNIFORM3FPROC __glewUniform3f;
+extern PFNGLUNIFORM3FVPROC __glewUniform3fv;
+extern PFNGLUNIFORM3IPROC __glewUniform3i;
+extern PFNGLUNIFORM3IVPROC __glewUniform3iv;
+extern PFNGLUNIFORM4FPROC __glewUniform4f;
+extern PFNGLUNIFORM4FVPROC __glewUniform4fv;
+extern PFNGLUNIFORM4IPROC __glewUniform4i;
+extern PFNGLUNIFORM4IVPROC __glewUniform4iv;
+extern PFNGLUNIFORMMATRIX2FVPROC __glewUniformMatrix2fv;
+extern PFNGLUNIFORMMATRIX3FVPROC __glewUniformMatrix3fv;
+extern PFNGLUNIFORMMATRIX4FVPROC __glewUniformMatrix4fv;
+extern PFNGLUSEPROGRAMPROC __glewUseProgram;
+extern PFNGLVALIDATEPROGRAMPROC __glewValidateProgram;
+extern PFNGLVERTEXATTRIB1DPROC __glewVertexAttrib1d;
+extern PFNGLVERTEXATTRIB1DVPROC __glewVertexAttrib1dv;
+extern PFNGLVERTEXATTRIB1FPROC __glewVertexAttrib1f;
+extern PFNGLVERTEXATTRIB1FVPROC __glewVertexAttrib1fv;
+extern PFNGLVERTEXATTRIB1SPROC __glewVertexAttrib1s;
+extern PFNGLVERTEXATTRIB1SVPROC __glewVertexAttrib1sv;
+extern PFNGLVERTEXATTRIB2DPROC __glewVertexAttrib2d;
+extern PFNGLVERTEXATTRIB2DVPROC __glewVertexAttrib2dv;
+extern PFNGLVERTEXATTRIB2FPROC __glewVertexAttrib2f;
+extern PFNGLVERTEXATTRIB2FVPROC __glewVertexAttrib2fv;
+extern PFNGLVERTEXATTRIB2SPROC __glewVertexAttrib2s;
+extern PFNGLVERTEXATTRIB2SVPROC __glewVertexAttrib2sv;
+extern PFNGLVERTEXATTRIB3DPROC __glewVertexAttrib3d;
+extern PFNGLVERTEXATTRIB3DVPROC __glewVertexAttrib3dv;
+extern PFNGLVERTEXATTRIB3FPROC __glewVertexAttrib3f;
+extern PFNGLVERTEXATTRIB3FVPROC __glewVertexAttrib3fv;
+extern PFNGLVERTEXATTRIB3SPROC __glewVertexAttrib3s;
+extern PFNGLVERTEXATTRIB3SVPROC __glewVertexAttrib3sv;
+extern PFNGLVERTEXATTRIB4NBVPROC __glewVertexAttrib4Nbv;
+extern PFNGLVERTEXATTRIB4NIVPROC __glewVertexAttrib4Niv;
+extern PFNGLVERTEXATTRIB4NSVPROC __glewVertexAttrib4Nsv;
+extern PFNGLVERTEXATTRIB4NUBPROC __glewVertexAttrib4Nub;
+extern PFNGLVERTEXATTRIB4NUBVPROC __glewVertexAttrib4Nubv;
+extern PFNGLVERTEXATTRIB4NUIVPROC __glewVertexAttrib4Nuiv;
+extern PFNGLVERTEXATTRIB4NUSVPROC __glewVertexAttrib4Nusv;
+extern PFNGLVERTEXATTRIB4BVPROC __glewVertexAttrib4bv;
+extern PFNGLVERTEXATTRIB4DPROC __glewVertexAttrib4d;
+extern PFNGLVERTEXATTRIB4DVPROC __glewVertexAttrib4dv;
+extern PFNGLVERTEXATTRIB4FPROC __glewVertexAttrib4f;
+extern PFNGLVERTEXATTRIB4FVPROC __glewVertexAttrib4fv;
+extern PFNGLVERTEXATTRIB4IVPROC __glewVertexAttrib4iv;
+extern PFNGLVERTEXATTRIB4SPROC __glewVertexAttrib4s;
+extern PFNGLVERTEXATTRIB4SVPROC __glewVertexAttrib4sv;
+extern PFNGLVERTEXATTRIB4UBVPROC __glewVertexAttrib4ubv;
+extern PFNGLVERTEXATTRIB4UIVPROC __glewVertexAttrib4uiv;
+extern PFNGLVERTEXATTRIB4USVPROC __glewVertexAttrib4usv;
+extern PFNGLVERTEXATTRIBPOINTERPROC __glewVertexAttribPointer;
+
+extern PFNGLUNIFORMMATRIX2X3FVPROC __glewUniformMatrix2x3fv;
+extern PFNGLUNIFORMMATRIX2X4FVPROC __glewUniformMatrix2x4fv;
+extern PFNGLUNIFORMMATRIX3X2FVPROC __glewUniformMatrix3x2fv;
+extern PFNGLUNIFORMMATRIX3X4FVPROC __glewUniformMatrix3x4fv;
+extern PFNGLUNIFORMMATRIX4X2FVPROC __glewUniformMatrix4x2fv;
+extern PFNGLUNIFORMMATRIX4X3FVPROC __glewUniformMatrix4x3fv;
+
+extern PFNGLBEGINCONDITIONALRENDERPROC __glewBeginConditionalRender;
+extern PFNGLBEGINTRANSFORMFEEDBACKPROC __glewBeginTransformFeedback;
+extern PFNGLBINDFRAGDATALOCATIONPROC __glewBindFragDataLocation;
+extern PFNGLCLAMPCOLORPROC __glewClampColor;
+extern PFNGLCLEARBUFFERFIPROC __glewClearBufferfi;
+extern PFNGLCLEARBUFFERFVPROC __glewClearBufferfv;
+extern PFNGLCLEARBUFFERIVPROC __glewClearBufferiv;
+extern PFNGLCLEARBUFFERUIVPROC __glewClearBufferuiv;
+extern PFNGLCOLORMASKIPROC __glewColorMaski;
+extern PFNGLDISABLEIPROC __glewDisablei;
+extern PFNGLENABLEIPROC __glewEnablei;
+extern PFNGLENDCONDITIONALRENDERPROC __glewEndConditionalRender;
+extern PFNGLENDTRANSFORMFEEDBACKPROC __glewEndTransformFeedback;
+extern PFNGLGETBOOLEANI_VPROC __glewGetBooleani_v;
+extern PFNGLGETFRAGDATALOCATIONPROC __glewGetFragDataLocation;
+extern PFNGLGETSTRINGIPROC __glewGetStringi;
+extern PFNGLGETTEXPARAMETERIIVPROC __glewGetTexParameterIiv;
+extern PFNGLGETTEXPARAMETERIUIVPROC __glewGetTexParameterIuiv;
+extern PFNGLGETTRANSFORMFEEDBACKVARYINGPROC __glewGetTransformFeedbackVarying;
+extern PFNGLGETUNIFORMUIVPROC __glewGetUniformuiv;
+extern PFNGLGETVERTEXATTRIBIIVPROC __glewGetVertexAttribIiv;
+extern PFNGLGETVERTEXATTRIBIUIVPROC __glewGetVertexAttribIuiv;
+extern PFNGLISENABLEDIPROC __glewIsEnabledi;
+extern PFNGLTEXPARAMETERIIVPROC __glewTexParameterIiv;
+extern PFNGLTEXPARAMETERIUIVPROC __glewTexParameterIuiv;
+extern PFNGLTRANSFORMFEEDBACKVARYINGSPROC __glewTransformFeedbackVaryings;
+extern PFNGLUNIFORM1UIPROC __glewUniform1ui;
+extern PFNGLUNIFORM1UIVPROC __glewUniform1uiv;
+extern PFNGLUNIFORM2UIPROC __glewUniform2ui;
+extern PFNGLUNIFORM2UIVPROC __glewUniform2uiv;
+extern PFNGLUNIFORM3UIPROC __glewUniform3ui;
+extern PFNGLUNIFORM3UIVPROC __glewUniform3uiv;
+extern PFNGLUNIFORM4UIPROC __glewUniform4ui;
+extern PFNGLUNIFORM4UIVPROC __glewUniform4uiv;
+extern PFNGLVERTEXATTRIBI1IPROC __glewVertexAttribI1i;
+extern PFNGLVERTEXATTRIBI1IVPROC __glewVertexAttribI1iv;
+extern PFNGLVERTEXATTRIBI1UIPROC __glewVertexAttribI1ui;
+extern PFNGLVERTEXATTRIBI1UIVPROC __glewVertexAttribI1uiv;
+extern PFNGLVERTEXATTRIBI2IPROC __glewVertexAttribI2i;
+extern PFNGLVERTEXATTRIBI2IVPROC __glewVertexAttribI2iv;
+extern PFNGLVERTEXATTRIBI2UIPROC __glewVertexAttribI2ui;
+extern PFNGLVERTEXATTRIBI2UIVPROC __glewVertexAttribI2uiv;
+extern PFNGLVERTEXATTRIBI3IPROC __glewVertexAttribI3i;
+extern PFNGLVERTEXATTRIBI3IVPROC __glewVertexAttribI3iv;
+extern PFNGLVERTEXATTRIBI3UIPROC __glewVertexAttribI3ui;
+extern PFNGLVERTEXATTRIBI3UIVPROC __glewVertexAttribI3uiv;
+extern PFNGLVERTEXATTRIBI4BVPROC __glewVertexAttribI4bv;
+extern PFNGLVERTEXATTRIBI4IPROC __glewVertexAttribI4i;
+extern PFNGLVERTEXATTRIBI4IVPROC __glewVertexAttribI4iv;
+extern PFNGLVERTEXATTRIBI4SVPROC __glewVertexAttribI4sv;
+extern PFNGLVERTEXATTRIBI4UBVPROC __glewVertexAttribI4ubv;
+extern PFNGLVERTEXATTRIBI4UIPROC __glewVertexAttribI4ui;
+extern PFNGLVERTEXATTRIBI4UIVPROC __glewVertexAttribI4uiv;
+extern PFNGLVERTEXATTRIBI4USVPROC __glewVertexAttribI4usv;
+extern PFNGLVERTEXATTRIBIPOINTERPROC __glewVertexAttribIPointer;
+
+extern PFNGLDRAWARRAYSINSTANCEDPROC __glewDrawArraysInstanced;
+extern PFNGLDRAWELEMENTSINSTANCEDPROC __glewDrawElementsInstanced;
+extern PFNGLPRIMITIVERESTARTINDEXPROC __glewPrimitiveRestartIndex;
+extern PFNGLTEXBUFFERPROC __glewTexBuffer;
+
+extern PFNGLFRAMEBUFFERTEXTUREPROC __glewFramebufferTexture;
+extern PFNGLGETBUFFERPARAMETERI64VPROC __glewGetBufferParameteri64v;
+extern PFNGLGETINTEGER64I_VPROC __glewGetInteger64i_v;
+
+extern PFNGLVERTEXATTRIBDIVISORPROC __glewVertexAttribDivisor;
+
+extern PFNGLBLENDEQUATIONSEPARATEIPROC __glewBlendEquationSeparatei;
+extern PFNGLBLENDEQUATIONIPROC __glewBlendEquationi;
+extern PFNGLBLENDFUNCSEPARATEIPROC __glewBlendFuncSeparatei;
+extern PFNGLBLENDFUNCIPROC __glewBlendFunci;
+extern PFNGLMINSAMPLESHADINGPROC __glewMinSampleShading;
+
+extern PFNGLGETGRAPHICSRESETSTATUSPROC __glewGetGraphicsResetStatus;
+extern PFNGLGETNCOMPRESSEDTEXIMAGEPROC __glewGetnCompressedTexImage;
+extern PFNGLGETNTEXIMAGEPROC __glewGetnTexImage;
+extern PFNGLGETNUNIFORMDVPROC __glewGetnUniformdv;
+
+extern PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC __glewMultiDrawArraysIndirectCount;
+extern PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC __glewMultiDrawElementsIndirectCount;
+extern PFNGLSPECIALIZESHADERPROC __glewSpecializeShader;
+
+extern PFNGLTBUFFERMASK3DFXPROC __glewTbufferMask3DFX;
+
+extern PFNGLDEBUGMESSAGECALLBACKAMDPROC __glewDebugMessageCallbackAMD;
+extern PFNGLDEBUGMESSAGEENABLEAMDPROC __glewDebugMessageEnableAMD;
+extern PFNGLDEBUGMESSAGEINSERTAMDPROC __glewDebugMessageInsertAMD;
+extern PFNGLGETDEBUGMESSAGELOGAMDPROC __glewGetDebugMessageLogAMD;
+
+extern PFNGLBLENDEQUATIONINDEXEDAMDPROC __glewBlendEquationIndexedAMD;
+extern PFNGLBLENDEQUATIONSEPARATEINDEXEDAMDPROC __glewBlendEquationSeparateIndexedAMD;
+extern PFNGLBLENDFUNCINDEXEDAMDPROC __glewBlendFuncIndexedAMD;
+extern PFNGLBLENDFUNCSEPARATEINDEXEDAMDPROC __glewBlendFuncSeparateIndexedAMD;
+
+extern PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC __glewNamedRenderbufferStorageMultisampleAdvancedAMD;
+extern PFNGLRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC __glewRenderbufferStorageMultisampleAdvancedAMD;
+
+extern PFNGLFRAMEBUFFERSAMPLEPOSITIONSFVAMDPROC __glewFramebufferSamplePositionsfvAMD;
+extern PFNGLGETFRAMEBUFFERPARAMETERFVAMDPROC __glewGetFramebufferParameterfvAMD;
+extern PFNGLGETNAMEDFRAMEBUFFERPARAMETERFVAMDPROC __glewGetNamedFramebufferParameterfvAMD;
+extern PFNGLNAMEDFRAMEBUFFERSAMPLEPOSITIONSFVAMDPROC __glewNamedFramebufferSamplePositionsfvAMD;
+
+extern PFNGLVERTEXATTRIBPARAMETERIAMDPROC __glewVertexAttribParameteriAMD;
+
+extern PFNGLMULTIDRAWARRAYSINDIRECTAMDPROC __glewMultiDrawArraysIndirectAMD;
+extern PFNGLMULTIDRAWELEMENTSINDIRECTAMDPROC __glewMultiDrawElementsIndirectAMD;
+
+extern PFNGLDELETENAMESAMDPROC __glewDeleteNamesAMD;
+extern PFNGLGENNAMESAMDPROC __glewGenNamesAMD;
+extern PFNGLISNAMEAMDPROC __glewIsNameAMD;
+
+extern PFNGLQUERYOBJECTPARAMETERUIAMDPROC __glewQueryObjectParameteruiAMD;
+
+extern PFNGLBEGINPERFMONITORAMDPROC __glewBeginPerfMonitorAMD;
+extern PFNGLDELETEPERFMONITORSAMDPROC __glewDeletePerfMonitorsAMD;
+extern PFNGLENDPERFMONITORAMDPROC __glewEndPerfMonitorAMD;
+extern PFNGLGENPERFMONITORSAMDPROC __glewGenPerfMonitorsAMD;
+extern PFNGLGETPERFMONITORCOUNTERDATAAMDPROC __glewGetPerfMonitorCounterDataAMD;
+extern PFNGLGETPERFMONITORCOUNTERINFOAMDPROC __glewGetPerfMonitorCounterInfoAMD;
+extern PFNGLGETPERFMONITORCOUNTERSTRINGAMDPROC __glewGetPerfMonitorCounterStringAMD;
+extern PFNGLGETPERFMONITORCOUNTERSAMDPROC __glewGetPerfMonitorCountersAMD;
+extern PFNGLGETPERFMONITORGROUPSTRINGAMDPROC __glewGetPerfMonitorGroupStringAMD;
+extern PFNGLGETPERFMONITORGROUPSAMDPROC __glewGetPerfMonitorGroupsAMD;
+extern PFNGLSELECTPERFMONITORCOUNTERSAMDPROC __glewSelectPerfMonitorCountersAMD;
+
+extern PFNGLSETMULTISAMPLEFVAMDPROC __glewSetMultisamplefvAMD;
+
+extern PFNGLTEXSTORAGESPARSEAMDPROC __glewTexStorageSparseAMD;
+extern PFNGLTEXTURESTORAGESPARSEAMDPROC __glewTextureStorageSparseAMD;
+
+extern PFNGLSTENCILOPVALUEAMDPROC __glewStencilOpValueAMD;
+
+extern PFNGLTESSELLATIONFACTORAMDPROC __glewTessellationFactorAMD;
+extern PFNGLTESSELLATIONMODEAMDPROC __glewTessellationModeAMD;
+
+extern PFNGLBLITFRAMEBUFFERANGLEPROC __glewBlitFramebufferANGLE;
+
+extern PFNGLRENDERBUFFERSTORAGEMULTISAMPLEANGLEPROC __glewRenderbufferStorageMultisampleANGLE;
+
+extern PFNGLDRAWARRAYSINSTANCEDANGLEPROC __glewDrawArraysInstancedANGLE;
+extern PFNGLDRAWELEMENTSINSTANCEDANGLEPROC __glewDrawElementsInstancedANGLE;
+extern PFNGLVERTEXATTRIBDIVISORANGLEPROC __glewVertexAttribDivisorANGLE;
+
+extern PFNGLBEGINQUERYANGLEPROC __glewBeginQueryANGLE;
+extern PFNGLDELETEQUERIESANGLEPROC __glewDeleteQueriesANGLE;
+extern PFNGLENDQUERYANGLEPROC __glewEndQueryANGLE;
+extern PFNGLGENQUERIESANGLEPROC __glewGenQueriesANGLE;
+extern PFNGLGETQUERYOBJECTI64VANGLEPROC __glewGetQueryObjecti64vANGLE;
+extern PFNGLGETQUERYOBJECTIVANGLEPROC __glewGetQueryObjectivANGLE;
+extern PFNGLGETQUERYOBJECTUI64VANGLEPROC __glewGetQueryObjectui64vANGLE;
+extern PFNGLGETQUERYOBJECTUIVANGLEPROC __glewGetQueryObjectuivANGLE;
+extern PFNGLGETQUERYIVANGLEPROC __glewGetQueryivANGLE;
+extern PFNGLISQUERYANGLEPROC __glewIsQueryANGLE;
+extern PFNGLQUERYCOUNTERANGLEPROC __glewQueryCounterANGLE;
+
+extern PFNGLGETTRANSLATEDSHADERSOURCEANGLEPROC __glewGetTranslatedShaderSourceANGLE;
+
+extern PFNGLCOPYTEXTURELEVELSAPPLEPROC __glewCopyTextureLevelsAPPLE;
+
+extern PFNGLDRAWELEMENTARRAYAPPLEPROC __glewDrawElementArrayAPPLE;
+extern PFNGLDRAWRANGEELEMENTARRAYAPPLEPROC __glewDrawRangeElementArrayAPPLE;
+extern PFNGLELEMENTPOINTERAPPLEPROC __glewElementPointerAPPLE;
+extern PFNGLMULTIDRAWELEMENTARRAYAPPLEPROC __glewMultiDrawElementArrayAPPLE;
+extern PFNGLMULTIDRAWRANGEELEMENTARRAYAPPLEPROC __glewMultiDrawRangeElementArrayAPPLE;
+
+extern PFNGLDELETEFENCESAPPLEPROC __glewDeleteFencesAPPLE;
+extern PFNGLFINISHFENCEAPPLEPROC __glewFinishFenceAPPLE;
+extern PFNGLFINISHOBJECTAPPLEPROC __glewFinishObjectAPPLE;
+extern PFNGLGENFENCESAPPLEPROC __glewGenFencesAPPLE;
+extern PFNGLISFENCEAPPLEPROC __glewIsFenceAPPLE;
+extern PFNGLSETFENCEAPPLEPROC __glewSetFenceAPPLE;
+extern PFNGLTESTFENCEAPPLEPROC __glewTestFenceAPPLE;
+extern PFNGLTESTOBJECTAPPLEPROC __glewTestObjectAPPLE;
+
+extern PFNGLBUFFERPARAMETERIAPPLEPROC __glewBufferParameteriAPPLE;
+extern PFNGLFLUSHMAPPEDBUFFERRANGEAPPLEPROC __glewFlushMappedBufferRangeAPPLE;
+
+extern PFNGLRENDERBUFFERSTORAGEMULTISAMPLEAPPLEPROC __glewRenderbufferStorageMultisampleAPPLE;
+extern PFNGLRESOLVEMULTISAMPLEFRAMEBUFFERAPPLEPROC __glewResolveMultisampleFramebufferAPPLE;
+
+extern PFNGLGETOBJECTPARAMETERIVAPPLEPROC __glewGetObjectParameterivAPPLE;
+extern PFNGLOBJECTPURGEABLEAPPLEPROC __glewObjectPurgeableAPPLE;
+extern PFNGLOBJECTUNPURGEABLEAPPLEPROC __glewObjectUnpurgeableAPPLE;
+
+extern PFNGLCLIENTWAITSYNCAPPLEPROC __glewClientWaitSyncAPPLE;
+extern PFNGLDELETESYNCAPPLEPROC __glewDeleteSyncAPPLE;
+extern PFNGLFENCESYNCAPPLEPROC __glewFenceSyncAPPLE;
+extern PFNGLGETINTEGER64VAPPLEPROC __glewGetInteger64vAPPLE;
+extern PFNGLGETSYNCIVAPPLEPROC __glewGetSyncivAPPLE;
+extern PFNGLISSYNCAPPLEPROC __glewIsSyncAPPLE;
+extern PFNGLWAITSYNCAPPLEPROC __glewWaitSyncAPPLE;
+
+extern PFNGLGETTEXPARAMETERPOINTERVAPPLEPROC __glewGetTexParameterPointervAPPLE;
+extern PFNGLTEXTURERANGEAPPLEPROC __glewTextureRangeAPPLE;
+
+extern PFNGLBINDVERTEXARRAYAPPLEPROC __glewBindVertexArrayAPPLE;
+extern PFNGLDELETEVERTEXARRAYSAPPLEPROC __glewDeleteVertexArraysAPPLE;
+extern PFNGLGENVERTEXARRAYSAPPLEPROC __glewGenVertexArraysAPPLE;
+extern PFNGLISVERTEXARRAYAPPLEPROC __glewIsVertexArrayAPPLE;
+
+extern PFNGLFLUSHVERTEXARRAYRANGEAPPLEPROC __glewFlushVertexArrayRangeAPPLE;
+extern PFNGLVERTEXARRAYPARAMETERIAPPLEPROC __glewVertexArrayParameteriAPPLE;
+extern PFNGLVERTEXARRAYRANGEAPPLEPROC __glewVertexArrayRangeAPPLE;
+
+extern PFNGLDISABLEVERTEXATTRIBAPPLEPROC __glewDisableVertexAttribAPPLE;
+extern PFNGLENABLEVERTEXATTRIBAPPLEPROC __glewEnableVertexAttribAPPLE;
+extern PFNGLISVERTEXATTRIBENABLEDAPPLEPROC __glewIsVertexAttribEnabledAPPLE;
+extern PFNGLMAPVERTEXATTRIB1DAPPLEPROC __glewMapVertexAttrib1dAPPLE;
+extern PFNGLMAPVERTEXATTRIB1FAPPLEPROC __glewMapVertexAttrib1fAPPLE;
+extern PFNGLMAPVERTEXATTRIB2DAPPLEPROC __glewMapVertexAttrib2dAPPLE;
+extern PFNGLMAPVERTEXATTRIB2FAPPLEPROC __glewMapVertexAttrib2fAPPLE;
+
+extern PFNGLCLEARDEPTHFPROC __glewClearDepthf;
+extern PFNGLDEPTHRANGEFPROC __glewDepthRangef;
+extern PFNGLGETSHADERPRECISIONFORMATPROC __glewGetShaderPrecisionFormat;
+extern PFNGLRELEASESHADERCOMPILERPROC __glewReleaseShaderCompiler;
+extern PFNGLSHADERBINARYPROC __glewShaderBinary;
+
+extern PFNGLMEMORYBARRIERBYREGIONPROC __glewMemoryBarrierByRegion;
+
+extern PFNGLPRIMITIVEBOUNDINGBOXARBPROC __glewPrimitiveBoundingBoxARB;
+
+extern PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC __glewDrawArraysInstancedBaseInstance;
+extern PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC __glewDrawElementsInstancedBaseInstance;
+extern PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC __glewDrawElementsInstancedBaseVertexBaseInstance;
+
+extern PFNGLGETIMAGEHANDLEARBPROC __glewGetImageHandleARB;
+extern PFNGLGETTEXTUREHANDLEARBPROC __glewGetTextureHandleARB;
+extern PFNGLGETTEXTURESAMPLERHANDLEARBPROC __glewGetTextureSamplerHandleARB;
+extern PFNGLGETVERTEXATTRIBLUI64VARBPROC __glewGetVertexAttribLui64vARB;
+extern PFNGLISIMAGEHANDLERESIDENTARBPROC __glewIsImageHandleResidentARB;
+extern PFNGLISTEXTUREHANDLERESIDENTARBPROC __glewIsTextureHandleResidentARB;
+extern PFNGLMAKEIMAGEHANDLENONRESIDENTARBPROC __glewMakeImageHandleNonResidentARB;
+extern PFNGLMAKEIMAGEHANDLERESIDENTARBPROC __glewMakeImageHandleResidentARB;
+extern PFNGLMAKETEXTUREHANDLENONRESIDENTARBPROC __glewMakeTextureHandleNonResidentARB;
+extern PFNGLMAKETEXTUREHANDLERESIDENTARBPROC __glewMakeTextureHandleResidentARB;
+extern PFNGLPROGRAMUNIFORMHANDLEUI64ARBPROC __glewProgramUniformHandleui64ARB;
+extern PFNGLPROGRAMUNIFORMHANDLEUI64VARBPROC __glewProgramUniformHandleui64vARB;
+extern PFNGLUNIFORMHANDLEUI64ARBPROC __glewUniformHandleui64ARB;
+extern PFNGLUNIFORMHANDLEUI64VARBPROC __glewUniformHandleui64vARB;
+extern PFNGLVERTEXATTRIBL1UI64ARBPROC __glewVertexAttribL1ui64ARB;
+extern PFNGLVERTEXATTRIBL1UI64VARBPROC __glewVertexAttribL1ui64vARB;
+
+extern PFNGLBINDFRAGDATALOCATIONINDEXEDPROC __glewBindFragDataLocationIndexed;
+extern PFNGLGETFRAGDATAINDEXPROC __glewGetFragDataIndex;
+
+extern PFNGLBUFFERSTORAGEPROC __glewBufferStorage;
+
+extern PFNGLCREATESYNCFROMCLEVENTARBPROC __glewCreateSyncFromCLeventARB;
+
+extern PFNGLCLEARBUFFERDATAPROC __glewClearBufferData;
+extern PFNGLCLEARBUFFERSUBDATAPROC __glewClearBufferSubData;
+extern PFNGLCLEARNAMEDBUFFERDATAEXTPROC __glewClearNamedBufferDataEXT;
+extern PFNGLCLEARNAMEDBUFFERSUBDATAEXTPROC __glewClearNamedBufferSubDataEXT;
+
+extern PFNGLCLEARTEXIMAGEPROC __glewClearTexImage;
+extern PFNGLCLEARTEXSUBIMAGEPROC __glewClearTexSubImage;
+
+extern PFNGLCLIPCONTROLPROC __glewClipControl;
+
+extern PFNGLCLAMPCOLORARBPROC __glewClampColorARB;
+
+extern PFNGLDISPATCHCOMPUTEPROC __glewDispatchCompute;
+extern PFNGLDISPATCHCOMPUTEINDIRECTPROC __glewDispatchComputeIndirect;
+
+extern PFNGLDISPATCHCOMPUTEGROUPSIZEARBPROC __glewDispatchComputeGroupSizeARB;
+
+extern PFNGLCOPYBUFFERSUBDATAPROC __glewCopyBufferSubData;
+
+extern PFNGLCOPYIMAGESUBDATAPROC __glewCopyImageSubData;
+
+extern PFNGLDEBUGMESSAGECALLBACKARBPROC __glewDebugMessageCallbackARB;
+extern PFNGLDEBUGMESSAGECONTROLARBPROC __glewDebugMessageControlARB;
+extern PFNGLDEBUGMESSAGEINSERTARBPROC __glewDebugMessageInsertARB;
+extern PFNGLGETDEBUGMESSAGELOGARBPROC __glewGetDebugMessageLogARB;
+
+extern PFNGLBINDTEXTUREUNITPROC __glewBindTextureUnit;
+extern PFNGLBLITNAMEDFRAMEBUFFERPROC __glewBlitNamedFramebuffer;
+extern PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC __glewCheckNamedFramebufferStatus;
+extern PFNGLCLEARNAMEDBUFFERDATAPROC __glewClearNamedBufferData;
+extern PFNGLCLEARNAMEDBUFFERSUBDATAPROC __glewClearNamedBufferSubData;
+extern PFNGLCLEARNAMEDFRAMEBUFFERFIPROC __glewClearNamedFramebufferfi;
+extern PFNGLCLEARNAMEDFRAMEBUFFERFVPROC __glewClearNamedFramebufferfv;
+extern PFNGLCLEARNAMEDFRAMEBUFFERIVPROC __glewClearNamedFramebufferiv;
+extern PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC __glewClearNamedFramebufferuiv;
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC __glewCompressedTextureSubImage1D;
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC __glewCompressedTextureSubImage2D;
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC __glewCompressedTextureSubImage3D;
+extern PFNGLCOPYNAMEDBUFFERSUBDATAPROC __glewCopyNamedBufferSubData;
+extern PFNGLCOPYTEXTURESUBIMAGE1DPROC __glewCopyTextureSubImage1D;
+extern PFNGLCOPYTEXTURESUBIMAGE2DPROC __glewCopyTextureSubImage2D;
+extern PFNGLCOPYTEXTURESUBIMAGE3DPROC __glewCopyTextureSubImage3D;
+extern PFNGLCREATEBUFFERSPROC __glewCreateBuffers;
+extern PFNGLCREATEFRAMEBUFFERSPROC __glewCreateFramebuffers;
+extern PFNGLCREATEPROGRAMPIPELINESPROC __glewCreateProgramPipelines;
+extern PFNGLCREATEQUERIESPROC __glewCreateQueries;
+extern PFNGLCREATERENDERBUFFERSPROC __glewCreateRenderbuffers;
+extern PFNGLCREATESAMPLERSPROC __glewCreateSamplers;
+extern PFNGLCREATETEXTURESPROC __glewCreateTextures;
+extern PFNGLCREATETRANSFORMFEEDBACKSPROC __glewCreateTransformFeedbacks;
+extern PFNGLCREATEVERTEXARRAYSPROC __glewCreateVertexArrays;
+extern PFNGLDISABLEVERTEXARRAYATTRIBPROC __glewDisableVertexArrayAttrib;
+extern PFNGLENABLEVERTEXARRAYATTRIBPROC __glewEnableVertexArrayAttrib;
+extern PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC __glewFlushMappedNamedBufferRange;
+extern PFNGLGENERATETEXTUREMIPMAPPROC __glewGenerateTextureMipmap;
+extern PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC __glewGetCompressedTextureImage;
+extern PFNGLGETNAMEDBUFFERPARAMETERI64VPROC __glewGetNamedBufferParameteri64v;
+extern PFNGLGETNAMEDBUFFERPARAMETERIVPROC __glewGetNamedBufferParameteriv;
+extern PFNGLGETNAMEDBUFFERPOINTERVPROC __glewGetNamedBufferPointerv;
+extern PFNGLGETNAMEDBUFFERSUBDATAPROC __glewGetNamedBufferSubData;
+extern PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC __glewGetNamedFramebufferAttachmentParameteriv;
+extern PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC __glewGetNamedFramebufferParameteriv;
+extern PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC __glewGetNamedRenderbufferParameteriv;
+extern PFNGLGETQUERYBUFFEROBJECTI64VPROC __glewGetQueryBufferObjecti64v;
+extern PFNGLGETQUERYBUFFEROBJECTIVPROC __glewGetQueryBufferObjectiv;
+extern PFNGLGETQUERYBUFFEROBJECTUI64VPROC __glewGetQueryBufferObjectui64v;
+extern PFNGLGETQUERYBUFFEROBJECTUIVPROC __glewGetQueryBufferObjectuiv;
+extern PFNGLGETTEXTUREIMAGEPROC __glewGetTextureImage;
+extern PFNGLGETTEXTURELEVELPARAMETERFVPROC __glewGetTextureLevelParameterfv;
+extern PFNGLGETTEXTURELEVELPARAMETERIVPROC __glewGetTextureLevelParameteriv;
+extern PFNGLGETTEXTUREPARAMETERIIVPROC __glewGetTextureParameterIiv;
+extern PFNGLGETTEXTUREPARAMETERIUIVPROC __glewGetTextureParameterIuiv;
+extern PFNGLGETTEXTUREPARAMETERFVPROC __glewGetTextureParameterfv;
+extern PFNGLGETTEXTUREPARAMETERIVPROC __glewGetTextureParameteriv;
+extern PFNGLGETTRANSFORMFEEDBACKI64_VPROC __glewGetTransformFeedbacki64_v;
+extern PFNGLGETTRANSFORMFEEDBACKI_VPROC __glewGetTransformFeedbacki_v;
+extern PFNGLGETTRANSFORMFEEDBACKIVPROC __glewGetTransformFeedbackiv;
+extern PFNGLGETVERTEXARRAYINDEXED64IVPROC __glewGetVertexArrayIndexed64iv;
+extern PFNGLGETVERTEXARRAYINDEXEDIVPROC __glewGetVertexArrayIndexediv;
+extern PFNGLGETVERTEXARRAYIVPROC __glewGetVertexArrayiv;
+extern PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC __glewInvalidateNamedFramebufferData;
+extern PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC __glewInvalidateNamedFramebufferSubData;
+extern PFNGLMAPNAMEDBUFFERPROC __glewMapNamedBuffer;
+extern PFNGLMAPNAMEDBUFFERRANGEPROC __glewMapNamedBufferRange;
+extern PFNGLNAMEDBUFFERDATAPROC __glewNamedBufferData;
+extern PFNGLNAMEDBUFFERSTORAGEPROC __glewNamedBufferStorage;
+extern PFNGLNAMEDBUFFERSUBDATAPROC __glewNamedBufferSubData;
+extern PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC __glewNamedFramebufferDrawBuffer;
+extern PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC __glewNamedFramebufferDrawBuffers;
+extern PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC __glewNamedFramebufferParameteri;
+extern PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC __glewNamedFramebufferReadBuffer;
+extern PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC __glewNamedFramebufferRenderbuffer;
+extern PFNGLNAMEDFRAMEBUFFERTEXTUREPROC __glewNamedFramebufferTexture;
+extern PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC __glewNamedFramebufferTextureLayer;
+extern PFNGLNAMEDRENDERBUFFERSTORAGEPROC __glewNamedRenderbufferStorage;
+extern PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC __glewNamedRenderbufferStorageMultisample;
+extern PFNGLTEXTUREBUFFERPROC __glewTextureBuffer;
+extern PFNGLTEXTUREBUFFERRANGEPROC __glewTextureBufferRange;
+extern PFNGLTEXTUREPARAMETERIIVPROC __glewTextureParameterIiv;
+extern PFNGLTEXTUREPARAMETERIUIVPROC __glewTextureParameterIuiv;
+extern PFNGLTEXTUREPARAMETERFPROC __glewTextureParameterf;
+extern PFNGLTEXTUREPARAMETERFVPROC __glewTextureParameterfv;
+extern PFNGLTEXTUREPARAMETERIPROC __glewTextureParameteri;
+extern PFNGLTEXTUREPARAMETERIVPROC __glewTextureParameteriv;
+extern PFNGLTEXTURESTORAGE1DPROC __glewTextureStorage1D;
+extern PFNGLTEXTURESTORAGE2DPROC __glewTextureStorage2D;
+extern PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC __glewTextureStorage2DMultisample;
+extern PFNGLTEXTURESTORAGE3DPROC __glewTextureStorage3D;
+extern PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC __glewTextureStorage3DMultisample;
+extern PFNGLTEXTURESUBIMAGE1DPROC __glewTextureSubImage1D;
+extern PFNGLTEXTURESUBIMAGE2DPROC __glewTextureSubImage2D;
+extern PFNGLTEXTURESUBIMAGE3DPROC __glewTextureSubImage3D;
+extern PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC __glewTransformFeedbackBufferBase;
+extern PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC __glewTransformFeedbackBufferRange;
+extern PFNGLUNMAPNAMEDBUFFERPROC __glewUnmapNamedBuffer;
+extern PFNGLVERTEXARRAYATTRIBBINDINGPROC __glewVertexArrayAttribBinding;
+extern PFNGLVERTEXARRAYATTRIBFORMATPROC __glewVertexArrayAttribFormat;
+extern PFNGLVERTEXARRAYATTRIBIFORMATPROC __glewVertexArrayAttribIFormat;
+extern PFNGLVERTEXARRAYATTRIBLFORMATPROC __glewVertexArrayAttribLFormat;
+extern PFNGLVERTEXARRAYBINDINGDIVISORPROC __glewVertexArrayBindingDivisor;
+extern PFNGLVERTEXARRAYELEMENTBUFFERPROC __glewVertexArrayElementBuffer;
+extern PFNGLVERTEXARRAYVERTEXBUFFERPROC __glewVertexArrayVertexBuffer;
+extern PFNGLVERTEXARRAYVERTEXBUFFERSPROC __glewVertexArrayVertexBuffers;
+
+extern PFNGLDRAWBUFFERSARBPROC __glewDrawBuffersARB;
+
+extern PFNGLBLENDEQUATIONSEPARATEIARBPROC __glewBlendEquationSeparateiARB;
+extern PFNGLBLENDEQUATIONIARBPROC __glewBlendEquationiARB;
+extern PFNGLBLENDFUNCSEPARATEIARBPROC __glewBlendFuncSeparateiARB;
+extern PFNGLBLENDFUNCIARBPROC __glewBlendFunciARB;
+
+extern PFNGLDRAWELEMENTSBASEVERTEXPROC __glewDrawElementsBaseVertex;
+extern PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC __glewDrawElementsInstancedBaseVertex;
+extern PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC __glewDrawRangeElementsBaseVertex;
+extern PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC __glewMultiDrawElementsBaseVertex;
+
+extern PFNGLDRAWARRAYSINDIRECTPROC __glewDrawArraysIndirect;
+extern PFNGLDRAWELEMENTSINDIRECTPROC __glewDrawElementsIndirect;
+
+extern PFNGLFRAMEBUFFERPARAMETERIPROC __glewFramebufferParameteri;
+extern PFNGLGETFRAMEBUFFERPARAMETERIVPROC __glewGetFramebufferParameteriv;
+extern PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVEXTPROC __glewGetNamedFramebufferParameterivEXT;
+extern PFNGLNAMEDFRAMEBUFFERPARAMETERIEXTPROC __glewNamedFramebufferParameteriEXT;
+
+extern PFNGLBINDFRAMEBUFFERPROC __glewBindFramebuffer;
+extern PFNGLBINDRENDERBUFFERPROC __glewBindRenderbuffer;
+extern PFNGLBLITFRAMEBUFFERPROC __glewBlitFramebuffer;
+extern PFNGLCHECKFRAMEBUFFERSTATUSPROC __glewCheckFramebufferStatus;
+extern PFNGLDELETEFRAMEBUFFERSPROC __glewDeleteFramebuffers;
+extern PFNGLDELETERENDERBUFFERSPROC __glewDeleteRenderbuffers;
+extern PFNGLFRAMEBUFFERRENDERBUFFERPROC __glewFramebufferRenderbuffer;
+extern PFNGLFRAMEBUFFERTEXTURE1DPROC __glewFramebufferTexture1D;
+extern PFNGLFRAMEBUFFERTEXTURE2DPROC __glewFramebufferTexture2D;
+extern PFNGLFRAMEBUFFERTEXTURE3DPROC __glewFramebufferTexture3D;
+extern PFNGLFRAMEBUFFERTEXTURELAYERPROC __glewFramebufferTextureLayer;
+extern PFNGLGENFRAMEBUFFERSPROC __glewGenFramebuffers;
+extern PFNGLGENRENDERBUFFERSPROC __glewGenRenderbuffers;
+extern PFNGLGENERATEMIPMAPPROC __glewGenerateMipmap;
+extern PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVPROC __glewGetFramebufferAttachmentParameteriv;
+extern PFNGLGETRENDERBUFFERPARAMETERIVPROC __glewGetRenderbufferParameteriv;
+extern PFNGLISFRAMEBUFFERPROC __glewIsFramebuffer;
+extern PFNGLISRENDERBUFFERPROC __glewIsRenderbuffer;
+extern PFNGLRENDERBUFFERSTORAGEPROC __glewRenderbufferStorage;
+extern PFNGLRENDERBUFFERSTORAGEMULTISAMPLEPROC __glewRenderbufferStorageMultisample;
+
+extern PFNGLFRAMEBUFFERTEXTUREARBPROC __glewFramebufferTextureARB;
+extern PFNGLFRAMEBUFFERTEXTUREFACEARBPROC __glewFramebufferTextureFaceARB;
+extern PFNGLFRAMEBUFFERTEXTURELAYERARBPROC __glewFramebufferTextureLayerARB;
+extern PFNGLPROGRAMPARAMETERIARBPROC __glewProgramParameteriARB;
+
+extern PFNGLGETPROGRAMBINARYPROC __glewGetProgramBinary;
+extern PFNGLPROGRAMBINARYPROC __glewProgramBinary;
+extern PFNGLPROGRAMPARAMETERIPROC __glewProgramParameteri;
+
+extern PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC __glewGetCompressedTextureSubImage;
+extern PFNGLGETTEXTURESUBIMAGEPROC __glewGetTextureSubImage;
+
+extern PFNGLSPECIALIZESHADERARBPROC __glewSpecializeShaderARB;
+
+extern PFNGLGETUNIFORMDVPROC __glewGetUniformdv;
+extern PFNGLUNIFORM1DPROC __glewUniform1d;
+extern PFNGLUNIFORM1DVPROC __glewUniform1dv;
+extern PFNGLUNIFORM2DPROC __glewUniform2d;
+extern PFNGLUNIFORM2DVPROC __glewUniform2dv;
+extern PFNGLUNIFORM3DPROC __glewUniform3d;
+extern PFNGLUNIFORM3DVPROC __glewUniform3dv;
+extern PFNGLUNIFORM4DPROC __glewUniform4d;
+extern PFNGLUNIFORM4DVPROC __glewUniform4dv;
+extern PFNGLUNIFORMMATRIX2DVPROC __glewUniformMatrix2dv;
+extern PFNGLUNIFORMMATRIX2X3DVPROC __glewUniformMatrix2x3dv;
+extern PFNGLUNIFORMMATRIX2X4DVPROC __glewUniformMatrix2x4dv;
+extern PFNGLUNIFORMMATRIX3DVPROC __glewUniformMatrix3dv;
+extern PFNGLUNIFORMMATRIX3X2DVPROC __glewUniformMatrix3x2dv;
+extern PFNGLUNIFORMMATRIX3X4DVPROC __glewUniformMatrix3x4dv;
+extern PFNGLUNIFORMMATRIX4DVPROC __glewUniformMatrix4dv;
+extern PFNGLUNIFORMMATRIX4X2DVPROC __glewUniformMatrix4x2dv;
+extern PFNGLUNIFORMMATRIX4X3DVPROC __glewUniformMatrix4x3dv;
+
+extern PFNGLGETUNIFORMI64VARBPROC __glewGetUniformi64vARB;
+extern PFNGLGETUNIFORMUI64VARBPROC __glewGetUniformui64vARB;
+extern PFNGLGETNUNIFORMI64VARBPROC __glewGetnUniformi64vARB;
+extern PFNGLGETNUNIFORMUI64VARBPROC __glewGetnUniformui64vARB;
+extern PFNGLPROGRAMUNIFORM1I64ARBPROC __glewProgramUniform1i64ARB;
+extern PFNGLPROGRAMUNIFORM1I64VARBPROC __glewProgramUniform1i64vARB;
+extern PFNGLPROGRAMUNIFORM1UI64ARBPROC __glewProgramUniform1ui64ARB;
+extern PFNGLPROGRAMUNIFORM1UI64VARBPROC __glewProgramUniform1ui64vARB;
+extern PFNGLPROGRAMUNIFORM2I64ARBPROC __glewProgramUniform2i64ARB;
+extern PFNGLPROGRAMUNIFORM2I64VARBPROC __glewProgramUniform2i64vARB;
+extern PFNGLPROGRAMUNIFORM2UI64ARBPROC __glewProgramUniform2ui64ARB;
+extern PFNGLPROGRAMUNIFORM2UI64VARBPROC __glewProgramUniform2ui64vARB;
+extern PFNGLPROGRAMUNIFORM3I64ARBPROC __glewProgramUniform3i64ARB;
+extern PFNGLPROGRAMUNIFORM3I64VARBPROC __glewProgramUniform3i64vARB;
+extern PFNGLPROGRAMUNIFORM3UI64ARBPROC __glewProgramUniform3ui64ARB;
+extern PFNGLPROGRAMUNIFORM3UI64VARBPROC __glewProgramUniform3ui64vARB;
+extern PFNGLPROGRAMUNIFORM4I64ARBPROC __glewProgramUniform4i64ARB;
+extern PFNGLPROGRAMUNIFORM4I64VARBPROC __glewProgramUniform4i64vARB;
+extern PFNGLPROGRAMUNIFORM4UI64ARBPROC __glewProgramUniform4ui64ARB;
+extern PFNGLPROGRAMUNIFORM4UI64VARBPROC __glewProgramUniform4ui64vARB;
+extern PFNGLUNIFORM1I64ARBPROC __glewUniform1i64ARB;
+extern PFNGLUNIFORM1I64VARBPROC __glewUniform1i64vARB;
+extern PFNGLUNIFORM1UI64ARBPROC __glewUniform1ui64ARB;
+extern PFNGLUNIFORM1UI64VARBPROC __glewUniform1ui64vARB;
+extern PFNGLUNIFORM2I64ARBPROC __glewUniform2i64ARB;
+extern PFNGLUNIFORM2I64VARBPROC __glewUniform2i64vARB;
+extern PFNGLUNIFORM2UI64ARBPROC __glewUniform2ui64ARB;
+extern PFNGLUNIFORM2UI64VARBPROC __glewUniform2ui64vARB;
+extern PFNGLUNIFORM3I64ARBPROC __glewUniform3i64ARB;
+extern PFNGLUNIFORM3I64VARBPROC __glewUniform3i64vARB;
+extern PFNGLUNIFORM3UI64ARBPROC __glewUniform3ui64ARB;
+extern PFNGLUNIFORM3UI64VARBPROC __glewUniform3ui64vARB;
+extern PFNGLUNIFORM4I64ARBPROC __glewUniform4i64ARB;
+extern PFNGLUNIFORM4I64VARBPROC __glewUniform4i64vARB;
+extern PFNGLUNIFORM4UI64ARBPROC __glewUniform4ui64ARB;
+extern PFNGLUNIFORM4UI64VARBPROC __glewUniform4ui64vARB;
+
+extern PFNGLCOLORSUBTABLEPROC __glewColorSubTable;
+extern PFNGLCOLORTABLEPROC __glewColorTable;
+extern PFNGLCOLORTABLEPARAMETERFVPROC __glewColorTableParameterfv;
+extern PFNGLCOLORTABLEPARAMETERIVPROC __glewColorTableParameteriv;
+extern PFNGLCONVOLUTIONFILTER1DPROC __glewConvolutionFilter1D;
+extern PFNGLCONVOLUTIONFILTER2DPROC __glewConvolutionFilter2D;
+extern PFNGLCONVOLUTIONPARAMETERFPROC __glewConvolutionParameterf;
+extern PFNGLCONVOLUTIONPARAMETERFVPROC __glewConvolutionParameterfv;
+extern PFNGLCONVOLUTIONPARAMETERIPROC __glewConvolutionParameteri;
+extern PFNGLCONVOLUTIONPARAMETERIVPROC __glewConvolutionParameteriv;
+extern PFNGLCOPYCOLORSUBTABLEPROC __glewCopyColorSubTable;
+extern PFNGLCOPYCOLORTABLEPROC __glewCopyColorTable;
+extern PFNGLCOPYCONVOLUTIONFILTER1DPROC __glewCopyConvolutionFilter1D;
+extern PFNGLCOPYCONVOLUTIONFILTER2DPROC __glewCopyConvolutionFilter2D;
+extern PFNGLGETCOLORTABLEPROC __glewGetColorTable;
+extern PFNGLGETCOLORTABLEPARAMETERFVPROC __glewGetColorTableParameterfv;
+extern PFNGLGETCOLORTABLEPARAMETERIVPROC __glewGetColorTableParameteriv;
+extern PFNGLGETCONVOLUTIONFILTERPROC __glewGetConvolutionFilter;
+extern PFNGLGETCONVOLUTIONPARAMETERFVPROC __glewGetConvolutionParameterfv;
+extern PFNGLGETCONVOLUTIONPARAMETERIVPROC __glewGetConvolutionParameteriv;
+extern PFNGLGETHISTOGRAMPROC __glewGetHistogram;
+extern PFNGLGETHISTOGRAMPARAMETERFVPROC __glewGetHistogramParameterfv;
+extern PFNGLGETHISTOGRAMPARAMETERIVPROC __glewGetHistogramParameteriv;
+extern PFNGLGETMINMAXPROC __glewGetMinmax;
+extern PFNGLGETMINMAXPARAMETERFVPROC __glewGetMinmaxParameterfv;
+extern PFNGLGETMINMAXPARAMETERIVPROC __glewGetMinmaxParameteriv;
+extern PFNGLGETSEPARABLEFILTERPROC __glewGetSeparableFilter;
+extern PFNGLHISTOGRAMPROC __glewHistogram;
+extern PFNGLMINMAXPROC __glewMinmax;
+extern PFNGLRESETHISTOGRAMPROC __glewResetHistogram;
+extern PFNGLRESETMINMAXPROC __glewResetMinmax;
+extern PFNGLSEPARABLEFILTER2DPROC __glewSeparableFilter2D;
+
+extern PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC __glewMultiDrawArraysIndirectCountARB;
+extern PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC __glewMultiDrawElementsIndirectCountARB;
+
+extern PFNGLDRAWARRAYSINSTANCEDARBPROC __glewDrawArraysInstancedARB;
+extern PFNGLDRAWELEMENTSINSTANCEDARBPROC __glewDrawElementsInstancedARB;
+extern PFNGLVERTEXATTRIBDIVISORARBPROC __glewVertexAttribDivisorARB;
+
+extern PFNGLGETINTERNALFORMATIVPROC __glewGetInternalformativ;
+
+extern PFNGLGETINTERNALFORMATI64VPROC __glewGetInternalformati64v;
+
+extern PFNGLINVALIDATEBUFFERDATAPROC __glewInvalidateBufferData;
+extern PFNGLINVALIDATEBUFFERSUBDATAPROC __glewInvalidateBufferSubData;
+extern PFNGLINVALIDATEFRAMEBUFFERPROC __glewInvalidateFramebuffer;
+extern PFNGLINVALIDATESUBFRAMEBUFFERPROC __glewInvalidateSubFramebuffer;
+extern PFNGLINVALIDATETEXIMAGEPROC __glewInvalidateTexImage;
+extern PFNGLINVALIDATETEXSUBIMAGEPROC __glewInvalidateTexSubImage;
+
+extern PFNGLFLUSHMAPPEDBUFFERRANGEPROC __glewFlushMappedBufferRange;
+extern PFNGLMAPBUFFERRANGEPROC __glewMapBufferRange;
+
+extern PFNGLCURRENTPALETTEMATRIXARBPROC __glewCurrentPaletteMatrixARB;
+extern PFNGLMATRIXINDEXPOINTERARBPROC __glewMatrixIndexPointerARB;
+extern PFNGLMATRIXINDEXUBVARBPROC __glewMatrixIndexubvARB;
+extern PFNGLMATRIXINDEXUIVARBPROC __glewMatrixIndexuivARB;
+extern PFNGLMATRIXINDEXUSVARBPROC __glewMatrixIndexusvARB;
+
+extern PFNGLBINDBUFFERSBASEPROC __glewBindBuffersBase;
+extern PFNGLBINDBUFFERSRANGEPROC __glewBindBuffersRange;
+extern PFNGLBINDIMAGETEXTURESPROC __glewBindImageTextures;
+extern PFNGLBINDSAMPLERSPROC __glewBindSamplers;
+extern PFNGLBINDTEXTURESPROC __glewBindTextures;
+extern PFNGLBINDVERTEXBUFFERSPROC __glewBindVertexBuffers;
+
+extern PFNGLMULTIDRAWARRAYSINDIRECTPROC __glewMultiDrawArraysIndirect;
+extern PFNGLMULTIDRAWELEMENTSINDIRECTPROC __glewMultiDrawElementsIndirect;
+
+extern PFNGLSAMPLECOVERAGEARBPROC __glewSampleCoverageARB;
+
+extern PFNGLACTIVETEXTUREARBPROC __glewActiveTextureARB;
+extern PFNGLCLIENTACTIVETEXTUREARBPROC __glewClientActiveTextureARB;
+extern PFNGLMULTITEXCOORD1DARBPROC __glewMultiTexCoord1dARB;
+extern PFNGLMULTITEXCOORD1DVARBPROC __glewMultiTexCoord1dvARB;
+extern PFNGLMULTITEXCOORD1FARBPROC __glewMultiTexCoord1fARB;
+extern PFNGLMULTITEXCOORD1FVARBPROC __glewMultiTexCoord1fvARB;
+extern PFNGLMULTITEXCOORD1IARBPROC __glewMultiTexCoord1iARB;
+extern PFNGLMULTITEXCOORD1IVARBPROC __glewMultiTexCoord1ivARB;
+extern PFNGLMULTITEXCOORD1SARBPROC __glewMultiTexCoord1sARB;
+extern PFNGLMULTITEXCOORD1SVARBPROC __glewMultiTexCoord1svARB;
+extern PFNGLMULTITEXCOORD2DARBPROC __glewMultiTexCoord2dARB;
+extern PFNGLMULTITEXCOORD2DVARBPROC __glewMultiTexCoord2dvARB;
+extern PFNGLMULTITEXCOORD2FARBPROC __glewMultiTexCoord2fARB;
+extern PFNGLMULTITEXCOORD2FVARBPROC __glewMultiTexCoord2fvARB;
+extern PFNGLMULTITEXCOORD2IARBPROC __glewMultiTexCoord2iARB;
+extern PFNGLMULTITEXCOORD2IVARBPROC __glewMultiTexCoord2ivARB;
+extern PFNGLMULTITEXCOORD2SARBPROC __glewMultiTexCoord2sARB;
+extern PFNGLMULTITEXCOORD2SVARBPROC __glewMultiTexCoord2svARB;
+extern PFNGLMULTITEXCOORD3DARBPROC __glewMultiTexCoord3dARB;
+extern PFNGLMULTITEXCOORD3DVARBPROC __glewMultiTexCoord3dvARB;
+extern PFNGLMULTITEXCOORD3FARBPROC __glewMultiTexCoord3fARB;
+extern PFNGLMULTITEXCOORD3FVARBPROC __glewMultiTexCoord3fvARB;
+extern PFNGLMULTITEXCOORD3IARBPROC __glewMultiTexCoord3iARB;
+extern PFNGLMULTITEXCOORD3IVARBPROC __glewMultiTexCoord3ivARB;
+extern PFNGLMULTITEXCOORD3SARBPROC __glewMultiTexCoord3sARB;
+extern PFNGLMULTITEXCOORD3SVARBPROC __glewMultiTexCoord3svARB;
+extern PFNGLMULTITEXCOORD4DARBPROC __glewMultiTexCoord4dARB;
+extern PFNGLMULTITEXCOORD4DVARBPROC __glewMultiTexCoord4dvARB;
+extern PFNGLMULTITEXCOORD4FARBPROC __glewMultiTexCoord4fARB;
+extern PFNGLMULTITEXCOORD4FVARBPROC __glewMultiTexCoord4fvARB;
+extern PFNGLMULTITEXCOORD4IARBPROC __glewMultiTexCoord4iARB;
+extern PFNGLMULTITEXCOORD4IVARBPROC __glewMultiTexCoord4ivARB;
+extern PFNGLMULTITEXCOORD4SARBPROC __glewMultiTexCoord4sARB;
+extern PFNGLMULTITEXCOORD4SVARBPROC __glewMultiTexCoord4svARB;
+
+extern PFNGLBEGINQUERYARBPROC __glewBeginQueryARB;
+extern PFNGLDELETEQUERIESARBPROC __glewDeleteQueriesARB;
+extern PFNGLENDQUERYARBPROC __glewEndQueryARB;
+extern PFNGLGENQUERIESARBPROC __glewGenQueriesARB;
+extern PFNGLGETQUERYOBJECTIVARBPROC __glewGetQueryObjectivARB;
+extern PFNGLGETQUERYOBJECTUIVARBPROC __glewGetQueryObjectuivARB;
+extern PFNGLGETQUERYIVARBPROC __glewGetQueryivARB;
+extern PFNGLISQUERYARBPROC __glewIsQueryARB;
+
+extern PFNGLMAXSHADERCOMPILERTHREADSARBPROC __glewMaxShaderCompilerThreadsARB;
+
+extern PFNGLPOINTPARAMETERFARBPROC __glewPointParameterfARB;
+extern PFNGLPOINTPARAMETERFVARBPROC __glewPointParameterfvARB;
+
+extern PFNGLPOLYGONOFFSETCLAMPPROC __glewPolygonOffsetClamp;
+
+extern PFNGLGETPROGRAMINTERFACEIVPROC __glewGetProgramInterfaceiv;
+extern PFNGLGETPROGRAMRESOURCEINDEXPROC __glewGetProgramResourceIndex;
+extern PFNGLGETPROGRAMRESOURCELOCATIONPROC __glewGetProgramResourceLocation;
+extern PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC __glewGetProgramResourceLocationIndex;
+extern PFNGLGETPROGRAMRESOURCENAMEPROC __glewGetProgramResourceName;
+extern PFNGLGETPROGRAMRESOURCEIVPROC __glewGetProgramResourceiv;
+
+extern PFNGLPROVOKINGVERTEXPROC __glewProvokingVertex;
+
+extern PFNGLGETGRAPHICSRESETSTATUSARBPROC __glewGetGraphicsResetStatusARB;
+extern PFNGLGETNCOLORTABLEARBPROC __glewGetnColorTableARB;
+extern PFNGLGETNCOMPRESSEDTEXIMAGEARBPROC __glewGetnCompressedTexImageARB;
+extern PFNGLGETNCONVOLUTIONFILTERARBPROC __glewGetnConvolutionFilterARB;
+extern PFNGLGETNHISTOGRAMARBPROC __glewGetnHistogramARB;
+extern PFNGLGETNMAPDVARBPROC __glewGetnMapdvARB;
+extern PFNGLGETNMAPFVARBPROC __glewGetnMapfvARB;
+extern PFNGLGETNMAPIVARBPROC __glewGetnMapivARB;
+extern PFNGLGETNMINMAXARBPROC __glewGetnMinmaxARB;
+extern PFNGLGETNPIXELMAPFVARBPROC __glewGetnPixelMapfvARB;
+extern PFNGLGETNPIXELMAPUIVARBPROC __glewGetnPixelMapuivARB;
+extern PFNGLGETNPIXELMAPUSVARBPROC __glewGetnPixelMapusvARB;
+extern PFNGLGETNPOLYGONSTIPPLEARBPROC __glewGetnPolygonStippleARB;
+extern PFNGLGETNSEPARABLEFILTERARBPROC __glewGetnSeparableFilterARB;
+extern PFNGLGETNTEXIMAGEARBPROC __glewGetnTexImageARB;
+extern PFNGLGETNUNIFORMDVARBPROC __glewGetnUniformdvARB;
+extern PFNGLGETNUNIFORMFVARBPROC __glewGetnUniformfvARB;
+extern PFNGLGETNUNIFORMIVARBPROC __glewGetnUniformivARB;
+extern PFNGLGETNUNIFORMUIVARBPROC __glewGetnUniformuivARB;
+extern PFNGLREADNPIXELSARBPROC __glewReadnPixelsARB;
+
+extern PFNGLEVALUATEDEPTHVALUESARBPROC __glewEvaluateDepthValuesARB;
+extern PFNGLFRAMEBUFFERSAMPLELOCATIONSFVARBPROC __glewFramebufferSampleLocationsfvARB;
+extern PFNGLNAMEDFRAMEBUFFERSAMPLELOCATIONSFVARBPROC __glewNamedFramebufferSampleLocationsfvARB;
+
+extern PFNGLMINSAMPLESHADINGARBPROC __glewMinSampleShadingARB;
+
+extern PFNGLBINDSAMPLERPROC __glewBindSampler;
+extern PFNGLDELETESAMPLERSPROC __glewDeleteSamplers;
+extern PFNGLGENSAMPLERSPROC __glewGenSamplers;
+extern PFNGLGETSAMPLERPARAMETERIIVPROC __glewGetSamplerParameterIiv;
+extern PFNGLGETSAMPLERPARAMETERIUIVPROC __glewGetSamplerParameterIuiv;
+extern PFNGLGETSAMPLERPARAMETERFVPROC __glewGetSamplerParameterfv;
+extern PFNGLGETSAMPLERPARAMETERIVPROC __glewGetSamplerParameteriv;
+extern PFNGLISSAMPLERPROC __glewIsSampler;
+extern PFNGLSAMPLERPARAMETERIIVPROC __glewSamplerParameterIiv;
+extern PFNGLSAMPLERPARAMETERIUIVPROC __glewSamplerParameterIuiv;
+extern PFNGLSAMPLERPARAMETERFPROC __glewSamplerParameterf;
+extern PFNGLSAMPLERPARAMETERFVPROC __glewSamplerParameterfv;
+extern PFNGLSAMPLERPARAMETERIPROC __glewSamplerParameteri;
+extern PFNGLSAMPLERPARAMETERIVPROC __glewSamplerParameteriv;
+
+extern PFNGLACTIVESHADERPROGRAMPROC __glewActiveShaderProgram;
+extern PFNGLBINDPROGRAMPIPELINEPROC __glewBindProgramPipeline;
+extern PFNGLCREATESHADERPROGRAMVPROC __glewCreateShaderProgramv;
+extern PFNGLDELETEPROGRAMPIPELINESPROC __glewDeleteProgramPipelines;
+extern PFNGLGENPROGRAMPIPELINESPROC __glewGenProgramPipelines;
+extern PFNGLGETPROGRAMPIPELINEINFOLOGPROC __glewGetProgramPipelineInfoLog;
+extern PFNGLGETPROGRAMPIPELINEIVPROC __glewGetProgramPipelineiv;
+extern PFNGLISPROGRAMPIPELINEPROC __glewIsProgramPipeline;
+extern PFNGLPROGRAMUNIFORM1DPROC __glewProgramUniform1d;
+extern PFNGLPROGRAMUNIFORM1DVPROC __glewProgramUniform1dv;
+extern PFNGLPROGRAMUNIFORM1FPROC __glewProgramUniform1f;
+extern PFNGLPROGRAMUNIFORM1FVPROC __glewProgramUniform1fv;
+extern PFNGLPROGRAMUNIFORM1IPROC __glewProgramUniform1i;
+extern PFNGLPROGRAMUNIFORM1IVPROC __glewProgramUniform1iv;
+extern PFNGLPROGRAMUNIFORM1UIPROC __glewProgramUniform1ui;
+extern PFNGLPROGRAMUNIFORM1UIVPROC __glewProgramUniform1uiv;
+extern PFNGLPROGRAMUNIFORM2DPROC __glewProgramUniform2d;
+extern PFNGLPROGRAMUNIFORM2DVPROC __glewProgramUniform2dv;
+extern PFNGLPROGRAMUNIFORM2FPROC __glewProgramUniform2f;
+extern PFNGLPROGRAMUNIFORM2FVPROC __glewProgramUniform2fv;
+extern PFNGLPROGRAMUNIFORM2IPROC __glewProgramUniform2i;
+extern PFNGLPROGRAMUNIFORM2IVPROC __glewProgramUniform2iv;
+extern PFNGLPROGRAMUNIFORM2UIPROC __glewProgramUniform2ui;
+extern PFNGLPROGRAMUNIFORM2UIVPROC __glewProgramUniform2uiv;
+extern PFNGLPROGRAMUNIFORM3DPROC __glewProgramUniform3d;
+extern PFNGLPROGRAMUNIFORM3DVPROC __glewProgramUniform3dv;
+extern PFNGLPROGRAMUNIFORM3FPROC __glewProgramUniform3f;
+extern PFNGLPROGRAMUNIFORM3FVPROC __glewProgramUniform3fv;
+extern PFNGLPROGRAMUNIFORM3IPROC __glewProgramUniform3i;
+extern PFNGLPROGRAMUNIFORM3IVPROC __glewProgramUniform3iv;
+extern PFNGLPROGRAMUNIFORM3UIPROC __glewProgramUniform3ui;
+extern PFNGLPROGRAMUNIFORM3UIVPROC __glewProgramUniform3uiv;
+extern PFNGLPROGRAMUNIFORM4DPROC __glewProgramUniform4d;
+extern PFNGLPROGRAMUNIFORM4DVPROC __glewProgramUniform4dv;
+extern PFNGLPROGRAMUNIFORM4FPROC __glewProgramUniform4f;
+extern PFNGLPROGRAMUNIFORM4FVPROC __glewProgramUniform4fv;
+extern PFNGLPROGRAMUNIFORM4IPROC __glewProgramUniform4i;
+extern PFNGLPROGRAMUNIFORM4IVPROC __glewProgramUniform4iv;
+extern PFNGLPROGRAMUNIFORM4UIPROC __glewProgramUniform4ui;
+extern PFNGLPROGRAMUNIFORM4UIVPROC __glewProgramUniform4uiv;
+extern PFNGLPROGRAMUNIFORMMATRIX2DVPROC __glewProgramUniformMatrix2dv;
+extern PFNGLPROGRAMUNIFORMMATRIX2FVPROC __glewProgramUniformMatrix2fv;
+extern PFNGLPROGRAMUNIFORMMATRIX2X3DVPROC __glewProgramUniformMatrix2x3dv;
+extern PFNGLPROGRAMUNIFORMMATRIX2X3FVPROC __glewProgramUniformMatrix2x3fv;
+extern PFNGLPROGRAMUNIFORMMATRIX2X4DVPROC __glewProgramUniformMatrix2x4dv;
+extern PFNGLPROGRAMUNIFORMMATRIX2X4FVPROC __glewProgramUniformMatrix2x4fv;
+extern PFNGLPROGRAMUNIFORMMATRIX3DVPROC __glewProgramUniformMatrix3dv;
+extern PFNGLPROGRAMUNIFORMMATRIX3FVPROC __glewProgramUniformMatrix3fv;
+extern PFNGLPROGRAMUNIFORMMATRIX3X2DVPROC __glewProgramUniformMatrix3x2dv;
+extern PFNGLPROGRAMUNIFORMMATRIX3X2FVPROC __glewProgramUniformMatrix3x2fv;
+extern PFNGLPROGRAMUNIFORMMATRIX3X4DVPROC __glewProgramUniformMatrix3x4dv;
+extern PFNGLPROGRAMUNIFORMMATRIX3X4FVPROC __glewProgramUniformMatrix3x4fv;
+extern PFNGLPROGRAMUNIFORMMATRIX4DVPROC __glewProgramUniformMatrix4dv;
+extern PFNGLPROGRAMUNIFORMMATRIX4FVPROC __glewProgramUniformMatrix4fv;
+extern PFNGLPROGRAMUNIFORMMATRIX4X2DVPROC __glewProgramUniformMatrix4x2dv;
+extern PFNGLPROGRAMUNIFORMMATRIX4X2FVPROC __glewProgramUniformMatrix4x2fv;
+extern PFNGLPROGRAMUNIFORMMATRIX4X3DVPROC __glewProgramUniformMatrix4x3dv;
+extern PFNGLPROGRAMUNIFORMMATRIX4X3FVPROC __glewProgramUniformMatrix4x3fv;
+extern PFNGLUSEPROGRAMSTAGESPROC __glewUseProgramStages;
+extern PFNGLVALIDATEPROGRAMPIPELINEPROC __glewValidateProgramPipeline;
+
+extern PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC __glewGetActiveAtomicCounterBufferiv;
+
+extern PFNGLBINDIMAGETEXTUREPROC __glewBindImageTexture;
+extern PFNGLMEMORYBARRIERPROC __glewMemoryBarrier;
+
+extern PFNGLATTACHOBJECTARBPROC __glewAttachObjectARB;
+extern PFNGLCOMPILESHADERARBPROC __glewCompileShaderARB;
+extern PFNGLCREATEPROGRAMOBJECTARBPROC __glewCreateProgramObjectARB;
+extern PFNGLCREATESHADEROBJECTARBPROC __glewCreateShaderObjectARB;
+extern PFNGLDELETEOBJECTARBPROC __glewDeleteObjectARB;
+extern PFNGLDETACHOBJECTARBPROC __glewDetachObjectARB;
+extern PFNGLGETACTIVEUNIFORMARBPROC __glewGetActiveUniformARB;
+extern PFNGLGETATTACHEDOBJECTSARBPROC __glewGetAttachedObjectsARB;
+extern PFNGLGETHANDLEARBPROC __glewGetHandleARB;
+extern PFNGLGETINFOLOGARBPROC __glewGetInfoLogARB;
+extern PFNGLGETOBJECTPARAMETERFVARBPROC __glewGetObjectParameterfvARB;
+extern PFNGLGETOBJECTPARAMETERIVARBPROC __glewGetObjectParameterivARB;
+extern PFNGLGETSHADERSOURCEARBPROC __glewGetShaderSourceARB;
+extern PFNGLGETUNIFORMLOCATIONARBPROC __glewGetUniformLocationARB;
+extern PFNGLGETUNIFORMFVARBPROC __glewGetUniformfvARB;
+extern PFNGLGETUNIFORMIVARBPROC __glewGetUniformivARB;
+extern PFNGLLINKPROGRAMARBPROC __glewLinkProgramARB;
+extern PFNGLSHADERSOURCEARBPROC __glewShaderSourceARB;
+extern PFNGLUNIFORM1FARBPROC __glewUniform1fARB;
+extern PFNGLUNIFORM1FVARBPROC __glewUniform1fvARB;
+extern PFNGLUNIFORM1IARBPROC __glewUniform1iARB;
+extern PFNGLUNIFORM1IVARBPROC __glewUniform1ivARB;
+extern PFNGLUNIFORM2FARBPROC __glewUniform2fARB;
+extern PFNGLUNIFORM2FVARBPROC __glewUniform2fvARB;
+extern PFNGLUNIFORM2IARBPROC __glewUniform2iARB;
+extern PFNGLUNIFORM2IVARBPROC __glewUniform2ivARB;
+extern PFNGLUNIFORM3FARBPROC __glewUniform3fARB;
+extern PFNGLUNIFORM3FVARBPROC __glewUniform3fvARB;
+extern PFNGLUNIFORM3IARBPROC __glewUniform3iARB;
+extern PFNGLUNIFORM3IVARBPROC __glewUniform3ivARB;
+extern PFNGLUNIFORM4FARBPROC __glewUniform4fARB;
+extern PFNGLUNIFORM4FVARBPROC __glewUniform4fvARB;
+extern PFNGLUNIFORM4IARBPROC __glewUniform4iARB;
+extern PFNGLUNIFORM4IVARBPROC __glewUniform4ivARB;
+extern PFNGLUNIFORMMATRIX2FVARBPROC __glewUniformMatrix2fvARB;
+extern PFNGLUNIFORMMATRIX3FVARBPROC __glewUniformMatrix3fvARB;
+extern PFNGLUNIFORMMATRIX4FVARBPROC __glewUniformMatrix4fvARB;
+extern PFNGLUSEPROGRAMOBJECTARBPROC __glewUseProgramObjectARB;
+extern PFNGLVALIDATEPROGRAMARBPROC __glewValidateProgramARB;
+
+extern PFNGLSHADERSTORAGEBLOCKBINDINGPROC __glewShaderStorageBlockBinding;
+
+extern PFNGLGETACTIVESUBROUTINENAMEPROC __glewGetActiveSubroutineName;
+extern PFNGLGETACTIVESUBROUTINEUNIFORMNAMEPROC __glewGetActiveSubroutineUniformName;
+extern PFNGLGETACTIVESUBROUTINEUNIFORMIVPROC __glewGetActiveSubroutineUniformiv;
+extern PFNGLGETPROGRAMSTAGEIVPROC __glewGetProgramStageiv;
+extern PFNGLGETSUBROUTINEINDEXPROC __glewGetSubroutineIndex;
+extern PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC __glewGetSubroutineUniformLocation;
+extern PFNGLGETUNIFORMSUBROUTINEUIVPROC __glewGetUniformSubroutineuiv;
+extern PFNGLUNIFORMSUBROUTINESUIVPROC __glewUniformSubroutinesuiv;
+
+extern PFNGLCOMPILESHADERINCLUDEARBPROC __glewCompileShaderIncludeARB;
+extern PFNGLDELETENAMEDSTRINGARBPROC __glewDeleteNamedStringARB;
+extern PFNGLGETNAMEDSTRINGARBPROC __glewGetNamedStringARB;
+extern PFNGLGETNAMEDSTRINGIVARBPROC __glewGetNamedStringivARB;
+extern PFNGLISNAMEDSTRINGARBPROC __glewIsNamedStringARB;
+extern PFNGLNAMEDSTRINGARBPROC __glewNamedStringARB;
+
+extern PFNGLBUFFERPAGECOMMITMENTARBPROC __glewBufferPageCommitmentARB;
+
+extern PFNGLTEXPAGECOMMITMENTARBPROC __glewTexPageCommitmentARB;
+
+extern PFNGLCLIENTWAITSYNCPROC __glewClientWaitSync;
+extern PFNGLDELETESYNCPROC __glewDeleteSync;
+extern PFNGLFENCESYNCPROC __glewFenceSync;
+extern PFNGLGETINTEGER64VPROC __glewGetInteger64v;
+extern PFNGLGETSYNCIVPROC __glewGetSynciv;
+extern PFNGLISSYNCPROC __glewIsSync;
+extern PFNGLWAITSYNCPROC __glewWaitSync;
+
+extern PFNGLPATCHPARAMETERFVPROC __glewPatchParameterfv;
+extern PFNGLPATCHPARAMETERIPROC __glewPatchParameteri;
+
+extern PFNGLTEXTUREBARRIERPROC __glewTextureBarrier;
+
+extern PFNGLTEXBUFFERARBPROC __glewTexBufferARB;
+
+extern PFNGLTEXBUFFERRANGEPROC __glewTexBufferRange;
+extern PFNGLTEXTUREBUFFERRANGEEXTPROC __glewTextureBufferRangeEXT;
+
+extern PFNGLCOMPRESSEDTEXIMAGE1DARBPROC __glewCompressedTexImage1DARB;
+extern PFNGLCOMPRESSEDTEXIMAGE2DARBPROC __glewCompressedTexImage2DARB;
+extern PFNGLCOMPRESSEDTEXIMAGE3DARBPROC __glewCompressedTexImage3DARB;
+extern PFNGLCOMPRESSEDTEXSUBIMAGE1DARBPROC __glewCompressedTexSubImage1DARB;
+extern PFNGLCOMPRESSEDTEXSUBIMAGE2DARBPROC __glewCompressedTexSubImage2DARB;
+extern PFNGLCOMPRESSEDTEXSUBIMAGE3DARBPROC __glewCompressedTexSubImage3DARB;
+extern PFNGLGETCOMPRESSEDTEXIMAGEARBPROC __glewGetCompressedTexImageARB;
+
+extern PFNGLGETMULTISAMPLEFVPROC __glewGetMultisamplefv;
+extern PFNGLSAMPLEMASKIPROC __glewSampleMaski;
+extern PFNGLTEXIMAGE2DMULTISAMPLEPROC __glewTexImage2DMultisample;
+extern PFNGLTEXIMAGE3DMULTISAMPLEPROC __glewTexImage3DMultisample;
+
+extern PFNGLTEXSTORAGE1DPROC __glewTexStorage1D;
+extern PFNGLTEXSTORAGE2DPROC __glewTexStorage2D;
+extern PFNGLTEXSTORAGE3DPROC __glewTexStorage3D;
+
+extern PFNGLTEXSTORAGE2DMULTISAMPLEPROC __glewTexStorage2DMultisample;
+extern PFNGLTEXSTORAGE3DMULTISAMPLEPROC __glewTexStorage3DMultisample;
+extern PFNGLTEXTURESTORAGE2DMULTISAMPLEEXTPROC __glewTextureStorage2DMultisampleEXT;
+extern PFNGLTEXTURESTORAGE3DMULTISAMPLEEXTPROC __glewTextureStorage3DMultisampleEXT;
+
+extern PFNGLTEXTUREVIEWPROC __glewTextureView;
+
+extern PFNGLGETQUERYOBJECTI64VPROC __glewGetQueryObjecti64v;
+extern PFNGLGETQUERYOBJECTUI64VPROC __glewGetQueryObjectui64v;
+extern PFNGLQUERYCOUNTERPROC __glewQueryCounter;
+
+extern PFNGLBINDTRANSFORMFEEDBACKPROC __glewBindTransformFeedback;
+extern PFNGLDELETETRANSFORMFEEDBACKSPROC __glewDeleteTransformFeedbacks;
+extern PFNGLDRAWTRANSFORMFEEDBACKPROC __glewDrawTransformFeedback;
+extern PFNGLGENTRANSFORMFEEDBACKSPROC __glewGenTransformFeedbacks;
+extern PFNGLISTRANSFORMFEEDBACKPROC __glewIsTransformFeedback;
+extern PFNGLPAUSETRANSFORMFEEDBACKPROC __glewPauseTransformFeedback;
+extern PFNGLRESUMETRANSFORMFEEDBACKPROC __glewResumeTransformFeedback;
+
+extern PFNGLBEGINQUERYINDEXEDPROC __glewBeginQueryIndexed;
+extern PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC __glewDrawTransformFeedbackStream;
+extern PFNGLENDQUERYINDEXEDPROC __glewEndQueryIndexed;
+extern PFNGLGETQUERYINDEXEDIVPROC __glewGetQueryIndexediv;
+
+extern PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC __glewDrawTransformFeedbackInstanced;
+extern PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC __glewDrawTransformFeedbackStreamInstanced;
+
+extern PFNGLLOADTRANSPOSEMATRIXDARBPROC __glewLoadTransposeMatrixdARB;
+extern PFNGLLOADTRANSPOSEMATRIXFARBPROC __glewLoadTransposeMatrixfARB;
+extern PFNGLMULTTRANSPOSEMATRIXDARBPROC __glewMultTransposeMatrixdARB;
+extern PFNGLMULTTRANSPOSEMATRIXFARBPROC __glewMultTransposeMatrixfARB;
+
+extern PFNGLBINDBUFFERBASEPROC __glewBindBufferBase;
+extern PFNGLBINDBUFFERRANGEPROC __glewBindBufferRange;
+extern PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC __glewGetActiveUniformBlockName;
+extern PFNGLGETACTIVEUNIFORMBLOCKIVPROC __glewGetActiveUniformBlockiv;
+extern PFNGLGETACTIVEUNIFORMNAMEPROC __glewGetActiveUniformName;
+extern PFNGLGETACTIVEUNIFORMSIVPROC __glewGetActiveUniformsiv;
+extern PFNGLGETINTEGERI_VPROC __glewGetIntegeri_v;
+extern PFNGLGETUNIFORMBLOCKINDEXPROC __glewGetUniformBlockIndex;
+extern PFNGLGETUNIFORMINDICESPROC __glewGetUniformIndices;
+extern PFNGLUNIFORMBLOCKBINDINGPROC __glewUniformBlockBinding;
+
+extern PFNGLBINDVERTEXARRAYPROC __glewBindVertexArray;
+extern PFNGLDELETEVERTEXARRAYSPROC __glewDeleteVertexArrays;
+extern PFNGLGENVERTEXARRAYSPROC __glewGenVertexArrays;
+extern PFNGLISVERTEXARRAYPROC __glewIsVertexArray;
+
+extern PFNGLGETVERTEXATTRIBLDVPROC __glewGetVertexAttribLdv;
+extern PFNGLVERTEXATTRIBL1DPROC __glewVertexAttribL1d;
+extern PFNGLVERTEXATTRIBL1DVPROC __glewVertexAttribL1dv;
+extern PFNGLVERTEXATTRIBL2DPROC __glewVertexAttribL2d;
+extern PFNGLVERTEXATTRIBL2DVPROC __glewVertexAttribL2dv;
+extern PFNGLVERTEXATTRIBL3DPROC __glewVertexAttribL3d;
+extern PFNGLVERTEXATTRIBL3DVPROC __glewVertexAttribL3dv;
+extern PFNGLVERTEXATTRIBL4DPROC __glewVertexAttribL4d;
+extern PFNGLVERTEXATTRIBL4DVPROC __glewVertexAttribL4dv;
+extern PFNGLVERTEXATTRIBLPOINTERPROC __glewVertexAttribLPointer;
+
+extern PFNGLBINDVERTEXBUFFERPROC __glewBindVertexBuffer;
+extern PFNGLVERTEXARRAYBINDVERTEXBUFFEREXTPROC __glewVertexArrayBindVertexBufferEXT;
+extern PFNGLVERTEXARRAYVERTEXATTRIBBINDINGEXTPROC __glewVertexArrayVertexAttribBindingEXT;
+extern PFNGLVERTEXARRAYVERTEXATTRIBFORMATEXTPROC __glewVertexArrayVertexAttribFormatEXT;
+extern PFNGLVERTEXARRAYVERTEXATTRIBIFORMATEXTPROC __glewVertexArrayVertexAttribIFormatEXT;
+extern PFNGLVERTEXARRAYVERTEXATTRIBLFORMATEXTPROC __glewVertexArrayVertexAttribLFormatEXT;
+extern PFNGLVERTEXARRAYVERTEXBINDINGDIVISOREXTPROC __glewVertexArrayVertexBindingDivisorEXT;
+extern PFNGLVERTEXATTRIBBINDINGPROC __glewVertexAttribBinding;
+extern PFNGLVERTEXATTRIBFORMATPROC __glewVertexAttribFormat;
+extern PFNGLVERTEXATTRIBIFORMATPROC __glewVertexAttribIFormat;
+extern PFNGLVERTEXATTRIBLFORMATPROC __glewVertexAttribLFormat;
+extern PFNGLVERTEXBINDINGDIVISORPROC __glewVertexBindingDivisor;
+
+extern PFNGLVERTEXBLENDARBPROC __glewVertexBlendARB;
+extern PFNGLWEIGHTPOINTERARBPROC __glewWeightPointerARB;
+extern PFNGLWEIGHTBVARBPROC __glewWeightbvARB;
+extern PFNGLWEIGHTDVARBPROC __glewWeightdvARB;
+extern PFNGLWEIGHTFVARBPROC __glewWeightfvARB;
+extern PFNGLWEIGHTIVARBPROC __glewWeightivARB;
+extern PFNGLWEIGHTSVARBPROC __glewWeightsvARB;
+extern PFNGLWEIGHTUBVARBPROC __glewWeightubvARB;
+extern PFNGLWEIGHTUIVARBPROC __glewWeightuivARB;
+extern PFNGLWEIGHTUSVARBPROC __glewWeightusvARB;
+
+extern PFNGLBINDBUFFERARBPROC __glewBindBufferARB;
+extern PFNGLBUFFERDATAARBPROC __glewBufferDataARB;
+extern PFNGLBUFFERSUBDATAARBPROC __glewBufferSubDataARB;
+extern PFNGLDELETEBUFFERSARBPROC __glewDeleteBuffersARB;
+extern PFNGLGENBUFFERSARBPROC __glewGenBuffersARB;
+extern PFNGLGETBUFFERPARAMETERIVARBPROC __glewGetBufferParameterivARB;
+extern PFNGLGETBUFFERPOINTERVARBPROC __glewGetBufferPointervARB;
+extern PFNGLGETBUFFERSUBDATAARBPROC __glewGetBufferSubDataARB;
+extern PFNGLISBUFFERARBPROC __glewIsBufferARB;
+extern PFNGLMAPBUFFERARBPROC __glewMapBufferARB;
+extern PFNGLUNMAPBUFFERARBPROC __glewUnmapBufferARB;
+
+extern PFNGLBINDPROGRAMARBPROC __glewBindProgramARB;
+extern PFNGLDELETEPROGRAMSARBPROC __glewDeleteProgramsARB;
+extern PFNGLDISABLEVERTEXATTRIBARRAYARBPROC __glewDisableVertexAttribArrayARB;
+extern PFNGLENABLEVERTEXATTRIBARRAYARBPROC __glewEnableVertexAttribArrayARB;
+extern PFNGLGENPROGRAMSARBPROC __glewGenProgramsARB;
+extern PFNGLGETPROGRAMENVPARAMETERDVARBPROC __glewGetProgramEnvParameterdvARB;
+extern PFNGLGETPROGRAMENVPARAMETERFVARBPROC __glewGetProgramEnvParameterfvARB;
+extern PFNGLGETPROGRAMLOCALPARAMETERDVARBPROC __glewGetProgramLocalParameterdvARB;
+extern PFNGLGETPROGRAMLOCALPARAMETERFVARBPROC __glewGetProgramLocalParameterfvARB;
+extern PFNGLGETPROGRAMSTRINGARBPROC __glewGetProgramStringARB;
+extern PFNGLGETPROGRAMIVARBPROC __glewGetProgramivARB;
+extern PFNGLGETVERTEXATTRIBPOINTERVARBPROC __glewGetVertexAttribPointervARB;
+extern PFNGLGETVERTEXATTRIBDVARBPROC __glewGetVertexAttribdvARB;
+extern PFNGLGETVERTEXATTRIBFVARBPROC __glewGetVertexAttribfvARB;
+extern PFNGLGETVERTEXATTRIBIVARBPROC __glewGetVertexAttribivARB;
+extern PFNGLISPROGRAMARBPROC __glewIsProgramARB;
+extern PFNGLPROGRAMENVPARAMETER4DARBPROC __glewProgramEnvParameter4dARB;
+extern PFNGLPROGRAMENVPARAMETER4DVARBPROC __glewProgramEnvParameter4dvARB;
+extern PFNGLPROGRAMENVPARAMETER4FARBPROC __glewProgramEnvParameter4fARB;
+extern PFNGLPROGRAMENVPARAMETER4FVARBPROC __glewProgramEnvParameter4fvARB;
+extern PFNGLPROGRAMLOCALPARAMETER4DARBPROC __glewProgramLocalParameter4dARB;
+extern PFNGLPROGRAMLOCALPARAMETER4DVARBPROC __glewProgramLocalParameter4dvARB;
+extern PFNGLPROGRAMLOCALPARAMETER4FARBPROC __glewProgramLocalParameter4fARB;
+extern PFNGLPROGRAMLOCALPARAMETER4FVARBPROC __glewProgramLocalParameter4fvARB;
+extern PFNGLPROGRAMSTRINGARBPROC __glewProgramStringARB;
+extern PFNGLVERTEXATTRIB1DARBPROC __glewVertexAttrib1dARB;
+extern PFNGLVERTEXATTRIB1DVARBPROC __glewVertexAttrib1dvARB;
+extern PFNGLVERTEXATTRIB1FARBPROC __glewVertexAttrib1fARB;
+extern PFNGLVERTEXATTRIB1FVARBPROC __glewVertexAttrib1fvARB;
+extern PFNGLVERTEXATTRIB1SARBPROC __glewVertexAttrib1sARB;
+extern PFNGLVERTEXATTRIB1SVARBPROC __glewVertexAttrib1svARB;
+extern PFNGLVERTEXATTRIB2DARBPROC __glewVertexAttrib2dARB;
+extern PFNGLVERTEXATTRIB2DVARBPROC __glewVertexAttrib2dvARB;
+extern PFNGLVERTEXATTRIB2FARBPROC __glewVertexAttrib2fARB;
+extern PFNGLVERTEXATTRIB2FVARBPROC __glewVertexAttrib2fvARB;
+extern PFNGLVERTEXATTRIB2SARBPROC __glewVertexAttrib2sARB;
+extern PFNGLVERTEXATTRIB2SVARBPROC __glewVertexAttrib2svARB;
+extern PFNGLVERTEXATTRIB3DARBPROC __glewVertexAttrib3dARB;
+extern PFNGLVERTEXATTRIB3DVARBPROC __glewVertexAttrib3dvARB;
+extern PFNGLVERTEXATTRIB3FARBPROC __glewVertexAttrib3fARB;
+extern PFNGLVERTEXATTRIB3FVARBPROC __glewVertexAttrib3fvARB;
+extern PFNGLVERTEXATTRIB3SARBPROC __glewVertexAttrib3sARB;
+extern PFNGLVERTEXATTRIB3SVARBPROC __glewVertexAttrib3svARB;
+extern PFNGLVERTEXATTRIB4NBVARBPROC __glewVertexAttrib4NbvARB;
+extern PFNGLVERTEXATTRIB4NIVARBPROC __glewVertexAttrib4NivARB;
+extern PFNGLVERTEXATTRIB4NSVARBPROC __glewVertexAttrib4NsvARB;
+extern PFNGLVERTEXATTRIB4NUBARBPROC __glewVertexAttrib4NubARB;
+extern PFNGLVERTEXATTRIB4NUBVARBPROC __glewVertexAttrib4NubvARB;
+extern PFNGLVERTEXATTRIB4NUIVARBPROC __glewVertexAttrib4NuivARB;
+extern PFNGLVERTEXATTRIB4NUSVARBPROC __glewVertexAttrib4NusvARB;
+extern PFNGLVERTEXATTRIB4BVARBPROC __glewVertexAttrib4bvARB;
+extern PFNGLVERTEXATTRIB4DARBPROC __glewVertexAttrib4dARB;
+extern PFNGLVERTEXATTRIB4DVARBPROC __glewVertexAttrib4dvARB;
+extern PFNGLVERTEXATTRIB4FARBPROC __glewVertexAttrib4fARB;
+extern PFNGLVERTEXATTRIB4FVARBPROC __glewVertexAttrib4fvARB;
+extern PFNGLVERTEXATTRIB4IVARBPROC __glewVertexAttrib4ivARB;
+extern PFNGLVERTEXATTRIB4SARBPROC __glewVertexAttrib4sARB;
+extern PFNGLVERTEXATTRIB4SVARBPROC __glewVertexAttrib4svARB;
+extern PFNGLVERTEXATTRIB4UBVARBPROC __glewVertexAttrib4ubvARB;
+extern PFNGLVERTEXATTRIB4UIVARBPROC __glewVertexAttrib4uivARB;
+extern PFNGLVERTEXATTRIB4USVARBPROC __glewVertexAttrib4usvARB;
+extern PFNGLVERTEXATTRIBPOINTERARBPROC __glewVertexAttribPointerARB;
+
+extern PFNGLBINDATTRIBLOCATIONARBPROC __glewBindAttribLocationARB;
+extern PFNGLGETACTIVEATTRIBARBPROC __glewGetActiveAttribARB;
+extern PFNGLGETATTRIBLOCATIONARBPROC __glewGetAttribLocationARB;
+
+extern PFNGLCOLORP3UIPROC __glewColorP3ui;
+extern PFNGLCOLORP3UIVPROC __glewColorP3uiv;
+extern PFNGLCOLORP4UIPROC __glewColorP4ui;
+extern PFNGLCOLORP4UIVPROC __glewColorP4uiv;
+extern PFNGLMULTITEXCOORDP1UIPROC __glewMultiTexCoordP1ui;
+extern PFNGLMULTITEXCOORDP1UIVPROC __glewMultiTexCoordP1uiv;
+extern PFNGLMULTITEXCOORDP2UIPROC __glewMultiTexCoordP2ui;
+extern PFNGLMULTITEXCOORDP2UIVPROC __glewMultiTexCoordP2uiv;
+extern PFNGLMULTITEXCOORDP3UIPROC __glewMultiTexCoordP3ui;
+extern PFNGLMULTITEXCOORDP3UIVPROC __glewMultiTexCoordP3uiv;
+extern PFNGLMULTITEXCOORDP4UIPROC __glewMultiTexCoordP4ui;
+extern PFNGLMULTITEXCOORDP4UIVPROC __glewMultiTexCoordP4uiv;
+extern PFNGLNORMALP3UIPROC __glewNormalP3ui;
+extern PFNGLNORMALP3UIVPROC __glewNormalP3uiv;
+extern PFNGLSECONDARYCOLORP3UIPROC __glewSecondaryColorP3ui;
+extern PFNGLSECONDARYCOLORP3UIVPROC __glewSecondaryColorP3uiv;
+extern PFNGLTEXCOORDP1UIPROC __glewTexCoordP1ui;
+extern PFNGLTEXCOORDP1UIVPROC __glewTexCoordP1uiv;
+extern PFNGLTEXCOORDP2UIPROC __glewTexCoordP2ui;
+extern PFNGLTEXCOORDP2UIVPROC __glewTexCoordP2uiv;
+extern PFNGLTEXCOORDP3UIPROC __glewTexCoordP3ui;
+extern PFNGLTEXCOORDP3UIVPROC __glewTexCoordP3uiv;
+extern PFNGLTEXCOORDP4UIPROC __glewTexCoordP4ui;
+extern PFNGLTEXCOORDP4UIVPROC __glewTexCoordP4uiv;
+extern PFNGLVERTEXATTRIBP1UIPROC __glewVertexAttribP1ui;
+extern PFNGLVERTEXATTRIBP1UIVPROC __glewVertexAttribP1uiv;
+extern PFNGLVERTEXATTRIBP2UIPROC __glewVertexAttribP2ui;
+extern PFNGLVERTEXATTRIBP2UIVPROC __glewVertexAttribP2uiv;
+extern PFNGLVERTEXATTRIBP3UIPROC __glewVertexAttribP3ui;
+extern PFNGLVERTEXATTRIBP3UIVPROC __glewVertexAttribP3uiv;
+extern PFNGLVERTEXATTRIBP4UIPROC __glewVertexAttribP4ui;
+extern PFNGLVERTEXATTRIBP4UIVPROC __glewVertexAttribP4uiv;
+extern PFNGLVERTEXP2UIPROC __glewVertexP2ui;
+extern PFNGLVERTEXP2UIVPROC __glewVertexP2uiv;
+extern PFNGLVERTEXP3UIPROC __glewVertexP3ui;
+extern PFNGLVERTEXP3UIVPROC __glewVertexP3uiv;
+extern PFNGLVERTEXP4UIPROC __glewVertexP4ui;
+extern PFNGLVERTEXP4UIVPROC __glewVertexP4uiv;
+
+extern PFNGLDEPTHRANGEARRAYVPROC __glewDepthRangeArrayv;
+extern PFNGLDEPTHRANGEINDEXEDPROC __glewDepthRangeIndexed;
+extern PFNGLGETDOUBLEI_VPROC __glewGetDoublei_v;
+extern PFNGLGETFLOATI_VPROC __glewGetFloati_v;
+extern PFNGLSCISSORARRAYVPROC __glewScissorArrayv;
+extern PFNGLSCISSORINDEXEDPROC __glewScissorIndexed;
+extern PFNGLSCISSORINDEXEDVPROC __glewScissorIndexedv;
+extern PFNGLVIEWPORTARRAYVPROC __glewViewportArrayv;
+extern PFNGLVIEWPORTINDEXEDFPROC __glewViewportIndexedf;
+extern PFNGLVIEWPORTINDEXEDFVPROC __glewViewportIndexedfv;
+
+extern PFNGLWINDOWPOS2DARBPROC __glewWindowPos2dARB;
+extern PFNGLWINDOWPOS2DVARBPROC __glewWindowPos2dvARB;
+extern PFNGLWINDOWPOS2FARBPROC __glewWindowPos2fARB;
+extern PFNGLWINDOWPOS2FVARBPROC __glewWindowPos2fvARB;
+extern PFNGLWINDOWPOS2IARBPROC __glewWindowPos2iARB;
+extern PFNGLWINDOWPOS2IVARBPROC __glewWindowPos2ivARB;
+extern PFNGLWINDOWPOS2SARBPROC __glewWindowPos2sARB;
+extern PFNGLWINDOWPOS2SVARBPROC __glewWindowPos2svARB;
+extern PFNGLWINDOWPOS3DARBPROC __glewWindowPos3dARB;
+extern PFNGLWINDOWPOS3DVARBPROC __glewWindowPos3dvARB;
+extern PFNGLWINDOWPOS3FARBPROC __glewWindowPos3fARB;
+extern PFNGLWINDOWPOS3FVARBPROC __glewWindowPos3fvARB;
+extern PFNGLWINDOWPOS3IARBPROC __glewWindowPos3iARB;
+extern PFNGLWINDOWPOS3IVARBPROC __glewWindowPos3ivARB;
+extern PFNGLWINDOWPOS3SARBPROC __glewWindowPos3sARB;
+extern PFNGLWINDOWPOS3SVARBPROC __glewWindowPos3svARB;
+
+extern PFNGLMAXACTIVESHADERCORESARMPROC __glewMaxActiveShaderCoresARM;
+
+extern PFNGLDRAWBUFFERSATIPROC __glewDrawBuffersATI;
+
+extern PFNGLDRAWELEMENTARRAYATIPROC __glewDrawElementArrayATI;
+extern PFNGLDRAWRANGEELEMENTARRAYATIPROC __glewDrawRangeElementArrayATI;
+extern PFNGLELEMENTPOINTERATIPROC __glewElementPointerATI;
+
+extern PFNGLGETTEXBUMPPARAMETERFVATIPROC __glewGetTexBumpParameterfvATI;
+extern PFNGLGETTEXBUMPPARAMETERIVATIPROC __glewGetTexBumpParameterivATI;
+extern PFNGLTEXBUMPPARAMETERFVATIPROC __glewTexBumpParameterfvATI;
+extern PFNGLTEXBUMPPARAMETERIVATIPROC __glewTexBumpParameterivATI;
+
+extern PFNGLALPHAFRAGMENTOP1ATIPROC __glewAlphaFragmentOp1ATI;
+extern PFNGLALPHAFRAGMENTOP2ATIPROC __glewAlphaFragmentOp2ATI;
+extern PFNGLALPHAFRAGMENTOP3ATIPROC __glewAlphaFragmentOp3ATI;
+extern PFNGLBEGINFRAGMENTSHADERATIPROC __glewBeginFragmentShaderATI;
+extern PFNGLBINDFRAGMENTSHADERATIPROC __glewBindFragmentShaderATI;
+extern PFNGLCOLORFRAGMENTOP1ATIPROC __glewColorFragmentOp1ATI;
+extern PFNGLCOLORFRAGMENTOP2ATIPROC __glewColorFragmentOp2ATI;
+extern PFNGLCOLORFRAGMENTOP3ATIPROC __glewColorFragmentOp3ATI;
+extern PFNGLDELETEFRAGMENTSHADERATIPROC __glewDeleteFragmentShaderATI;
+extern PFNGLENDFRAGMENTSHADERATIPROC __glewEndFragmentShaderATI;
+extern PFNGLGENFRAGMENTSHADERSATIPROC __glewGenFragmentShadersATI;
+extern PFNGLPASSTEXCOORDATIPROC __glewPassTexCoordATI;
+extern PFNGLSAMPLEMAPATIPROC __glewSampleMapATI;
+extern PFNGLSETFRAGMENTSHADERCONSTANTATIPROC __glewSetFragmentShaderConstantATI;
+
+extern PFNGLMAPOBJECTBUFFERATIPROC __glewMapObjectBufferATI;
+extern PFNGLUNMAPOBJECTBUFFERATIPROC __glewUnmapObjectBufferATI;
+
+extern PFNGLPNTRIANGLESFATIPROC __glewPNTrianglesfATI;
+extern PFNGLPNTRIANGLESIATIPROC __glewPNTrianglesiATI;
+
+extern PFNGLSTENCILFUNCSEPARATEATIPROC __glewStencilFuncSeparateATI;
+extern PFNGLSTENCILOPSEPARATEATIPROC __glewStencilOpSeparateATI;
+
+extern PFNGLARRAYOBJECTATIPROC __glewArrayObjectATI;
+extern PFNGLFREEOBJECTBUFFERATIPROC __glewFreeObjectBufferATI;
+extern PFNGLGETARRAYOBJECTFVATIPROC __glewGetArrayObjectfvATI;
+extern PFNGLGETARRAYOBJECTIVATIPROC __glewGetArrayObjectivATI;
+extern PFNGLGETOBJECTBUFFERFVATIPROC __glewGetObjectBufferfvATI;
+extern PFNGLGETOBJECTBUFFERIVATIPROC __glewGetObjectBufferivATI;
+extern PFNGLGETVARIANTARRAYOBJECTFVATIPROC __glewGetVariantArrayObjectfvATI;
+extern PFNGLGETVARIANTARRAYOBJECTIVATIPROC __glewGetVariantArrayObjectivATI;
+extern PFNGLISOBJECTBUFFERATIPROC __glewIsObjectBufferATI;
+extern PFNGLNEWOBJECTBUFFERATIPROC __glewNewObjectBufferATI;
+extern PFNGLUPDATEOBJECTBUFFERATIPROC __glewUpdateObjectBufferATI;
+extern PFNGLVARIANTARRAYOBJECTATIPROC __glewVariantArrayObjectATI;
+
+extern PFNGLGETVERTEXATTRIBARRAYOBJECTFVATIPROC __glewGetVertexAttribArrayObjectfvATI;
+extern PFNGLGETVERTEXATTRIBARRAYOBJECTIVATIPROC __glewGetVertexAttribArrayObjectivATI;
+extern PFNGLVERTEXATTRIBARRAYOBJECTATIPROC __glewVertexAttribArrayObjectATI;
+
+extern PFNGLCLIENTACTIVEVERTEXSTREAMATIPROC __glewClientActiveVertexStreamATI;
+extern PFNGLNORMALSTREAM3BATIPROC __glewNormalStream3bATI;
+extern PFNGLNORMALSTREAM3BVATIPROC __glewNormalStream3bvATI;
+extern PFNGLNORMALSTREAM3DATIPROC __glewNormalStream3dATI;
+extern PFNGLNORMALSTREAM3DVATIPROC __glewNormalStream3dvATI;
+extern PFNGLNORMALSTREAM3FATIPROC __glewNormalStream3fATI;
+extern PFNGLNORMALSTREAM3FVATIPROC __glewNormalStream3fvATI;
+extern PFNGLNORMALSTREAM3IATIPROC __glewNormalStream3iATI;
+extern PFNGLNORMALSTREAM3IVATIPROC __glewNormalStream3ivATI;
+extern PFNGLNORMALSTREAM3SATIPROC __glewNormalStream3sATI;
+extern PFNGLNORMALSTREAM3SVATIPROC __glewNormalStream3svATI;
+extern PFNGLVERTEXBLENDENVFATIPROC __glewVertexBlendEnvfATI;
+extern PFNGLVERTEXBLENDENVIATIPROC __glewVertexBlendEnviATI;
+extern PFNGLVERTEXSTREAM1DATIPROC __glewVertexStream1dATI;
+extern PFNGLVERTEXSTREAM1DVATIPROC __glewVertexStream1dvATI;
+extern PFNGLVERTEXSTREAM1FATIPROC __glewVertexStream1fATI;
+extern PFNGLVERTEXSTREAM1FVATIPROC __glewVertexStream1fvATI;
+extern PFNGLVERTEXSTREAM1IATIPROC __glewVertexStream1iATI;
+extern PFNGLVERTEXSTREAM1IVATIPROC __glewVertexStream1ivATI;
+extern PFNGLVERTEXSTREAM1SATIPROC __glewVertexStream1sATI;
+extern PFNGLVERTEXSTREAM1SVATIPROC __glewVertexStream1svATI;
+extern PFNGLVERTEXSTREAM2DATIPROC __glewVertexStream2dATI;
+extern PFNGLVERTEXSTREAM2DVATIPROC __glewVertexStream2dvATI;
+extern PFNGLVERTEXSTREAM2FATIPROC __glewVertexStream2fATI;
+extern PFNGLVERTEXSTREAM2FVATIPROC __glewVertexStream2fvATI;
+extern PFNGLVERTEXSTREAM2IATIPROC __glewVertexStream2iATI;
+extern PFNGLVERTEXSTREAM2IVATIPROC __glewVertexStream2ivATI;
+extern PFNGLVERTEXSTREAM2SATIPROC __glewVertexStream2sATI;
+extern PFNGLVERTEXSTREAM2SVATIPROC __glewVertexStream2svATI;
+extern PFNGLVERTEXSTREAM3DATIPROC __glewVertexStream3dATI;
+extern PFNGLVERTEXSTREAM3DVATIPROC __glewVertexStream3dvATI;
+extern PFNGLVERTEXSTREAM3FATIPROC __glewVertexStream3fATI;
+extern PFNGLVERTEXSTREAM3FVATIPROC __glewVertexStream3fvATI;
+extern PFNGLVERTEXSTREAM3IATIPROC __glewVertexStream3iATI;
+extern PFNGLVERTEXSTREAM3IVATIPROC __glewVertexStream3ivATI;
+extern PFNGLVERTEXSTREAM3SATIPROC __glewVertexStream3sATI;
+extern PFNGLVERTEXSTREAM3SVATIPROC __glewVertexStream3svATI;
+extern PFNGLVERTEXSTREAM4DATIPROC __glewVertexStream4dATI;
+extern PFNGLVERTEXSTREAM4DVATIPROC __glewVertexStream4dvATI;
+extern PFNGLVERTEXSTREAM4FATIPROC __glewVertexStream4fATI;
+extern PFNGLVERTEXSTREAM4FVATIPROC __glewVertexStream4fvATI;
+extern PFNGLVERTEXSTREAM4IATIPROC __glewVertexStream4iATI;
+extern PFNGLVERTEXSTREAM4IVATIPROC __glewVertexStream4ivATI;
+extern PFNGLVERTEXSTREAM4SATIPROC __glewVertexStream4sATI;
+extern PFNGLVERTEXSTREAM4SVATIPROC __glewVertexStream4svATI;
+
+extern PFNGLEGLIMAGETARGETTEXSTORAGEEXTPROC __glewEGLImageTargetTexStorageEXT;
+extern PFNGLEGLIMAGETARGETTEXTURESTORAGEEXTPROC __glewEGLImageTargetTextureStorageEXT;
+
+extern PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEEXTPROC __glewDrawArraysInstancedBaseInstanceEXT;
+extern PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEEXTPROC __glewDrawElementsInstancedBaseInstanceEXT;
+extern PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEEXTPROC __glewDrawElementsInstancedBaseVertexBaseInstanceEXT;
+
+extern PFNGLGETUNIFORMBUFFERSIZEEXTPROC __glewGetUniformBufferSizeEXT;
+extern PFNGLGETUNIFORMOFFSETEXTPROC __glewGetUniformOffsetEXT;
+extern PFNGLUNIFORMBUFFEREXTPROC __glewUniformBufferEXT;
+
+extern PFNGLBLENDCOLOREXTPROC __glewBlendColorEXT;
+
+extern PFNGLBLENDEQUATIONSEPARATEEXTPROC __glewBlendEquationSeparateEXT;
+
+extern PFNGLBINDFRAGDATALOCATIONINDEXEDEXTPROC __glewBindFragDataLocationIndexedEXT;
+extern PFNGLGETFRAGDATAINDEXEXTPROC __glewGetFragDataIndexEXT;
+extern PFNGLGETPROGRAMRESOURCELOCATIONINDEXEXTPROC __glewGetProgramResourceLocationIndexEXT;
+
+extern PFNGLBLENDFUNCSEPARATEEXTPROC __glewBlendFuncSeparateEXT;
+
+extern PFNGLBLENDEQUATIONEXTPROC __glewBlendEquationEXT;
+
+extern PFNGLBUFFERSTORAGEEXTPROC __glewBufferStorageEXT;
+
+extern PFNGLCLEARTEXIMAGEEXTPROC __glewClearTexImageEXT;
+extern PFNGLCLEARTEXSUBIMAGEEXTPROC __glewClearTexSubImageEXT;
+
+extern PFNGLCLIPCONTROLEXTPROC __glewClipControlEXT;
+
+extern PFNGLCOLORSUBTABLEEXTPROC __glewColorSubTableEXT;
+extern PFNGLCOPYCOLORSUBTABLEEXTPROC __glewCopyColorSubTableEXT;
+
+extern PFNGLLOCKARRAYSEXTPROC __glewLockArraysEXT;
+extern PFNGLUNLOCKARRAYSEXTPROC __glewUnlockArraysEXT;
+
+extern PFNGLCONVOLUTIONFILTER1DEXTPROC __glewConvolutionFilter1DEXT;
+extern PFNGLCONVOLUTIONFILTER2DEXTPROC __glewConvolutionFilter2DEXT;
+extern PFNGLCONVOLUTIONPARAMETERFEXTPROC __glewConvolutionParameterfEXT;
+extern PFNGLCONVOLUTIONPARAMETERFVEXTPROC __glewConvolutionParameterfvEXT;
+extern PFNGLCONVOLUTIONPARAMETERIEXTPROC __glewConvolutionParameteriEXT;
+extern PFNGLCONVOLUTIONPARAMETERIVEXTPROC __glewConvolutionParameterivEXT;
+extern PFNGLCOPYCONVOLUTIONFILTER1DEXTPROC __glewCopyConvolutionFilter1DEXT;
+extern PFNGLCOPYCONVOLUTIONFILTER2DEXTPROC __glewCopyConvolutionFilter2DEXT;
+extern PFNGLGETCONVOLUTIONFILTEREXTPROC __glewGetConvolutionFilterEXT;
+extern PFNGLGETCONVOLUTIONPARAMETERFVEXTPROC __glewGetConvolutionParameterfvEXT;
+extern PFNGLGETCONVOLUTIONPARAMETERIVEXTPROC __glewGetConvolutionParameterivEXT;
+extern PFNGLGETSEPARABLEFILTEREXTPROC __glewGetSeparableFilterEXT;
+extern PFNGLSEPARABLEFILTER2DEXTPROC __glewSeparableFilter2DEXT;
+
+extern PFNGLBINORMALPOINTEREXTPROC __glewBinormalPointerEXT;
+extern PFNGLTANGENTPOINTEREXTPROC __glewTangentPointerEXT;
+
+extern PFNGLCOPYIMAGESUBDATAEXTPROC __glewCopyImageSubDataEXT;
+
+extern PFNGLCOPYTEXIMAGE1DEXTPROC __glewCopyTexImage1DEXT;
+extern PFNGLCOPYTEXIMAGE2DEXTPROC __glewCopyTexImage2DEXT;
+extern PFNGLCOPYTEXSUBIMAGE1DEXTPROC __glewCopyTexSubImage1DEXT;
+extern PFNGLCOPYTEXSUBIMAGE2DEXTPROC __glewCopyTexSubImage2DEXT;
+extern PFNGLCOPYTEXSUBIMAGE3DEXTPROC __glewCopyTexSubImage3DEXT;
+
+extern PFNGLCULLPARAMETERDVEXTPROC __glewCullParameterdvEXT;
+extern PFNGLCULLPARAMETERFVEXTPROC __glewCullParameterfvEXT;
+
+extern PFNGLGETOBJECTLABELEXTPROC __glewGetObjectLabelEXT;
+extern PFNGLLABELOBJECTEXTPROC __glewLabelObjectEXT;
+
+extern PFNGLINSERTEVENTMARKEREXTPROC __glewInsertEventMarkerEXT;
+extern PFNGLPOPGROUPMARKEREXTPROC __glewPopGroupMarkerEXT;
+extern PFNGLPUSHGROUPMARKEREXTPROC __glewPushGroupMarkerEXT;
+
+extern PFNGLDEPTHBOUNDSEXTPROC __glewDepthBoundsEXT;
+
+extern PFNGLBINDMULTITEXTUREEXTPROC __glewBindMultiTextureEXT;
+extern PFNGLCHECKNAMEDFRAMEBUFFERSTATUSEXTPROC __glewCheckNamedFramebufferStatusEXT;
+extern PFNGLCLIENTATTRIBDEFAULTEXTPROC __glewClientAttribDefaultEXT;
+extern PFNGLCOMPRESSEDMULTITEXIMAGE1DEXTPROC __glewCompressedMultiTexImage1DEXT;
+extern PFNGLCOMPRESSEDMULTITEXIMAGE2DEXTPROC __glewCompressedMultiTexImage2DEXT;
+extern PFNGLCOMPRESSEDMULTITEXIMAGE3DEXTPROC __glewCompressedMultiTexImage3DEXT;
+extern PFNGLCOMPRESSEDMULTITEXSUBIMAGE1DEXTPROC __glewCompressedMultiTexSubImage1DEXT;
+extern PFNGLCOMPRESSEDMULTITEXSUBIMAGE2DEXTPROC __glewCompressedMultiTexSubImage2DEXT;
+extern PFNGLCOMPRESSEDMULTITEXSUBIMAGE3DEXTPROC __glewCompressedMultiTexSubImage3DEXT;
+extern PFNGLCOMPRESSEDTEXTUREIMAGE1DEXTPROC __glewCompressedTextureImage1DEXT;
+extern PFNGLCOMPRESSEDTEXTUREIMAGE2DEXTPROC __glewCompressedTextureImage2DEXT;
+extern PFNGLCOMPRESSEDTEXTUREIMAGE3DEXTPROC __glewCompressedTextureImage3DEXT;
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE1DEXTPROC __glewCompressedTextureSubImage1DEXT;
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE2DEXTPROC __glewCompressedTextureSubImage2DEXT;
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE3DEXTPROC __glewCompressedTextureSubImage3DEXT;
+extern PFNGLCOPYMULTITEXIMAGE1DEXTPROC __glewCopyMultiTexImage1DEXT;
+extern PFNGLCOPYMULTITEXIMAGE2DEXTPROC __glewCopyMultiTexImage2DEXT;
+extern PFNGLCOPYMULTITEXSUBIMAGE1DEXTPROC __glewCopyMultiTexSubImage1DEXT;
+extern PFNGLCOPYMULTITEXSUBIMAGE2DEXTPROC __glewCopyMultiTexSubImage2DEXT;
+extern PFNGLCOPYMULTITEXSUBIMAGE3DEXTPROC __glewCopyMultiTexSubImage3DEXT;
+extern PFNGLCOPYTEXTUREIMAGE1DEXTPROC __glewCopyTextureImage1DEXT;
+extern PFNGLCOPYTEXTUREIMAGE2DEXTPROC __glewCopyTextureImage2DEXT;
+extern PFNGLCOPYTEXTURESUBIMAGE1DEXTPROC __glewCopyTextureSubImage1DEXT;
+extern PFNGLCOPYTEXTURESUBIMAGE2DEXTPROC __glewCopyTextureSubImage2DEXT;
+extern PFNGLCOPYTEXTURESUBIMAGE3DEXTPROC __glewCopyTextureSubImage3DEXT;
+extern PFNGLDISABLECLIENTSTATEINDEXEDEXTPROC __glewDisableClientStateIndexedEXT;
+extern PFNGLDISABLECLIENTSTATEIEXTPROC __glewDisableClientStateiEXT;
+extern PFNGLDISABLEVERTEXARRAYATTRIBEXTPROC __glewDisableVertexArrayAttribEXT;
+extern PFNGLDISABLEVERTEXARRAYEXTPROC __glewDisableVertexArrayEXT;
+extern PFNGLENABLECLIENTSTATEINDEXEDEXTPROC __glewEnableClientStateIndexedEXT;
+extern PFNGLENABLECLIENTSTATEIEXTPROC __glewEnableClientStateiEXT;
+extern PFNGLENABLEVERTEXARRAYATTRIBEXTPROC __glewEnableVertexArrayAttribEXT;
+extern PFNGLENABLEVERTEXARRAYEXTPROC __glewEnableVertexArrayEXT;
+extern PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEEXTPROC __glewFlushMappedNamedBufferRangeEXT;
+extern PFNGLFRAMEBUFFERDRAWBUFFEREXTPROC __glewFramebufferDrawBufferEXT;
+extern PFNGLFRAMEBUFFERDRAWBUFFERSEXTPROC __glewFramebufferDrawBuffersEXT;
+extern PFNGLFRAMEBUFFERREADBUFFEREXTPROC __glewFramebufferReadBufferEXT;
+extern PFNGLGENERATEMULTITEXMIPMAPEXTPROC __glewGenerateMultiTexMipmapEXT;
+extern PFNGLGENERATETEXTUREMIPMAPEXTPROC __glewGenerateTextureMipmapEXT;
+extern PFNGLGETCOMPRESSEDMULTITEXIMAGEEXTPROC __glewGetCompressedMultiTexImageEXT;
+extern PFNGLGETCOMPRESSEDTEXTUREIMAGEEXTPROC __glewGetCompressedTextureImageEXT;
+extern PFNGLGETDOUBLEINDEXEDVEXTPROC __glewGetDoubleIndexedvEXT;
+extern PFNGLGETDOUBLEI_VEXTPROC __glewGetDoublei_vEXT;
+extern PFNGLGETFLOATINDEXEDVEXTPROC __glewGetFloatIndexedvEXT;
+extern PFNGLGETFLOATI_VEXTPROC __glewGetFloati_vEXT;
+extern PFNGLGETFRAMEBUFFERPARAMETERIVEXTPROC __glewGetFramebufferParameterivEXT;
+extern PFNGLGETMULTITEXENVFVEXTPROC __glewGetMultiTexEnvfvEXT;
+extern PFNGLGETMULTITEXENVIVEXTPROC __glewGetMultiTexEnvivEXT;
+extern PFNGLGETMULTITEXGENDVEXTPROC __glewGetMultiTexGendvEXT;
+extern PFNGLGETMULTITEXGENFVEXTPROC __glewGetMultiTexGenfvEXT;
+extern PFNGLGETMULTITEXGENIVEXTPROC __glewGetMultiTexGenivEXT;
+extern PFNGLGETMULTITEXIMAGEEXTPROC __glewGetMultiTexImageEXT;
+extern PFNGLGETMULTITEXLEVELPARAMETERFVEXTPROC __glewGetMultiTexLevelParameterfvEXT;
+extern PFNGLGETMULTITEXLEVELPARAMETERIVEXTPROC __glewGetMultiTexLevelParameterivEXT;
+extern PFNGLGETMULTITEXPARAMETERIIVEXTPROC __glewGetMultiTexParameterIivEXT;
+extern PFNGLGETMULTITEXPARAMETERIUIVEXTPROC __glewGetMultiTexParameterIuivEXT;
+extern PFNGLGETMULTITEXPARAMETERFVEXTPROC __glewGetMultiTexParameterfvEXT;
+extern PFNGLGETMULTITEXPARAMETERIVEXTPROC __glewGetMultiTexParameterivEXT;
+extern PFNGLGETNAMEDBUFFERPARAMETERIVEXTPROC __glewGetNamedBufferParameterivEXT;
+extern PFNGLGETNAMEDBUFFERPOINTERVEXTPROC __glewGetNamedBufferPointervEXT;
+extern PFNGLGETNAMEDBUFFERSUBDATAEXTPROC __glewGetNamedBufferSubDataEXT;
+extern PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVEXTPROC __glewGetNamedFramebufferAttachmentParameterivEXT;
+extern PFNGLGETNAMEDPROGRAMLOCALPARAMETERIIVEXTPROC __glewGetNamedProgramLocalParameterIivEXT;
+extern PFNGLGETNAMEDPROGRAMLOCALPARAMETERIUIVEXTPROC __glewGetNamedProgramLocalParameterIuivEXT;
+extern PFNGLGETNAMEDPROGRAMLOCALPARAMETERDVEXTPROC __glewGetNamedProgramLocalParameterdvEXT;
+extern PFNGLGETNAMEDPROGRAMLOCALPARAMETERFVEXTPROC __glewGetNamedProgramLocalParameterfvEXT;
+extern PFNGLGETNAMEDPROGRAMSTRINGEXTPROC __glewGetNamedProgramStringEXT;
+extern PFNGLGETNAMEDPROGRAMIVEXTPROC __glewGetNamedProgramivEXT;
+extern PFNGLGETNAMEDRENDERBUFFERPARAMETERIVEXTPROC __glewGetNamedRenderbufferParameterivEXT;
+extern PFNGLGETPOINTERINDEXEDVEXTPROC __glewGetPointerIndexedvEXT;
+extern PFNGLGETPOINTERI_VEXTPROC __glewGetPointeri_vEXT;
+extern PFNGLGETTEXTUREIMAGEEXTPROC __glewGetTextureImageEXT;
+extern PFNGLGETTEXTURELEVELPARAMETERFVEXTPROC __glewGetTextureLevelParameterfvEXT;
+extern PFNGLGETTEXTURELEVELPARAMETERIVEXTPROC __glewGetTextureLevelParameterivEXT;
+extern PFNGLGETTEXTUREPARAMETERIIVEXTPROC __glewGetTextureParameterIivEXT;
+extern PFNGLGETTEXTUREPARAMETERIUIVEXTPROC __glewGetTextureParameterIuivEXT;
+extern PFNGLGETTEXTUREPARAMETERFVEXTPROC __glewGetTextureParameterfvEXT;
+extern PFNGLGETTEXTUREPARAMETERIVEXTPROC __glewGetTextureParameterivEXT;
+extern PFNGLGETVERTEXARRAYINTEGERI_VEXTPROC __glewGetVertexArrayIntegeri_vEXT;
+extern PFNGLGETVERTEXARRAYINTEGERVEXTPROC __glewGetVertexArrayIntegervEXT;
+extern PFNGLGETVERTEXARRAYPOINTERI_VEXTPROC __glewGetVertexArrayPointeri_vEXT;
+extern PFNGLGETVERTEXARRAYPOINTERVEXTPROC __glewGetVertexArrayPointervEXT;
+extern PFNGLMAPNAMEDBUFFEREXTPROC __glewMapNamedBufferEXT;
+extern PFNGLMAPNAMEDBUFFERRANGEEXTPROC __glewMapNamedBufferRangeEXT;
+extern PFNGLMATRIXFRUSTUMEXTPROC __glewMatrixFrustumEXT;
+extern PFNGLMATRIXLOADIDENTITYEXTPROC __glewMatrixLoadIdentityEXT;
+extern PFNGLMATRIXLOADTRANSPOSEDEXTPROC __glewMatrixLoadTransposedEXT;
+extern PFNGLMATRIXLOADTRANSPOSEFEXTPROC __glewMatrixLoadTransposefEXT;
+extern PFNGLMATRIXLOADDEXTPROC __glewMatrixLoaddEXT;
+extern PFNGLMATRIXLOADFEXTPROC __glewMatrixLoadfEXT;
+extern PFNGLMATRIXMULTTRANSPOSEDEXTPROC __glewMatrixMultTransposedEXT;
+extern PFNGLMATRIXMULTTRANSPOSEFEXTPROC __glewMatrixMultTransposefEXT;
+extern PFNGLMATRIXMULTDEXTPROC __glewMatrixMultdEXT;
+extern PFNGLMATRIXMULTFEXTPROC __glewMatrixMultfEXT;
+extern PFNGLMATRIXORTHOEXTPROC __glewMatrixOrthoEXT;
+extern PFNGLMATRIXPOPEXTPROC __glewMatrixPopEXT;
+extern PFNGLMATRIXPUSHEXTPROC __glewMatrixPushEXT;
+extern PFNGLMATRIXROTATEDEXTPROC __glewMatrixRotatedEXT;
+extern PFNGLMATRIXROTATEFEXTPROC __glewMatrixRotatefEXT;
+extern PFNGLMATRIXSCALEDEXTPROC __glewMatrixScaledEXT;
+extern PFNGLMATRIXSCALEFEXTPROC __glewMatrixScalefEXT;
+extern PFNGLMATRIXTRANSLATEDEXTPROC __glewMatrixTranslatedEXT;
+extern PFNGLMATRIXTRANSLATEFEXTPROC __glewMatrixTranslatefEXT;
+extern PFNGLMULTITEXBUFFEREXTPROC __glewMultiTexBufferEXT;
+extern PFNGLMULTITEXCOORDPOINTEREXTPROC __glewMultiTexCoordPointerEXT;
+extern PFNGLMULTITEXENVFEXTPROC __glewMultiTexEnvfEXT;
+extern PFNGLMULTITEXENVFVEXTPROC __glewMultiTexEnvfvEXT;
+extern PFNGLMULTITEXENVIEXTPROC __glewMultiTexEnviEXT;
+extern PFNGLMULTITEXENVIVEXTPROC __glewMultiTexEnvivEXT;
+extern PFNGLMULTITEXGENDEXTPROC __glewMultiTexGendEXT;
+extern PFNGLMULTITEXGENDVEXTPROC __glewMultiTexGendvEXT;
+extern PFNGLMULTITEXGENFEXTPROC __glewMultiTexGenfEXT;
+extern PFNGLMULTITEXGENFVEXTPROC __glewMultiTexGenfvEXT;
+extern PFNGLMULTITEXGENIEXTPROC __glewMultiTexGeniEXT;
+extern PFNGLMULTITEXGENIVEXTPROC __glewMultiTexGenivEXT;
+extern PFNGLMULTITEXIMAGE1DEXTPROC __glewMultiTexImage1DEXT;
+extern PFNGLMULTITEXIMAGE2DEXTPROC __glewMultiTexImage2DEXT;
+extern PFNGLMULTITEXIMAGE3DEXTPROC __glewMultiTexImage3DEXT;
+extern PFNGLMULTITEXPARAMETERIIVEXTPROC __glewMultiTexParameterIivEXT;
+extern PFNGLMULTITEXPARAMETERIUIVEXTPROC __glewMultiTexParameterIuivEXT;
+extern PFNGLMULTITEXPARAMETERFEXTPROC __glewMultiTexParameterfEXT;
+extern PFNGLMULTITEXPARAMETERFVEXTPROC __glewMultiTexParameterfvEXT;
+extern PFNGLMULTITEXPARAMETERIEXTPROC __glewMultiTexParameteriEXT;
+extern PFNGLMULTITEXPARAMETERIVEXTPROC __glewMultiTexParameterivEXT;
+extern PFNGLMULTITEXRENDERBUFFEREXTPROC __glewMultiTexRenderbufferEXT;
+extern PFNGLMULTITEXSUBIMAGE1DEXTPROC __glewMultiTexSubImage1DEXT;
+extern PFNGLMULTITEXSUBIMAGE2DEXTPROC __glewMultiTexSubImage2DEXT;
+extern PFNGLMULTITEXSUBIMAGE3DEXTPROC __glewMultiTexSubImage3DEXT;
+extern PFNGLNAMEDBUFFERDATAEXTPROC __glewNamedBufferDataEXT;
+extern PFNGLNAMEDBUFFERSTORAGEEXTPROC __glewNamedBufferStorageEXT;
+extern PFNGLNAMEDBUFFERSUBDATAEXTPROC __glewNamedBufferSubDataEXT;
+extern PFNGLNAMEDCOPYBUFFERSUBDATAEXTPROC __glewNamedCopyBufferSubDataEXT;
+extern PFNGLNAMEDFRAMEBUFFERRENDERBUFFEREXTPROC __glewNamedFramebufferRenderbufferEXT;
+extern PFNGLNAMEDFRAMEBUFFERTEXTURE1DEXTPROC __glewNamedFramebufferTexture1DEXT;
+extern PFNGLNAMEDFRAMEBUFFERTEXTURE2DEXTPROC __glewNamedFramebufferTexture2DEXT;
+extern PFNGLNAMEDFRAMEBUFFERTEXTURE3DEXTPROC __glewNamedFramebufferTexture3DEXT;
+extern PFNGLNAMEDFRAMEBUFFERTEXTUREEXTPROC __glewNamedFramebufferTextureEXT;
+extern PFNGLNAMEDFRAMEBUFFERTEXTUREFACEEXTPROC __glewNamedFramebufferTextureFaceEXT;
+extern PFNGLNAMEDFRAMEBUFFERTEXTURELAYEREXTPROC __glewNamedFramebufferTextureLayerEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETER4DEXTPROC __glewNamedProgramLocalParameter4dEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETER4DVEXTPROC __glewNamedProgramLocalParameter4dvEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETER4FEXTPROC __glewNamedProgramLocalParameter4fEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETER4FVEXTPROC __glewNamedProgramLocalParameter4fvEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETERI4IEXTPROC __glewNamedProgramLocalParameterI4iEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETERI4IVEXTPROC __glewNamedProgramLocalParameterI4ivEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETERI4UIEXTPROC __glewNamedProgramLocalParameterI4uiEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETERI4UIVEXTPROC __glewNamedProgramLocalParameterI4uivEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETERS4FVEXTPROC __glewNamedProgramLocalParameters4fvEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETERSI4IVEXTPROC __glewNamedProgramLocalParametersI4ivEXT;
+extern PFNGLNAMEDPROGRAMLOCALPARAMETERSI4UIVEXTPROC __glewNamedProgramLocalParametersI4uivEXT;
+extern PFNGLNAMEDPROGRAMSTRINGEXTPROC __glewNamedProgramStringEXT;
+extern PFNGLNAMEDRENDERBUFFERSTORAGEEXTPROC __glewNamedRenderbufferStorageEXT;
+extern PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLECOVERAGEEXTPROC __glewNamedRenderbufferStorageMultisampleCoverageEXT;
+extern PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC __glewNamedRenderbufferStorageMultisampleEXT;
+extern PFNGLPROGRAMUNIFORM1FEXTPROC __glewProgramUniform1fEXT;
+extern PFNGLPROGRAMUNIFORM1FVEXTPROC __glewProgramUniform1fvEXT;
+extern PFNGLPROGRAMUNIFORM1IEXTPROC __glewProgramUniform1iEXT;
+extern PFNGLPROGRAMUNIFORM1IVEXTPROC __glewProgramUniform1ivEXT;
+extern PFNGLPROGRAMUNIFORM1UIEXTPROC __glewProgramUniform1uiEXT;
+extern PFNGLPROGRAMUNIFORM1UIVEXTPROC __glewProgramUniform1uivEXT;
+extern PFNGLPROGRAMUNIFORM2FEXTPROC __glewProgramUniform2fEXT;
+extern PFNGLPROGRAMUNIFORM2FVEXTPROC __glewProgramUniform2fvEXT;
+extern PFNGLPROGRAMUNIFORM2IEXTPROC __glewProgramUniform2iEXT;
+extern PFNGLPROGRAMUNIFORM2IVEXTPROC __glewProgramUniform2ivEXT;
+extern PFNGLPROGRAMUNIFORM2UIEXTPROC __glewProgramUniform2uiEXT;
+extern PFNGLPROGRAMUNIFORM2UIVEXTPROC __glewProgramUniform2uivEXT;
+extern PFNGLPROGRAMUNIFORM3FEXTPROC __glewProgramUniform3fEXT;
+extern PFNGLPROGRAMUNIFORM3FVEXTPROC __glewProgramUniform3fvEXT;
+extern PFNGLPROGRAMUNIFORM3IEXTPROC __glewProgramUniform3iEXT;
+extern PFNGLPROGRAMUNIFORM3IVEXTPROC __glewProgramUniform3ivEXT;
+extern PFNGLPROGRAMUNIFORM3UIEXTPROC __glewProgramUniform3uiEXT;
+extern PFNGLPROGRAMUNIFORM3UIVEXTPROC __glewProgramUniform3uivEXT;
+extern PFNGLPROGRAMUNIFORM4FEXTPROC __glewProgramUniform4fEXT;
+extern PFNGLPROGRAMUNIFORM4FVEXTPROC __glewProgramUniform4fvEXT;
+extern PFNGLPROGRAMUNIFORM4IEXTPROC __glewProgramUniform4iEXT;
+extern PFNGLPROGRAMUNIFORM4IVEXTPROC __glewProgramUniform4ivEXT;
+extern PFNGLPROGRAMUNIFORM4UIEXTPROC __glewProgramUniform4uiEXT;
+extern PFNGLPROGRAMUNIFORM4UIVEXTPROC __glewProgramUniform4uivEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX2FVEXTPROC __glewProgramUniformMatrix2fvEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX2X3FVEXTPROC __glewProgramUniformMatrix2x3fvEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX2X4FVEXTPROC __glewProgramUniformMatrix2x4fvEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX3FVEXTPROC __glewProgramUniformMatrix3fvEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX3X2FVEXTPROC __glewProgramUniformMatrix3x2fvEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX3X4FVEXTPROC __glewProgramUniformMatrix3x4fvEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX4FVEXTPROC __glewProgramUniformMatrix4fvEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX4X2FVEXTPROC __glewProgramUniformMatrix4x2fvEXT;
+extern PFNGLPROGRAMUNIFORMMATRIX4X3FVEXTPROC __glewProgramUniformMatrix4x3fvEXT;
+extern PFNGLPUSHCLIENTATTRIBDEFAULTEXTPROC __glewPushClientAttribDefaultEXT;
+extern PFNGLTEXTUREBUFFEREXTPROC __glewTextureBufferEXT;
+extern PFNGLTEXTUREIMAGE1DEXTPROC __glewTextureImage1DEXT;
+extern PFNGLTEXTUREIMAGE2DEXTPROC __glewTextureImage2DEXT;
+extern PFNGLTEXTUREIMAGE3DEXTPROC __glewTextureImage3DEXT;
+extern PFNGLTEXTUREPAGECOMMITMENTEXTPROC __glewTexturePageCommitmentEXT;
+extern PFNGLTEXTUREPARAMETERIIVEXTPROC __glewTextureParameterIivEXT;
+extern PFNGLTEXTUREPARAMETERIUIVEXTPROC __glewTextureParameterIuivEXT;
+extern PFNGLTEXTUREPARAMETERFEXTPROC __glewTextureParameterfEXT;
+extern PFNGLTEXTUREPARAMETERFVEXTPROC __glewTextureParameterfvEXT;
+extern PFNGLTEXTUREPARAMETERIEXTPROC __glewTextureParameteriEXT;
+extern PFNGLTEXTUREPARAMETERIVEXTPROC __glewTextureParameterivEXT;
+extern PFNGLTEXTURERENDERBUFFEREXTPROC __glewTextureRenderbufferEXT;
+extern PFNGLTEXTURESUBIMAGE1DEXTPROC __glewTextureSubImage1DEXT;
+extern PFNGLTEXTURESUBIMAGE2DEXTPROC __glewTextureSubImage2DEXT;
+extern PFNGLTEXTURESUBIMAGE3DEXTPROC __glewTextureSubImage3DEXT;
+extern PFNGLUNMAPNAMEDBUFFEREXTPROC __glewUnmapNamedBufferEXT;
+extern PFNGLVERTEXARRAYCOLOROFFSETEXTPROC __glewVertexArrayColorOffsetEXT;
+extern PFNGLVERTEXARRAYEDGEFLAGOFFSETEXTPROC __glewVertexArrayEdgeFlagOffsetEXT;
+extern PFNGLVERTEXARRAYFOGCOORDOFFSETEXTPROC __glewVertexArrayFogCoordOffsetEXT;
+extern PFNGLVERTEXARRAYINDEXOFFSETEXTPROC __glewVertexArrayIndexOffsetEXT;
+extern PFNGLVERTEXARRAYMULTITEXCOORDOFFSETEXTPROC __glewVertexArrayMultiTexCoordOffsetEXT;
+extern PFNGLVERTEXARRAYNORMALOFFSETEXTPROC __glewVertexArrayNormalOffsetEXT;
+extern PFNGLVERTEXARRAYSECONDARYCOLOROFFSETEXTPROC __glewVertexArraySecondaryColorOffsetEXT;
+extern PFNGLVERTEXARRAYTEXCOORDOFFSETEXTPROC __glewVertexArrayTexCoordOffsetEXT;
+extern PFNGLVERTEXARRAYVERTEXATTRIBDIVISOREXTPROC __glewVertexArrayVertexAttribDivisorEXT;
+extern PFNGLVERTEXARRAYVERTEXATTRIBIOFFSETEXTPROC __glewVertexArrayVertexAttribIOffsetEXT;
+extern PFNGLVERTEXARRAYVERTEXATTRIBOFFSETEXTPROC __glewVertexArrayVertexAttribOffsetEXT;
+extern PFNGLVERTEXARRAYVERTEXOFFSETEXTPROC __glewVertexArrayVertexOffsetEXT;
+
+extern PFNGLDISCARDFRAMEBUFFEREXTPROC __glewDiscardFramebufferEXT;
+
+extern PFNGLBEGINQUERYEXTPROC __glewBeginQueryEXT;
+extern PFNGLDELETEQUERIESEXTPROC __glewDeleteQueriesEXT;
+extern PFNGLENDQUERYEXTPROC __glewEndQueryEXT;
+extern PFNGLGENQUERIESEXTPROC __glewGenQueriesEXT;
+extern PFNGLGETINTEGER64VEXTPROC __glewGetInteger64vEXT;
+extern PFNGLGETQUERYOBJECTIVEXTPROC __glewGetQueryObjectivEXT;
+extern PFNGLGETQUERYOBJECTUIVEXTPROC __glewGetQueryObjectuivEXT;
+extern PFNGLGETQUERYIVEXTPROC __glewGetQueryivEXT;
+extern PFNGLISQUERYEXTPROC __glewIsQueryEXT;
+extern PFNGLQUERYCOUNTEREXTPROC __glewQueryCounterEXT;
+
+extern PFNGLDRAWBUFFERSEXTPROC __glewDrawBuffersEXT;
+
+extern PFNGLCOLORMASKINDEXEDEXTPROC __glewColorMaskIndexedEXT;
+extern PFNGLDISABLEINDEXEDEXTPROC __glewDisableIndexedEXT;
+extern PFNGLENABLEINDEXEDEXTPROC __glewEnableIndexedEXT;
+extern PFNGLGETBOOLEANINDEXEDVEXTPROC __glewGetBooleanIndexedvEXT;
+extern PFNGLGETINTEGERINDEXEDVEXTPROC __glewGetIntegerIndexedvEXT;
+extern PFNGLISENABLEDINDEXEDEXTPROC __glewIsEnabledIndexedEXT;
+
+extern PFNGLBLENDEQUATIONSEPARATEIEXTPROC __glewBlendEquationSeparateiEXT;
+extern PFNGLBLENDEQUATIONIEXTPROC __glewBlendEquationiEXT;
+extern PFNGLBLENDFUNCSEPARATEIEXTPROC __glewBlendFuncSeparateiEXT;
+extern PFNGLBLENDFUNCIEXTPROC __glewBlendFunciEXT;
+extern PFNGLCOLORMASKIEXTPROC __glewColorMaskiEXT;
+extern PFNGLDISABLEIEXTPROC __glewDisableiEXT;
+extern PFNGLENABLEIEXTPROC __glewEnableiEXT;
+extern PFNGLISENABLEDIEXTPROC __glewIsEnablediEXT;
+
+extern PFNGLDRAWELEMENTSBASEVERTEXEXTPROC __glewDrawElementsBaseVertexEXT;
+extern PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXEXTPROC __glewDrawElementsInstancedBaseVertexEXT;
+extern PFNGLDRAWRANGEELEMENTSBASEVERTEXEXTPROC __glewDrawRangeElementsBaseVertexEXT;
+extern PFNGLMULTIDRAWELEMENTSBASEVERTEXEXTPROC __glewMultiDrawElementsBaseVertexEXT;
+
+extern PFNGLDRAWARRAYSINSTANCEDEXTPROC __glewDrawArraysInstancedEXT;
+extern PFNGLDRAWELEMENTSINSTANCEDEXTPROC __glewDrawElementsInstancedEXT;
+
+extern PFNGLDRAWRANGEELEMENTSEXTPROC __glewDrawRangeElementsEXT;
+
+extern PFNGLDRAWTRANSFORMFEEDBACKEXTPROC __glewDrawTransformFeedbackEXT;
+extern PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDEXTPROC __glewDrawTransformFeedbackInstancedEXT;
+
+extern PFNGLBUFFERSTORAGEEXTERNALEXTPROC __glewBufferStorageExternalEXT;
+extern PFNGLNAMEDBUFFERSTORAGEEXTERNALEXTPROC __glewNamedBufferStorageExternalEXT;
+
+extern PFNGLFOGCOORDPOINTEREXTPROC __glewFogCoordPointerEXT;
+extern PFNGLFOGCOORDDEXTPROC __glewFogCoorddEXT;
+extern PFNGLFOGCOORDDVEXTPROC __glewFogCoorddvEXT;
+extern PFNGLFOGCOORDFEXTPROC __glewFogCoordfEXT;
+extern PFNGLFOGCOORDFVEXTPROC __glewFogCoordfvEXT;
+
+extern PFNGLFRAGMENTCOLORMATERIALEXTPROC __glewFragmentColorMaterialEXT;
+extern PFNGLFRAGMENTLIGHTMODELFEXTPROC __glewFragmentLightModelfEXT;
+extern PFNGLFRAGMENTLIGHTMODELFVEXTPROC __glewFragmentLightModelfvEXT;
+extern PFNGLFRAGMENTLIGHTMODELIEXTPROC __glewFragmentLightModeliEXT;
+extern PFNGLFRAGMENTLIGHTMODELIVEXTPROC __glewFragmentLightModelivEXT;
+extern PFNGLFRAGMENTLIGHTFEXTPROC __glewFragmentLightfEXT;
+extern PFNGLFRAGMENTLIGHTFVEXTPROC __glewFragmentLightfvEXT;
+extern PFNGLFRAGMENTLIGHTIEXTPROC __glewFragmentLightiEXT;
+extern PFNGLFRAGMENTLIGHTIVEXTPROC __glewFragmentLightivEXT;
+extern PFNGLFRAGMENTMATERIALFEXTPROC __glewFragmentMaterialfEXT;
+extern PFNGLFRAGMENTMATERIALFVEXTPROC __glewFragmentMaterialfvEXT;
+extern PFNGLFRAGMENTMATERIALIEXTPROC __glewFragmentMaterialiEXT;
+extern PFNGLFRAGMENTMATERIALIVEXTPROC __glewFragmentMaterialivEXT;
+extern PFNGLGETFRAGMENTLIGHTFVEXTPROC __glewGetFragmentLightfvEXT;
+extern PFNGLGETFRAGMENTLIGHTIVEXTPROC __glewGetFragmentLightivEXT;
+extern PFNGLGETFRAGMENTMATERIALFVEXTPROC __glewGetFragmentMaterialfvEXT;
+extern PFNGLGETFRAGMENTMATERIALIVEXTPROC __glewGetFragmentMaterialivEXT;
+extern PFNGLLIGHTENVIEXTPROC __glewLightEnviEXT;
+
+extern PFNGLFRAMEBUFFERSHADINGRATEEXTPROC __glewFramebufferShadingRateEXT;
+extern PFNGLGETFRAGMENTSHADINGRATESEXTPROC __glewGetFragmentShadingRatesEXT;
+extern PFNGLSHADINGRATECOMBINEROPSEXTPROC __glewShadingRateCombinerOpsEXT;
+extern PFNGLSHADINGRATEEXTPROC __glewShadingRateEXT;
+
+extern PFNGLBLITFRAMEBUFFEREXTPROC __glewBlitFramebufferEXT;
+
+extern PFNGLBLITFRAMEBUFFERLAYEREXTPROC __glewBlitFramebufferLayerEXT;
+extern PFNGLBLITFRAMEBUFFERLAYERSEXTPROC __glewBlitFramebufferLayersEXT;
+
+extern PFNGLRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC __glewRenderbufferStorageMultisampleEXT;
+
+extern PFNGLBINDFRAMEBUFFEREXTPROC __glewBindFramebufferEXT;
+extern PFNGLBINDRENDERBUFFEREXTPROC __glewBindRenderbufferEXT;
+extern PFNGLCHECKFRAMEBUFFERSTATUSEXTPROC __glewCheckFramebufferStatusEXT;
+extern PFNGLDELETEFRAMEBUFFERSEXTPROC __glewDeleteFramebuffersEXT;
+extern PFNGLDELETERENDERBUFFERSEXTPROC __glewDeleteRenderbuffersEXT;
+extern PFNGLFRAMEBUFFERRENDERBUFFEREXTPROC __glewFramebufferRenderbufferEXT;
+extern PFNGLFRAMEBUFFERTEXTURE1DEXTPROC __glewFramebufferTexture1DEXT;
+extern PFNGLFRAMEBUFFERTEXTURE2DEXTPROC __glewFramebufferTexture2DEXT;
+extern PFNGLFRAMEBUFFERTEXTURE3DEXTPROC __glewFramebufferTexture3DEXT;
+extern PFNGLGENFRAMEBUFFERSEXTPROC __glewGenFramebuffersEXT;
+extern PFNGLGENRENDERBUFFERSEXTPROC __glewGenRenderbuffersEXT;
+extern PFNGLGENERATEMIPMAPEXTPROC __glewGenerateMipmapEXT;
+extern PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVEXTPROC __glewGetFramebufferAttachmentParameterivEXT;
+extern PFNGLGETRENDERBUFFERPARAMETERIVEXTPROC __glewGetRenderbufferParameterivEXT;
+extern PFNGLISFRAMEBUFFEREXTPROC __glewIsFramebufferEXT;
+extern PFNGLISRENDERBUFFEREXTPROC __glewIsRenderbufferEXT;
+extern PFNGLRENDERBUFFERSTORAGEEXTPROC __glewRenderbufferStorageEXT;
+
+extern PFNGLFRAMEBUFFERTEXTUREEXTPROC __glewFramebufferTextureEXT;
+extern PFNGLFRAMEBUFFERTEXTUREFACEEXTPROC __glewFramebufferTextureFaceEXT;
+extern PFNGLPROGRAMPARAMETERIEXTPROC __glewProgramParameteriEXT;
+
+extern PFNGLPROGRAMENVPARAMETERS4FVEXTPROC __glewProgramEnvParameters4fvEXT;
+extern PFNGLPROGRAMLOCALPARAMETERS4FVEXTPROC __glewProgramLocalParameters4fvEXT;
+
+extern PFNGLBINDFRAGDATALOCATIONEXTPROC __glewBindFragDataLocationEXT;
+extern PFNGLGETFRAGDATALOCATIONEXTPROC __glewGetFragDataLocationEXT;
+extern PFNGLGETUNIFORMUIVEXTPROC __glewGetUniformuivEXT;
+extern PFNGLGETVERTEXATTRIBIIVEXTPROC __glewGetVertexAttribIivEXT;
+extern PFNGLGETVERTEXATTRIBIUIVEXTPROC __glewGetVertexAttribIuivEXT;
+extern PFNGLUNIFORM1UIEXTPROC __glewUniform1uiEXT;
+extern PFNGLUNIFORM1UIVEXTPROC __glewUniform1uivEXT;
+extern PFNGLUNIFORM2UIEXTPROC __glewUniform2uiEXT;
+extern PFNGLUNIFORM2UIVEXTPROC __glewUniform2uivEXT;
+extern PFNGLUNIFORM3UIEXTPROC __glewUniform3uiEXT;
+extern PFNGLUNIFORM3UIVEXTPROC __glewUniform3uivEXT;
+extern PFNGLUNIFORM4UIEXTPROC __glewUniform4uiEXT;
+extern PFNGLUNIFORM4UIVEXTPROC __glewUniform4uivEXT;
+extern PFNGLVERTEXATTRIBI1IEXTPROC __glewVertexAttribI1iEXT;
+extern PFNGLVERTEXATTRIBI1IVEXTPROC __glewVertexAttribI1ivEXT;
+extern PFNGLVERTEXATTRIBI1UIEXTPROC __glewVertexAttribI1uiEXT;
+extern PFNGLVERTEXATTRIBI1UIVEXTPROC __glewVertexAttribI1uivEXT;
+extern PFNGLVERTEXATTRIBI2IEXTPROC __glewVertexAttribI2iEXT;
+extern PFNGLVERTEXATTRIBI2IVEXTPROC __glewVertexAttribI2ivEXT;
+extern PFNGLVERTEXATTRIBI2UIEXTPROC __glewVertexAttribI2uiEXT;
+extern PFNGLVERTEXATTRIBI2UIVEXTPROC __glewVertexAttribI2uivEXT;
+extern PFNGLVERTEXATTRIBI3IEXTPROC __glewVertexAttribI3iEXT;
+extern PFNGLVERTEXATTRIBI3IVEXTPROC __glewVertexAttribI3ivEXT;
+extern PFNGLVERTEXATTRIBI3UIEXTPROC __glewVertexAttribI3uiEXT;
+extern PFNGLVERTEXATTRIBI3UIVEXTPROC __glewVertexAttribI3uivEXT;
+extern PFNGLVERTEXATTRIBI4BVEXTPROC __glewVertexAttribI4bvEXT;
+extern PFNGLVERTEXATTRIBI4IEXTPROC __glewVertexAttribI4iEXT;
+extern PFNGLVERTEXATTRIBI4IVEXTPROC __glewVertexAttribI4ivEXT;
+extern PFNGLVERTEXATTRIBI4SVEXTPROC __glewVertexAttribI4svEXT;
+extern PFNGLVERTEXATTRIBI4UBVEXTPROC __glewVertexAttribI4ubvEXT;
+extern PFNGLVERTEXATTRIBI4UIEXTPROC __glewVertexAttribI4uiEXT;
+extern PFNGLVERTEXATTRIBI4UIVEXTPROC __glewVertexAttribI4uivEXT;
+extern PFNGLVERTEXATTRIBI4USVEXTPROC __glewVertexAttribI4usvEXT;
+extern PFNGLVERTEXATTRIBIPOINTEREXTPROC __glewVertexAttribIPointerEXT;
+
+extern PFNGLGETHISTOGRAMEXTPROC __glewGetHistogramEXT;
+extern PFNGLGETHISTOGRAMPARAMETERFVEXTPROC __glewGetHistogramParameterfvEXT;
+extern PFNGLGETHISTOGRAMPARAMETERIVEXTPROC __glewGetHistogramParameterivEXT;
+extern PFNGLGETMINMAXEXTPROC __glewGetMinmaxEXT;
+extern PFNGLGETMINMAXPARAMETERFVEXTPROC __glewGetMinmaxParameterfvEXT;
+extern PFNGLGETMINMAXPARAMETERIVEXTPROC __glewGetMinmaxParameterivEXT;
+extern PFNGLHISTOGRAMEXTPROC __glewHistogramEXT;
+extern PFNGLMINMAXEXTPROC __glewMinmaxEXT;
+extern PFNGLRESETHISTOGRAMEXTPROC __glewResetHistogramEXT;
+extern PFNGLRESETMINMAXEXTPROC __glewResetMinmaxEXT;
+
+extern PFNGLINDEXFUNCEXTPROC __glewIndexFuncEXT;
+
+extern PFNGLINDEXMATERIALEXTPROC __glewIndexMaterialEXT;
+
+extern PFNGLVERTEXATTRIBDIVISOREXTPROC __glewVertexAttribDivisorEXT;
+
+extern PFNGLAPPLYTEXTUREEXTPROC __glewApplyTextureEXT;
+extern PFNGLTEXTURELIGHTEXTPROC __glewTextureLightEXT;
+extern PFNGLTEXTUREMATERIALEXTPROC __glewTextureMaterialEXT;
+
+extern PFNGLFLUSHMAPPEDBUFFERRANGEEXTPROC __glewFlushMappedBufferRangeEXT;
+extern PFNGLMAPBUFFERRANGEEXTPROC __glewMapBufferRangeEXT;
+
+extern PFNGLBUFFERSTORAGEMEMEXTPROC __glewBufferStorageMemEXT;
+extern PFNGLCREATEMEMORYOBJECTSEXTPROC __glewCreateMemoryObjectsEXT;
+extern PFNGLDELETEMEMORYOBJECTSEXTPROC __glewDeleteMemoryObjectsEXT;
+extern PFNGLGETMEMORYOBJECTPARAMETERIVEXTPROC __glewGetMemoryObjectParameterivEXT;
+extern PFNGLGETUNSIGNEDBYTEI_VEXTPROC __glewGetUnsignedBytei_vEXT;
+extern PFNGLGETUNSIGNEDBYTEVEXTPROC __glewGetUnsignedBytevEXT;
+extern PFNGLISMEMORYOBJECTEXTPROC __glewIsMemoryObjectEXT;
+extern PFNGLMEMORYOBJECTPARAMETERIVEXTPROC __glewMemoryObjectParameterivEXT;
+extern PFNGLNAMEDBUFFERSTORAGEMEMEXTPROC __glewNamedBufferStorageMemEXT;
+extern PFNGLTEXSTORAGEMEM1DEXTPROC __glewTexStorageMem1DEXT;
+extern PFNGLTEXSTORAGEMEM2DEXTPROC __glewTexStorageMem2DEXT;
+extern PFNGLTEXSTORAGEMEM2DMULTISAMPLEEXTPROC __glewTexStorageMem2DMultisampleEXT;
+extern PFNGLTEXSTORAGEMEM3DEXTPROC __glewTexStorageMem3DEXT;
+extern PFNGLTEXSTORAGEMEM3DMULTISAMPLEEXTPROC __glewTexStorageMem3DMultisampleEXT;
+extern PFNGLTEXTURESTORAGEMEM1DEXTPROC __glewTextureStorageMem1DEXT;
+extern PFNGLTEXTURESTORAGEMEM2DEXTPROC __glewTextureStorageMem2DEXT;
+extern PFNGLTEXTURESTORAGEMEM2DMULTISAMPLEEXTPROC __glewTextureStorageMem2DMultisampleEXT;
+extern PFNGLTEXTURESTORAGEMEM3DEXTPROC __glewTextureStorageMem3DEXT;
+extern PFNGLTEXTURESTORAGEMEM3DMULTISAMPLEEXTPROC __glewTextureStorageMem3DMultisampleEXT;
+
+extern PFNGLIMPORTMEMORYFDEXTPROC __glewImportMemoryFdEXT;
+
+extern PFNGLIMPORTMEMORYWIN32HANDLEEXTPROC __glewImportMemoryWin32HandleEXT;
+extern PFNGLIMPORTMEMORYWIN32NAMEEXTPROC __glewImportMemoryWin32NameEXT;
+
+extern PFNGLDRAWMESHTASKSEXTPROC __glewDrawMeshTasksEXT;
+extern PFNGLDRAWMESHTASKSINDIRECTEXTPROC __glewDrawMeshTasksIndirectEXT;
+extern PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTEXTPROC __glewMultiDrawMeshTasksIndirectCountEXT;
+extern PFNGLMULTIDRAWMESHTASKSINDIRECTEXTPROC __glewMultiDrawMeshTasksIndirectEXT;
+
+extern PFNGLMULTIDRAWARRAYSEXTPROC __glewMultiDrawArraysEXT;
+extern PFNGLMULTIDRAWELEMENTSEXTPROC __glewMultiDrawElementsEXT;
+
+extern PFNGLMULTIDRAWARRAYSINDIRECTEXTPROC __glewMultiDrawArraysIndirectEXT;
+extern PFNGLMULTIDRAWELEMENTSINDIRECTEXTPROC __glewMultiDrawElementsIndirectEXT;
+
+extern PFNGLSAMPLEMASKEXTPROC __glewSampleMaskEXT;
+extern PFNGLSAMPLEPATTERNEXTPROC __glewSamplePatternEXT;
+
+extern PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEEXTPROC __glewFramebufferTexture2DMultisampleEXT;
+
+extern PFNGLDRAWBUFFERSINDEXEDEXTPROC __glewDrawBuffersIndexedEXT;
+extern PFNGLGETINTEGERI_VEXTPROC __glewGetIntegeri_vEXT;
+extern PFNGLREADBUFFERINDEXEDEXTPROC __glewReadBufferIndexedEXT;
+
+extern PFNGLCOLORTABLEEXTPROC __glewColorTableEXT;
+extern PFNGLGETCOLORTABLEEXTPROC __glewGetColorTableEXT;
+extern PFNGLGETCOLORTABLEPARAMETERFVEXTPROC __glewGetColorTableParameterfvEXT;
+extern PFNGLGETCOLORTABLEPARAMETERIVEXTPROC __glewGetColorTableParameterivEXT;
+
+extern PFNGLGETPIXELTRANSFORMPARAMETERFVEXTPROC __glewGetPixelTransformParameterfvEXT;
+extern PFNGLGETPIXELTRANSFORMPARAMETERIVEXTPROC __glewGetPixelTransformParameterivEXT;
+extern PFNGLPIXELTRANSFORMPARAMETERFEXTPROC __glewPixelTransformParameterfEXT;
+extern PFNGLPIXELTRANSFORMPARAMETERFVEXTPROC __glewPixelTransformParameterfvEXT;
+extern PFNGLPIXELTRANSFORMPARAMETERIEXTPROC __glewPixelTransformParameteriEXT;
+extern PFNGLPIXELTRANSFORMPARAMETERIVEXTPROC __glewPixelTransformParameterivEXT;
+
+extern PFNGLPOINTPARAMETERFEXTPROC __glewPointParameterfEXT;
+extern PFNGLPOINTPARAMETERFVEXTPROC __glewPointParameterfvEXT;
+
+extern PFNGLPOLYGONOFFSETEXTPROC __glewPolygonOffsetEXT;
+
+extern PFNGLPOLYGONOFFSETCLAMPEXTPROC __glewPolygonOffsetClampEXT;
+
+extern PFNGLPRIMITIVEBOUNDINGBOXEXTPROC __glewPrimitiveBoundingBoxEXT;
+
+extern PFNGLPROVOKINGVERTEXEXTPROC __glewProvokingVertexEXT;
+
+extern PFNGLCOVERAGEMODULATIONNVPROC __glewCoverageModulationNV;
+extern PFNGLCOVERAGEMODULATIONTABLENVPROC __glewCoverageModulationTableNV;
+extern PFNGLGETCOVERAGEMODULATIONTABLENVPROC __glewGetCoverageModulationTableNV;
+extern PFNGLRASTERSAMPLESEXTPROC __glewRasterSamplesEXT;
+
+extern PFNGLGETGRAPHICSRESETSTATUSEXTPROC __glewGetGraphicsResetStatusEXT;
+extern PFNGLGETNUNIFORMFVEXTPROC __glewGetnUniformfvEXT;
+extern PFNGLGETNUNIFORMIVEXTPROC __glewGetnUniformivEXT;
+extern PFNGLREADNPIXELSEXTPROC __glewReadnPixelsEXT;
+
+extern PFNGLBEGINSCENEEXTPROC __glewBeginSceneEXT;
+extern PFNGLENDSCENEEXTPROC __glewEndSceneEXT;
+
+extern PFNGLSECONDARYCOLOR3BEXTPROC __glewSecondaryColor3bEXT;
+extern PFNGLSECONDARYCOLOR3BVEXTPROC __glewSecondaryColor3bvEXT;
+extern PFNGLSECONDARYCOLOR3DEXTPROC __glewSecondaryColor3dEXT;
+extern PFNGLSECONDARYCOLOR3DVEXTPROC __glewSecondaryColor3dvEXT;
+extern PFNGLSECONDARYCOLOR3FEXTPROC __glewSecondaryColor3fEXT;
+extern PFNGLSECONDARYCOLOR3FVEXTPROC __glewSecondaryColor3fvEXT;
+extern PFNGLSECONDARYCOLOR3IEXTPROC __glewSecondaryColor3iEXT;
+extern PFNGLSECONDARYCOLOR3IVEXTPROC __glewSecondaryColor3ivEXT;
+extern PFNGLSECONDARYCOLOR3SEXTPROC __glewSecondaryColor3sEXT;
+extern PFNGLSECONDARYCOLOR3SVEXTPROC __glewSecondaryColor3svEXT;
+extern PFNGLSECONDARYCOLOR3UBEXTPROC __glewSecondaryColor3ubEXT;
+extern PFNGLSECONDARYCOLOR3UBVEXTPROC __glewSecondaryColor3ubvEXT;
+extern PFNGLSECONDARYCOLOR3UIEXTPROC __glewSecondaryColor3uiEXT;
+extern PFNGLSECONDARYCOLOR3UIVEXTPROC __glewSecondaryColor3uivEXT;
+extern PFNGLSECONDARYCOLOR3USEXTPROC __glewSecondaryColor3usEXT;
+extern PFNGLSECONDARYCOLOR3USVEXTPROC __glewSecondaryColor3usvEXT;
+extern PFNGLSECONDARYCOLORPOINTEREXTPROC __glewSecondaryColorPointerEXT;
+
+extern PFNGLDELETESEMAPHORESEXTPROC __glewDeleteSemaphoresEXT;
+extern PFNGLGENSEMAPHORESEXTPROC __glewGenSemaphoresEXT;
+extern PFNGLGETSEMAPHOREPARAMETERUI64VEXTPROC __glewGetSemaphoreParameterui64vEXT;
+extern PFNGLISSEMAPHOREEXTPROC __glewIsSemaphoreEXT;
+extern PFNGLSEMAPHOREPARAMETERUI64VEXTPROC __glewSemaphoreParameterui64vEXT;
+extern PFNGLSIGNALSEMAPHOREEXTPROC __glewSignalSemaphoreEXT;
+extern PFNGLWAITSEMAPHOREEXTPROC __glewWaitSemaphoreEXT;
+
+extern PFNGLIMPORTSEMAPHOREFDEXTPROC __glewImportSemaphoreFdEXT;
+
+extern PFNGLIMPORTSEMAPHOREWIN32HANDLEEXTPROC __glewImportSemaphoreWin32HandleEXT;
+extern PFNGLIMPORTSEMAPHOREWIN32NAMEEXTPROC __glewImportSemaphoreWin32NameEXT;
+
+extern PFNGLACTIVEPROGRAMEXTPROC __glewActiveProgramEXT;
+extern PFNGLCREATESHADERPROGRAMEXTPROC __glewCreateShaderProgramEXT;
+extern PFNGLUSESHADERPROGRAMEXTPROC __glewUseShaderProgramEXT;
+
+extern PFNGLFRAMEBUFFERFETCHBARRIEREXTPROC __glewFramebufferFetchBarrierEXT;
+
+extern PFNGLBINDIMAGETEXTUREEXTPROC __glewBindImageTextureEXT;
+extern PFNGLMEMORYBARRIEREXTPROC __glewMemoryBarrierEXT;
+
+extern PFNGLCLEARPIXELLOCALSTORAGEUIEXTPROC __glewClearPixelLocalStorageuiEXT;
+extern PFNGLFRAMEBUFFERPIXELLOCALSTORAGESIZEEXTPROC __glewFramebufferPixelLocalStorageSizeEXT;
+extern PFNGLGETFRAMEBUFFERPIXELLOCALSTORAGESIZEEXTPROC __glewGetFramebufferPixelLocalStorageSizeEXT;
+
+extern PFNGLTEXPAGECOMMITMENTEXTPROC __glewTexPageCommitmentEXT;
+
+extern PFNGLACTIVESTENCILFACEEXTPROC __glewActiveStencilFaceEXT;
+
+extern PFNGLTEXSUBIMAGE1DEXTPROC __glewTexSubImage1DEXT;
+extern PFNGLTEXSUBIMAGE2DEXTPROC __glewTexSubImage2DEXT;
+extern PFNGLTEXSUBIMAGE3DEXTPROC __glewTexSubImage3DEXT;
+
+extern PFNGLPATCHPARAMETERIEXTPROC __glewPatchParameteriEXT;
+
+extern PFNGLTEXIMAGE3DEXTPROC __glewTexImage3DEXT;
+
+extern PFNGLFRAMEBUFFERTEXTURELAYEREXTPROC __glewFramebufferTextureLayerEXT;
+
+extern PFNGLGETSAMPLERPARAMETERIIVEXTPROC __glewGetSamplerParameterIivEXT;
+extern PFNGLGETSAMPLERPARAMETERIUIVEXTPROC __glewGetSamplerParameterIuivEXT;
+extern PFNGLSAMPLERPARAMETERIIVEXTPROC __glewSamplerParameterIivEXT;
+extern PFNGLSAMPLERPARAMETERIUIVEXTPROC __glewSamplerParameterIuivEXT;
+
+extern PFNGLTEXBUFFEREXTPROC __glewTexBufferEXT;
+
+extern PFNGLCLEARCOLORIIEXTPROC __glewClearColorIiEXT;
+extern PFNGLCLEARCOLORIUIEXTPROC __glewClearColorIuiEXT;
+extern PFNGLGETTEXPARAMETERIIVEXTPROC __glewGetTexParameterIivEXT;
+extern PFNGLGETTEXPARAMETERIUIVEXTPROC __glewGetTexParameterIuivEXT;
+extern PFNGLTEXPARAMETERIIVEXTPROC __glewTexParameterIivEXT;
+extern PFNGLTEXPARAMETERIUIVEXTPROC __glewTexParameterIuivEXT;
+
+extern PFNGLARETEXTURESRESIDENTEXTPROC __glewAreTexturesResidentEXT;
+extern PFNGLBINDTEXTUREEXTPROC __glewBindTextureEXT;
+extern PFNGLDELETETEXTURESEXTPROC __glewDeleteTexturesEXT;
+extern PFNGLGENTEXTURESEXTPROC __glewGenTexturesEXT;
+extern PFNGLISTEXTUREEXTPROC __glewIsTextureEXT;
+extern PFNGLPRIORITIZETEXTURESEXTPROC __glewPrioritizeTexturesEXT;
+
+extern PFNGLTEXTURENORMALEXTPROC __glewTextureNormalEXT;
+
+extern PFNGLTEXSTORAGE1DEXTPROC __glewTexStorage1DEXT;
+extern PFNGLTEXSTORAGE2DEXTPROC __glewTexStorage2DEXT;
+extern PFNGLTEXSTORAGE3DEXTPROC __glewTexStorage3DEXT;
+extern PFNGLTEXTURESTORAGE1DEXTPROC __glewTextureStorage1DEXT;
+extern PFNGLTEXTURESTORAGE2DEXTPROC __glewTextureStorage2DEXT;
+extern PFNGLTEXTURESTORAGE3DEXTPROC __glewTextureStorage3DEXT;
+
+extern PFNGLTEXSTORAGEATTRIBS2DEXTPROC __glewTexStorageAttribs2DEXT;
+extern PFNGLTEXSTORAGEATTRIBS3DEXTPROC __glewTexStorageAttribs3DEXT;
+
+extern PFNGLTEXTUREVIEWEXTPROC __glewTextureViewEXT;
+
+extern PFNGLGETQUERYOBJECTI64VEXTPROC __glewGetQueryObjecti64vEXT;
+extern PFNGLGETQUERYOBJECTUI64VEXTPROC __glewGetQueryObjectui64vEXT;
+
+extern PFNGLBEGINTRANSFORMFEEDBACKEXTPROC __glewBeginTransformFeedbackEXT;
+extern PFNGLBINDBUFFERBASEEXTPROC __glewBindBufferBaseEXT;
+extern PFNGLBINDBUFFEROFFSETEXTPROC __glewBindBufferOffsetEXT;
+extern PFNGLBINDBUFFERRANGEEXTPROC __glewBindBufferRangeEXT;
+extern PFNGLENDTRANSFORMFEEDBACKEXTPROC __glewEndTransformFeedbackEXT;
+extern PFNGLGETTRANSFORMFEEDBACKVARYINGEXTPROC __glewGetTransformFeedbackVaryingEXT;
+extern PFNGLTRANSFORMFEEDBACKVARYINGSEXTPROC __glewTransformFeedbackVaryingsEXT;
+
+extern PFNGLARRAYELEMENTEXTPROC __glewArrayElementEXT;
+extern PFNGLCOLORPOINTEREXTPROC __glewColorPointerEXT;
+extern PFNGLDRAWARRAYSEXTPROC __glewDrawArraysEXT;
+extern PFNGLEDGEFLAGPOINTEREXTPROC __glewEdgeFlagPointerEXT;
+extern PFNGLINDEXPOINTEREXTPROC __glewIndexPointerEXT;
+extern PFNGLNORMALPOINTEREXTPROC __glewNormalPointerEXT;
+extern PFNGLTEXCOORDPOINTEREXTPROC __glewTexCoordPointerEXT;
+extern PFNGLVERTEXPOINTEREXTPROC __glewVertexPointerEXT;
+
+extern PFNGLBINDARRAYSETEXTPROC __glewBindArraySetEXT;
+extern PFNGLCREATEARRAYSETEXTPROC __glewCreateArraySetExt;
+extern PFNGLDELETEARRAYSETSEXTPROC __glewDeleteArraySetsEXT;
+
+extern PFNGLGETVERTEXATTRIBLDVEXTPROC __glewGetVertexAttribLdvEXT;
+extern PFNGLVERTEXARRAYVERTEXATTRIBLOFFSETEXTPROC __glewVertexArrayVertexAttribLOffsetEXT;
+extern PFNGLVERTEXATTRIBL1DEXTPROC __glewVertexAttribL1dEXT;
+extern PFNGLVERTEXATTRIBL1DVEXTPROC __glewVertexAttribL1dvEXT;
+extern PFNGLVERTEXATTRIBL2DEXTPROC __glewVertexAttribL2dEXT;
+extern PFNGLVERTEXATTRIBL2DVEXTPROC __glewVertexAttribL2dvEXT;
+extern PFNGLVERTEXATTRIBL3DEXTPROC __glewVertexAttribL3dEXT;
+extern PFNGLVERTEXATTRIBL3DVEXTPROC __glewVertexAttribL3dvEXT;
+extern PFNGLVERTEXATTRIBL4DEXTPROC __glewVertexAttribL4dEXT;
+extern PFNGLVERTEXATTRIBL4DVEXTPROC __glewVertexAttribL4dvEXT;
+extern PFNGLVERTEXATTRIBLPOINTEREXTPROC __glewVertexAttribLPointerEXT;
+
+extern PFNGLBEGINVERTEXSHADEREXTPROC __glewBeginVertexShaderEXT;
+extern PFNGLBINDLIGHTPARAMETEREXTPROC __glewBindLightParameterEXT;
+extern PFNGLBINDMATERIALPARAMETEREXTPROC __glewBindMaterialParameterEXT;
+extern PFNGLBINDPARAMETEREXTPROC __glewBindParameterEXT;
+extern PFNGLBINDTEXGENPARAMETEREXTPROC __glewBindTexGenParameterEXT;
+extern PFNGLBINDTEXTUREUNITPARAMETEREXTPROC __glewBindTextureUnitParameterEXT;
+extern PFNGLBINDVERTEXSHADEREXTPROC __glewBindVertexShaderEXT;
+extern PFNGLDELETEVERTEXSHADEREXTPROC __glewDeleteVertexShaderEXT;
+extern PFNGLDISABLEVARIANTCLIENTSTATEEXTPROC __glewDisableVariantClientStateEXT;
+extern PFNGLENABLEVARIANTCLIENTSTATEEXTPROC __glewEnableVariantClientStateEXT;
+extern PFNGLENDVERTEXSHADEREXTPROC __glewEndVertexShaderEXT;
+extern PFNGLEXTRACTCOMPONENTEXTPROC __glewExtractComponentEXT;
+extern PFNGLGENSYMBOLSEXTPROC __glewGenSymbolsEXT;
+extern PFNGLGENVERTEXSHADERSEXTPROC __glewGenVertexShadersEXT;
+extern PFNGLGETINVARIANTBOOLEANVEXTPROC __glewGetInvariantBooleanvEXT;
+extern PFNGLGETINVARIANTFLOATVEXTPROC __glewGetInvariantFloatvEXT;
+extern PFNGLGETINVARIANTINTEGERVEXTPROC __glewGetInvariantIntegervEXT;
+extern PFNGLGETLOCALCONSTANTBOOLEANVEXTPROC __glewGetLocalConstantBooleanvEXT;
+extern PFNGLGETLOCALCONSTANTFLOATVEXTPROC __glewGetLocalConstantFloatvEXT;
+extern PFNGLGETLOCALCONSTANTINTEGERVEXTPROC __glewGetLocalConstantIntegervEXT;
+extern PFNGLGETVARIANTBOOLEANVEXTPROC __glewGetVariantBooleanvEXT;
+extern PFNGLGETVARIANTFLOATVEXTPROC __glewGetVariantFloatvEXT;
+extern PFNGLGETVARIANTINTEGERVEXTPROC __glewGetVariantIntegervEXT;
+extern PFNGLGETVARIANTPOINTERVEXTPROC __glewGetVariantPointervEXT;
+extern PFNGLINSERTCOMPONENTEXTPROC __glewInsertComponentEXT;
+extern PFNGLISVARIANTENABLEDEXTPROC __glewIsVariantEnabledEXT;
+extern PFNGLSETINVARIANTEXTPROC __glewSetInvariantEXT;
+extern PFNGLSETLOCALCONSTANTEXTPROC __glewSetLocalConstantEXT;
+extern PFNGLSHADEROP1EXTPROC __glewShaderOp1EXT;
+extern PFNGLSHADEROP2EXTPROC __glewShaderOp2EXT;
+extern PFNGLSHADEROP3EXTPROC __glewShaderOp3EXT;
+extern PFNGLSWIZZLEEXTPROC __glewSwizzleEXT;
+extern PFNGLVARIANTPOINTEREXTPROC __glewVariantPointerEXT;
+extern PFNGLVARIANTBVEXTPROC __glewVariantbvEXT;
+extern PFNGLVARIANTDVEXTPROC __glewVariantdvEXT;
+extern PFNGLVARIANTFVEXTPROC __glewVariantfvEXT;
+extern PFNGLVARIANTIVEXTPROC __glewVariantivEXT;
+extern PFNGLVARIANTSVEXTPROC __glewVariantsvEXT;
+extern PFNGLVARIANTUBVEXTPROC __glewVariantubvEXT;
+extern PFNGLVARIANTUIVEXTPROC __glewVariantuivEXT;
+extern PFNGLVARIANTUSVEXTPROC __glewVariantusvEXT;
+extern PFNGLWRITEMASKEXTPROC __glewWriteMaskEXT;
+
+extern PFNGLVERTEXWEIGHTPOINTEREXTPROC __glewVertexWeightPointerEXT;
+extern PFNGLVERTEXWEIGHTFEXTPROC __glewVertexWeightfEXT;
+extern PFNGLVERTEXWEIGHTFVEXTPROC __glewVertexWeightfvEXT;
+
+extern PFNGLACQUIREKEYEDMUTEXWIN32EXTPROC __glewAcquireKeyedMutexWin32EXT;
+extern PFNGLRELEASEKEYEDMUTEXWIN32EXTPROC __glewReleaseKeyedMutexWin32EXT;
+
+extern PFNGLWINDOWRECTANGLESEXTPROC __glewWindowRectanglesEXT;
+
+extern PFNGLIMPORTSYNCEXTPROC __glewImportSyncEXT;
+
+extern PFNGLFRAMETERMINATORGREMEDYPROC __glewFrameTerminatorGREMEDY;
+
+extern PFNGLSTRINGMARKERGREMEDYPROC __glewStringMarkerGREMEDY;
+
+extern PFNGLGETIMAGETRANSFORMPARAMETERFVHPPROC __glewGetImageTransformParameterfvHP;
+extern PFNGLGETIMAGETRANSFORMPARAMETERIVHPPROC __glewGetImageTransformParameterivHP;
+extern PFNGLIMAGETRANSFORMPARAMETERFHPPROC __glewImageTransformParameterfHP;
+extern PFNGLIMAGETRANSFORMPARAMETERFVHPPROC __glewImageTransformParameterfvHP;
+extern PFNGLIMAGETRANSFORMPARAMETERIHPPROC __glewImageTransformParameteriHP;
+extern PFNGLIMAGETRANSFORMPARAMETERIVHPPROC __glewImageTransformParameterivHP;
+
+extern PFNGLMULTIMODEDRAWARRAYSIBMPROC __glewMultiModeDrawArraysIBM;
+extern PFNGLMULTIMODEDRAWELEMENTSIBMPROC __glewMultiModeDrawElementsIBM;
+
+extern PFNGLCOLORPOINTERLISTIBMPROC __glewColorPointerListIBM;
+extern PFNGLEDGEFLAGPOINTERLISTIBMPROC __glewEdgeFlagPointerListIBM;
+extern PFNGLFOGCOORDPOINTERLISTIBMPROC __glewFogCoordPointerListIBM;
+extern PFNGLINDEXPOINTERLISTIBMPROC __glewIndexPointerListIBM;
+extern PFNGLNORMALPOINTERLISTIBMPROC __glewNormalPointerListIBM;
+extern PFNGLSECONDARYCOLORPOINTERLISTIBMPROC __glewSecondaryColorPointerListIBM;
+extern PFNGLTEXCOORDPOINTERLISTIBMPROC __glewTexCoordPointerListIBM;
+extern PFNGLVERTEXPOINTERLISTIBMPROC __glewVertexPointerListIBM;
+
+extern PFNGLGETTEXTUREHANDLEIMGPROC __glewGetTextureHandleIMG;
+extern PFNGLGETTEXTURESAMPLERHANDLEIMGPROC __glewGetTextureSamplerHandleIMG;
+extern PFNGLPROGRAMUNIFORMHANDLEUI64IMGPROC __glewProgramUniformHandleui64IMG;
+extern PFNGLPROGRAMUNIFORMHANDLEUI64VIMGPROC __glewProgramUniformHandleui64vIMG;
+extern PFNGLUNIFORMHANDLEUI64IMGPROC __glewUniformHandleui64IMG;
+extern PFNGLUNIFORMHANDLEUI64VIMGPROC __glewUniformHandleui64vIMG;
+
+extern PFNGLFRAMEBUFFERTEXTURE2DDOWNSAMPLEIMGPROC __glewFramebufferTexture2DDownsampleIMG;
+extern PFNGLFRAMEBUFFERTEXTURELAYERDOWNSAMPLEIMGPROC __glewFramebufferTextureLayerDownsampleIMG;
+
+extern PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEIMGPROC __glewFramebufferTexture2DMultisampleIMG;
+extern PFNGLRENDERBUFFERSTORAGEMULTISAMPLEIMGPROC __glewRenderbufferStorageMultisampleIMG;
+
+extern PFNGLAPPLYFRAMEBUFFERATTACHMENTCMAAINTELPROC __glewApplyFramebufferAttachmentCMAAINTEL;
+
+extern PFNGLMAPTEXTURE2DINTELPROC __glewMapTexture2DINTEL;
+extern PFNGLSYNCTEXTUREINTELPROC __glewSyncTextureINTEL;
+extern PFNGLUNMAPTEXTURE2DINTELPROC __glewUnmapTexture2DINTEL;
+
+extern PFNGLCOLORPOINTERVINTELPROC __glewColorPointervINTEL;
+extern PFNGLNORMALPOINTERVINTELPROC __glewNormalPointervINTEL;
+extern PFNGLTEXCOORDPOINTERVINTELPROC __glewTexCoordPointervINTEL;
+extern PFNGLVERTEXPOINTERVINTELPROC __glewVertexPointervINTEL;
+
+extern PFNGLBEGINPERFQUERYINTELPROC __glewBeginPerfQueryINTEL;
+extern PFNGLCREATEPERFQUERYINTELPROC __glewCreatePerfQueryINTEL;
+extern PFNGLDELETEPERFQUERYINTELPROC __glewDeletePerfQueryINTEL;
+extern PFNGLENDPERFQUERYINTELPROC __glewEndPerfQueryINTEL;
+extern PFNGLGETFIRSTPERFQUERYIDINTELPROC __glewGetFirstPerfQueryIdINTEL;
+extern PFNGLGETNEXTPERFQUERYIDINTELPROC __glewGetNextPerfQueryIdINTEL;
+extern PFNGLGETPERFCOUNTERINFOINTELPROC __glewGetPerfCounterInfoINTEL;
+extern PFNGLGETPERFQUERYDATAINTELPROC __glewGetPerfQueryDataINTEL;
+extern PFNGLGETPERFQUERYIDBYNAMEINTELPROC __glewGetPerfQueryIdByNameINTEL;
+extern PFNGLGETPERFQUERYINFOINTELPROC __glewGetPerfQueryInfoINTEL;
+
+extern PFNGLTEXSCISSORFUNCINTELPROC __glewTexScissorFuncINTEL;
+extern PFNGLTEXSCISSORINTELPROC __glewTexScissorINTEL;
+
+extern PFNGLBLENDBARRIERKHRPROC __glewBlendBarrierKHR;
+
+extern PFNGLDEBUGMESSAGECALLBACKPROC __glewDebugMessageCallback;
+extern PFNGLDEBUGMESSAGECONTROLPROC __glewDebugMessageControl;
+extern PFNGLDEBUGMESSAGEINSERTPROC __glewDebugMessageInsert;
+extern PFNGLGETDEBUGMESSAGELOGPROC __glewGetDebugMessageLog;
+extern PFNGLGETOBJECTLABELPROC __glewGetObjectLabel;
+extern PFNGLGETOBJECTPTRLABELPROC __glewGetObjectPtrLabel;
+extern PFNGLOBJECTLABELPROC __glewObjectLabel;
+extern PFNGLOBJECTPTRLABELPROC __glewObjectPtrLabel;
+extern PFNGLPOPDEBUGGROUPPROC __glewPopDebugGroup;
+extern PFNGLPUSHDEBUGGROUPPROC __glewPushDebugGroup;
+
+extern PFNGLMAXSHADERCOMPILERTHREADSKHRPROC __glewMaxShaderCompilerThreadsKHR;
+
+extern PFNGLGETNUNIFORMFVPROC __glewGetnUniformfv;
+extern PFNGLGETNUNIFORMIVPROC __glewGetnUniformiv;
+extern PFNGLGETNUNIFORMUIVPROC __glewGetnUniformuiv;
+extern PFNGLREADNPIXELSPROC __glewReadnPixels;
+
+extern PFNGLBUFFERREGIONENABLEDPROC __glewBufferRegionEnabled;
+extern PFNGLDELETEBUFFERREGIONPROC __glewDeleteBufferRegion;
+extern PFNGLDRAWBUFFERREGIONPROC __glewDrawBufferRegion;
+extern PFNGLNEWBUFFERREGIONPROC __glewNewBufferRegion;
+extern PFNGLREADBUFFERREGIONPROC __glewReadBufferRegion;
+
+extern PFNGLFRAMEBUFFERPARAMETERIMESAPROC __glewFramebufferParameteriMESA;
+extern PFNGLGETFRAMEBUFFERPARAMETERIVMESAPROC __glewGetFramebufferParameterivMESA;
+
+extern PFNGLRESIZEBUFFERSMESAPROC __glewResizeBuffersMESA;
+
+extern PFNGLWINDOWPOS2DMESAPROC __glewWindowPos2dMESA;
+extern PFNGLWINDOWPOS2DVMESAPROC __glewWindowPos2dvMESA;
+extern PFNGLWINDOWPOS2FMESAPROC __glewWindowPos2fMESA;
+extern PFNGLWINDOWPOS2FVMESAPROC __glewWindowPos2fvMESA;
+extern PFNGLWINDOWPOS2IMESAPROC __glewWindowPos2iMESA;
+extern PFNGLWINDOWPOS2IVMESAPROC __glewWindowPos2ivMESA;
+extern PFNGLWINDOWPOS2SMESAPROC __glewWindowPos2sMESA;
+extern PFNGLWINDOWPOS2SVMESAPROC __glewWindowPos2svMESA;
+extern PFNGLWINDOWPOS3DMESAPROC __glewWindowPos3dMESA;
+extern PFNGLWINDOWPOS3DVMESAPROC __glewWindowPos3dvMESA;
+extern PFNGLWINDOWPOS3FMESAPROC __glewWindowPos3fMESA;
+extern PFNGLWINDOWPOS3FVMESAPROC __glewWindowPos3fvMESA;
+extern PFNGLWINDOWPOS3IMESAPROC __glewWindowPos3iMESA;
+extern PFNGLWINDOWPOS3IVMESAPROC __glewWindowPos3ivMESA;
+extern PFNGLWINDOWPOS3SMESAPROC __glewWindowPos3sMESA;
+extern PFNGLWINDOWPOS3SVMESAPROC __glewWindowPos3svMESA;
+extern PFNGLWINDOWPOS4DMESAPROC __glewWindowPos4dMESA;
+extern PFNGLWINDOWPOS4DVMESAPROC __glewWindowPos4dvMESA;
+extern PFNGLWINDOWPOS4FMESAPROC __glewWindowPos4fMESA;
+extern PFNGLWINDOWPOS4FVMESAPROC __glewWindowPos4fvMESA;
+extern PFNGLWINDOWPOS4IMESAPROC __glewWindowPos4iMESA;
+extern PFNGLWINDOWPOS4IVMESAPROC __glewWindowPos4ivMESA;
+extern PFNGLWINDOWPOS4SMESAPROC __glewWindowPos4sMESA;
+extern PFNGLWINDOWPOS4SVMESAPROC __glewWindowPos4svMESA;
+
+extern PFNGLBEGINCONDITIONALRENDERNVXPROC __glewBeginConditionalRenderNVX;
+extern PFNGLENDCONDITIONALRENDERNVXPROC __glewEndConditionalRenderNVX;
+
+extern PFNGLASYNCCOPYBUFFERSUBDATANVXPROC __glewAsyncCopyBufferSubDataNVX;
+extern PFNGLASYNCCOPYIMAGESUBDATANVXPROC __glewAsyncCopyImageSubDataNVX;
+extern PFNGLMULTICASTSCISSORARRAYVNVXPROC __glewMulticastScissorArrayvNVX;
+extern PFNGLMULTICASTVIEWPORTARRAYVNVXPROC __glewMulticastViewportArrayvNVX;
+extern PFNGLMULTICASTVIEWPORTPOSITIONWSCALENVXPROC __glewMulticastViewportPositionWScaleNVX;
+extern PFNGLUPLOADGPUMASKNVXPROC __glewUploadGpuMaskNVX;
+
+extern PFNGLLGPUCOPYIMAGESUBDATANVXPROC __glewLGPUCopyImageSubDataNVX;
+extern PFNGLLGPUINTERLOCKNVXPROC __glewLGPUInterlockNVX;
+extern PFNGLLGPUNAMEDBUFFERSUBDATANVXPROC __glewLGPUNamedBufferSubDataNVX;
+
+extern PFNGLCLIENTWAITSEMAPHOREUI64NVXPROC __glewClientWaitSemaphoreui64NVX;
+extern PFNGLCREATEPROGRESSFENCENVXPROC __glewCreateProgressFenceNVX;
+extern PFNGLSIGNALSEMAPHOREUI64NVXPROC __glewSignalSemaphoreui64NVX;
+extern PFNGLWAITSEMAPHOREUI64NVXPROC __glewWaitSemaphoreui64NVX;
+
+extern PFNGLSTEREOPARAMETERFNVPROC __glewStereoParameterfNV;
+extern PFNGLSTEREOPARAMETERINVPROC __glewStereoParameteriNV;
+
+extern PFNGLALPHATOCOVERAGEDITHERCONTROLNVPROC __glewAlphaToCoverageDitherControlNV;
+
+extern PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSNVPROC __glewMultiDrawArraysIndirectBindlessNV;
+extern PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSNVPROC __glewMultiDrawElementsIndirectBindlessNV;
+
+extern PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNVPROC __glewMultiDrawArraysIndirectBindlessCountNV;
+extern PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNVPROC __glewMultiDrawElementsIndirectBindlessCountNV;
+
+extern PFNGLGETIMAGEHANDLENVPROC __glewGetImageHandleNV;
+extern PFNGLGETTEXTUREHANDLENVPROC __glewGetTextureHandleNV;
+extern PFNGLGETTEXTURESAMPLERHANDLENVPROC __glewGetTextureSamplerHandleNV;
+extern PFNGLISIMAGEHANDLERESIDENTNVPROC __glewIsImageHandleResidentNV;
+extern PFNGLISTEXTUREHANDLERESIDENTNVPROC __glewIsTextureHandleResidentNV;
+extern PFNGLMAKEIMAGEHANDLENONRESIDENTNVPROC __glewMakeImageHandleNonResidentNV;
+extern PFNGLMAKEIMAGEHANDLERESIDENTNVPROC __glewMakeImageHandleResidentNV;
+extern PFNGLMAKETEXTUREHANDLENONRESIDENTNVPROC __glewMakeTextureHandleNonResidentNV;
+extern PFNGLMAKETEXTUREHANDLERESIDENTNVPROC __glewMakeTextureHandleResidentNV;
+extern PFNGLPROGRAMUNIFORMHANDLEUI64NVPROC __glewProgramUniformHandleui64NV;
+extern PFNGLPROGRAMUNIFORMHANDLEUI64VNVPROC __glewProgramUniformHandleui64vNV;
+extern PFNGLUNIFORMHANDLEUI64NVPROC __glewUniformHandleui64NV;
+extern PFNGLUNIFORMHANDLEUI64VNVPROC __glewUniformHandleui64vNV;
+
+extern PFNGLBLENDBARRIERNVPROC __glewBlendBarrierNV;
+extern PFNGLBLENDPARAMETERINVPROC __glewBlendParameteriNV;
+
+extern PFNGLVIEWPORTPOSITIONWSCALENVPROC __glewViewportPositionWScaleNV;
+
+extern PFNGLCALLCOMMANDLISTNVPROC __glewCallCommandListNV;
+extern PFNGLCOMMANDLISTSEGMENTSNVPROC __glewCommandListSegmentsNV;
+extern PFNGLCOMPILECOMMANDLISTNVPROC __glewCompileCommandListNV;
+extern PFNGLCREATECOMMANDLISTSNVPROC __glewCreateCommandListsNV;
+extern PFNGLCREATESTATESNVPROC __glewCreateStatesNV;
+extern PFNGLDELETECOMMANDLISTSNVPROC __glewDeleteCommandListsNV;
+extern PFNGLDELETESTATESNVPROC __glewDeleteStatesNV;
+extern PFNGLDRAWCOMMANDSADDRESSNVPROC __glewDrawCommandsAddressNV;
+extern PFNGLDRAWCOMMANDSNVPROC __glewDrawCommandsNV;
+extern PFNGLDRAWCOMMANDSSTATESADDRESSNVPROC __glewDrawCommandsStatesAddressNV;
+extern PFNGLDRAWCOMMANDSSTATESNVPROC __glewDrawCommandsStatesNV;
+extern PFNGLGETCOMMANDHEADERNVPROC __glewGetCommandHeaderNV;
+extern PFNGLGETSTAGEINDEXNVPROC __glewGetStageIndexNV;
+extern PFNGLISCOMMANDLISTNVPROC __glewIsCommandListNV;
+extern PFNGLISSTATENVPROC __glewIsStateNV;
+extern PFNGLLISTDRAWCOMMANDSSTATESCLIENTNVPROC __glewListDrawCommandsStatesClientNV;
+extern PFNGLSTATECAPTURENVPROC __glewStateCaptureNV;
+
+extern PFNGLBEGINCONDITIONALRENDERNVPROC __glewBeginConditionalRenderNV;
+extern PFNGLENDCONDITIONALRENDERNVPROC __glewEndConditionalRenderNV;
+
+extern PFNGLSUBPIXELPRECISIONBIASNVPROC __glewSubpixelPrecisionBiasNV;
+
+extern PFNGLCONSERVATIVERASTERPARAMETERFNVPROC __glewConservativeRasterParameterfNV;
+
+extern PFNGLCONSERVATIVERASTERPARAMETERINVPROC __glewConservativeRasterParameteriNV;
+
+extern PFNGLCOPYBUFFERSUBDATANVPROC __glewCopyBufferSubDataNV;
+
+extern PFNGLCOPYIMAGESUBDATANVPROC __glewCopyImageSubDataNV;
+
+extern PFNGLCLEARDEPTHDNVPROC __glewClearDepthdNV;
+extern PFNGLDEPTHBOUNDSDNVPROC __glewDepthBoundsdNV;
+extern PFNGLDEPTHRANGEDNVPROC __glewDepthRangedNV;
+
+extern PFNGLDRAWBUFFERSNVPROC __glewDrawBuffersNV;
+
+extern PFNGLDRAWARRAYSINSTANCEDNVPROC __glewDrawArraysInstancedNV;
+extern PFNGLDRAWELEMENTSINSTANCEDNVPROC __glewDrawElementsInstancedNV;
+
+extern PFNGLDRAWTEXTURENVPROC __glewDrawTextureNV;
+
+extern PFNGLDRAWVKIMAGENVPROC __glewDrawVkImageNV;
+extern PFNGLGETVKPROCADDRNVPROC __glewGetVkProcAddrNV;
+extern PFNGLSIGNALVKFENCENVPROC __glewSignalVkFenceNV;
+extern PFNGLSIGNALVKSEMAPHORENVPROC __glewSignalVkSemaphoreNV;
+extern PFNGLWAITVKSEMAPHORENVPROC __glewWaitVkSemaphoreNV;
+
+extern PFNGLEVALMAPSNVPROC __glewEvalMapsNV;
+extern PFNGLGETMAPATTRIBPARAMETERFVNVPROC __glewGetMapAttribParameterfvNV;
+extern PFNGLGETMAPATTRIBPARAMETERIVNVPROC __glewGetMapAttribParameterivNV;
+extern PFNGLGETMAPCONTROLPOINTSNVPROC __glewGetMapControlPointsNV;
+extern PFNGLGETMAPPARAMETERFVNVPROC __glewGetMapParameterfvNV;
+extern PFNGLGETMAPPARAMETERIVNVPROC __glewGetMapParameterivNV;
+extern PFNGLMAPCONTROLPOINTSNVPROC __glewMapControlPointsNV;
+extern PFNGLMAPPARAMETERFVNVPROC __glewMapParameterfvNV;
+extern PFNGLMAPPARAMETERIVNVPROC __glewMapParameterivNV;
+
+extern PFNGLGETMULTISAMPLEFVNVPROC __glewGetMultisamplefvNV;
+extern PFNGLSAMPLEMASKINDEXEDNVPROC __glewSampleMaskIndexedNV;
+extern PFNGLTEXRENDERBUFFERNVPROC __glewTexRenderbufferNV;
+
+extern PFNGLDELETEFENCESNVPROC __glewDeleteFencesNV;
+extern PFNGLFINISHFENCENVPROC __glewFinishFenceNV;
+extern PFNGLGENFENCESNVPROC __glewGenFencesNV;
+extern PFNGLGETFENCEIVNVPROC __glewGetFenceivNV;
+extern PFNGLISFENCENVPROC __glewIsFenceNV;
+extern PFNGLSETFENCENVPROC __glewSetFenceNV;
+extern PFNGLTESTFENCENVPROC __glewTestFenceNV;
+
+extern PFNGLFRAGMENTCOVERAGECOLORNVPROC __glewFragmentCoverageColorNV;
+
+extern PFNGLGETPROGRAMNAMEDPARAMETERDVNVPROC __glewGetProgramNamedParameterdvNV;
+extern PFNGLGETPROGRAMNAMEDPARAMETERFVNVPROC __glewGetProgramNamedParameterfvNV;
+extern PFNGLPROGRAMNAMEDPARAMETER4DNVPROC __glewProgramNamedParameter4dNV;
+extern PFNGLPROGRAMNAMEDPARAMETER4DVNVPROC __glewProgramNamedParameter4dvNV;
+extern PFNGLPROGRAMNAMEDPARAMETER4FNVPROC __glewProgramNamedParameter4fNV;
+extern PFNGLPROGRAMNAMEDPARAMETER4FVNVPROC __glewProgramNamedParameter4fvNV;
+
+extern PFNGLBLITFRAMEBUFFERNVPROC __glewBlitFramebufferNV;
+
+extern PFNGLRENDERBUFFERSTORAGEMULTISAMPLENVPROC __glewRenderbufferStorageMultisampleNV;
+
+extern PFNGLRENDERBUFFERSTORAGEMULTISAMPLECOVERAGENVPROC __glewRenderbufferStorageMultisampleCoverageNV;
+
+extern PFNGLPROGRAMVERTEXLIMITNVPROC __glewProgramVertexLimitNV;
+
+extern PFNGLMULTICASTBARRIERNVPROC __glewMulticastBarrierNV;
+extern PFNGLMULTICASTBLITFRAMEBUFFERNVPROC __glewMulticastBlitFramebufferNV;
+extern PFNGLMULTICASTBUFFERSUBDATANVPROC __glewMulticastBufferSubDataNV;
+extern PFNGLMULTICASTCOPYBUFFERSUBDATANVPROC __glewMulticastCopyBufferSubDataNV;
+extern PFNGLMULTICASTCOPYIMAGESUBDATANVPROC __glewMulticastCopyImageSubDataNV;
+extern PFNGLMULTICASTFRAMEBUFFERSAMPLELOCATIONSFVNVPROC __glewMulticastFramebufferSampleLocationsfvNV;
+extern PFNGLMULTICASTGETQUERYOBJECTI64VNVPROC __glewMulticastGetQueryObjecti64vNV;
+extern PFNGLMULTICASTGETQUERYOBJECTIVNVPROC __glewMulticastGetQueryObjectivNV;
+extern PFNGLMULTICASTGETQUERYOBJECTUI64VNVPROC __glewMulticastGetQueryObjectui64vNV;
+extern PFNGLMULTICASTGETQUERYOBJECTUIVNVPROC __glewMulticastGetQueryObjectuivNV;
+extern PFNGLMULTICASTWAITSYNCNVPROC __glewMulticastWaitSyncNV;
+extern PFNGLRENDERGPUMASKNVPROC __glewRenderGpuMaskNV;
+
+extern PFNGLPROGRAMENVPARAMETERI4INVPROC __glewProgramEnvParameterI4iNV;
+extern PFNGLPROGRAMENVPARAMETERI4IVNVPROC __glewProgramEnvParameterI4ivNV;
+extern PFNGLPROGRAMENVPARAMETERI4UINVPROC __glewProgramEnvParameterI4uiNV;
+extern PFNGLPROGRAMENVPARAMETERI4UIVNVPROC __glewProgramEnvParameterI4uivNV;
+extern PFNGLPROGRAMENVPARAMETERSI4IVNVPROC __glewProgramEnvParametersI4ivNV;
+extern PFNGLPROGRAMENVPARAMETERSI4UIVNVPROC __glewProgramEnvParametersI4uivNV;
+extern PFNGLPROGRAMLOCALPARAMETERI4INVPROC __glewProgramLocalParameterI4iNV;
+extern PFNGLPROGRAMLOCALPARAMETERI4IVNVPROC __glewProgramLocalParameterI4ivNV;
+extern PFNGLPROGRAMLOCALPARAMETERI4UINVPROC __glewProgramLocalParameterI4uiNV;
+extern PFNGLPROGRAMLOCALPARAMETERI4UIVNVPROC __glewProgramLocalParameterI4uivNV;
+extern PFNGLPROGRAMLOCALPARAMETERSI4IVNVPROC __glewProgramLocalParametersI4ivNV;
+extern PFNGLPROGRAMLOCALPARAMETERSI4UIVNVPROC __glewProgramLocalParametersI4uivNV;
+
+extern PFNGLGETUNIFORMI64VNVPROC __glewGetUniformi64vNV;
+extern PFNGLGETUNIFORMUI64VNVPROC __glewGetUniformui64vNV;
+extern PFNGLPROGRAMUNIFORM1I64NVPROC __glewProgramUniform1i64NV;
+extern PFNGLPROGRAMUNIFORM1I64VNVPROC __glewProgramUniform1i64vNV;
+extern PFNGLPROGRAMUNIFORM1UI64NVPROC __glewProgramUniform1ui64NV;
+extern PFNGLPROGRAMUNIFORM1UI64VNVPROC __glewProgramUniform1ui64vNV;
+extern PFNGLPROGRAMUNIFORM2I64NVPROC __glewProgramUniform2i64NV;
+extern PFNGLPROGRAMUNIFORM2I64VNVPROC __glewProgramUniform2i64vNV;
+extern PFNGLPROGRAMUNIFORM2UI64NVPROC __glewProgramUniform2ui64NV;
+extern PFNGLPROGRAMUNIFORM2UI64VNVPROC __glewProgramUniform2ui64vNV;
+extern PFNGLPROGRAMUNIFORM3I64NVPROC __glewProgramUniform3i64NV;
+extern PFNGLPROGRAMUNIFORM3I64VNVPROC __glewProgramUniform3i64vNV;
+extern PFNGLPROGRAMUNIFORM3UI64NVPROC __glewProgramUniform3ui64NV;
+extern PFNGLPROGRAMUNIFORM3UI64VNVPROC __glewProgramUniform3ui64vNV;
+extern PFNGLPROGRAMUNIFORM4I64NVPROC __glewProgramUniform4i64NV;
+extern PFNGLPROGRAMUNIFORM4I64VNVPROC __glewProgramUniform4i64vNV;
+extern PFNGLPROGRAMUNIFORM4UI64NVPROC __glewProgramUniform4ui64NV;
+extern PFNGLPROGRAMUNIFORM4UI64VNVPROC __glewProgramUniform4ui64vNV;
+extern PFNGLUNIFORM1I64NVPROC __glewUniform1i64NV;
+extern PFNGLUNIFORM1I64VNVPROC __glewUniform1i64vNV;
+extern PFNGLUNIFORM1UI64NVPROC __glewUniform1ui64NV;
+extern PFNGLUNIFORM1UI64VNVPROC __glewUniform1ui64vNV;
+extern PFNGLUNIFORM2I64NVPROC __glewUniform2i64NV;
+extern PFNGLUNIFORM2I64VNVPROC __glewUniform2i64vNV;
+extern PFNGLUNIFORM2UI64NVPROC __glewUniform2ui64NV;
+extern PFNGLUNIFORM2UI64VNVPROC __glewUniform2ui64vNV;
+extern PFNGLUNIFORM3I64NVPROC __glewUniform3i64NV;
+extern PFNGLUNIFORM3I64VNVPROC __glewUniform3i64vNV;
+extern PFNGLUNIFORM3UI64NVPROC __glewUniform3ui64NV;
+extern PFNGLUNIFORM3UI64VNVPROC __glewUniform3ui64vNV;
+extern PFNGLUNIFORM4I64NVPROC __glewUniform4i64NV;
+extern PFNGLUNIFORM4I64VNVPROC __glewUniform4i64vNV;
+extern PFNGLUNIFORM4UI64NVPROC __glewUniform4ui64NV;
+extern PFNGLUNIFORM4UI64VNVPROC __glewUniform4ui64vNV;
+
+extern PFNGLCOLOR3HNVPROC __glewColor3hNV;
+extern PFNGLCOLOR3HVNVPROC __glewColor3hvNV;
+extern PFNGLCOLOR4HNVPROC __glewColor4hNV;
+extern PFNGLCOLOR4HVNVPROC __glewColor4hvNV;
+extern PFNGLFOGCOORDHNVPROC __glewFogCoordhNV;
+extern PFNGLFOGCOORDHVNVPROC __glewFogCoordhvNV;
+extern PFNGLMULTITEXCOORD1HNVPROC __glewMultiTexCoord1hNV;
+extern PFNGLMULTITEXCOORD1HVNVPROC __glewMultiTexCoord1hvNV;
+extern PFNGLMULTITEXCOORD2HNVPROC __glewMultiTexCoord2hNV;
+extern PFNGLMULTITEXCOORD2HVNVPROC __glewMultiTexCoord2hvNV;
+extern PFNGLMULTITEXCOORD3HNVPROC __glewMultiTexCoord3hNV;
+extern PFNGLMULTITEXCOORD3HVNVPROC __glewMultiTexCoord3hvNV;
+extern PFNGLMULTITEXCOORD4HNVPROC __glewMultiTexCoord4hNV;
+extern PFNGLMULTITEXCOORD4HVNVPROC __glewMultiTexCoord4hvNV;
+extern PFNGLNORMAL3HNVPROC __glewNormal3hNV;
+extern PFNGLNORMAL3HVNVPROC __glewNormal3hvNV;
+extern PFNGLSECONDARYCOLOR3HNVPROC __glewSecondaryColor3hNV;
+extern PFNGLSECONDARYCOLOR3HVNVPROC __glewSecondaryColor3hvNV;
+extern PFNGLTEXCOORD1HNVPROC __glewTexCoord1hNV;
+extern PFNGLTEXCOORD1HVNVPROC __glewTexCoord1hvNV;
+extern PFNGLTEXCOORD2HNVPROC __glewTexCoord2hNV;
+extern PFNGLTEXCOORD2HVNVPROC __glewTexCoord2hvNV;
+extern PFNGLTEXCOORD3HNVPROC __glewTexCoord3hNV;
+extern PFNGLTEXCOORD3HVNVPROC __glewTexCoord3hvNV;
+extern PFNGLTEXCOORD4HNVPROC __glewTexCoord4hNV;
+extern PFNGLTEXCOORD4HVNVPROC __glewTexCoord4hvNV;
+extern PFNGLVERTEX2HNVPROC __glewVertex2hNV;
+extern PFNGLVERTEX2HVNVPROC __glewVertex2hvNV;
+extern PFNGLVERTEX3HNVPROC __glewVertex3hNV;
+extern PFNGLVERTEX3HVNVPROC __glewVertex3hvNV;
+extern PFNGLVERTEX4HNVPROC __glewVertex4hNV;
+extern PFNGLVERTEX4HVNVPROC __glewVertex4hvNV;
+extern PFNGLVERTEXATTRIB1HNVPROC __glewVertexAttrib1hNV;
+extern PFNGLVERTEXATTRIB1HVNVPROC __glewVertexAttrib1hvNV;
+extern PFNGLVERTEXATTRIB2HNVPROC __glewVertexAttrib2hNV;
+extern PFNGLVERTEXATTRIB2HVNVPROC __glewVertexAttrib2hvNV;
+extern PFNGLVERTEXATTRIB3HNVPROC __glewVertexAttrib3hNV;
+extern PFNGLVERTEXATTRIB3HVNVPROC __glewVertexAttrib3hvNV;
+extern PFNGLVERTEXATTRIB4HNVPROC __glewVertexAttrib4hNV;
+extern PFNGLVERTEXATTRIB4HVNVPROC __glewVertexAttrib4hvNV;
+extern PFNGLVERTEXATTRIBS1HVNVPROC __glewVertexAttribs1hvNV;
+extern PFNGLVERTEXATTRIBS2HVNVPROC __glewVertexAttribs2hvNV;
+extern PFNGLVERTEXATTRIBS3HVNVPROC __glewVertexAttribs3hvNV;
+extern PFNGLVERTEXATTRIBS4HVNVPROC __glewVertexAttribs4hvNV;
+extern PFNGLVERTEXWEIGHTHNVPROC __glewVertexWeighthNV;
+extern PFNGLVERTEXWEIGHTHVNVPROC __glewVertexWeighthvNV;
+
+extern PFNGLVERTEXATTRIBDIVISORNVPROC __glewVertexAttribDivisorNV;
+
+extern PFNGLGETINTERNALFORMATSAMPLEIVNVPROC __glewGetInternalformatSampleivNV;
+
+extern PFNGLBUFFERATTACHMEMORYNVPROC __glewBufferAttachMemoryNV;
+extern PFNGLGETMEMORYOBJECTDETACHEDRESOURCESUIVNVPROC __glewGetMemoryObjectDetachedResourcesuivNV;
+extern PFNGLNAMEDBUFFERATTACHMEMORYNVPROC __glewNamedBufferAttachMemoryNV;
+extern PFNGLRESETMEMORYOBJECTPARAMETERNVPROC __glewResetMemoryObjectParameterNV;
+extern PFNGLTEXATTACHMEMORYNVPROC __glewTexAttachMemoryNV;
+extern PFNGLTEXTUREATTACHMEMORYNVPROC __glewTextureAttachMemoryNV;
+
+extern PFNGLBUFFERPAGECOMMITMENTMEMNVPROC __glewBufferPageCommitmentMemNV;
+extern PFNGLNAMEDBUFFERPAGECOMMITMENTMEMNVPROC __glewNamedBufferPageCommitmentMemNV;
+extern PFNGLTEXPAGECOMMITMENTMEMNVPROC __glewTexPageCommitmentMemNV;
+extern PFNGLTEXTUREPAGECOMMITMENTMEMNVPROC __glewTexturePageCommitmentMemNV;
+
+extern PFNGLDRAWMESHTASKSINDIRECTNVPROC __glewDrawMeshTasksIndirectNV;
+extern PFNGLDRAWMESHTASKSNVPROC __glewDrawMeshTasksNV;
+extern PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC __glewMultiDrawMeshTasksIndirectCountNV;
+extern PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC __glewMultiDrawMeshTasksIndirectNV;
+
+extern PFNGLUNIFORMMATRIX2X3FVNVPROC __glewUniformMatrix2x3fvNV;
+extern PFNGLUNIFORMMATRIX2X4FVNVPROC __glewUniformMatrix2x4fvNV;
+extern PFNGLUNIFORMMATRIX3X2FVNVPROC __glewUniformMatrix3x2fvNV;
+extern PFNGLUNIFORMMATRIX3X4FVNVPROC __glewUniformMatrix3x4fvNV;
+extern PFNGLUNIFORMMATRIX4X2FVNVPROC __glewUniformMatrix4x2fvNV;
+extern PFNGLUNIFORMMATRIX4X3FVNVPROC __glewUniformMatrix4x3fvNV;
+
+extern PFNGLBEGINOCCLUSIONQUERYNVPROC __glewBeginOcclusionQueryNV;
+extern PFNGLDELETEOCCLUSIONQUERIESNVPROC __glewDeleteOcclusionQueriesNV;
+extern PFNGLENDOCCLUSIONQUERYNVPROC __glewEndOcclusionQueryNV;
+extern PFNGLGENOCCLUSIONQUERIESNVPROC __glewGenOcclusionQueriesNV;
+extern PFNGLGETOCCLUSIONQUERYIVNVPROC __glewGetOcclusionQueryivNV;
+extern PFNGLGETOCCLUSIONQUERYUIVNVPROC __glewGetOcclusionQueryuivNV;
+extern PFNGLISOCCLUSIONQUERYNVPROC __glewIsOcclusionQueryNV;
+
+extern PFNGLPROGRAMBUFFERPARAMETERSIIVNVPROC __glewProgramBufferParametersIivNV;
+extern PFNGLPROGRAMBUFFERPARAMETERSIUIVNVPROC __glewProgramBufferParametersIuivNV;
+extern PFNGLPROGRAMBUFFERPARAMETERSFVNVPROC __glewProgramBufferParametersfvNV;
+
+extern PFNGLCOPYPATHNVPROC __glewCopyPathNV;
+extern PFNGLCOVERFILLPATHINSTANCEDNVPROC __glewCoverFillPathInstancedNV;
+extern PFNGLCOVERFILLPATHNVPROC __glewCoverFillPathNV;
+extern PFNGLCOVERSTROKEPATHINSTANCEDNVPROC __glewCoverStrokePathInstancedNV;
+extern PFNGLCOVERSTROKEPATHNVPROC __glewCoverStrokePathNV;
+extern PFNGLDELETEPATHSNVPROC __glewDeletePathsNV;
+extern PFNGLGENPATHSNVPROC __glewGenPathsNV;
+extern PFNGLGETPATHCOLORGENFVNVPROC __glewGetPathColorGenfvNV;
+extern PFNGLGETPATHCOLORGENIVNVPROC __glewGetPathColorGenivNV;
+extern PFNGLGETPATHCOMMANDSNVPROC __glewGetPathCommandsNV;
+extern PFNGLGETPATHCOORDSNVPROC __glewGetPathCoordsNV;
+extern PFNGLGETPATHDASHARRAYNVPROC __glewGetPathDashArrayNV;
+extern PFNGLGETPATHLENGTHNVPROC __glewGetPathLengthNV;
+extern PFNGLGETPATHMETRICRANGENVPROC __glewGetPathMetricRangeNV;
+extern PFNGLGETPATHMETRICSNVPROC __glewGetPathMetricsNV;
+extern PFNGLGETPATHPARAMETERFVNVPROC __glewGetPathParameterfvNV;
+extern PFNGLGETPATHPARAMETERIVNVPROC __glewGetPathParameterivNV;
+extern PFNGLGETPATHSPACINGNVPROC __glewGetPathSpacingNV;
+extern PFNGLGETPATHTEXGENFVNVPROC __glewGetPathTexGenfvNV;
+extern PFNGLGETPATHTEXGENIVNVPROC __glewGetPathTexGenivNV;
+extern PFNGLGETPROGRAMRESOURCEFVNVPROC __glewGetProgramResourcefvNV;
+extern PFNGLINTERPOLATEPATHSNVPROC __glewInterpolatePathsNV;
+extern PFNGLISPATHNVPROC __glewIsPathNV;
+extern PFNGLISPOINTINFILLPATHNVPROC __glewIsPointInFillPathNV;
+extern PFNGLISPOINTINSTROKEPATHNVPROC __glewIsPointInStrokePathNV;
+extern PFNGLMATRIXLOAD3X2FNVPROC __glewMatrixLoad3x2fNV;
+extern PFNGLMATRIXLOAD3X3FNVPROC __glewMatrixLoad3x3fNV;
+extern PFNGLMATRIXLOADTRANSPOSE3X3FNVPROC __glewMatrixLoadTranspose3x3fNV;
+extern PFNGLMATRIXMULT3X2FNVPROC __glewMatrixMult3x2fNV;
+extern PFNGLMATRIXMULT3X3FNVPROC __glewMatrixMult3x3fNV;
+extern PFNGLMATRIXMULTTRANSPOSE3X3FNVPROC __glewMatrixMultTranspose3x3fNV;
+extern PFNGLPATHCOLORGENNVPROC __glewPathColorGenNV;
+extern PFNGLPATHCOMMANDSNVPROC __glewPathCommandsNV;
+extern PFNGLPATHCOORDSNVPROC __glewPathCoordsNV;
+extern PFNGLPATHCOVERDEPTHFUNCNVPROC __glewPathCoverDepthFuncNV;
+extern PFNGLPATHDASHARRAYNVPROC __glewPathDashArrayNV;
+extern PFNGLPATHFOGGENNVPROC __glewPathFogGenNV;
+extern PFNGLPATHGLYPHINDEXARRAYNVPROC __glewPathGlyphIndexArrayNV;
+extern PFNGLPATHGLYPHINDEXRANGENVPROC __glewPathGlyphIndexRangeNV;
+extern PFNGLPATHGLYPHRANGENVPROC __glewPathGlyphRangeNV;
+extern PFNGLPATHGLYPHSNVPROC __glewPathGlyphsNV;
+extern PFNGLPATHMEMORYGLYPHINDEXARRAYNVPROC __glewPathMemoryGlyphIndexArrayNV;
+extern PFNGLPATHPARAMETERFNVPROC __glewPathParameterfNV;
+extern PFNGLPATHPARAMETERFVNVPROC __glewPathParameterfvNV;
+extern PFNGLPATHPARAMETERINVPROC __glewPathParameteriNV;
+extern PFNGLPATHPARAMETERIVNVPROC __glewPathParameterivNV;
+extern PFNGLPATHSTENCILDEPTHOFFSETNVPROC __glewPathStencilDepthOffsetNV;
+extern PFNGLPATHSTENCILFUNCNVPROC __glewPathStencilFuncNV;
+extern PFNGLPATHSTRINGNVPROC __glewPathStringNV;
+extern PFNGLPATHSUBCOMMANDSNVPROC __glewPathSubCommandsNV;
+extern PFNGLPATHSUBCOORDSNVPROC __glewPathSubCoordsNV;
+extern PFNGLPATHTEXGENNVPROC __glewPathTexGenNV;
+extern PFNGLPOINTALONGPATHNVPROC __glewPointAlongPathNV;
+extern PFNGLPROGRAMPATHFRAGMENTINPUTGENNVPROC __glewProgramPathFragmentInputGenNV;
+extern PFNGLSTENCILFILLPATHINSTANCEDNVPROC __glewStencilFillPathInstancedNV;
+extern PFNGLSTENCILFILLPATHNVPROC __glewStencilFillPathNV;
+extern PFNGLSTENCILSTROKEPATHINSTANCEDNVPROC __glewStencilStrokePathInstancedNV;
+extern PFNGLSTENCILSTROKEPATHNVPROC __glewStencilStrokePathNV;
+extern PFNGLSTENCILTHENCOVERFILLPATHINSTANCEDNVPROC __glewStencilThenCoverFillPathInstancedNV;
+extern PFNGLSTENCILTHENCOVERFILLPATHNVPROC __glewStencilThenCoverFillPathNV;
+extern PFNGLSTENCILTHENCOVERSTROKEPATHINSTANCEDNVPROC __glewStencilThenCoverStrokePathInstancedNV;
+extern PFNGLSTENCILTHENCOVERSTROKEPATHNVPROC __glewStencilThenCoverStrokePathNV;
+extern PFNGLTRANSFORMPATHNVPROC __glewTransformPathNV;
+extern PFNGLWEIGHTPATHSNVPROC __glewWeightPathsNV;
+
+extern PFNGLFLUSHPIXELDATARANGENVPROC __glewFlushPixelDataRangeNV;
+extern PFNGLPIXELDATARANGENVPROC __glewPixelDataRangeNV;
+
+extern PFNGLPOINTPARAMETERINVPROC __glewPointParameteriNV;
+extern PFNGLPOINTPARAMETERIVNVPROC __glewPointParameterivNV;
+
+extern PFNGLPOLYGONMODENVPROC __glewPolygonModeNV;
+
+extern PFNGLGETVIDEOI64VNVPROC __glewGetVideoi64vNV;
+extern PFNGLGETVIDEOIVNVPROC __glewGetVideoivNV;
+extern PFNGLGETVIDEOUI64VNVPROC __glewGetVideoui64vNV;
+extern PFNGLGETVIDEOUIVNVPROC __glewGetVideouivNV;
+extern PFNGLPRESENTFRAMEDUALFILLNVPROC __glewPresentFrameDualFillNV;
+extern PFNGLPRESENTFRAMEKEYEDNVPROC __glewPresentFrameKeyedNV;
+
+extern PFNGLPRIMITIVERESTARTINDEXNVPROC __glewPrimitiveRestartIndexNV;
+extern PFNGLPRIMITIVERESTARTNVPROC __glewPrimitiveRestartNV;
+
+extern PFNGLREADBUFFERNVPROC __glewReadBufferNV;
+
+extern PFNGLCOMBINERINPUTNVPROC __glewCombinerInputNV;
+extern PFNGLCOMBINEROUTPUTNVPROC __glewCombinerOutputNV;
+extern PFNGLCOMBINERPARAMETERFNVPROC __glewCombinerParameterfNV;
+extern PFNGLCOMBINERPARAMETERFVNVPROC __glewCombinerParameterfvNV;
+extern PFNGLCOMBINERPARAMETERINVPROC __glewCombinerParameteriNV;
+extern PFNGLCOMBINERPARAMETERIVNVPROC __glewCombinerParameterivNV;
+extern PFNGLFINALCOMBINERINPUTNVPROC __glewFinalCombinerInputNV;
+extern PFNGLGETCOMBINERINPUTPARAMETERFVNVPROC __glewGetCombinerInputParameterfvNV;
+extern PFNGLGETCOMBINERINPUTPARAMETERIVNVPROC __glewGetCombinerInputParameterivNV;
+extern PFNGLGETCOMBINEROUTPUTPARAMETERFVNVPROC __glewGetCombinerOutputParameterfvNV;
+extern PFNGLGETCOMBINEROUTPUTPARAMETERIVNVPROC __glewGetCombinerOutputParameterivNV;
+extern PFNGLGETFINALCOMBINERINPUTPARAMETERFVNVPROC __glewGetFinalCombinerInputParameterfvNV;
+extern PFNGLGETFINALCOMBINERINPUTPARAMETERIVNVPROC __glewGetFinalCombinerInputParameterivNV;
+
+extern PFNGLCOMBINERSTAGEPARAMETERFVNVPROC __glewCombinerStageParameterfvNV;
+extern PFNGLGETCOMBINERSTAGEPARAMETERFVNVPROC __glewGetCombinerStageParameterfvNV;
+
+extern PFNGLFRAMEBUFFERSAMPLELOCATIONSFVNVPROC __glewFramebufferSampleLocationsfvNV;
+extern PFNGLNAMEDFRAMEBUFFERSAMPLELOCATIONSFVNVPROC __glewNamedFramebufferSampleLocationsfvNV;
+extern PFNGLRESOLVEDEPTHVALUESNVPROC __glewResolveDepthValuesNV;
+
+extern PFNGLSCISSOREXCLUSIVEARRAYVNVPROC __glewScissorExclusiveArrayvNV;
+extern PFNGLSCISSOREXCLUSIVENVPROC __glewScissorExclusiveNV;
+
+extern PFNGLGETBUFFERPARAMETERUI64VNVPROC __glewGetBufferParameterui64vNV;
+extern PFNGLGETINTEGERUI64VNVPROC __glewGetIntegerui64vNV;
+extern PFNGLGETNAMEDBUFFERPARAMETERUI64VNVPROC __glewGetNamedBufferParameterui64vNV;
+extern PFNGLISBUFFERRESIDENTNVPROC __glewIsBufferResidentNV;
+extern PFNGLISNAMEDBUFFERRESIDENTNVPROC __glewIsNamedBufferResidentNV;
+extern PFNGLMAKEBUFFERNONRESIDENTNVPROC __glewMakeBufferNonResidentNV;
+extern PFNGLMAKEBUFFERRESIDENTNVPROC __glewMakeBufferResidentNV;
+extern PFNGLMAKENAMEDBUFFERNONRESIDENTNVPROC __glewMakeNamedBufferNonResidentNV;
+extern PFNGLMAKENAMEDBUFFERRESIDENTNVPROC __glewMakeNamedBufferResidentNV;
+extern PFNGLPROGRAMUNIFORMUI64NVPROC __glewProgramUniformui64NV;
+extern PFNGLPROGRAMUNIFORMUI64VNVPROC __glewProgramUniformui64vNV;
+extern PFNGLUNIFORMUI64NVPROC __glewUniformui64NV;
+extern PFNGLUNIFORMUI64VNVPROC __glewUniformui64vNV;
+
+extern PFNGLBINDSHADINGRATEIMAGENVPROC __glewBindShadingRateImageNV;
+extern PFNGLGETSHADINGRATEIMAGEPALETTENVPROC __glewGetShadingRateImagePaletteNV;
+extern PFNGLGETSHADINGRATESAMPLELOCATIONIVNVPROC __glewGetShadingRateSampleLocationivNV;
+extern PFNGLSHADINGRATEIMAGEBARRIERNVPROC __glewShadingRateImageBarrierNV;
+extern PFNGLSHADINGRATEIMAGEPALETTENVPROC __glewShadingRateImagePaletteNV;
+extern PFNGLSHADINGRATESAMPLEORDERCUSTOMNVPROC __glewShadingRateSampleOrderCustomNV;
+extern PFNGLSHADINGRATESAMPLEORDERNVPROC __glewShadingRateSampleOrderNV;
+
+extern PFNGLCOMPRESSEDTEXIMAGE3DNVPROC __glewCompressedTexImage3DNV;
+extern PFNGLCOMPRESSEDTEXSUBIMAGE3DNVPROC __glewCompressedTexSubImage3DNV;
+extern PFNGLCOPYTEXSUBIMAGE3DNVPROC __glewCopyTexSubImage3DNV;
+extern PFNGLFRAMEBUFFERTEXTURELAYERNVPROC __glewFramebufferTextureLayerNV;
+extern PFNGLTEXIMAGE3DNVPROC __glewTexImage3DNV;
+extern PFNGLTEXSUBIMAGE3DNVPROC __glewTexSubImage3DNV;
+
+extern PFNGLTEXTUREBARRIERNVPROC __glewTextureBarrierNV;
+
+extern PFNGLTEXIMAGE2DMULTISAMPLECOVERAGENVPROC __glewTexImage2DMultisampleCoverageNV;
+extern PFNGLTEXIMAGE3DMULTISAMPLECOVERAGENVPROC __glewTexImage3DMultisampleCoverageNV;
+extern PFNGLTEXTUREIMAGE2DMULTISAMPLECOVERAGENVPROC __glewTextureImage2DMultisampleCoverageNV;
+extern PFNGLTEXTUREIMAGE2DMULTISAMPLENVPROC __glewTextureImage2DMultisampleNV;
+extern PFNGLTEXTUREIMAGE3DMULTISAMPLECOVERAGENVPROC __glewTextureImage3DMultisampleCoverageNV;
+extern PFNGLTEXTUREIMAGE3DMULTISAMPLENVPROC __glewTextureImage3DMultisampleNV;
+
+extern PFNGLCREATESEMAPHORESNVPROC __glewCreateSemaphoresNV;
+extern PFNGLGETSEMAPHOREPARAMETERIVNVPROC __glewGetSemaphoreParameterivNV;
+extern PFNGLSEMAPHOREPARAMETERIVNVPROC __glewSemaphoreParameterivNV;
+
+extern PFNGLACTIVEVARYINGNVPROC __glewActiveVaryingNV;
+extern PFNGLBEGINTRANSFORMFEEDBACKNVPROC __glewBeginTransformFeedbackNV;
+extern PFNGLBINDBUFFERBASENVPROC __glewBindBufferBaseNV;
+extern PFNGLBINDBUFFEROFFSETNVPROC __glewBindBufferOffsetNV;
+extern PFNGLBINDBUFFERRANGENVPROC __glewBindBufferRangeNV;
+extern PFNGLENDTRANSFORMFEEDBACKNVPROC __glewEndTransformFeedbackNV;
+extern PFNGLGETACTIVEVARYINGNVPROC __glewGetActiveVaryingNV;
+extern PFNGLGETTRANSFORMFEEDBACKVARYINGNVPROC __glewGetTransformFeedbackVaryingNV;
+extern PFNGLGETVARYINGLOCATIONNVPROC __glewGetVaryingLocationNV;
+extern PFNGLTRANSFORMFEEDBACKATTRIBSNVPROC __glewTransformFeedbackAttribsNV;
+extern PFNGLTRANSFORMFEEDBACKVARYINGSNVPROC __glewTransformFeedbackVaryingsNV;
+
+extern PFNGLBINDTRANSFORMFEEDBACKNVPROC __glewBindTransformFeedbackNV;
+extern PFNGLDELETETRANSFORMFEEDBACKSNVPROC __glewDeleteTransformFeedbacksNV;
+extern PFNGLDRAWTRANSFORMFEEDBACKNVPROC __glewDrawTransformFeedbackNV;
+extern PFNGLGENTRANSFORMFEEDBACKSNVPROC __glewGenTransformFeedbacksNV;
+extern PFNGLISTRANSFORMFEEDBACKNVPROC __glewIsTransformFeedbackNV;
+extern PFNGLPAUSETRANSFORMFEEDBACKNVPROC __glewPauseTransformFeedbackNV;
+extern PFNGLRESUMETRANSFORMFEEDBACKNVPROC __glewResumeTransformFeedbackNV;
+
+extern PFNGLVDPAUFININVPROC __glewVDPAUFiniNV;
+extern PFNGLVDPAUGETSURFACEIVNVPROC __glewVDPAUGetSurfaceivNV;
+extern PFNGLVDPAUINITNVPROC __glewVDPAUInitNV;
+extern PFNGLVDPAUISSURFACENVPROC __glewVDPAUIsSurfaceNV;
+extern PFNGLVDPAUMAPSURFACESNVPROC __glewVDPAUMapSurfacesNV;
+extern PFNGLVDPAUREGISTEROUTPUTSURFACENVPROC __glewVDPAURegisterOutputSurfaceNV;
+extern PFNGLVDPAUREGISTERVIDEOSURFACENVPROC __glewVDPAURegisterVideoSurfaceNV;
+extern PFNGLVDPAUSURFACEACCESSNVPROC __glewVDPAUSurfaceAccessNV;
+extern PFNGLVDPAUUNMAPSURFACESNVPROC __glewVDPAUUnmapSurfacesNV;
+extern PFNGLVDPAUUNREGISTERSURFACENVPROC __glewVDPAUUnregisterSurfaceNV;
+
+extern PFNGLVDPAUREGISTERVIDEOSURFACEWITHPICTURESTRUCTURENVPROC __glewVDPAURegisterVideoSurfaceWithPictureStructureNV;
+
+extern PFNGLFLUSHVERTEXARRAYRANGENVPROC __glewFlushVertexArrayRangeNV;
+extern PFNGLVERTEXARRAYRANGENVPROC __glewVertexArrayRangeNV;
+
+extern PFNGLGETVERTEXATTRIBLI64VNVPROC __glewGetVertexAttribLi64vNV;
+extern PFNGLGETVERTEXATTRIBLUI64VNVPROC __glewGetVertexAttribLui64vNV;
+extern PFNGLVERTEXATTRIBL1I64NVPROC __glewVertexAttribL1i64NV;
+extern PFNGLVERTEXATTRIBL1I64VNVPROC __glewVertexAttribL1i64vNV;
+extern PFNGLVERTEXATTRIBL1UI64NVPROC __glewVertexAttribL1ui64NV;
+extern PFNGLVERTEXATTRIBL1UI64VNVPROC __glewVertexAttribL1ui64vNV;
+extern PFNGLVERTEXATTRIBL2I64NVPROC __glewVertexAttribL2i64NV;
+extern PFNGLVERTEXATTRIBL2I64VNVPROC __glewVertexAttribL2i64vNV;
+extern PFNGLVERTEXATTRIBL2UI64NVPROC __glewVertexAttribL2ui64NV;
+extern PFNGLVERTEXATTRIBL2UI64VNVPROC __glewVertexAttribL2ui64vNV;
+extern PFNGLVERTEXATTRIBL3I64NVPROC __glewVertexAttribL3i64NV;
+extern PFNGLVERTEXATTRIBL3I64VNVPROC __glewVertexAttribL3i64vNV;
+extern PFNGLVERTEXATTRIBL3UI64NVPROC __glewVertexAttribL3ui64NV;
+extern PFNGLVERTEXATTRIBL3UI64VNVPROC __glewVertexAttribL3ui64vNV;
+extern PFNGLVERTEXATTRIBL4I64NVPROC __glewVertexAttribL4i64NV;
+extern PFNGLVERTEXATTRIBL4I64VNVPROC __glewVertexAttribL4i64vNV;
+extern PFNGLVERTEXATTRIBL4UI64NVPROC __glewVertexAttribL4ui64NV;
+extern PFNGLVERTEXATTRIBL4UI64VNVPROC __glewVertexAttribL4ui64vNV;
+extern PFNGLVERTEXATTRIBLFORMATNVPROC __glewVertexAttribLFormatNV;
+
+extern PFNGLBUFFERADDRESSRANGENVPROC __glewBufferAddressRangeNV;
+extern PFNGLCOLORFORMATNVPROC __glewColorFormatNV;
+extern PFNGLEDGEFLAGFORMATNVPROC __glewEdgeFlagFormatNV;
+extern PFNGLFOGCOORDFORMATNVPROC __glewFogCoordFormatNV;
+extern PFNGLGETINTEGERUI64I_VNVPROC __glewGetIntegerui64i_vNV;
+extern PFNGLINDEXFORMATNVPROC __glewIndexFormatNV;
+extern PFNGLNORMALFORMATNVPROC __glewNormalFormatNV;
+extern PFNGLSECONDARYCOLORFORMATNVPROC __glewSecondaryColorFormatNV;
+extern PFNGLTEXCOORDFORMATNVPROC __glewTexCoordFormatNV;
+extern PFNGLVERTEXATTRIBFORMATNVPROC __glewVertexAttribFormatNV;
+extern PFNGLVERTEXATTRIBIFORMATNVPROC __glewVertexAttribIFormatNV;
+extern PFNGLVERTEXFORMATNVPROC __glewVertexFormatNV;
+
+extern PFNGLAREPROGRAMSRESIDENTNVPROC __glewAreProgramsResidentNV;
+extern PFNGLBINDPROGRAMNVPROC __glewBindProgramNV;
+extern PFNGLDELETEPROGRAMSNVPROC __glewDeleteProgramsNV;
+extern PFNGLEXECUTEPROGRAMNVPROC __glewExecuteProgramNV;
+extern PFNGLGENPROGRAMSNVPROC __glewGenProgramsNV;
+extern PFNGLGETPROGRAMPARAMETERDVNVPROC __glewGetProgramParameterdvNV;
+extern PFNGLGETPROGRAMPARAMETERFVNVPROC __glewGetProgramParameterfvNV;
+extern PFNGLGETPROGRAMSTRINGNVPROC __glewGetProgramStringNV;
+extern PFNGLGETPROGRAMIVNVPROC __glewGetProgramivNV;
+extern PFNGLGETTRACKMATRIXIVNVPROC __glewGetTrackMatrixivNV;
+extern PFNGLGETVERTEXATTRIBPOINTERVNVPROC __glewGetVertexAttribPointervNV;
+extern PFNGLGETVERTEXATTRIBDVNVPROC __glewGetVertexAttribdvNV;
+extern PFNGLGETVERTEXATTRIBFVNVPROC __glewGetVertexAttribfvNV;
+extern PFNGLGETVERTEXATTRIBIVNVPROC __glewGetVertexAttribivNV;
+extern PFNGLISPROGRAMNVPROC __glewIsProgramNV;
+extern PFNGLLOADPROGRAMNVPROC __glewLoadProgramNV;
+extern PFNGLPROGRAMPARAMETER4DNVPROC __glewProgramParameter4dNV;
+extern PFNGLPROGRAMPARAMETER4DVNVPROC __glewProgramParameter4dvNV;
+extern PFNGLPROGRAMPARAMETER4FNVPROC __glewProgramParameter4fNV;
+extern PFNGLPROGRAMPARAMETER4FVNVPROC __glewProgramParameter4fvNV;
+extern PFNGLPROGRAMPARAMETERS4DVNVPROC __glewProgramParameters4dvNV;
+extern PFNGLPROGRAMPARAMETERS4FVNVPROC __glewProgramParameters4fvNV;
+extern PFNGLREQUESTRESIDENTPROGRAMSNVPROC __glewRequestResidentProgramsNV;
+extern PFNGLTRACKMATRIXNVPROC __glewTrackMatrixNV;
+extern PFNGLVERTEXATTRIB1DNVPROC __glewVertexAttrib1dNV;
+extern PFNGLVERTEXATTRIB1DVNVPROC __glewVertexAttrib1dvNV;
+extern PFNGLVERTEXATTRIB1FNVPROC __glewVertexAttrib1fNV;
+extern PFNGLVERTEXATTRIB1FVNVPROC __glewVertexAttrib1fvNV;
+extern PFNGLVERTEXATTRIB1SNVPROC __glewVertexAttrib1sNV;
+extern PFNGLVERTEXATTRIB1SVNVPROC __glewVertexAttrib1svNV;
+extern PFNGLVERTEXATTRIB2DNVPROC __glewVertexAttrib2dNV;
+extern PFNGLVERTEXATTRIB2DVNVPROC __glewVertexAttrib2dvNV;
+extern PFNGLVERTEXATTRIB2FNVPROC __glewVertexAttrib2fNV;
+extern PFNGLVERTEXATTRIB2FVNVPROC __glewVertexAttrib2fvNV;
+extern PFNGLVERTEXATTRIB2SNVPROC __glewVertexAttrib2sNV;
+extern PFNGLVERTEXATTRIB2SVNVPROC __glewVertexAttrib2svNV;
+extern PFNGLVERTEXATTRIB3DNVPROC __glewVertexAttrib3dNV;
+extern PFNGLVERTEXATTRIB3DVNVPROC __glewVertexAttrib3dvNV;
+extern PFNGLVERTEXATTRIB3FNVPROC __glewVertexAttrib3fNV;
+extern PFNGLVERTEXATTRIB3FVNVPROC __glewVertexAttrib3fvNV;
+extern PFNGLVERTEXATTRIB3SNVPROC __glewVertexAttrib3sNV;
+extern PFNGLVERTEXATTRIB3SVNVPROC __glewVertexAttrib3svNV;
+extern PFNGLVERTEXATTRIB4DNVPROC __glewVertexAttrib4dNV;
+extern PFNGLVERTEXATTRIB4DVNVPROC __glewVertexAttrib4dvNV;
+extern PFNGLVERTEXATTRIB4FNVPROC __glewVertexAttrib4fNV;
+extern PFNGLVERTEXATTRIB4FVNVPROC __glewVertexAttrib4fvNV;
+extern PFNGLVERTEXATTRIB4SNVPROC __glewVertexAttrib4sNV;
+extern PFNGLVERTEXATTRIB4SVNVPROC __glewVertexAttrib4svNV;
+extern PFNGLVERTEXATTRIB4UBNVPROC __glewVertexAttrib4ubNV;
+extern PFNGLVERTEXATTRIB4UBVNVPROC __glewVertexAttrib4ubvNV;
+extern PFNGLVERTEXATTRIBPOINTERNVPROC __glewVertexAttribPointerNV;
+extern PFNGLVERTEXATTRIBS1DVNVPROC __glewVertexAttribs1dvNV;
+extern PFNGLVERTEXATTRIBS1FVNVPROC __glewVertexAttribs1fvNV;
+extern PFNGLVERTEXATTRIBS1SVNVPROC __glewVertexAttribs1svNV;
+extern PFNGLVERTEXATTRIBS2DVNVPROC __glewVertexAttribs2dvNV;
+extern PFNGLVERTEXATTRIBS2FVNVPROC __glewVertexAttribs2fvNV;
+extern PFNGLVERTEXATTRIBS2SVNVPROC __glewVertexAttribs2svNV;
+extern PFNGLVERTEXATTRIBS3DVNVPROC __glewVertexAttribs3dvNV;
+extern PFNGLVERTEXATTRIBS3FVNVPROC __glewVertexAttribs3fvNV;
+extern PFNGLVERTEXATTRIBS3SVNVPROC __glewVertexAttribs3svNV;
+extern PFNGLVERTEXATTRIBS4DVNVPROC __glewVertexAttribs4dvNV;
+extern PFNGLVERTEXATTRIBS4FVNVPROC __glewVertexAttribs4fvNV;
+extern PFNGLVERTEXATTRIBS4SVNVPROC __glewVertexAttribs4svNV;
+extern PFNGLVERTEXATTRIBS4UBVNVPROC __glewVertexAttribs4ubvNV;
+
+extern PFNGLBEGINVIDEOCAPTURENVPROC __glewBeginVideoCaptureNV;
+extern PFNGLBINDVIDEOCAPTURESTREAMBUFFERNVPROC __glewBindVideoCaptureStreamBufferNV;
+extern PFNGLBINDVIDEOCAPTURESTREAMTEXTURENVPROC __glewBindVideoCaptureStreamTextureNV;
+extern PFNGLENDVIDEOCAPTURENVPROC __glewEndVideoCaptureNV;
+extern PFNGLGETVIDEOCAPTURESTREAMDVNVPROC __glewGetVideoCaptureStreamdvNV;
+extern PFNGLGETVIDEOCAPTURESTREAMFVNVPROC __glewGetVideoCaptureStreamfvNV;
+extern PFNGLGETVIDEOCAPTURESTREAMIVNVPROC __glewGetVideoCaptureStreamivNV;
+extern PFNGLGETVIDEOCAPTUREIVNVPROC __glewGetVideoCaptureivNV;
+extern PFNGLVIDEOCAPTURENVPROC __glewVideoCaptureNV;
+extern PFNGLVIDEOCAPTURESTREAMPARAMETERDVNVPROC __glewVideoCaptureStreamParameterdvNV;
+extern PFNGLVIDEOCAPTURESTREAMPARAMETERFVNVPROC __glewVideoCaptureStreamParameterfvNV;
+extern PFNGLVIDEOCAPTURESTREAMPARAMETERIVNVPROC __glewVideoCaptureStreamParameterivNV;
+
+extern PFNGLDEPTHRANGEARRAYFVNVPROC __glewDepthRangeArrayfvNV;
+extern PFNGLDEPTHRANGEINDEXEDFNVPROC __glewDepthRangeIndexedfNV;
+extern PFNGLDISABLEINVPROC __glewDisableiNV;
+extern PFNGLENABLEINVPROC __glewEnableiNV;
+extern PFNGLGETFLOATI_VNVPROC __glewGetFloati_vNV;
+extern PFNGLISENABLEDINVPROC __glewIsEnablediNV;
+extern PFNGLSCISSORARRAYVNVPROC __glewScissorArrayvNV;
+extern PFNGLSCISSORINDEXEDNVPROC __glewScissorIndexedNV;
+extern PFNGLSCISSORINDEXEDVNVPROC __glewScissorIndexedvNV;
+extern PFNGLVIEWPORTARRAYVNVPROC __glewViewportArrayvNV;
+extern PFNGLVIEWPORTINDEXEDFNVPROC __glewViewportIndexedfNV;
+extern PFNGLVIEWPORTINDEXEDFVNVPROC __glewViewportIndexedfvNV;
+
+extern PFNGLVIEWPORTSWIZZLENVPROC __glewViewportSwizzleNV;
+
+extern PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC __glewEGLImageTargetRenderbufferStorageOES;
+extern PFNGLEGLIMAGETARGETTEXTURE2DOESPROC __glewEGLImageTargetTexture2DOES;
+
+extern PFNGLBLENDEQUATIONSEPARATEOESPROC __glewBlendEquationSeparateOES;
+
+extern PFNGLBLENDFUNCSEPARATEOESPROC __glewBlendFuncSeparateOES;
+
+extern PFNGLBLENDEQUATIONOESPROC __glewBlendEquationOES;
+
+extern PFNGLCOPYIMAGESUBDATAOESPROC __glewCopyImageSubDataOES;
+
+extern PFNGLBLENDEQUATIONSEPARATEIOESPROC __glewBlendEquationSeparateiOES;
+extern PFNGLBLENDEQUATIONIOESPROC __glewBlendEquationiOES;
+extern PFNGLBLENDFUNCSEPARATEIOESPROC __glewBlendFuncSeparateiOES;
+extern PFNGLBLENDFUNCIOESPROC __glewBlendFunciOES;
+extern PFNGLCOLORMASKIOESPROC __glewColorMaskiOES;
+extern PFNGLDISABLEIOESPROC __glewDisableiOES;
+extern PFNGLENABLEIOESPROC __glewEnableiOES;
+extern PFNGLISENABLEDIOESPROC __glewIsEnablediOES;
+
+extern PFNGLBINDFRAMEBUFFEROESPROC __glewBindFramebufferOES;
+extern PFNGLBINDRENDERBUFFEROESPROC __glewBindRenderbufferOES;
+extern PFNGLCHECKFRAMEBUFFERSTATUSOESPROC __glewCheckFramebufferStatusOES;
+extern PFNGLDELETEFRAMEBUFFERSOESPROC __glewDeleteFramebuffersOES;
+extern PFNGLDELETERENDERBUFFERSOESPROC __glewDeleteRenderbuffersOES;
+extern PFNGLFRAMEBUFFERRENDERBUFFEROESPROC __glewFramebufferRenderbufferOES;
+extern PFNGLFRAMEBUFFERTEXTURE2DOESPROC __glewFramebufferTexture2DOES;
+extern PFNGLGENFRAMEBUFFERSOESPROC __glewGenFramebuffersOES;
+extern PFNGLGENRENDERBUFFERSOESPROC __glewGenRenderbuffersOES;
+extern PFNGLGENERATEMIPMAPOESPROC __glewGenerateMipmapOES;
+extern PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVOESPROC __glewGetFramebufferAttachmentParameterivOES;
+extern PFNGLGETRENDERBUFFERPARAMETERIVOESPROC __glewGetRenderbufferParameterivOES;
+extern PFNGLISFRAMEBUFFEROESPROC __glewIsFramebufferOES;
+extern PFNGLISRENDERBUFFEROESPROC __glewIsRenderbufferOES;
+extern PFNGLRENDERBUFFERSTORAGEOESPROC __glewRenderbufferStorageOES;
+
+extern PFNGLGETPROGRAMBINARYOESPROC __glewGetProgramBinaryOES;
+extern PFNGLPROGRAMBINARYOESPROC __glewProgramBinaryOES;
+
+extern PFNGLGETBUFFERPOINTERVOESPROC __glewGetBufferPointervOES;
+extern PFNGLMAPBUFFEROESPROC __glewMapBufferOES;
+extern PFNGLUNMAPBUFFEROESPROC __glewUnmapBufferOES;
+
+extern PFNGLCURRENTPALETTEMATRIXOESPROC __glewCurrentPaletteMatrixOES;
+extern PFNGLLOADPALETTEFROMMODELVIEWMATRIXOESPROC __glewLoadPaletteFromModelViewMatrixOES;
+extern PFNGLMATRIXINDEXPOINTEROESPROC __glewMatrixIndexPointerOES;
+extern PFNGLWEIGHTPOINTEROESPROC __glewWeightPointerOES;
+
+extern PFNGLMINSAMPLESHADINGOESPROC __glewMinSampleShadingOES;
+
+extern PFNGLCLEARDEPTHFOESPROC __glewClearDepthfOES;
+extern PFNGLCLIPPLANEFOESPROC __glewClipPlanefOES;
+extern PFNGLDEPTHRANGEFOESPROC __glewDepthRangefOES;
+extern PFNGLFRUSTUMFOESPROC __glewFrustumfOES;
+extern PFNGLGETCLIPPLANEFOESPROC __glewGetClipPlanefOES;
+extern PFNGLORTHOFOESPROC __glewOrthofOES;
+
+extern PFNGLCOMPRESSEDTEXIMAGE3DOESPROC __glewCompressedTexImage3DOES;
+extern PFNGLCOMPRESSEDTEXSUBIMAGE3DOESPROC __glewCompressedTexSubImage3DOES;
+extern PFNGLCOPYTEXSUBIMAGE3DOESPROC __glewCopyTexSubImage3DOES;
+extern PFNGLFRAMEBUFFERTEXTURE3DOESPROC __glewFramebufferTexture3DOES;
+extern PFNGLTEXIMAGE3DOESPROC __glewTexImage3DOES;
+extern PFNGLTEXSUBIMAGE3DOESPROC __glewTexSubImage3DOES;
+
+extern PFNGLGETSAMPLERPARAMETERIIVOESPROC __glewGetSamplerParameterIivOES;
+extern PFNGLGETSAMPLERPARAMETERIUIVOESPROC __glewGetSamplerParameterIuivOES;
+extern PFNGLGETTEXPARAMETERIIVOESPROC __glewGetTexParameterIivOES;
+extern PFNGLGETTEXPARAMETERIUIVOESPROC __glewGetTexParameterIuivOES;
+extern PFNGLSAMPLERPARAMETERIIVOESPROC __glewSamplerParameterIivOES;
+extern PFNGLSAMPLERPARAMETERIUIVOESPROC __glewSamplerParameterIuivOES;
+extern PFNGLTEXPARAMETERIIVOESPROC __glewTexParameterIivOES;
+extern PFNGLTEXPARAMETERIUIVOESPROC __glewTexParameterIuivOES;
+
+extern PFNGLTEXBUFFEROESPROC __glewTexBufferOES;
+extern PFNGLTEXBUFFERRANGEOESPROC __glewTexBufferRangeOES;
+
+extern PFNGLGETTEXGENFVOESPROC __glewGetTexGenfvOES;
+extern PFNGLGETTEXGENIVOESPROC __glewGetTexGenivOES;
+extern PFNGLGETTEXGENXVOESPROC __glewGetTexGenxvOES;
+extern PFNGLTEXGENFOESPROC __glewTexGenfOES;
+extern PFNGLTEXGENFVOESPROC __glewTexGenfvOES;
+extern PFNGLTEXGENIOESPROC __glewTexGeniOES;
+extern PFNGLTEXGENIVOESPROC __glewTexGenivOES;
+extern PFNGLTEXGENXOESPROC __glewTexGenxOES;
+extern PFNGLTEXGENXVOESPROC __glewTexGenxvOES;
+
+extern PFNGLTEXSTORAGE3DMULTISAMPLEOESPROC __glewTexStorage3DMultisampleOES;
+
+extern PFNGLTEXTUREVIEWOESPROC __glewTextureViewOES;
+
+extern PFNGLBINDVERTEXARRAYOESPROC __glewBindVertexArrayOES;
+extern PFNGLDELETEVERTEXARRAYSOESPROC __glewDeleteVertexArraysOES;
+extern PFNGLGENVERTEXARRAYSOESPROC __glewGenVertexArraysOES;
+extern PFNGLISVERTEXARRAYOESPROC __glewIsVertexArrayOES;
+
+extern PFNGLFRAMEBUFFERTEXTUREMULTIVIEWOVRPROC __glewFramebufferTextureMultiviewOVR;
+extern PFNGLNAMEDFRAMEBUFFERTEXTUREMULTIVIEWOVRPROC __glewNamedFramebufferTextureMultiviewOVR;
+
+extern PFNGLFRAMEBUFFERTEXTUREMULTISAMPLEMULTIVIEWOVRPROC __glewFramebufferTextureMultisampleMultiviewOVR;
+
+extern PFNGLALPHAFUNCQCOMPROC __glewAlphaFuncQCOM;
+
+extern PFNGLDISABLEDRIVERCONTROLQCOMPROC __glewDisableDriverControlQCOM;
+extern PFNGLENABLEDRIVERCONTROLQCOMPROC __glewEnableDriverControlQCOM;
+extern PFNGLGETDRIVERCONTROLSTRINGQCOMPROC __glewGetDriverControlStringQCOM;
+extern PFNGLGETDRIVERCONTROLSQCOMPROC __glewGetDriverControlsQCOM;
+
+extern PFNGLEXTGETBUFFERPOINTERVQCOMPROC __glewExtGetBufferPointervQCOM;
+extern PFNGLEXTGETBUFFERSQCOMPROC __glewExtGetBuffersQCOM;
+extern PFNGLEXTGETFRAMEBUFFERSQCOMPROC __glewExtGetFramebuffersQCOM;
+extern PFNGLEXTGETRENDERBUFFERSQCOMPROC __glewExtGetRenderbuffersQCOM;
+extern PFNGLEXTGETTEXLEVELPARAMETERIVQCOMPROC __glewExtGetTexLevelParameterivQCOM;
+extern PFNGLEXTGETTEXSUBIMAGEQCOMPROC __glewExtGetTexSubImageQCOM;
+extern PFNGLEXTGETTEXTURESQCOMPROC __glewExtGetTexturesQCOM;
+extern PFNGLEXTTEXOBJECTSTATEOVERRIDEIQCOMPROC __glewExtTexObjectStateOverrideiQCOM;
+
+extern PFNGLEXTGETPROGRAMBINARYSOURCEQCOMPROC __glewExtGetProgramBinarySourceQCOM;
+extern PFNGLEXTGETPROGRAMSQCOMPROC __glewExtGetProgramsQCOM;
+extern PFNGLEXTGETSHADERSQCOMPROC __glewExtGetShadersQCOM;
+extern PFNGLEXTISPROGRAMBINARYQCOMPROC __glewExtIsProgramBinaryQCOM;
+
+extern PFNGLEXTRAPOLATETEX2DQCOMPROC __glewExtrapolateTex2DQCOM;
+
+extern PFNGLFRAMEBUFFERFOVEATIONCONFIGQCOMPROC __glewFramebufferFoveationConfigQCOM;
+extern PFNGLFRAMEBUFFERFOVEATIONPARAMETERSQCOMPROC __glewFramebufferFoveationParametersQCOM;
+
+extern PFNGLTEXESTIMATEMOTIONQCOMPROC __glewTexEstimateMotionQCOM;
+extern PFNGLTEXESTIMATEMOTIONREGIONSQCOMPROC __glewTexEstimateMotionRegionsQCOM;
+
+extern PFNGLFRAMEBUFFERFETCHBARRIERQCOMPROC __glewFramebufferFetchBarrierQCOM;
+
+extern PFNGLSHADINGRATEQCOMPROC __glewShadingRateQCOM;
+
+extern PFNGLTEXTUREFOVEATIONPARAMETERSQCOMPROC __glewTextureFoveationParametersQCOM;
+
+extern PFNGLENDTILINGQCOMPROC __glewEndTilingQCOM;
+extern PFNGLSTARTTILINGQCOMPROC __glewStartTilingQCOM;
+
+extern PFNGLALPHAFUNCXPROC __glewAlphaFuncx;
+extern PFNGLCLEARCOLORXPROC __glewClearColorx;
+extern PFNGLCLEARDEPTHXPROC __glewClearDepthx;
+extern PFNGLCOLOR4XPROC __glewColor4x;
+extern PFNGLDEPTHRANGEXPROC __glewDepthRangex;
+extern PFNGLFOGXPROC __glewFogx;
+extern PFNGLFOGXVPROC __glewFogxv;
+extern PFNGLFRUSTUMFPROC __glewFrustumf;
+extern PFNGLFRUSTUMXPROC __glewFrustumx;
+extern PFNGLLIGHTMODELXPROC __glewLightModelx;
+extern PFNGLLIGHTMODELXVPROC __glewLightModelxv;
+extern PFNGLLIGHTXPROC __glewLightx;
+extern PFNGLLIGHTXVPROC __glewLightxv;
+extern PFNGLLINEWIDTHXPROC __glewLineWidthx;
+extern PFNGLLOADMATRIXXPROC __glewLoadMatrixx;
+extern PFNGLMATERIALXPROC __glewMaterialx;
+extern PFNGLMATERIALXVPROC __glewMaterialxv;
+extern PFNGLMULTMATRIXXPROC __glewMultMatrixx;
+extern PFNGLMULTITEXCOORD4XPROC __glewMultiTexCoord4x;
+extern PFNGLNORMAL3XPROC __glewNormal3x;
+extern PFNGLORTHOFPROC __glewOrthof;
+extern PFNGLORTHOXPROC __glewOrthox;
+extern PFNGLPOINTSIZEXPROC __glewPointSizex;
+extern PFNGLPOLYGONOFFSETXPROC __glewPolygonOffsetx;
+extern PFNGLROTATEXPROC __glewRotatex;
+extern PFNGLSAMPLECOVERAGEXPROC __glewSampleCoveragex;
+extern PFNGLSCALEXPROC __glewScalex;
+extern PFNGLTEXENVXPROC __glewTexEnvx;
+extern PFNGLTEXENVXVPROC __glewTexEnvxv;
+extern PFNGLTEXPARAMETERXPROC __glewTexParameterx;
+extern PFNGLTRANSLATEXPROC __glewTranslatex;
+
+extern PFNGLCLIPPLANEFPROC __glewClipPlanef;
+extern PFNGLCLIPPLANEXPROC __glewClipPlanex;
+extern PFNGLGETCLIPPLANEFPROC __glewGetClipPlanef;
+extern PFNGLGETCLIPPLANEXPROC __glewGetClipPlanex;
+extern PFNGLGETFIXEDVPROC __glewGetFixedv;
+extern PFNGLGETLIGHTXVPROC __glewGetLightxv;
+extern PFNGLGETMATERIALXVPROC __glewGetMaterialxv;
+extern PFNGLGETTEXENVXVPROC __glewGetTexEnvxv;
+extern PFNGLGETTEXPARAMETERXVPROC __glewGetTexParameterxv;
+extern PFNGLPOINTPARAMETERXPROC __glewPointParameterx;
+extern PFNGLPOINTPARAMETERXVPROC __glewPointParameterxv;
+extern PFNGLPOINTSIZEPOINTEROESPROC __glewPointSizePointerOES;
+extern PFNGLTEXPARAMETERXVPROC __glewTexParameterxv;
+
+extern PFNGLERRORSTRINGREGALPROC __glewErrorStringREGAL;
+
+extern PFNGLGETEXTENSIONREGALPROC __glewGetExtensionREGAL;
+extern PFNGLISSUPPORTEDREGALPROC __glewIsSupportedREGAL;
+
+extern PFNGLLOGMESSAGECALLBACKREGALPROC __glewLogMessageCallbackREGAL;
+
+extern PFNGLGETPROCADDRESSREGALPROC __glewGetProcAddressREGAL;
+
+extern PFNGLDETAILTEXFUNCSGISPROC __glewDetailTexFuncSGIS;
+extern PFNGLGETDETAILTEXFUNCSGISPROC __glewGetDetailTexFuncSGIS;
+
+extern PFNGLFOGFUNCSGISPROC __glewFogFuncSGIS;
+extern PFNGLGETFOGFUNCSGISPROC __glewGetFogFuncSGIS;
+
+extern PFNGLSAMPLEMASKSGISPROC __glewSampleMaskSGIS;
+extern PFNGLSAMPLEPATTERNSGISPROC __glewSamplePatternSGIS;
+
+extern PFNGLINTERLEAVEDTEXTURECOORDSETSSGISPROC __glewInterleavedTextureCoordSetsSGIS;
+extern PFNGLSELECTTEXTURECOORDSETSGISPROC __glewSelectTextureCoordSetSGIS;
+extern PFNGLSELECTTEXTURESGISPROC __glewSelectTextureSGIS;
+extern PFNGLSELECTTEXTURETRANSFORMSGISPROC __glewSelectTextureTransformSGIS;
+
+extern PFNGLMULTISAMPLESUBRECTPOSSGISPROC __glewMultisampleSubRectPosSGIS;
+
+extern PFNGLGETSHARPENTEXFUNCSGISPROC __glewGetSharpenTexFuncSGIS;
+extern PFNGLSHARPENTEXFUNCSGISPROC __glewSharpenTexFuncSGIS;
+
+extern PFNGLTEXIMAGE4DSGISPROC __glewTexImage4DSGIS;
+extern PFNGLTEXSUBIMAGE4DSGISPROC __glewTexSubImage4DSGIS;
+
+extern PFNGLGETTEXFILTERFUNCSGISPROC __glewGetTexFilterFuncSGIS;
+extern PFNGLTEXFILTERFUNCSGISPROC __glewTexFilterFuncSGIS;
+
+extern PFNGLASYNCMARKERSGIXPROC __glewAsyncMarkerSGIX;
+extern PFNGLDELETEASYNCMARKERSSGIXPROC __glewDeleteAsyncMarkersSGIX;
+extern PFNGLFINISHASYNCSGIXPROC __glewFinishAsyncSGIX;
+extern PFNGLGENASYNCMARKERSSGIXPROC __glewGenAsyncMarkersSGIX;
+extern PFNGLISASYNCMARKERSGIXPROC __glewIsAsyncMarkerSGIX;
+extern PFNGLPOLLASYNCSGIXPROC __glewPollAsyncSGIX;
+
+extern PFNGLADDRESSSPACEPROC __glewAddressSpace;
+extern PFNGLDATAPIPEPROC __glewDataPipe;
+
+extern PFNGLFLUSHRASTERSGIXPROC __glewFlushRasterSGIX;
+
+extern PFNGLFOGLAYERSSGIXPROC __glewFogLayersSGIX;
+extern PFNGLGETFOGLAYERSSGIXPROC __glewGetFogLayersSGIX;
+
+extern PFNGLTEXTUREFOGSGIXPROC __glewTextureFogSGIX;
+
+extern PFNGLFRAGMENTCOLORMATERIALSGIXPROC __glewFragmentColorMaterialSGIX;
+extern PFNGLFRAGMENTLIGHTMODELFSGIXPROC __glewFragmentLightModelfSGIX;
+extern PFNGLFRAGMENTLIGHTMODELFVSGIXPROC __glewFragmentLightModelfvSGIX;
+extern PFNGLFRAGMENTLIGHTMODELISGIXPROC __glewFragmentLightModeliSGIX;
+extern PFNGLFRAGMENTLIGHTMODELIVSGIXPROC __glewFragmentLightModelivSGIX;
+extern PFNGLFRAGMENTLIGHTFSGIXPROC __glewFragmentLightfSGIX;
+extern PFNGLFRAGMENTLIGHTFVSGIXPROC __glewFragmentLightfvSGIX;
+extern PFNGLFRAGMENTLIGHTISGIXPROC __glewFragmentLightiSGIX;
+extern PFNGLFRAGMENTLIGHTIVSGIXPROC __glewFragmentLightivSGIX;
+extern PFNGLFRAGMENTMATERIALFSGIXPROC __glewFragmentMaterialfSGIX;
+extern PFNGLFRAGMENTMATERIALFVSGIXPROC __glewFragmentMaterialfvSGIX;
+extern PFNGLFRAGMENTMATERIALISGIXPROC __glewFragmentMaterialiSGIX;
+extern PFNGLFRAGMENTMATERIALIVSGIXPROC __glewFragmentMaterialivSGIX;
+extern PFNGLGETFRAGMENTLIGHTFVSGIXPROC __glewGetFragmentLightfvSGIX;
+extern PFNGLGETFRAGMENTLIGHTIVSGIXPROC __glewGetFragmentLightivSGIX;
+extern PFNGLGETFRAGMENTMATERIALFVSGIXPROC __glewGetFragmentMaterialfvSGIX;
+extern PFNGLGETFRAGMENTMATERIALIVSGIXPROC __glewGetFragmentMaterialivSGIX;
+
+extern PFNGLFRAMEZOOMSGIXPROC __glewFrameZoomSGIX;
+
+extern PFNGLIGLOOINTERFACESGIXPROC __glewIglooInterfaceSGIX;
+
+extern PFNGLALLOCMPEGPREDICTORSSGIXPROC __glewAllocMPEGPredictorsSGIX;
+extern PFNGLDELETEMPEGPREDICTORSSGIXPROC __glewDeleteMPEGPredictorsSGIX;
+extern PFNGLGENMPEGPREDICTORSSGIXPROC __glewGenMPEGPredictorsSGIX;
+extern PFNGLGETMPEGPARAMETERFVSGIXPROC __glewGetMPEGParameterfvSGIX;
+extern PFNGLGETMPEGPARAMETERIVSGIXPROC __glewGetMPEGParameterivSGIX;
+extern PFNGLGETMPEGPREDICTORSGIXPROC __glewGetMPEGPredictorSGIX;
+extern PFNGLGETMPEGQUANTTABLEUBVPROC __glewGetMPEGQuantTableubv;
+extern PFNGLISMPEGPREDICTORSGIXPROC __glewIsMPEGPredictorSGIX;
+extern PFNGLMPEGPREDICTORSGIXPROC __glewMPEGPredictorSGIX;
+extern PFNGLMPEGQUANTTABLEUBVPROC __glewMPEGQuantTableubv;
+extern PFNGLSWAPMPEGPREDICTORSSGIXPROC __glewSwapMPEGPredictorsSGIX;
+
+extern PFNGLGETNONLINLIGHTFVSGIXPROC __glewGetNonlinLightfvSGIX;
+extern PFNGLGETNONLINMATERIALFVSGIXPROC __glewGetNonlinMaterialfvSGIX;
+extern PFNGLNONLINLIGHTFVSGIXPROC __glewNonlinLightfvSGIX;
+extern PFNGLNONLINMATERIALFVSGIXPROC __glewNonlinMaterialfvSGIX;
+
+extern PFNGLPIXELTEXGENSGIXPROC __glewPixelTexGenSGIX;
+
+extern PFNGLDEFORMSGIXPROC __glewDeformSGIX;
+extern PFNGLLOADIDENTITYDEFORMATIONMAPSGIXPROC __glewLoadIdentityDeformationMapSGIX;
+
+extern PFNGLMESHBREADTHSGIXPROC __glewMeshBreadthSGIX;
+extern PFNGLMESHSTRIDESGIXPROC __glewMeshStrideSGIX;
+
+extern PFNGLREFERENCEPLANESGIXPROC __glewReferencePlaneSGIX;
+
+extern PFNGLSPRITEPARAMETERFSGIXPROC __glewSpriteParameterfSGIX;
+extern PFNGLSPRITEPARAMETERFVSGIXPROC __glewSpriteParameterfvSGIX;
+extern PFNGLSPRITEPARAMETERISGIXPROC __glewSpriteParameteriSGIX;
+extern PFNGLSPRITEPARAMETERIVSGIXPROC __glewSpriteParameterivSGIX;
+
+extern PFNGLTAGSAMPLEBUFFERSGIXPROC __glewTagSampleBufferSGIX;
+
+extern PFNGLGETVECTOROPERATIONSGIXPROC __glewGetVectorOperationSGIX;
+extern PFNGLVECTOROPERATIONSGIXPROC __glewVectorOperationSGIX;
+
+extern PFNGLAREVERTEXARRAYSRESIDENTSGIXPROC __glewAreVertexArraysResidentSGIX;
+extern PFNGLBINDVERTEXARRAYSGIXPROC __glewBindVertexArraySGIX;
+extern PFNGLDELETEVERTEXARRAYSSGIXPROC __glewDeleteVertexArraysSGIX;
+extern PFNGLGENVERTEXARRAYSSGIXPROC __glewGenVertexArraysSGIX;
+extern PFNGLISVERTEXARRAYSGIXPROC __glewIsVertexArraySGIX;
+extern PFNGLPRIORITIZEVERTEXARRAYSSGIXPROC __glewPrioritizeVertexArraysSGIX;
+
+extern PFNGLCOLORTABLEPARAMETERFVSGIPROC __glewColorTableParameterfvSGI;
+extern PFNGLCOLORTABLEPARAMETERIVSGIPROC __glewColorTableParameterivSGI;
+extern PFNGLCOLORTABLESGIPROC __glewColorTableSGI;
+extern PFNGLCOPYCOLORTABLESGIPROC __glewCopyColorTableSGI;
+extern PFNGLGETCOLORTABLEPARAMETERFVSGIPROC __glewGetColorTableParameterfvSGI;
+extern PFNGLGETCOLORTABLEPARAMETERIVSGIPROC __glewGetColorTableParameterivSGI;
+extern PFNGLGETCOLORTABLESGIPROC __glewGetColorTableSGI;
+
+extern PFNGLGETPIXELTRANSFORMPARAMETERFVSGIPROC __glewGetPixelTransformParameterfvSGI;
+extern PFNGLGETPIXELTRANSFORMPARAMETERIVSGIPROC __glewGetPixelTransformParameterivSGI;
+extern PFNGLPIXELTRANSFORMPARAMETERFSGIPROC __glewPixelTransformParameterfSGI;
+extern PFNGLPIXELTRANSFORMPARAMETERFVSGIPROC __glewPixelTransformParameterfvSGI;
+extern PFNGLPIXELTRANSFORMPARAMETERISGIPROC __glewPixelTransformParameteriSGI;
+extern PFNGLPIXELTRANSFORMPARAMETERIVSGIPROC __glewPixelTransformParameterivSGI;
+extern PFNGLPIXELTRANSFORMSGIPROC __glewPixelTransformSGI;
+
+extern PFNGLFINISHTEXTURESUNXPROC __glewFinishTextureSUNX;
+
+extern PFNGLGLOBALALPHAFACTORBSUNPROC __glewGlobalAlphaFactorbSUN;
+extern PFNGLGLOBALALPHAFACTORDSUNPROC __glewGlobalAlphaFactordSUN;
+extern PFNGLGLOBALALPHAFACTORFSUNPROC __glewGlobalAlphaFactorfSUN;
+extern PFNGLGLOBALALPHAFACTORISUNPROC __glewGlobalAlphaFactoriSUN;
+extern PFNGLGLOBALALPHAFACTORSSUNPROC __glewGlobalAlphaFactorsSUN;
+extern PFNGLGLOBALALPHAFACTORUBSUNPROC __glewGlobalAlphaFactorubSUN;
+extern PFNGLGLOBALALPHAFACTORUISUNPROC __glewGlobalAlphaFactoruiSUN;
+extern PFNGLGLOBALALPHAFACTORUSSUNPROC __glewGlobalAlphaFactorusSUN;
+
+extern PFNGLREADVIDEOPIXELSSUNPROC __glewReadVideoPixelsSUN;
+
+extern PFNGLREPLACEMENTCODEPOINTERSUNPROC __glewReplacementCodePointerSUN;
+extern PFNGLREPLACEMENTCODEUBSUNPROC __glewReplacementCodeubSUN;
+extern PFNGLREPLACEMENTCODEUBVSUNPROC __glewReplacementCodeubvSUN;
+extern PFNGLREPLACEMENTCODEUISUNPROC __glewReplacementCodeuiSUN;
+extern PFNGLREPLACEMENTCODEUIVSUNPROC __glewReplacementCodeuivSUN;
+extern PFNGLREPLACEMENTCODEUSSUNPROC __glewReplacementCodeusSUN;
+extern PFNGLREPLACEMENTCODEUSVSUNPROC __glewReplacementCodeusvSUN;
+
+extern PFNGLCOLOR3FVERTEX3FSUNPROC __glewColor3fVertex3fSUN;
+extern PFNGLCOLOR3FVERTEX3FVSUNPROC __glewColor3fVertex3fvSUN;
+extern PFNGLCOLOR4FNORMAL3FVERTEX3FSUNPROC __glewColor4fNormal3fVertex3fSUN;
+extern PFNGLCOLOR4FNORMAL3FVERTEX3FVSUNPROC __glewColor4fNormal3fVertex3fvSUN;
+extern PFNGLCOLOR4UBVERTEX2FSUNPROC __glewColor4ubVertex2fSUN;
+extern PFNGLCOLOR4UBVERTEX2FVSUNPROC __glewColor4ubVertex2fvSUN;
+extern PFNGLCOLOR4UBVERTEX3FSUNPROC __glewColor4ubVertex3fSUN;
+extern PFNGLCOLOR4UBVERTEX3FVSUNPROC __glewColor4ubVertex3fvSUN;
+extern PFNGLNORMAL3FVERTEX3FSUNPROC __glewNormal3fVertex3fSUN;
+extern PFNGLNORMAL3FVERTEX3FVSUNPROC __glewNormal3fVertex3fvSUN;
+extern PFNGLREPLACEMENTCODEUICOLOR3FVERTEX3FSUNPROC __glewReplacementCodeuiColor3fVertex3fSUN;
+extern PFNGLREPLACEMENTCODEUICOLOR3FVERTEX3FVSUNPROC __glewReplacementCodeuiColor3fVertex3fvSUN;
+extern PFNGLREPLACEMENTCODEUICOLOR4FNORMAL3FVERTEX3FSUNPROC __glewReplacementCodeuiColor4fNormal3fVertex3fSUN;
+extern PFNGLREPLACEMENTCODEUICOLOR4FNORMAL3FVERTEX3FVSUNPROC __glewReplacementCodeuiColor4fNormal3fVertex3fvSUN;
+extern PFNGLREPLACEMENTCODEUICOLOR4UBVERTEX3FSUNPROC __glewReplacementCodeuiColor4ubVertex3fSUN;
+extern PFNGLREPLACEMENTCODEUICOLOR4UBVERTEX3FVSUNPROC __glewReplacementCodeuiColor4ubVertex3fvSUN;
+extern PFNGLREPLACEMENTCODEUINORMAL3FVERTEX3FSUNPROC __glewReplacementCodeuiNormal3fVertex3fSUN;
+extern PFNGLREPLACEMENTCODEUINORMAL3FVERTEX3FVSUNPROC __glewReplacementCodeuiNormal3fVertex3fvSUN;
+extern PFNGLREPLACEMENTCODEUITEXCOORD2FCOLOR4FNORMAL3FVERTEX3FSUNPROC __glewReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN;
+extern PFNGLREPLACEMENTCODEUITEXCOORD2FCOLOR4FNORMAL3FVERTEX3FVSUNPROC __glewReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN;
+extern PFNGLREPLACEMENTCODEUITEXCOORD2FNORMAL3FVERTEX3FSUNPROC __glewReplacementCodeuiTexCoord2fNormal3fVertex3fSUN;
+extern PFNGLREPLACEMENTCODEUITEXCOORD2FNORMAL3FVERTEX3FVSUNPROC __glewReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN;
+extern PFNGLREPLACEMENTCODEUITEXCOORD2FVERTEX3FSUNPROC __glewReplacementCodeuiTexCoord2fVertex3fSUN;
+extern PFNGLREPLACEMENTCODEUITEXCOORD2FVERTEX3FVSUNPROC __glewReplacementCodeuiTexCoord2fVertex3fvSUN;
+extern PFNGLREPLACEMENTCODEUIVERTEX3FSUNPROC __glewReplacementCodeuiVertex3fSUN;
+extern PFNGLREPLACEMENTCODEUIVERTEX3FVSUNPROC __glewReplacementCodeuiVertex3fvSUN;
+extern PFNGLTEXCOORD2FCOLOR3FVERTEX3FSUNPROC __glewTexCoord2fColor3fVertex3fSUN;
+extern PFNGLTEXCOORD2FCOLOR3FVERTEX3FVSUNPROC __glewTexCoord2fColor3fVertex3fvSUN;
+extern PFNGLTEXCOORD2FCOLOR4FNORMAL3FVERTEX3FSUNPROC __glewTexCoord2fColor4fNormal3fVertex3fSUN;
+extern PFNGLTEXCOORD2FCOLOR4FNORMAL3FVERTEX3FVSUNPROC __glewTexCoord2fColor4fNormal3fVertex3fvSUN;
+extern PFNGLTEXCOORD2FCOLOR4UBVERTEX3FSUNPROC __glewTexCoord2fColor4ubVertex3fSUN;
+extern PFNGLTEXCOORD2FCOLOR4UBVERTEX3FVSUNPROC __glewTexCoord2fColor4ubVertex3fvSUN;
+extern PFNGLTEXCOORD2FNORMAL3FVERTEX3FSUNPROC __glewTexCoord2fNormal3fVertex3fSUN;
+extern PFNGLTEXCOORD2FNORMAL3FVERTEX3FVSUNPROC __glewTexCoord2fNormal3fVertex3fvSUN;
+extern PFNGLTEXCOORD2FVERTEX3FSUNPROC __glewTexCoord2fVertex3fSUN;
+extern PFNGLTEXCOORD2FVERTEX3FVSUNPROC __glewTexCoord2fVertex3fvSUN;
+extern PFNGLTEXCOORD4FCOLOR4FNORMAL3FVERTEX4FSUNPROC __glewTexCoord4fColor4fNormal3fVertex4fSUN;
+extern PFNGLTEXCOORD4FCOLOR4FNORMAL3FVERTEX4FVSUNPROC __glewTexCoord4fColor4fNormal3fVertex4fvSUN;
+extern PFNGLTEXCOORD4FVERTEX4FSUNPROC __glewTexCoord4fVertex4fSUN;
+extern PFNGLTEXCOORD4FVERTEX4FVSUNPROC __glewTexCoord4fVertex4fvSUN;
+
+extern PFNGLADDSWAPHINTRECTWINPROC __glewAddSwapHintRectWIN;
+extern GLboolean __GLEW_VERSION_1_1;
+extern GLboolean __GLEW_VERSION_1_2;
+extern GLboolean __GLEW_VERSION_1_2_1;
+extern GLboolean __GLEW_VERSION_1_3;
+extern GLboolean __GLEW_VERSION_1_4;
+extern GLboolean __GLEW_VERSION_1_5;
+extern GLboolean __GLEW_VERSION_2_0;
+extern GLboolean __GLEW_VERSION_2_1;
+extern GLboolean __GLEW_VERSION_3_0;
+extern GLboolean __GLEW_VERSION_3_1;
+extern GLboolean __GLEW_VERSION_3_2;
+extern GLboolean __GLEW_VERSION_3_3;
+extern GLboolean __GLEW_VERSION_4_0;
+extern GLboolean __GLEW_VERSION_4_1;
+extern GLboolean __GLEW_VERSION_4_2;
+extern GLboolean __GLEW_VERSION_4_3;
+extern GLboolean __GLEW_VERSION_4_4;
+extern GLboolean __GLEW_VERSION_4_5;
+extern GLboolean __GLEW_VERSION_4_6;
+extern GLboolean __GLEW_3DFX_multisample;
+extern GLboolean __GLEW_3DFX_tbuffer;
+extern GLboolean __GLEW_3DFX_texture_compression_FXT1;
+extern GLboolean __GLEW_AMD_blend_minmax_factor;
+extern GLboolean __GLEW_AMD_compressed_3DC_texture;
+extern GLboolean __GLEW_AMD_compressed_ATC_texture;
+extern GLboolean __GLEW_AMD_conservative_depth;
+extern GLboolean __GLEW_AMD_debug_output;
+extern GLboolean __GLEW_AMD_depth_clamp_separate;
+extern GLboolean __GLEW_AMD_draw_buffers_blend;
+extern GLboolean __GLEW_AMD_framebuffer_multisample_advanced;
+extern GLboolean __GLEW_AMD_framebuffer_sample_positions;
+extern GLboolean __GLEW_AMD_gcn_shader;
+extern GLboolean __GLEW_AMD_gpu_shader_half_float;
+extern GLboolean __GLEW_AMD_gpu_shader_half_float_fetch;
+extern GLboolean __GLEW_AMD_gpu_shader_int16;
+extern GLboolean __GLEW_AMD_gpu_shader_int64;
+extern GLboolean __GLEW_AMD_interleaved_elements;
+extern GLboolean __GLEW_AMD_multi_draw_indirect;
+extern GLboolean __GLEW_AMD_name_gen_delete;
+extern GLboolean __GLEW_AMD_occlusion_query_event;
+extern GLboolean __GLEW_AMD_performance_monitor;
+extern GLboolean __GLEW_AMD_pinned_memory;
+extern GLboolean __GLEW_AMD_program_binary_Z400;
+extern GLboolean __GLEW_AMD_query_buffer_object;
+extern GLboolean __GLEW_AMD_sample_positions;
+extern GLboolean __GLEW_AMD_seamless_cubemap_per_texture;
+extern GLboolean __GLEW_AMD_shader_atomic_counter_ops;
+extern GLboolean __GLEW_AMD_shader_ballot;
+extern GLboolean __GLEW_AMD_shader_explicit_vertex_parameter;
+extern GLboolean __GLEW_AMD_shader_image_load_store_lod;
+extern GLboolean __GLEW_AMD_shader_stencil_export;
+extern GLboolean __GLEW_AMD_shader_stencil_value_export;
+extern GLboolean __GLEW_AMD_shader_trinary_minmax;
+extern GLboolean __GLEW_AMD_sparse_texture;
+extern GLboolean __GLEW_AMD_stencil_operation_extended;
+extern GLboolean __GLEW_AMD_texture_gather_bias_lod;
+extern GLboolean __GLEW_AMD_texture_texture4;
+extern GLboolean __GLEW_AMD_transform_feedback3_lines_triangles;
+extern GLboolean __GLEW_AMD_transform_feedback4;
+extern GLboolean __GLEW_AMD_vertex_shader_layer;
+extern GLboolean __GLEW_AMD_vertex_shader_tessellator;
+extern GLboolean __GLEW_AMD_vertex_shader_viewport_index;
+extern GLboolean __GLEW_ANDROID_extension_pack_es31a;
+extern GLboolean __GLEW_ANGLE_depth_texture;
+extern GLboolean __GLEW_ANGLE_framebuffer_blit;
+extern GLboolean __GLEW_ANGLE_framebuffer_multisample;
+extern GLboolean __GLEW_ANGLE_instanced_arrays;
+extern GLboolean __GLEW_ANGLE_pack_reverse_row_order;
+extern GLboolean __GLEW_ANGLE_program_binary;
+extern GLboolean __GLEW_ANGLE_texture_compression_dxt1;
+extern GLboolean __GLEW_ANGLE_texture_compression_dxt3;
+extern GLboolean __GLEW_ANGLE_texture_compression_dxt5;
+extern GLboolean __GLEW_ANGLE_texture_usage;
+extern GLboolean __GLEW_ANGLE_timer_query;
+extern GLboolean __GLEW_ANGLE_translated_shader_source;
+extern GLboolean __GLEW_APPLE_aux_depth_stencil;
+extern GLboolean __GLEW_APPLE_client_storage;
+extern GLboolean __GLEW_APPLE_clip_distance;
+extern GLboolean __GLEW_APPLE_color_buffer_packed_float;
+extern GLboolean __GLEW_APPLE_copy_texture_levels;
+extern GLboolean __GLEW_APPLE_element_array;
+extern GLboolean __GLEW_APPLE_fence;
+extern GLboolean __GLEW_APPLE_float_pixels;
+extern GLboolean __GLEW_APPLE_flush_buffer_range;
+extern GLboolean __GLEW_APPLE_framebuffer_multisample;
+extern GLboolean __GLEW_APPLE_object_purgeable;
+extern GLboolean __GLEW_APPLE_pixel_buffer;
+extern GLboolean __GLEW_APPLE_rgb_422;
+extern GLboolean __GLEW_APPLE_row_bytes;
+extern GLboolean __GLEW_APPLE_specular_vector;
+extern GLboolean __GLEW_APPLE_sync;
+extern GLboolean __GLEW_APPLE_texture_2D_limited_npot;
+extern GLboolean __GLEW_APPLE_texture_format_BGRA8888;
+extern GLboolean __GLEW_APPLE_texture_max_level;
+extern GLboolean __GLEW_APPLE_texture_packed_float;
+extern GLboolean __GLEW_APPLE_texture_range;
+extern GLboolean __GLEW_APPLE_transform_hint;
+extern GLboolean __GLEW_APPLE_vertex_array_object;
+extern GLboolean __GLEW_APPLE_vertex_array_range;
+extern GLboolean __GLEW_APPLE_vertex_program_evaluators;
+extern GLboolean __GLEW_APPLE_ycbcr_422;
+extern GLboolean __GLEW_ARB_ES2_compatibility;
+extern GLboolean __GLEW_ARB_ES3_1_compatibility;
+extern GLboolean __GLEW_ARB_ES3_2_compatibility;
+extern GLboolean __GLEW_ARB_ES3_compatibility;
+extern GLboolean __GLEW_ARB_arrays_of_arrays;
+extern GLboolean __GLEW_ARB_base_instance;
+extern GLboolean __GLEW_ARB_bindless_texture;
+extern GLboolean __GLEW_ARB_blend_func_extended;
+extern GLboolean __GLEW_ARB_buffer_storage;
+extern GLboolean __GLEW_ARB_cl_event;
+extern GLboolean __GLEW_ARB_clear_buffer_object;
+extern GLboolean __GLEW_ARB_clear_texture;
+extern GLboolean __GLEW_ARB_clip_control;
+extern GLboolean __GLEW_ARB_color_buffer_float;
+extern GLboolean __GLEW_ARB_compatibility;
+extern GLboolean __GLEW_ARB_compressed_texture_pixel_storage;
+extern GLboolean __GLEW_ARB_compute_shader;
+extern GLboolean __GLEW_ARB_compute_variable_group_size;
+extern GLboolean __GLEW_ARB_conditional_render_inverted;
+extern GLboolean __GLEW_ARB_conservative_depth;
+extern GLboolean __GLEW_ARB_copy_buffer;
+extern GLboolean __GLEW_ARB_copy_image;
+extern GLboolean __GLEW_ARB_cull_distance;
+extern GLboolean __GLEW_ARB_debug_output;
+extern GLboolean __GLEW_ARB_depth_buffer_float;
+extern GLboolean __GLEW_ARB_depth_clamp;
+extern GLboolean __GLEW_ARB_depth_texture;
+extern GLboolean __GLEW_ARB_derivative_control;
+extern GLboolean __GLEW_ARB_direct_state_access;
+extern GLboolean __GLEW_ARB_draw_buffers;
+extern GLboolean __GLEW_ARB_draw_buffers_blend;
+extern GLboolean __GLEW_ARB_draw_elements_base_vertex;
+extern GLboolean __GLEW_ARB_draw_indirect;
+extern GLboolean __GLEW_ARB_draw_instanced;
+extern GLboolean __GLEW_ARB_enhanced_layouts;
+extern GLboolean __GLEW_ARB_explicit_attrib_location;
+extern GLboolean __GLEW_ARB_explicit_uniform_location;
+extern GLboolean __GLEW_ARB_fragment_coord_conventions;
+extern GLboolean __GLEW_ARB_fragment_layer_viewport;
+extern GLboolean __GLEW_ARB_fragment_program;
+extern GLboolean __GLEW_ARB_fragment_program_shadow;
+extern GLboolean __GLEW_ARB_fragment_shader;
+extern GLboolean __GLEW_ARB_fragment_shader_interlock;
+extern GLboolean __GLEW_ARB_framebuffer_no_attachments;
+extern GLboolean __GLEW_ARB_framebuffer_object;
+extern GLboolean __GLEW_ARB_framebuffer_sRGB;
+extern GLboolean __GLEW_ARB_geometry_shader4;
+extern GLboolean __GLEW_ARB_get_program_binary;
+extern GLboolean __GLEW_ARB_get_texture_sub_image;
+extern GLboolean __GLEW_ARB_gl_spirv;
+extern GLboolean __GLEW_ARB_gpu_shader5;
+extern GLboolean __GLEW_ARB_gpu_shader_fp64;
+extern GLboolean __GLEW_ARB_gpu_shader_int64;
+extern GLboolean __GLEW_ARB_half_float_pixel;
+extern GLboolean __GLEW_ARB_half_float_vertex;
+extern GLboolean __GLEW_ARB_imaging;
+extern GLboolean __GLEW_ARB_indirect_parameters;
+extern GLboolean __GLEW_ARB_instanced_arrays;
+extern GLboolean __GLEW_ARB_internalformat_query;
+extern GLboolean __GLEW_ARB_internalformat_query2;
+extern GLboolean __GLEW_ARB_invalidate_subdata;
+extern GLboolean __GLEW_ARB_map_buffer_alignment;
+extern GLboolean __GLEW_ARB_map_buffer_range;
+extern GLboolean __GLEW_ARB_matrix_palette;
+extern GLboolean __GLEW_ARB_multi_bind;
+extern GLboolean __GLEW_ARB_multi_draw_indirect;
+extern GLboolean __GLEW_ARB_multisample;
+extern GLboolean __GLEW_ARB_multitexture;
+extern GLboolean __GLEW_ARB_occlusion_query;
+extern GLboolean __GLEW_ARB_occlusion_query2;
+extern GLboolean __GLEW_ARB_parallel_shader_compile;
+extern GLboolean __GLEW_ARB_pipeline_statistics_query;
+extern GLboolean __GLEW_ARB_pixel_buffer_object;
+extern GLboolean __GLEW_ARB_point_parameters;
+extern GLboolean __GLEW_ARB_point_sprite;
+extern GLboolean __GLEW_ARB_polygon_offset_clamp;
+extern GLboolean __GLEW_ARB_post_depth_coverage;
+extern GLboolean __GLEW_ARB_program_interface_query;
+extern GLboolean __GLEW_ARB_provoking_vertex;
+extern GLboolean __GLEW_ARB_query_buffer_object;
+extern GLboolean __GLEW_ARB_robust_buffer_access_behavior;
+extern GLboolean __GLEW_ARB_robustness;
+extern GLboolean __GLEW_ARB_robustness_application_isolation;
+extern GLboolean __GLEW_ARB_robustness_share_group_isolation;
+extern GLboolean __GLEW_ARB_sample_locations;
+extern GLboolean __GLEW_ARB_sample_shading;
+extern GLboolean __GLEW_ARB_sampler_objects;
+extern GLboolean __GLEW_ARB_seamless_cube_map;
+extern GLboolean __GLEW_ARB_seamless_cubemap_per_texture;
+extern GLboolean __GLEW_ARB_separate_shader_objects;
+extern GLboolean __GLEW_ARB_shader_atomic_counter_ops;
+extern GLboolean __GLEW_ARB_shader_atomic_counters;
+extern GLboolean __GLEW_ARB_shader_ballot;
+extern GLboolean __GLEW_ARB_shader_bit_encoding;
+extern GLboolean __GLEW_ARB_shader_clock;
+extern GLboolean __GLEW_ARB_shader_draw_parameters;
+extern GLboolean __GLEW_ARB_shader_group_vote;
+extern GLboolean __GLEW_ARB_shader_image_load_store;
+extern GLboolean __GLEW_ARB_shader_image_size;
+extern GLboolean __GLEW_ARB_shader_objects;
+extern GLboolean __GLEW_ARB_shader_precision;
+extern GLboolean __GLEW_ARB_shader_stencil_export;
+extern GLboolean __GLEW_ARB_shader_storage_buffer_object;
+extern GLboolean __GLEW_ARB_shader_subroutine;
+extern GLboolean __GLEW_ARB_shader_texture_image_samples;
+extern GLboolean __GLEW_ARB_shader_texture_lod;
+extern GLboolean __GLEW_ARB_shader_viewport_layer_array;
+extern GLboolean __GLEW_ARB_shading_language_100;
+extern GLboolean __GLEW_ARB_shading_language_420pack;
+extern GLboolean __GLEW_ARB_shading_language_include;
+extern GLboolean __GLEW_ARB_shading_language_packing;
+extern GLboolean __GLEW_ARB_shadow;
+extern GLboolean __GLEW_ARB_shadow_ambient;
+extern GLboolean __GLEW_ARB_sparse_buffer;
+extern GLboolean __GLEW_ARB_sparse_texture;
+extern GLboolean __GLEW_ARB_sparse_texture2;
+extern GLboolean __GLEW_ARB_sparse_texture_clamp;
+extern GLboolean __GLEW_ARB_spirv_extensions;
+extern GLboolean __GLEW_ARB_stencil_texturing;
+extern GLboolean __GLEW_ARB_sync;
+extern GLboolean __GLEW_ARB_tessellation_shader;
+extern GLboolean __GLEW_ARB_texture_barrier;
+extern GLboolean __GLEW_ARB_texture_border_clamp;
+extern GLboolean __GLEW_ARB_texture_buffer_object;
+extern GLboolean __GLEW_ARB_texture_buffer_object_rgb32;
+extern GLboolean __GLEW_ARB_texture_buffer_range;
+extern GLboolean __GLEW_ARB_texture_compression;
+extern GLboolean __GLEW_ARB_texture_compression_bptc;
+extern GLboolean __GLEW_ARB_texture_compression_rgtc;
+extern GLboolean __GLEW_ARB_texture_cube_map;
+extern GLboolean __GLEW_ARB_texture_cube_map_array;
+extern GLboolean __GLEW_ARB_texture_env_add;
+extern GLboolean __GLEW_ARB_texture_env_combine;
+extern GLboolean __GLEW_ARB_texture_env_crossbar;
+extern GLboolean __GLEW_ARB_texture_env_dot3;
+extern GLboolean __GLEW_ARB_texture_filter_anisotropic;
+extern GLboolean __GLEW_ARB_texture_filter_minmax;
+extern GLboolean __GLEW_ARB_texture_float;
+extern GLboolean __GLEW_ARB_texture_gather;
+extern GLboolean __GLEW_ARB_texture_mirror_clamp_to_edge;
+extern GLboolean __GLEW_ARB_texture_mirrored_repeat;
+extern GLboolean __GLEW_ARB_texture_multisample;
+extern GLboolean __GLEW_ARB_texture_non_power_of_two;
+extern GLboolean __GLEW_ARB_texture_query_levels;
+extern GLboolean __GLEW_ARB_texture_query_lod;
+extern GLboolean __GLEW_ARB_texture_rectangle;
+extern GLboolean __GLEW_ARB_texture_rg;
+extern GLboolean __GLEW_ARB_texture_rgb10_a2ui;
+extern GLboolean __GLEW_ARB_texture_stencil8;
+extern GLboolean __GLEW_ARB_texture_storage;
+extern GLboolean __GLEW_ARB_texture_storage_multisample;
+extern GLboolean __GLEW_ARB_texture_swizzle;
+extern GLboolean __GLEW_ARB_texture_view;
+extern GLboolean __GLEW_ARB_timer_query;
+extern GLboolean __GLEW_ARB_transform_feedback2;
+extern GLboolean __GLEW_ARB_transform_feedback3;
+extern GLboolean __GLEW_ARB_transform_feedback_instanced;
+extern GLboolean __GLEW_ARB_transform_feedback_overflow_query;
+extern GLboolean __GLEW_ARB_transpose_matrix;
+extern GLboolean __GLEW_ARB_uniform_buffer_object;
+extern GLboolean __GLEW_ARB_vertex_array_bgra;
+extern GLboolean __GLEW_ARB_vertex_array_object;
+extern GLboolean __GLEW_ARB_vertex_attrib_64bit;
+extern GLboolean __GLEW_ARB_vertex_attrib_binding;
+extern GLboolean __GLEW_ARB_vertex_blend;
+extern GLboolean __GLEW_ARB_vertex_buffer_object;
+extern GLboolean __GLEW_ARB_vertex_program;
+extern GLboolean __GLEW_ARB_vertex_shader;
+extern GLboolean __GLEW_ARB_vertex_type_10f_11f_11f_rev;
+extern GLboolean __GLEW_ARB_vertex_type_2_10_10_10_rev;
+extern GLboolean __GLEW_ARB_viewport_array;
+extern GLboolean __GLEW_ARB_window_pos;
+extern GLboolean __GLEW_ARM_mali_program_binary;
+extern GLboolean __GLEW_ARM_mali_shader_binary;
+extern GLboolean __GLEW_ARM_rgba8;
+extern GLboolean __GLEW_ARM_shader_core_properties;
+extern GLboolean __GLEW_ARM_shader_framebuffer_fetch;
+extern GLboolean __GLEW_ARM_shader_framebuffer_fetch_depth_stencil;
+extern GLboolean __GLEW_ARM_texture_unnormalized_coordinates;
+extern GLboolean __GLEW_ATIX_point_sprites;
+extern GLboolean __GLEW_ATIX_texture_env_combine3;
+extern GLboolean __GLEW_ATIX_texture_env_route;
+extern GLboolean __GLEW_ATIX_vertex_shader_output_point_size;
+extern GLboolean __GLEW_ATI_draw_buffers;
+extern GLboolean __GLEW_ATI_element_array;
+extern GLboolean __GLEW_ATI_envmap_bumpmap;
+extern GLboolean __GLEW_ATI_fragment_shader;
+extern GLboolean __GLEW_ATI_map_object_buffer;
+extern GLboolean __GLEW_ATI_meminfo;
+extern GLboolean __GLEW_ATI_pn_triangles;
+extern GLboolean __GLEW_ATI_separate_stencil;
+extern GLboolean __GLEW_ATI_shader_texture_lod;
+extern GLboolean __GLEW_ATI_text_fragment_shader;
+extern GLboolean __GLEW_ATI_texture_compression_3dc;
+extern GLboolean __GLEW_ATI_texture_env_combine3;
+extern GLboolean __GLEW_ATI_texture_float;
+extern GLboolean __GLEW_ATI_texture_mirror_once;
+extern GLboolean __GLEW_ATI_vertex_array_object;
+extern GLboolean __GLEW_ATI_vertex_attrib_array_object;
+extern GLboolean __GLEW_ATI_vertex_streams;
+extern GLboolean __GLEW_DMP_program_binary;
+extern GLboolean __GLEW_DMP_shader_binary;
+extern GLboolean __GLEW_EXT_422_pixels;
+extern GLboolean __GLEW_EXT_Cg_shader;
+extern GLboolean __GLEW_EXT_EGL_image_array;
+extern GLboolean __GLEW_EXT_EGL_image_external_wrap_modes;
+extern GLboolean __GLEW_EXT_EGL_image_storage;
+extern GLboolean __GLEW_EXT_EGL_image_storage_compression;
+extern GLboolean __GLEW_EXT_EGL_sync;
+extern GLboolean __GLEW_EXT_YUV_target;
+extern GLboolean __GLEW_EXT_abgr;
+extern GLboolean __GLEW_EXT_base_instance;
+extern GLboolean __GLEW_EXT_bgra;
+extern GLboolean __GLEW_EXT_bindable_uniform;
+extern GLboolean __GLEW_EXT_blend_color;
+extern GLboolean __GLEW_EXT_blend_equation_separate;
+extern GLboolean __GLEW_EXT_blend_func_extended;
+extern GLboolean __GLEW_EXT_blend_func_separate;
+extern GLboolean __GLEW_EXT_blend_logic_op;
+extern GLboolean __GLEW_EXT_blend_minmax;
+extern GLboolean __GLEW_EXT_blend_subtract;
+extern GLboolean __GLEW_EXT_buffer_storage;
+extern GLboolean __GLEW_EXT_clear_texture;
+extern GLboolean __GLEW_EXT_clip_control;
+extern GLboolean __GLEW_EXT_clip_cull_distance;
+extern GLboolean __GLEW_EXT_clip_volume_hint;
+extern GLboolean __GLEW_EXT_cmyka;
+extern GLboolean __GLEW_EXT_color_buffer_float;
+extern GLboolean __GLEW_EXT_color_buffer_half_float;
+extern GLboolean __GLEW_EXT_color_subtable;
+extern GLboolean __GLEW_EXT_compiled_vertex_array;
+extern GLboolean __GLEW_EXT_compressed_ETC1_RGB8_sub_texture;
+extern GLboolean __GLEW_EXT_conservative_depth;
+extern GLboolean __GLEW_EXT_convolution;
+extern GLboolean __GLEW_EXT_coordinate_frame;
+extern GLboolean __GLEW_EXT_copy_image;
+extern GLboolean __GLEW_EXT_copy_texture;
+extern GLboolean __GLEW_EXT_cull_vertex;
+extern GLboolean __GLEW_EXT_debug_label;
+extern GLboolean __GLEW_EXT_debug_marker;
+extern GLboolean __GLEW_EXT_depth_bounds_test;
+extern GLboolean __GLEW_EXT_depth_clamp;
+extern GLboolean __GLEW_EXT_direct_state_access;
+extern GLboolean __GLEW_EXT_discard_framebuffer;
+extern GLboolean __GLEW_EXT_disjoint_timer_query;
+extern GLboolean __GLEW_EXT_draw_buffers;
+extern GLboolean __GLEW_EXT_draw_buffers2;
+extern GLboolean __GLEW_EXT_draw_buffers_indexed;
+extern GLboolean __GLEW_EXT_draw_elements_base_vertex;
+extern GLboolean __GLEW_EXT_draw_instanced;
+extern GLboolean __GLEW_EXT_draw_range_elements;
+extern GLboolean __GLEW_EXT_draw_transform_feedback;
+extern GLboolean __GLEW_EXT_external_buffer;
+extern GLboolean __GLEW_EXT_float_blend;
+extern GLboolean __GLEW_EXT_fog_coord;
+extern GLboolean __GLEW_EXT_frag_depth;
+extern GLboolean __GLEW_EXT_fragment_lighting;
+extern GLboolean __GLEW_EXT_fragment_shading_rate;
+extern GLboolean __GLEW_EXT_fragment_shading_rate_attachment;
+extern GLboolean __GLEW_EXT_fragment_shading_rate_primitive;
+extern GLboolean __GLEW_EXT_framebuffer_blit;
+extern GLboolean __GLEW_EXT_framebuffer_blit_layers;
+extern GLboolean __GLEW_EXT_framebuffer_multisample;
+extern GLboolean __GLEW_EXT_framebuffer_multisample_blit_scaled;
+extern GLboolean __GLEW_EXT_framebuffer_object;
+extern GLboolean __GLEW_EXT_framebuffer_sRGB;
+extern GLboolean __GLEW_EXT_geometry_point_size;
+extern GLboolean __GLEW_EXT_geometry_shader;
+extern GLboolean __GLEW_EXT_geometry_shader4;
+extern GLboolean __GLEW_EXT_gpu_program_parameters;
+extern GLboolean __GLEW_EXT_gpu_shader4;
+extern GLboolean __GLEW_EXT_gpu_shader5;
+extern GLboolean __GLEW_EXT_histogram;
+extern GLboolean __GLEW_EXT_index_array_formats;
+extern GLboolean __GLEW_EXT_index_func;
+extern GLboolean __GLEW_EXT_index_material;
+extern GLboolean __GLEW_EXT_index_texture;
+extern GLboolean __GLEW_EXT_instanced_arrays;
+extern GLboolean __GLEW_EXT_light_texture;
+extern GLboolean __GLEW_EXT_map_buffer_range;
+extern GLboolean __GLEW_EXT_memory_object;
+extern GLboolean __GLEW_EXT_memory_object_fd;
+extern GLboolean __GLEW_EXT_memory_object_win32;
+extern GLboolean __GLEW_EXT_mesh_shader;
+extern GLboolean __GLEW_EXT_misc_attribute;
+extern GLboolean __GLEW_EXT_multi_draw_arrays;
+extern GLboolean __GLEW_EXT_multi_draw_indirect;
+extern GLboolean __GLEW_EXT_multiple_textures;
+extern GLboolean __GLEW_EXT_multisample;
+extern GLboolean __GLEW_EXT_multisample_compatibility;
+extern GLboolean __GLEW_EXT_multisampled_render_to_texture;
+extern GLboolean __GLEW_EXT_multisampled_render_to_texture2;
+extern GLboolean __GLEW_EXT_multiview_draw_buffers;
+extern GLboolean __GLEW_EXT_multiview_tessellation_geometry_shader;
+extern GLboolean __GLEW_EXT_multiview_texture_multisample;
+extern GLboolean __GLEW_EXT_multiview_timer_query;
+extern GLboolean __GLEW_EXT_occlusion_query_boolean;
+extern GLboolean __GLEW_EXT_packed_depth_stencil;
+extern GLboolean __GLEW_EXT_packed_float;
+extern GLboolean __GLEW_EXT_packed_pixels;
+extern GLboolean __GLEW_EXT_paletted_texture;
+extern GLboolean __GLEW_EXT_pixel_buffer_object;
+extern GLboolean __GLEW_EXT_pixel_transform;
+extern GLboolean __GLEW_EXT_pixel_transform_color_table;
+extern GLboolean __GLEW_EXT_point_parameters;
+extern GLboolean __GLEW_EXT_polygon_offset;
+extern GLboolean __GLEW_EXT_polygon_offset_clamp;
+extern GLboolean __GLEW_EXT_post_depth_coverage;
+extern GLboolean __GLEW_EXT_primitive_bounding_box;
+extern GLboolean __GLEW_EXT_protected_textures;
+extern GLboolean __GLEW_EXT_provoking_vertex;
+extern GLboolean __GLEW_EXT_pvrtc_sRGB;
+extern GLboolean __GLEW_EXT_raster_multisample;
+extern GLboolean __GLEW_EXT_read_format_bgra;
+extern GLboolean __GLEW_EXT_render_snorm;
+extern GLboolean __GLEW_EXT_rescale_normal;
+extern GLboolean __GLEW_EXT_robustness;
+extern GLboolean __GLEW_EXT_sRGB;
+extern GLboolean __GLEW_EXT_sRGB_write_control;
+extern GLboolean __GLEW_EXT_scene_marker;
+extern GLboolean __GLEW_EXT_secondary_color;
+extern GLboolean __GLEW_EXT_semaphore;
+extern GLboolean __GLEW_EXT_semaphore_fd;
+extern GLboolean __GLEW_EXT_semaphore_win32;
+extern GLboolean __GLEW_EXT_separate_depth_stencil;
+extern GLboolean __GLEW_EXT_separate_shader_objects;
+extern GLboolean __GLEW_EXT_separate_specular_color;
+extern GLboolean __GLEW_EXT_shader_clock;
+extern GLboolean __GLEW_EXT_shader_framebuffer_fetch;
+extern GLboolean __GLEW_EXT_shader_framebuffer_fetch_non_coherent;
+extern GLboolean __GLEW_EXT_shader_group_vote;
+extern GLboolean __GLEW_EXT_shader_image_load_formatted;
+extern GLboolean __GLEW_EXT_shader_image_load_store;
+extern GLboolean __GLEW_EXT_shader_implicit_conversions;
+extern GLboolean __GLEW_EXT_shader_integer_mix;
+extern GLboolean __GLEW_EXT_shader_io_blocks;
+extern GLboolean __GLEW_EXT_shader_non_constant_global_initializers;
+extern GLboolean __GLEW_EXT_shader_pixel_local_storage;
+extern GLboolean __GLEW_EXT_shader_pixel_local_storage2;
+extern GLboolean __GLEW_EXT_shader_realtime_clock;
+extern GLboolean __GLEW_EXT_shader_samples_identical;
+extern GLboolean __GLEW_EXT_shader_texture_lod;
+extern GLboolean __GLEW_EXT_shader_texture_samples;
+extern GLboolean __GLEW_EXT_shadow_funcs;
+extern GLboolean __GLEW_EXT_shadow_samplers;
+extern GLboolean __GLEW_EXT_shared_texture_palette;
+extern GLboolean __GLEW_EXT_sparse_texture;
+extern GLboolean __GLEW_EXT_sparse_texture2;
+extern GLboolean __GLEW_EXT_static_vertex_array;
+extern GLboolean __GLEW_EXT_stencil_clear_tag;
+extern GLboolean __GLEW_EXT_stencil_two_side;
+extern GLboolean __GLEW_EXT_stencil_wrap;
+extern GLboolean __GLEW_EXT_subtexture;
+extern GLboolean __GLEW_EXT_tessellation_point_size;
+extern GLboolean __GLEW_EXT_tessellation_shader;
+extern GLboolean __GLEW_EXT_texture;
+extern GLboolean __GLEW_EXT_texture3D;
+extern GLboolean __GLEW_EXT_texture_array;
+extern GLboolean __GLEW_EXT_texture_border_clamp;
+extern GLboolean __GLEW_EXT_texture_buffer;
+extern GLboolean __GLEW_EXT_texture_buffer_object;
+extern GLboolean __GLEW_EXT_texture_compression_astc_decode_mode;
+extern GLboolean __GLEW_EXT_texture_compression_astc_decode_mode_rgb9e5;
+extern GLboolean __GLEW_EXT_texture_compression_bptc;
+extern GLboolean __GLEW_EXT_texture_compression_dxt1;
+extern GLboolean __GLEW_EXT_texture_compression_latc;
+extern GLboolean __GLEW_EXT_texture_compression_rgtc;
+extern GLboolean __GLEW_EXT_texture_compression_s3tc;
+extern GLboolean __GLEW_EXT_texture_compression_s3tc_srgb;
+extern GLboolean __GLEW_EXT_texture_cube_map;
+extern GLboolean __GLEW_EXT_texture_cube_map_array;
+extern GLboolean __GLEW_EXT_texture_edge_clamp;
+extern GLboolean __GLEW_EXT_texture_env;
+extern GLboolean __GLEW_EXT_texture_env_add;
+extern GLboolean __GLEW_EXT_texture_env_combine;
+extern GLboolean __GLEW_EXT_texture_env_dot3;
+extern GLboolean __GLEW_EXT_texture_filter_anisotropic;
+extern GLboolean __GLEW_EXT_texture_filter_minmax;
+extern GLboolean __GLEW_EXT_texture_format_BGRA8888;
+extern GLboolean __GLEW_EXT_texture_format_sRGB_override;
+extern GLboolean __GLEW_EXT_texture_integer;
+extern GLboolean __GLEW_EXT_texture_lod_bias;
+extern GLboolean __GLEW_EXT_texture_mirror_clamp;
+extern GLboolean __GLEW_EXT_texture_mirror_clamp_to_edge;
+extern GLboolean __GLEW_EXT_texture_norm16;
+extern GLboolean __GLEW_EXT_texture_object;
+extern GLboolean __GLEW_EXT_texture_perturb_normal;
+extern GLboolean __GLEW_EXT_texture_query_lod;
+extern GLboolean __GLEW_EXT_texture_rectangle;
+extern GLboolean __GLEW_EXT_texture_rg;
+extern GLboolean __GLEW_EXT_texture_sRGB;
+extern GLboolean __GLEW_EXT_texture_sRGB_R8;
+extern GLboolean __GLEW_EXT_texture_sRGB_RG8;
+extern GLboolean __GLEW_EXT_texture_sRGB_decode;
+extern GLboolean __GLEW_EXT_texture_shadow_lod;
+extern GLboolean __GLEW_EXT_texture_shared_exponent;
+extern GLboolean __GLEW_EXT_texture_snorm;
+extern GLboolean __GLEW_EXT_texture_storage;
+extern GLboolean __GLEW_EXT_texture_storage_compression;
+extern GLboolean __GLEW_EXT_texture_swizzle;
+extern GLboolean __GLEW_EXT_texture_type_2_10_10_10_REV;
+extern GLboolean __GLEW_EXT_texture_view;
+extern GLboolean __GLEW_EXT_timer_query;
+extern GLboolean __GLEW_EXT_transform_feedback;
+extern GLboolean __GLEW_EXT_unpack_subimage;
+extern GLboolean __GLEW_EXT_vertex_array;
+extern GLboolean __GLEW_EXT_vertex_array_bgra;
+extern GLboolean __GLEW_EXT_vertex_array_setXXX;
+extern GLboolean __GLEW_EXT_vertex_attrib_64bit;
+extern GLboolean __GLEW_EXT_vertex_shader;
+extern GLboolean __GLEW_EXT_vertex_weighting;
+extern GLboolean __GLEW_EXT_win32_keyed_mutex;
+extern GLboolean __GLEW_EXT_window_rectangles;
+extern GLboolean __GLEW_EXT_x11_sync_object;
+extern GLboolean __GLEW_FJ_shader_binary_GCCSO;
+extern GLboolean __GLEW_GREMEDY_frame_terminator;
+extern GLboolean __GLEW_GREMEDY_string_marker;
+extern GLboolean __GLEW_HP_convolution_border_modes;
+extern GLboolean __GLEW_HP_image_transform;
+extern GLboolean __GLEW_HP_occlusion_test;
+extern GLboolean __GLEW_HP_texture_lighting;
+extern GLboolean __GLEW_HUAWEI_program_binary;
+extern GLboolean __GLEW_HUAWEI_shader_binary;
+extern GLboolean __GLEW_IBM_cull_vertex;
+extern GLboolean __GLEW_IBM_multimode_draw_arrays;
+extern GLboolean __GLEW_IBM_rasterpos_clip;
+extern GLboolean __GLEW_IBM_static_data;
+extern GLboolean __GLEW_IBM_texture_mirrored_repeat;
+extern GLboolean __GLEW_IBM_vertex_array_lists;
+extern GLboolean __GLEW_IMG_bindless_texture;
+extern GLboolean __GLEW_IMG_framebuffer_downsample;
+extern GLboolean __GLEW_IMG_multisampled_render_to_texture;
+extern GLboolean __GLEW_IMG_program_binary;
+extern GLboolean __GLEW_IMG_pvric_end_to_end_signature;
+extern GLboolean __GLEW_IMG_read_format;
+extern GLboolean __GLEW_IMG_shader_binary;
+extern GLboolean __GLEW_IMG_texture_compression_pvrtc;
+extern GLboolean __GLEW_IMG_texture_compression_pvrtc2;
+extern GLboolean __GLEW_IMG_texture_env_enhanced_fixed_function;
+extern GLboolean __GLEW_IMG_texture_filter_cubic;
+extern GLboolean __GLEW_IMG_tile_region_protection;
+extern GLboolean __GLEW_INGR_color_clamp;
+extern GLboolean __GLEW_INGR_interlace_read;
+extern GLboolean __GLEW_INTEL_blackhole_render;
+extern GLboolean __GLEW_INTEL_conservative_rasterization;
+extern GLboolean __GLEW_INTEL_fragment_shader_ordering;
+extern GLboolean __GLEW_INTEL_framebuffer_CMAA;
+extern GLboolean __GLEW_INTEL_map_texture;
+extern GLboolean __GLEW_INTEL_parallel_arrays;
+extern GLboolean __GLEW_INTEL_performance_query;
+extern GLboolean __GLEW_INTEL_shader_integer_functions2;
+extern GLboolean __GLEW_INTEL_texture_scissor;
+extern GLboolean __GLEW_KHR_blend_equation_advanced;
+extern GLboolean __GLEW_KHR_blend_equation_advanced_coherent;
+extern GLboolean __GLEW_KHR_context_flush_control;
+extern GLboolean __GLEW_KHR_debug;
+extern GLboolean __GLEW_KHR_no_error;
+extern GLboolean __GLEW_KHR_parallel_shader_compile;
+extern GLboolean __GLEW_KHR_robust_buffer_access_behavior;
+extern GLboolean __GLEW_KHR_robustness;
+extern GLboolean __GLEW_KHR_shader_subgroup;
+extern GLboolean __GLEW_KHR_texture_compression_astc_hdr;
+extern GLboolean __GLEW_KHR_texture_compression_astc_ldr;
+extern GLboolean __GLEW_KHR_texture_compression_astc_sliced_3d;
+extern GLboolean __GLEW_KTX_buffer_region;
+extern GLboolean __GLEW_MESAX_texture_stack;
+extern GLboolean __GLEW_MESA_bgra;
+extern GLboolean __GLEW_MESA_framebuffer_flip_x;
+extern GLboolean __GLEW_MESA_framebuffer_flip_y;
+extern GLboolean __GLEW_MESA_framebuffer_swap_xy;
+extern GLboolean __GLEW_MESA_pack_invert;
+extern GLboolean __GLEW_MESA_program_binary_formats;
+extern GLboolean __GLEW_MESA_resize_buffers;
+extern GLboolean __GLEW_MESA_shader_integer_functions;
+extern GLboolean __GLEW_MESA_texture_const_bandwidth;
+extern GLboolean __GLEW_MESA_tile_raster_order;
+extern GLboolean __GLEW_MESA_window_pos;
+extern GLboolean __GLEW_MESA_ycbcr_texture;
+extern GLboolean __GLEW_NVX_blend_equation_advanced_multi_draw_buffers;
+extern GLboolean __GLEW_NVX_conditional_render;
+extern GLboolean __GLEW_NVX_gpu_memory_info;
+extern GLboolean __GLEW_NVX_gpu_multicast2;
+extern GLboolean __GLEW_NVX_linked_gpu_multicast;
+extern GLboolean __GLEW_NVX_progress_fence;
+extern GLboolean __GLEW_NV_3dvision_settings;
+extern GLboolean __GLEW_NV_EGL_stream_consumer_external;
+extern GLboolean __GLEW_NV_alpha_to_coverage_dither_control;
+extern GLboolean __GLEW_NV_bgr;
+extern GLboolean __GLEW_NV_bindless_multi_draw_indirect;
+extern GLboolean __GLEW_NV_bindless_multi_draw_indirect_count;
+extern GLboolean __GLEW_NV_bindless_texture;
+extern GLboolean __GLEW_NV_blend_equation_advanced;
+extern GLboolean __GLEW_NV_blend_equation_advanced_coherent;
+extern GLboolean __GLEW_NV_blend_minmax_factor;
+extern GLboolean __GLEW_NV_blend_square;
+extern GLboolean __GLEW_NV_clip_space_w_scaling;
+extern GLboolean __GLEW_NV_command_list;
+extern GLboolean __GLEW_NV_compute_program5;
+extern GLboolean __GLEW_NV_compute_shader_derivatives;
+extern GLboolean __GLEW_NV_conditional_render;
+extern GLboolean __GLEW_NV_conservative_raster;
+extern GLboolean __GLEW_NV_conservative_raster_dilate;
+extern GLboolean __GLEW_NV_conservative_raster_pre_snap;
+extern GLboolean __GLEW_NV_conservative_raster_pre_snap_triangles;
+extern GLboolean __GLEW_NV_conservative_raster_underestimation;
+extern GLboolean __GLEW_NV_copy_buffer;
+extern GLboolean __GLEW_NV_copy_depth_to_color;
+extern GLboolean __GLEW_NV_copy_image;
+extern GLboolean __GLEW_NV_deep_texture3D;
+extern GLboolean __GLEW_NV_depth_buffer_float;
+extern GLboolean __GLEW_NV_depth_clamp;
+extern GLboolean __GLEW_NV_depth_nonlinear;
+extern GLboolean __GLEW_NV_depth_range_unclamped;
+extern GLboolean __GLEW_NV_draw_buffers;
+extern GLboolean __GLEW_NV_draw_instanced;
+extern GLboolean __GLEW_NV_draw_texture;
+extern GLboolean __GLEW_NV_draw_vulkan_image;
+extern GLboolean __GLEW_NV_evaluators;
+extern GLboolean __GLEW_NV_explicit_attrib_location;
+extern GLboolean __GLEW_NV_explicit_multisample;
+extern GLboolean __GLEW_NV_fbo_color_attachments;
+extern GLboolean __GLEW_NV_fence;
+extern GLboolean __GLEW_NV_fill_rectangle;
+extern GLboolean __GLEW_NV_float_buffer;
+extern GLboolean __GLEW_NV_fog_distance;
+extern GLboolean __GLEW_NV_fragment_coverage_to_color;
+extern GLboolean __GLEW_NV_fragment_program;
+extern GLboolean __GLEW_NV_fragment_program2;
+extern GLboolean __GLEW_NV_fragment_program4;
+extern GLboolean __GLEW_NV_fragment_program_option;
+extern GLboolean __GLEW_NV_fragment_shader_barycentric;
+extern GLboolean __GLEW_NV_fragment_shader_interlock;
+extern GLboolean __GLEW_NV_framebuffer_blit;
+extern GLboolean __GLEW_NV_framebuffer_mixed_samples;
+extern GLboolean __GLEW_NV_framebuffer_multisample;
+extern GLboolean __GLEW_NV_framebuffer_multisample_coverage;
+extern GLboolean __GLEW_NV_generate_mipmap_sRGB;
+extern GLboolean __GLEW_NV_geometry_program4;
+extern GLboolean __GLEW_NV_geometry_shader4;
+extern GLboolean __GLEW_NV_geometry_shader_passthrough;
+extern GLboolean __GLEW_NV_gpu_multicast;
+extern GLboolean __GLEW_NV_gpu_program4;
+extern GLboolean __GLEW_NV_gpu_program5;
+extern GLboolean __GLEW_NV_gpu_program5_mem_extended;
+extern GLboolean __GLEW_NV_gpu_program_fp64;
+extern GLboolean __GLEW_NV_gpu_shader5;
+extern GLboolean __GLEW_NV_half_float;
+extern GLboolean __GLEW_NV_image_formats;
+extern GLboolean __GLEW_NV_instanced_arrays;
+extern GLboolean __GLEW_NV_internalformat_sample_query;
+extern GLboolean __GLEW_NV_light_max_exponent;
+extern GLboolean __GLEW_NV_memory_attachment;
+extern GLboolean __GLEW_NV_memory_object_sparse;
+extern GLboolean __GLEW_NV_mesh_shader;
+extern GLboolean __GLEW_NV_multisample_coverage;
+extern GLboolean __GLEW_NV_multisample_filter_hint;
+extern GLboolean __GLEW_NV_non_square_matrices;
+extern GLboolean __GLEW_NV_occlusion_query;
+extern GLboolean __GLEW_NV_pack_subimage;
+extern GLboolean __GLEW_NV_packed_depth_stencil;
+extern GLboolean __GLEW_NV_packed_float;
+extern GLboolean __GLEW_NV_packed_float_linear;
+extern GLboolean __GLEW_NV_parameter_buffer_object;
+extern GLboolean __GLEW_NV_parameter_buffer_object2;
+extern GLboolean __GLEW_NV_path_rendering;
+extern GLboolean __GLEW_NV_path_rendering_shared_edge;
+extern GLboolean __GLEW_NV_pixel_buffer_object;
+extern GLboolean __GLEW_NV_pixel_data_range;
+extern GLboolean __GLEW_NV_platform_binary;
+extern GLboolean __GLEW_NV_point_sprite;
+extern GLboolean __GLEW_NV_polygon_mode;
+extern GLboolean __GLEW_NV_present_video;
+extern GLboolean __GLEW_NV_primitive_restart;
+extern GLboolean __GLEW_NV_primitive_shading_rate;
+extern GLboolean __GLEW_NV_query_resource_tag;
+extern GLboolean __GLEW_NV_read_buffer;
+extern GLboolean __GLEW_NV_read_buffer_front;
+extern GLboolean __GLEW_NV_read_depth;
+extern GLboolean __GLEW_NV_read_depth_stencil;
+extern GLboolean __GLEW_NV_read_stencil;
+extern GLboolean __GLEW_NV_register_combiners;
+extern GLboolean __GLEW_NV_register_combiners2;
+extern GLboolean __GLEW_NV_representative_fragment_test;
+extern GLboolean __GLEW_NV_robustness_video_memory_purge;
+extern GLboolean __GLEW_NV_sRGB_formats;
+extern GLboolean __GLEW_NV_sample_locations;
+extern GLboolean __GLEW_NV_sample_mask_override_coverage;
+extern GLboolean __GLEW_NV_scissor_exclusive;
+extern GLboolean __GLEW_NV_shader_atomic_counters;
+extern GLboolean __GLEW_NV_shader_atomic_float;
+extern GLboolean __GLEW_NV_shader_atomic_float64;
+extern GLboolean __GLEW_NV_shader_atomic_fp16_vector;
+extern GLboolean __GLEW_NV_shader_atomic_int64;
+extern GLboolean __GLEW_NV_shader_buffer_load;
+extern GLboolean __GLEW_NV_shader_noperspective_interpolation;
+extern GLboolean __GLEW_NV_shader_storage_buffer_object;
+extern GLboolean __GLEW_NV_shader_subgroup_partitioned;
+extern GLboolean __GLEW_NV_shader_texture_footprint;
+extern GLboolean __GLEW_NV_shader_thread_group;
+extern GLboolean __GLEW_NV_shader_thread_shuffle;
+extern GLboolean __GLEW_NV_shading_rate_image;
+extern GLboolean __GLEW_NV_shadow_samplers_array;
+extern GLboolean __GLEW_NV_shadow_samplers_cube;
+extern GLboolean __GLEW_NV_stereo_view_rendering;
+extern GLboolean __GLEW_NV_tessellation_program5;
+extern GLboolean __GLEW_NV_texgen_emboss;
+extern GLboolean __GLEW_NV_texgen_reflection;
+extern GLboolean __GLEW_NV_texture_array;
+extern GLboolean __GLEW_NV_texture_barrier;
+extern GLboolean __GLEW_NV_texture_border_clamp;
+extern GLboolean __GLEW_NV_texture_compression_latc;
+extern GLboolean __GLEW_NV_texture_compression_s3tc;
+extern GLboolean __GLEW_NV_texture_compression_s3tc_update;
+extern GLboolean __GLEW_NV_texture_compression_vtc;
+extern GLboolean __GLEW_NV_texture_env_combine4;
+extern GLboolean __GLEW_NV_texture_expand_normal;
+extern GLboolean __GLEW_NV_texture_multisample;
+extern GLboolean __GLEW_NV_texture_npot_2D_mipmap;
+extern GLboolean __GLEW_NV_texture_rectangle;
+extern GLboolean __GLEW_NV_texture_rectangle_compressed;
+extern GLboolean __GLEW_NV_texture_shader;
+extern GLboolean __GLEW_NV_texture_shader2;
+extern GLboolean __GLEW_NV_texture_shader3;
+extern GLboolean __GLEW_NV_timeline_semaphore;
+extern GLboolean __GLEW_NV_transform_feedback;
+extern GLboolean __GLEW_NV_transform_feedback2;
+extern GLboolean __GLEW_NV_uniform_buffer_std430_layout;
+extern GLboolean __GLEW_NV_uniform_buffer_unified_memory;
+extern GLboolean __GLEW_NV_vdpau_interop;
+extern GLboolean __GLEW_NV_vdpau_interop2;
+extern GLboolean __GLEW_NV_vertex_array_range;
+extern GLboolean __GLEW_NV_vertex_array_range2;
+extern GLboolean __GLEW_NV_vertex_attrib_integer_64bit;
+extern GLboolean __GLEW_NV_vertex_buffer_unified_memory;
+extern GLboolean __GLEW_NV_vertex_program;
+extern GLboolean __GLEW_NV_vertex_program1_1;
+extern GLboolean __GLEW_NV_vertex_program2;
+extern GLboolean __GLEW_NV_vertex_program2_option;
+extern GLboolean __GLEW_NV_vertex_program3;
+extern GLboolean __GLEW_NV_vertex_program4;
+extern GLboolean __GLEW_NV_video_capture;
+extern GLboolean __GLEW_NV_viewport_array;
+extern GLboolean __GLEW_NV_viewport_array2;
+extern GLboolean __GLEW_NV_viewport_swizzle;
+extern GLboolean __GLEW_OES_EGL_image;
+extern GLboolean __GLEW_OES_EGL_image_external;
+extern GLboolean __GLEW_OES_EGL_image_external_essl3;
+extern GLboolean __GLEW_OES_blend_equation_separate;
+extern GLboolean __GLEW_OES_blend_func_separate;
+extern GLboolean __GLEW_OES_blend_subtract;
+extern GLboolean __GLEW_OES_byte_coordinates;
+extern GLboolean __GLEW_OES_compressed_ETC1_RGB8_texture;
+extern GLboolean __GLEW_OES_compressed_paletted_texture;
+extern GLboolean __GLEW_OES_copy_image;
+extern GLboolean __GLEW_OES_depth24;
+extern GLboolean __GLEW_OES_depth32;
+extern GLboolean __GLEW_OES_depth_texture;
+extern GLboolean __GLEW_OES_depth_texture_cube_map;
+extern GLboolean __GLEW_OES_draw_buffers_indexed;
+extern GLboolean __GLEW_OES_draw_texture;
+extern GLboolean __GLEW_OES_element_index_uint;
+extern GLboolean __GLEW_OES_extended_matrix_palette;
+extern GLboolean __GLEW_OES_fbo_render_mipmap;
+extern GLboolean __GLEW_OES_fragment_precision_high;
+extern GLboolean __GLEW_OES_framebuffer_object;
+extern GLboolean __GLEW_OES_geometry_point_size;
+extern GLboolean __GLEW_OES_geometry_shader;
+extern GLboolean __GLEW_OES_get_program_binary;
+extern GLboolean __GLEW_OES_gpu_shader5;
+extern GLboolean __GLEW_OES_mapbuffer;
+extern GLboolean __GLEW_OES_matrix_get;
+extern GLboolean __GLEW_OES_matrix_palette;
+extern GLboolean __GLEW_OES_packed_depth_stencil;
+extern GLboolean __GLEW_OES_point_size_array;
+extern GLboolean __GLEW_OES_point_sprite;
+extern GLboolean __GLEW_OES_read_format;
+extern GLboolean __GLEW_OES_required_internalformat;
+extern GLboolean __GLEW_OES_rgb8_rgba8;
+extern GLboolean __GLEW_OES_sample_shading;
+extern GLboolean __GLEW_OES_sample_variables;
+extern GLboolean __GLEW_OES_shader_image_atomic;
+extern GLboolean __GLEW_OES_shader_io_blocks;
+extern GLboolean __GLEW_OES_shader_multisample_interpolation;
+extern GLboolean __GLEW_OES_single_precision;
+extern GLboolean __GLEW_OES_standard_derivatives;
+extern GLboolean __GLEW_OES_stencil1;
+extern GLboolean __GLEW_OES_stencil4;
+extern GLboolean __GLEW_OES_stencil8;
+extern GLboolean __GLEW_OES_surfaceless_context;
+extern GLboolean __GLEW_OES_tessellation_point_size;
+extern GLboolean __GLEW_OES_tessellation_shader;
+extern GLboolean __GLEW_OES_texture_3D;
+extern GLboolean __GLEW_OES_texture_border_clamp;
+extern GLboolean __GLEW_OES_texture_buffer;
+extern GLboolean __GLEW_OES_texture_compression_astc;
+extern GLboolean __GLEW_OES_texture_cube_map;
+extern GLboolean __GLEW_OES_texture_cube_map_array;
+extern GLboolean __GLEW_OES_texture_env_crossbar;
+extern GLboolean __GLEW_OES_texture_mirrored_repeat;
+extern GLboolean __GLEW_OES_texture_npot;
+extern GLboolean __GLEW_OES_texture_stencil8;
+extern GLboolean __GLEW_OES_texture_storage_multisample_2d_array;
+extern GLboolean __GLEW_OES_texture_view;
+extern GLboolean __GLEW_OES_vertex_array_object;
+extern GLboolean __GLEW_OES_vertex_half_float;
+extern GLboolean __GLEW_OES_vertex_type_10_10_10_2;
+extern GLboolean __GLEW_OML_interlace;
+extern GLboolean __GLEW_OML_resample;
+extern GLboolean __GLEW_OML_subsample;
+extern GLboolean __GLEW_OVR_multiview;
+extern GLboolean __GLEW_OVR_multiview2;
+extern GLboolean __GLEW_OVR_multiview_multisampled_render_to_texture;
+extern GLboolean __GLEW_PGI_misc_hints;
+extern GLboolean __GLEW_PGI_vertex_hints;
+extern GLboolean __GLEW_QCOM_YUV_texture_gather;
+extern GLboolean __GLEW_QCOM_alpha_test;
+extern GLboolean __GLEW_QCOM_binning_control;
+extern GLboolean __GLEW_QCOM_driver_control;
+extern GLboolean __GLEW_QCOM_extended_get;
+extern GLboolean __GLEW_QCOM_extended_get2;
+extern GLboolean __GLEW_QCOM_frame_extrapolation;
+extern GLboolean __GLEW_QCOM_framebuffer_foveated;
+extern GLboolean __GLEW_QCOM_motion_estimation;
+extern GLboolean __GLEW_QCOM_perfmon_global_mode;
+extern GLboolean __GLEW_QCOM_render_sRGB_R8_RG8;
+extern GLboolean __GLEW_QCOM_render_shared_exponent;
+extern GLboolean __GLEW_QCOM_shader_framebuffer_fetch_noncoherent;
+extern GLboolean __GLEW_QCOM_shader_framebuffer_fetch_rate;
+extern GLboolean __GLEW_QCOM_shading_rate;
+extern GLboolean __GLEW_QCOM_texture_foveated;
+extern GLboolean __GLEW_QCOM_texture_foveated2;
+extern GLboolean __GLEW_QCOM_texture_foveated_subsampled_layout;
+extern GLboolean __GLEW_QCOM_texture_lod_bias;
+extern GLboolean __GLEW_QCOM_tiled_rendering;
+extern GLboolean __GLEW_QCOM_writeonly_rendering;
+extern GLboolean __GLEW_QCOM_ycbcr_degamma;
+extern GLboolean __GLEW_REGAL_ES1_0_compatibility;
+extern GLboolean __GLEW_REGAL_ES1_1_compatibility;
+extern GLboolean __GLEW_REGAL_enable;
+extern GLboolean __GLEW_REGAL_error_string;
+extern GLboolean __GLEW_REGAL_extension_query;
+extern GLboolean __GLEW_REGAL_log;
+extern GLboolean __GLEW_REGAL_proc_address;
+extern GLboolean __GLEW_REND_screen_coordinates;
+extern GLboolean __GLEW_S3_s3tc;
+extern GLboolean __GLEW_SGIS_clip_band_hint;
+extern GLboolean __GLEW_SGIS_color_range;
+extern GLboolean __GLEW_SGIS_detail_texture;
+extern GLboolean __GLEW_SGIS_fog_function;
+extern GLboolean __GLEW_SGIS_generate_mipmap;
+extern GLboolean __GLEW_SGIS_line_texgen;
+extern GLboolean __GLEW_SGIS_multisample;
+extern GLboolean __GLEW_SGIS_multitexture;
+extern GLboolean __GLEW_SGIS_pixel_texture;
+extern GLboolean __GLEW_SGIS_point_line_texgen;
+extern GLboolean __GLEW_SGIS_shared_multisample;
+extern GLboolean __GLEW_SGIS_sharpen_texture;
+extern GLboolean __GLEW_SGIS_texture4D;
+extern GLboolean __GLEW_SGIS_texture_border_clamp;
+extern GLboolean __GLEW_SGIS_texture_edge_clamp;
+extern GLboolean __GLEW_SGIS_texture_filter4;
+extern GLboolean __GLEW_SGIS_texture_lod;
+extern GLboolean __GLEW_SGIS_texture_select;
+extern GLboolean __GLEW_SGIX_async;
+extern GLboolean __GLEW_SGIX_async_histogram;
+extern GLboolean __GLEW_SGIX_async_pixel;
+extern GLboolean __GLEW_SGIX_bali_g_instruments;
+extern GLboolean __GLEW_SGIX_bali_r_instruments;
+extern GLboolean __GLEW_SGIX_bali_timer_instruments;
+extern GLboolean __GLEW_SGIX_blend_alpha_minmax;
+extern GLboolean __GLEW_SGIX_blend_cadd;
+extern GLboolean __GLEW_SGIX_blend_cmultiply;
+extern GLboolean __GLEW_SGIX_calligraphic_fragment;
+extern GLboolean __GLEW_SGIX_clipmap;
+extern GLboolean __GLEW_SGIX_color_matrix_accuracy;
+extern GLboolean __GLEW_SGIX_color_table_index_mode;
+extern GLboolean __GLEW_SGIX_complex_polar;
+extern GLboolean __GLEW_SGIX_convolution_accuracy;
+extern GLboolean __GLEW_SGIX_cube_map;
+extern GLboolean __GLEW_SGIX_cylinder_texgen;
+extern GLboolean __GLEW_SGIX_datapipe;
+extern GLboolean __GLEW_SGIX_decimation;
+extern GLboolean __GLEW_SGIX_depth_pass_instrument;
+extern GLboolean __GLEW_SGIX_depth_texture;
+extern GLboolean __GLEW_SGIX_dvc;
+extern GLboolean __GLEW_SGIX_flush_raster;
+extern GLboolean __GLEW_SGIX_fog_blend;
+extern GLboolean __GLEW_SGIX_fog_factor_to_alpha;
+extern GLboolean __GLEW_SGIX_fog_layers;
+extern GLboolean __GLEW_SGIX_fog_offset;
+extern GLboolean __GLEW_SGIX_fog_patchy;
+extern GLboolean __GLEW_SGIX_fog_scale;
+extern GLboolean __GLEW_SGIX_fog_texture;
+extern GLboolean __GLEW_SGIX_fragment_lighting_space;
+extern GLboolean __GLEW_SGIX_fragment_specular_lighting;
+extern GLboolean __GLEW_SGIX_fragments_instrument;
+extern GLboolean __GLEW_SGIX_framezoom;
+extern GLboolean __GLEW_SGIX_icc_texture;
+extern GLboolean __GLEW_SGIX_igloo_interface;
+extern GLboolean __GLEW_SGIX_image_compression;
+extern GLboolean __GLEW_SGIX_impact_pixel_texture;
+extern GLboolean __GLEW_SGIX_instrument_error;
+extern GLboolean __GLEW_SGIX_interlace;
+extern GLboolean __GLEW_SGIX_ir_instrument1;
+extern GLboolean __GLEW_SGIX_line_quality_hint;
+extern GLboolean __GLEW_SGIX_list_priority;
+extern GLboolean __GLEW_SGIX_mpeg1;
+extern GLboolean __GLEW_SGIX_mpeg2;
+extern GLboolean __GLEW_SGIX_nonlinear_lighting_pervertex;
+extern GLboolean __GLEW_SGIX_nurbs_eval;
+extern GLboolean __GLEW_SGIX_occlusion_instrument;
+extern GLboolean __GLEW_SGIX_packed_6bytes;
+extern GLboolean __GLEW_SGIX_pixel_texture;
+extern GLboolean __GLEW_SGIX_pixel_texture_bits;
+extern GLboolean __GLEW_SGIX_pixel_texture_lod;
+extern GLboolean __GLEW_SGIX_pixel_tiles;
+extern GLboolean __GLEW_SGIX_polynomial_ffd;
+extern GLboolean __GLEW_SGIX_quad_mesh;
+extern GLboolean __GLEW_SGIX_reference_plane;
+extern GLboolean __GLEW_SGIX_resample;
+extern GLboolean __GLEW_SGIX_scalebias_hint;
+extern GLboolean __GLEW_SGIX_shadow;
+extern GLboolean __GLEW_SGIX_shadow_ambient;
+extern GLboolean __GLEW_SGIX_slim;
+extern GLboolean __GLEW_SGIX_spotlight_cutoff;
+extern GLboolean __GLEW_SGIX_sprite;
+extern GLboolean __GLEW_SGIX_subdiv_patch;
+extern GLboolean __GLEW_SGIX_subsample;
+extern GLboolean __GLEW_SGIX_tag_sample_buffer;
+extern GLboolean __GLEW_SGIX_texture_add_env;
+extern GLboolean __GLEW_SGIX_texture_coordinate_clamp;
+extern GLboolean __GLEW_SGIX_texture_lod_bias;
+extern GLboolean __GLEW_SGIX_texture_mipmap_anisotropic;
+extern GLboolean __GLEW_SGIX_texture_multi_buffer;
+extern GLboolean __GLEW_SGIX_texture_phase;
+extern GLboolean __GLEW_SGIX_texture_range;
+extern GLboolean __GLEW_SGIX_texture_scale_bias;
+extern GLboolean __GLEW_SGIX_texture_supersample;
+extern GLboolean __GLEW_SGIX_vector_ops;
+extern GLboolean __GLEW_SGIX_vertex_array_object;
+extern GLboolean __GLEW_SGIX_vertex_preclip;
+extern GLboolean __GLEW_SGIX_vertex_preclip_hint;
+extern GLboolean __GLEW_SGIX_ycrcb;
+extern GLboolean __GLEW_SGIX_ycrcb_subsample;
+extern GLboolean __GLEW_SGIX_ycrcba;
+extern GLboolean __GLEW_SGI_color_matrix;
+extern GLboolean __GLEW_SGI_color_table;
+extern GLboolean __GLEW_SGI_complex;
+extern GLboolean __GLEW_SGI_complex_type;
+extern GLboolean __GLEW_SGI_fft;
+extern GLboolean __GLEW_SGI_texture_color_table;
+extern GLboolean __GLEW_SUNX_constant_data;
+extern GLboolean __GLEW_SUN_convolution_border_modes;
+extern GLboolean __GLEW_SUN_global_alpha;
+extern GLboolean __GLEW_SUN_mesh_array;
+extern GLboolean __GLEW_SUN_read_video_pixels;
+extern GLboolean __GLEW_SUN_slice_accum;
+extern GLboolean __GLEW_SUN_triangle_list;
+extern GLboolean __GLEW_SUN_vertex;
+extern GLboolean __GLEW_VIV_shader_binary;
+extern GLboolean __GLEW_WIN_phong_shading;
+extern GLboolean __GLEW_WIN_scene_markerXXX;
+extern GLboolean __GLEW_WIN_specular_fog;
+extern GLboolean __GLEW_WIN_swap_hint;
+# 27012 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
+extern GLenum glewInit (void);
+extern GLenum glewContextInit (void);
+extern GLboolean glewIsSupported (const char *name);
+# 27025 "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h" 3 4
+extern GLboolean glewExperimental;
+extern GLboolean glewGetExtension (const char *name);
+extern const GLubyte * glewGetErrorString (GLenum error);
+extern const GLubyte * glewGetString (GLenum name);
 
 
 }
@@ -84356,7 +84266,16 @@ uninitialized_value_construct_n(_ExecutionPolicy&& __exec, _ForwardIterator __fi
 # 11 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h"
 class Texture {
 public:
-    explicit Texture(std::string filename, std::string type = "");
+    struct TextConf {
+        int TEXTURE_WRAP_S = 0x2901;
+        int TEXTURE_WRAP_T = 0x2901;
+        int TEXTURE_WRAP_R = 0x2901;
+        int TEXTURE_MIN_FILTER = 0x2703;
+        int TEXTURE_MAG_FILTER = 0x2601;
+        int FLIP_VERTICALLY = 1;
+    };
+
+    explicit Texture(std::string filename, const TextConf& cfg, std::string type = "");
     ~Texture() = default;
 
     Texture(const Texture&) = default;
@@ -84372,6 +84291,8 @@ public:
 private:
     int width{}, height{}, nrChannels{};
     unsigned char *data{};
+
+    TextConf config;
 
     std::string type{};
     std::string path{};
@@ -86438,8 +86359,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 # 13 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-Texture::Texture(std::string filename, std::string type)
-    : type(std::move(type)), path(std::move(filename))
+Texture::Texture(std::string filename, const TextConf& cfg, std::string type)
+    : type(std::move(type)), path(std::move(filename)), config(cfg)
 {
     unsigned int id = 0;
     glGenTextures(1, &id);
@@ -86466,11 +86387,7 @@ Texture::Texture(std::string filename, std::string type)
 # 29 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                                   0x2802
 # 29 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-                                                   , 
-# 29 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
-                                                     0x2901
-# 29 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-                                                              );
+                                                   , config.TEXTURE_WRAP_S);
     glTexParameteri(
 # 30 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                    0x0DE1
@@ -86479,73 +86396,70 @@ Texture::Texture(std::string filename, std::string type)
 # 30 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                                   0x2803
 # 30 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-                                                   , 
-# 30 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
-                                                     0x2901
-# 30 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-                                                              );
+                                                   , config.TEXTURE_WRAP_T);
     glTexParameteri(
 # 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                    0x0DE1
 # 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                                 , 
 # 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+                                  0x8072
+# 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+                                                   , config.TEXTURE_WRAP_R);
+    glTexParameteri(
+# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+                   0x0DE1
+# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+                                , 
+# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                                   0x2801
-# 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-                                                       , 
-# 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
-                                                         0x2703
-# 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-                                                                                );
+# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+                                                       , config.TEXTURE_MIN_FILTER);
     glTexParameteri(
-# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 33 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                    0x0DE1
-# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+# 33 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                                 , 
-# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 33 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                                   0x2800
-# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-                                                       , 
-# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
-                                                         0x2601
-# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
-                                                                  );
+# 33 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+                                                       , config.TEXTURE_MAG_FILTER);
 
-    stbi_set_flip_vertically_on_load(true);
+    stbi_set_flip_vertically_on_load(config.FLIP_VERTICALLY);
     unsigned char* data = stbi_load(path.c_str(), &width, &height, &nrChannels, 0);
     GLint fmt = (nrChannels == 4) ? 
-# 36 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 37 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                                    0x1908 
-# 36 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+# 37 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                                            : 
-# 36 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 37 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                                              0x1907
-# 36 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+# 37 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                                                    ;
 
     if (data) {
         glPixelStorei(
-# 39 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 40 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                      0x0CF5
-# 39 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+# 40 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                                         , 1);
         glTexImage2D(
-# 40 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                     0x0DE1
-# 40 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+# 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                                  , 0, fmt, width, height, 0, fmt, 
-# 40 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                                                                   0x1401
-# 40 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+# 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                                                                                   , data);
         
-# 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 42 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
        __glewGenerateMipmap
-# 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+# 42 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                        (
-# 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
+# 42 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp" 3 4
                         0x0DE1
-# 41 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
+# 42 "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
                                      );
     } else {
         std::cout << "Failed to load texture: " << path << "\n";

@@ -8,9 +8,13 @@ set(OLD_GLOB
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/Light.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h"
+  "/home/cadenv07/CLionProjects/numericore/headers/graphics/Window.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Mesh.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Model.h"
   "/home/cadenv07/CLionProjects/numericore/headers/graphics/stb_image.h"
+  "/home/cadenv07/CLionProjects/numericore/headers/level/Level.h"
+  "/home/cadenv07/CLionProjects/numericore/headers/tiles/Tile.h"
+  "/home/cadenv07/CLionProjects/numericore/headers/tiles/types/BasicTile.h"
   "/home/cadenv07/CLionProjects/numericore/headers/util/File.h"
   "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
   )
@@ -27,7 +31,10 @@ set(OLD_GLOB
   "/home/cadenv07/CLionProjects/numericore/src/graphics/Texture.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/graphics/models/Mesh.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/graphics/models/Model.cpp"
+  "/home/cadenv07/CLionProjects/numericore/src/level/Level.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+  "/home/cadenv07/CLionProjects/numericore/src/tiles/Tile.cpp"
+  "/home/cadenv07/CLionProjects/numericore/src/tiles/types/BasicTile.cpp"
   "/home/cadenv07/CLionProjects/numericore/src/util/File.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

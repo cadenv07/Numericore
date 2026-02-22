@@ -1,0 +1,4 @@
+# tile
+# Created 2/21/26 by cadenv07
+newmtl tile
+map_Kd diffuse.png

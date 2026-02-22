@@ -99,9 +99,8 @@ CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o.ddi: \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/mmintrin.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/mm_malloc.h \
- /usr/include/GL/glew.h /usr/include/c++/15.2.1/cstddef \
- /usr/include/c++/15.2.1/cstdint /usr/include/GL/glu.h \
- /usr/include/GL/gl.h \
+ /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include/GL/glew.h \
+ /usr/include/c++/15.2.1/cstddef /usr/include/c++/15.2.1/cstdint \
  /home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h \
  /usr/include/c++/15.2.1/memory /usr/include/c++/15.2.1/bits/memoryfwd.h \
  /usr/include/c++/15.2.1/bits/allocator.h \

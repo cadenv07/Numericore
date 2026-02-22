@@ -2,6 +2,10 @@
   "name": "numericore",
   "version-string": "0.1.0",
   "dependencies": [
-    "assimp"
+    "assimp",
+    "fmt",
+    "glew",
+    "glfw3",
+    "glm"
   ]
 }

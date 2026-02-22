@@ -9,7 +9,13 @@ build CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o: dyndep
 
 build CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o: dyndep
 
+build CMakeFiles/numericore.dir/src/level/Level.cpp.o: dyndep
+
 build CMakeFiles/numericore.dir/src/main.cpp.o: dyndep
+
+build CMakeFiles/numericore.dir/src/tiles/Tile.cpp.o: dyndep
+
+build CMakeFiles/numericore.dir/src/tiles/types/BasicTile.cpp.o: dyndep
 
 build CMakeFiles/numericore.dir/src/util/File.cpp.o: dyndep
 

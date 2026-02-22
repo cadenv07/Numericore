@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <ostream>
+#include <GL/glew.h>
 
 void Model::draw(const Shader& shader) const {
     shader.use();
@@ -107,7 +108,7 @@ std::vector<Texture> Model::loadMaterialTextures(const aiMaterial* mat, aiTextur
         }
         if(!skip) {
             std::cout << "Loading tex: " << fullPath << "\n";
-            Texture texture(fullPath, typeName);
+            Texture texture(fullPath, conf, typeName);
             std::cout << "Loaded tex OK\n";
             textures.push_back(texture);
             textures_loaded.push_back(texture);

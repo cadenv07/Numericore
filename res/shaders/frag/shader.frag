@@ -52,7 +52,7 @@ vec3 calculateSpecular(Light light, vec3 lightDir, vec3 norm) {
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 reflectDir = reflect(-lightDir, norm);
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
-    return light.specular * spec * vec3(texture(material.texture_specular1, TexCoords));
+    return light.specular * spec * vec3(texture(material.texture_diffuse1, TexCoords));
 }
 
 vec3 calculateLight(Light light) {
@@ -103,5 +103,5 @@ void main() {
             if(lights[i].type != 0)
                 output += calculateLight(lights[i]);
     FragColor = vec4(output, 1.0);
-//    FragColor = vec4(1,0,0,1);
+//    FragColor = texture(material.texture_diffuse1, TexCoords);
 }
