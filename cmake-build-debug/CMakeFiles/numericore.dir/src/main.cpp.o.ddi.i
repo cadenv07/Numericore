@@ -94762,6 +94762,8 @@ namespace detail
 # 11 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h"
 class Shader {
 public:
+    inline static unsigned int s_current;
+
     explicit Shader(std::string vertPath, std::string fragPath);
     ~Shader();
 
@@ -94774,8 +94776,13 @@ public:
     void setInt(const std::string &name, int value) const;
     void setFloat(const std::string &name, float value) const;
     void setMat4(const std::string &name, const glm::mat4& m) const;
+    void setVec3(const std::string &name, const glm::vec3& v) const;
+    void setVec4(const std::string &name, const glm::vec4& v) const;
 private:
+    mutable std::unordered_map<std::string, int> uniformLocations;
     unsigned int s_id;
+
+    int getUniformLocation(const char *name) const;
 };
 # 6 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
 # 1 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Texture.h" 1
@@ -123871,69 +123878,8 @@ struct __attribute__((visibility("default"))) aiScene {
 
 }
 # 11 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Model.h" 2
-
-# 1 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Mesh.h" 1
-# 14 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Mesh.h"
-
-# 14 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Mesh.h"
-struct Vertex {
-    glm::vec3 position;
-    glm::vec3 normal;
-    glm::vec2 texCoords;
-};
-
-class Mesh {
-public:
-    explicit Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures);
-
-    [[nodiscard]] [[maybe_unused]] const std::vector<Vertex>& getVertices() const { return vertices; }
-    [[nodiscard]] [[maybe_unused]] const std::vector<unsigned int>& getIndices() const { return indices; }
-    [[nodiscard]] [[maybe_unused]] const std::vector<Texture>& getTextures() const { return textures; }
-
-    void draw(const Shader& shader) const;
-private:
-    unsigned int VAO{}, VBO{}, EBO{};
-
-    std::vector<Vertex> vertices;
-    std::vector<unsigned int> indices;
-    std::vector<Texture> textures;
-
-    void setupMesh();
-};
-# 13 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Model.h" 2
-
-
-class Model {
-public:
-    explicit Model(const char* path) {
-        loadModel(path);
-    }
-    void draw(const Shader& shader) const;
-private:
-    std::vector<Texture> textures_loaded;
-    glm::mat4 model = glm::mat4(1.0f);
-    std::vector<Mesh> meshes;
-    std::string directory;
-
-    void loadModel(const std::string& path);
-    void processNode(const aiNode* node, const aiScene* scene);
-    Mesh processMesh(aiMesh* mesh, const aiScene* scene);
-    std::vector<Texture> loadMaterialTextures(const aiMaterial *mat, aiTextureType type, const std::string& typeName);
-};
-# 8 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
-
-
-# 1 "/usr/include/glm/gtc/matrix_transform.hpp" 1 3 4
-# 21 "/usr/include/glm/gtc/matrix_transform.hpp" 3 4
-       
-
-
-
-
-
-
-# 1 "/usr/include/glm/ext/matrix_projection.hpp" 1 3 4
-# 20 "/usr/include/glm/ext/matrix_projection.hpp" 3 4
+# 1 "/usr/include/glm/ext/matrix_transform.hpp" 1 3 4
+# 20 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
        
 
 
@@ -123954,8 +123900,6 @@ private:
 
 
 
-
-# 20 "/usr/include/glm/ext/scalar_constants.hpp" 3 4
 namespace glm
 {
 
@@ -124331,7 +124275,276 @@ namespace glm
 
 }
 # 171 "/usr/include/glm/gtc/constants.hpp" 2 3 4
-# 24 "/usr/include/glm/ext/matrix_projection.hpp" 2 3 4
+# 24 "/usr/include/glm/ext/matrix_transform.hpp" 2 3 4
+# 32 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
+namespace glm
+{
+
+
+
+
+ template<typename genType>
+ [[nodiscard]] constexpr genType identity();
+# 63 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
+ template<typename T, qualifier Q>
+ [[nodiscard]] constexpr mat<4, 4, T, Q> translate(
+  mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v);
+# 79 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
+ template<typename T, qualifier Q>
+ [[nodiscard]] mat<4, 4, T, Q> rotate(
+  mat<4, 4, T, Q> const& m, T angle, vec<3, T, Q> const& axis);
+# 94 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
+ template<typename T, qualifier Q>
+ [[nodiscard]] mat<4, 4, T, Q> scale(
+  mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v);
+# 121 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
+    template <typename T, qualifier Q>
+    inline mat<4, 4, T, Q> shear(
+        mat<4, 4, T, Q> const &m, vec<3, T, Q> const& p, vec<2, T, Q> const &l_x, vec<2, T, Q> const &l_y, vec<2, T, Q> const &l_z);
+# 135 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
+ template<typename T, qualifier Q>
+ [[nodiscard]] mat<4, 4, T, Q> lookAtRH(
+  vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up);
+# 149 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
+ template<typename T, qualifier Q>
+ [[nodiscard]] mat<4, 4, T, Q> lookAtLH(
+  vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up);
+# 164 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
+ template<typename T, qualifier Q>
+ [[nodiscard]] mat<4, 4, T, Q> lookAt(
+  vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up);
+
+
+}
+
+# 1 "/usr/include/glm/ext/matrix_transform.inl" 1 3 4
+namespace glm
+{
+ template<typename genType>
+ inline constexpr genType identity()
+ {
+  return detail::init_gentype<genType, detail::genTypeTrait<genType>::GENTYPE>::identity();
+ }
+
+ template<typename T, qualifier Q>
+ inline constexpr mat<4, 4, T, Q> translate(mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v)
+ {
+  mat<4, 4, T, Q> Result(m);
+  Result[3] = m[0] * v[0] + m[1] * v[1] + m[2] * v[2] + m[3];
+  return Result;
+ }
+
+ template<typename T, qualifier Q>
+ inline mat<4, 4, T, Q> rotate(mat<4, 4, T, Q> const& m, T angle, vec<3, T, Q> const& v)
+ {
+  T const a = angle;
+  T const c = cos(a);
+  T const s = sin(a);
+
+  vec<3, T, Q> axis(normalize(v));
+  vec<3, T, Q> temp((T(1) - c) * axis);
+
+  mat<4, 4, T, Q> Rotate;
+  Rotate[0][0] = c + temp[0] * axis[0];
+  Rotate[0][1] = temp[0] * axis[1] + s * axis[2];
+  Rotate[0][2] = temp[0] * axis[2] - s * axis[1];
+
+  Rotate[1][0] = temp[1] * axis[0] - s * axis[2];
+  Rotate[1][1] = c + temp[1] * axis[1];
+  Rotate[1][2] = temp[1] * axis[2] + s * axis[0];
+
+  Rotate[2][0] = temp[2] * axis[0] + s * axis[1];
+  Rotate[2][1] = temp[2] * axis[1] - s * axis[0];
+  Rotate[2][2] = c + temp[2] * axis[2];
+
+  mat<4, 4, T, Q> Result;
+  Result[0] = m[0] * Rotate[0][0] + m[1] * Rotate[0][1] + m[2] * Rotate[0][2];
+  Result[1] = m[0] * Rotate[1][0] + m[1] * Rotate[1][1] + m[2] * Rotate[1][2];
+  Result[2] = m[0] * Rotate[2][0] + m[1] * Rotate[2][1] + m[2] * Rotate[2][2];
+  Result[3] = m[3];
+  return Result;
+ }
+
+ template<typename T, qualifier Q>
+ inline mat<4, 4, T, Q> rotate_slow(mat<4, 4, T, Q> const& m, T angle, vec<3, T, Q> const& v)
+ {
+  T const a = angle;
+  T const c = cos(a);
+  T const s = sin(a);
+  mat<4, 4, T, Q> Result;
+
+  vec<3, T, Q> axis = normalize(v);
+
+  Result[0][0] = c + (static_cast<T>(1) - c) * axis.x * axis.x;
+  Result[0][1] = (static_cast<T>(1) - c) * axis.x * axis.y + s * axis.z;
+  Result[0][2] = (static_cast<T>(1) - c) * axis.x * axis.z - s * axis.y;
+  Result[0][3] = static_cast<T>(0);
+
+  Result[1][0] = (static_cast<T>(1) - c) * axis.y * axis.x - s * axis.z;
+  Result[1][1] = c + (static_cast<T>(1) - c) * axis.y * axis.y;
+  Result[1][2] = (static_cast<T>(1) - c) * axis.y * axis.z + s * axis.x;
+  Result[1][3] = static_cast<T>(0);
+
+  Result[2][0] = (static_cast<T>(1) - c) * axis.z * axis.x + s * axis.y;
+  Result[2][1] = (static_cast<T>(1) - c) * axis.z * axis.y - s * axis.x;
+  Result[2][2] = c + (static_cast<T>(1) - c) * axis.z * axis.z;
+  Result[2][3] = static_cast<T>(0);
+
+  Result[3] = vec<4, T, Q>(0, 0, 0, 1);
+  return m * Result;
+ }
+
+ template<typename T, qualifier Q>
+ inline mat<4, 4, T, Q> scale(mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v)
+ {
+  mat<4, 4, T, Q> Result;
+  Result[0] = m[0] * v[0];
+  Result[1] = m[1] * v[1];
+  Result[2] = m[2] * v[2];
+  Result[3] = m[3];
+  return Result;
+ }
+
+ template<typename T, qualifier Q>
+ inline mat<4, 4, T, Q> scale_slow(mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v)
+ {
+  mat<4, 4, T, Q> Result(T(1));
+  Result[0][0] = v.x;
+  Result[1][1] = v.y;
+  Result[2][2] = v.z;
+  return m * Result;
+ }
+
+    template <typename T, qualifier Q>
+    inline mat<4, 4, T, Q> shear(mat<4, 4, T, Q> const &m, vec<3, T, Q> const& p, vec<2, T, Q> const &l_x, vec<2, T, Q> const &l_y, vec<2, T, Q> const &l_z)
+    {
+        T const lambda_xy = l_x[0];
+        T const lambda_xz = l_x[1];
+        T const lambda_yx = l_y[0];
+        T const lambda_yz = l_y[1];
+        T const lambda_zx = l_z[0];
+        T const lambda_zy = l_z[1];
+
+        vec<3, T, Q> point_lambda = vec<3, T, Q>(
+            (lambda_xy + lambda_xz), (lambda_yx + lambda_yz), (lambda_zx + lambda_zy)
+        );
+
+        mat<4, 4, T, Q> Shear = mat<4, 4, T, Q>(
+            1 , lambda_yx , lambda_zx , 0,
+            lambda_xy , 1 , lambda_zy , 0,
+            lambda_xz , lambda_yz , 1 , 0,
+            -point_lambda[0] * p[0], -point_lambda[1] * p[1], -point_lambda[2] * p[2], 1
+        );
+
+        mat<4, 4, T, Q> Result;
+  Result[0] = m[0] * Shear[0][0] + m[1] * Shear[0][1] + m[2] * Shear[0][2] + m[3] * Shear[0][3];
+  Result[1] = m[0] * Shear[1][0] + m[1] * Shear[1][1] + m[2] * Shear[1][2] + m[3] * Shear[1][3];
+  Result[2] = m[0] * Shear[2][0] + m[1] * Shear[2][1] + m[2] * Shear[2][2] + m[3] * Shear[2][3];
+  Result[3] = m[0] * Shear[3][0] + m[1] * Shear[3][1] + m[2] * Shear[3][2] + m[3] * Shear[3][3];
+        return Result;
+    }
+
+    template <typename T, qualifier Q>
+    inline mat<4, 4, T, Q> shear_slow(mat<4, 4, T, Q> const &m, vec<3, T, Q> const& p, vec<2, T, Q> const &l_x, vec<2, T, Q> const &l_y, vec<2, T, Q> const &l_z)
+    {
+        T const lambda_xy = static_cast<T>(l_x[0]);
+        T const lambda_xz = static_cast<T>(l_x[1]);
+        T const lambda_yx = static_cast<T>(l_y[0]);
+        T const lambda_yz = static_cast<T>(l_y[1]);
+        T const lambda_zx = static_cast<T>(l_z[0]);
+        T const lambda_zy = static_cast<T>(l_z[1]);
+
+        vec<3, T, Q> point_lambda = vec<3, T, Q>(
+            static_cast<T>(lambda_xy + lambda_xz),
+            static_cast<T>(lambda_yx + lambda_yz),
+            static_cast<T>(lambda_zx + lambda_zy)
+        );
+
+        mat<4, 4, T, Q> Shear = mat<4, 4, T, Q>(
+            1 , lambda_yx , lambda_zx , 0,
+            lambda_xy , 1 , lambda_zy , 0,
+            lambda_xz , lambda_yz , 1 , 0,
+            -point_lambda[0] * p[0], -point_lambda[1] * p[1], -point_lambda[2] * p[2], 1
+        );
+        return m * Shear;
+    }
+
+ template<typename T, qualifier Q>
+ inline mat<4, 4, T, Q> lookAtRH(vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up)
+ {
+  vec<3, T, Q> const f(normalize(center - eye));
+  vec<3, T, Q> const s(normalize(cross(f, up)));
+  vec<3, T, Q> const u(cross(s, f));
+
+  mat<4, 4, T, Q> Result(1);
+  Result[0][0] = s.x;
+  Result[1][0] = s.y;
+  Result[2][0] = s.z;
+  Result[0][1] = u.x;
+  Result[1][1] = u.y;
+  Result[2][1] = u.z;
+  Result[0][2] =-f.x;
+  Result[1][2] =-f.y;
+  Result[2][2] =-f.z;
+  Result[3][0] =-dot(s, eye);
+  Result[3][1] =-dot(u, eye);
+  Result[3][2] = dot(f, eye);
+  return Result;
+ }
+
+ template<typename T, qualifier Q>
+ inline mat<4, 4, T, Q> lookAtLH(vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up)
+ {
+  vec<3, T, Q> const f(normalize(center - eye));
+  vec<3, T, Q> const s(normalize(cross(up, f)));
+  vec<3, T, Q> const u(cross(f, s));
+
+  mat<4, 4, T, Q> Result(1);
+  Result[0][0] = s.x;
+  Result[1][0] = s.y;
+  Result[2][0] = s.z;
+  Result[0][1] = u.x;
+  Result[1][1] = u.y;
+  Result[2][1] = u.z;
+  Result[0][2] = f.x;
+  Result[1][2] = f.y;
+  Result[2][2] = f.z;
+  Result[3][0] = -dot(s, eye);
+  Result[3][1] = -dot(u, eye);
+  Result[3][2] = -dot(f, eye);
+  return Result;
+ }
+
+ template<typename T, qualifier Q>
+ inline mat<4, 4, T, Q> lookAt(vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up)
+ {
+
+
+
+            return lookAtRH(eye, center, up);
+
+ }
+}
+# 172 "/usr/include/glm/ext/matrix_transform.hpp" 2 3 4
+# 12 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Model.h" 2
+# 1 "/usr/include/glm/gtc/quaternion.hpp" 1 3 4
+# 14 "/usr/include/glm/gtc/quaternion.hpp" 3 4
+       
+
+
+
+# 1 "/usr/include/glm/gtc/matrix_transform.hpp" 1 3 4
+# 21 "/usr/include/glm/gtc/matrix_transform.hpp" 3 4
+       
+
+
+
+
+
+
+# 1 "/usr/include/glm/ext/matrix_projection.hpp" 1 3 4
+# 20 "/usr/include/glm/ext/matrix_projection.hpp" 3 4
+       
 # 32 "/usr/include/glm/ext/matrix_projection.hpp" 3 4
 namespace glm
 {
@@ -125363,260 +125576,7 @@ namespace glm
 }
 # 577 "/usr/include/glm/ext/matrix_clip_space.hpp" 2 3 4
 # 30 "/usr/include/glm/gtc/matrix_transform.hpp" 2 3 4
-# 1 "/usr/include/glm/ext/matrix_transform.hpp" 1 3 4
-# 20 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
-       
-# 32 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
-namespace glm
-{
 
-
-
-
- template<typename genType>
- [[nodiscard]] constexpr genType identity();
-# 63 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
- template<typename T, qualifier Q>
- [[nodiscard]] constexpr mat<4, 4, T, Q> translate(
-  mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v);
-# 79 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
- template<typename T, qualifier Q>
- [[nodiscard]] mat<4, 4, T, Q> rotate(
-  mat<4, 4, T, Q> const& m, T angle, vec<3, T, Q> const& axis);
-# 94 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
- template<typename T, qualifier Q>
- [[nodiscard]] mat<4, 4, T, Q> scale(
-  mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v);
-# 121 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
-    template <typename T, qualifier Q>
-    inline mat<4, 4, T, Q> shear(
-        mat<4, 4, T, Q> const &m, vec<3, T, Q> const& p, vec<2, T, Q> const &l_x, vec<2, T, Q> const &l_y, vec<2, T, Q> const &l_z);
-# 135 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
- template<typename T, qualifier Q>
- [[nodiscard]] mat<4, 4, T, Q> lookAtRH(
-  vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up);
-# 149 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
- template<typename T, qualifier Q>
- [[nodiscard]] mat<4, 4, T, Q> lookAtLH(
-  vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up);
-# 164 "/usr/include/glm/ext/matrix_transform.hpp" 3 4
- template<typename T, qualifier Q>
- [[nodiscard]] mat<4, 4, T, Q> lookAt(
-  vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up);
-
-
-}
-
-# 1 "/usr/include/glm/ext/matrix_transform.inl" 1 3 4
-namespace glm
-{
- template<typename genType>
- inline constexpr genType identity()
- {
-  return detail::init_gentype<genType, detail::genTypeTrait<genType>::GENTYPE>::identity();
- }
-
- template<typename T, qualifier Q>
- inline constexpr mat<4, 4, T, Q> translate(mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v)
- {
-  mat<4, 4, T, Q> Result(m);
-  Result[3] = m[0] * v[0] + m[1] * v[1] + m[2] * v[2] + m[3];
-  return Result;
- }
-
- template<typename T, qualifier Q>
- inline mat<4, 4, T, Q> rotate(mat<4, 4, T, Q> const& m, T angle, vec<3, T, Q> const& v)
- {
-  T const a = angle;
-  T const c = cos(a);
-  T const s = sin(a);
-
-  vec<3, T, Q> axis(normalize(v));
-  vec<3, T, Q> temp((T(1) - c) * axis);
-
-  mat<4, 4, T, Q> Rotate;
-  Rotate[0][0] = c + temp[0] * axis[0];
-  Rotate[0][1] = temp[0] * axis[1] + s * axis[2];
-  Rotate[0][2] = temp[0] * axis[2] - s * axis[1];
-
-  Rotate[1][0] = temp[1] * axis[0] - s * axis[2];
-  Rotate[1][1] = c + temp[1] * axis[1];
-  Rotate[1][2] = temp[1] * axis[2] + s * axis[0];
-
-  Rotate[2][0] = temp[2] * axis[0] + s * axis[1];
-  Rotate[2][1] = temp[2] * axis[1] - s * axis[0];
-  Rotate[2][2] = c + temp[2] * axis[2];
-
-  mat<4, 4, T, Q> Result;
-  Result[0] = m[0] * Rotate[0][0] + m[1] * Rotate[0][1] + m[2] * Rotate[0][2];
-  Result[1] = m[0] * Rotate[1][0] + m[1] * Rotate[1][1] + m[2] * Rotate[1][2];
-  Result[2] = m[0] * Rotate[2][0] + m[1] * Rotate[2][1] + m[2] * Rotate[2][2];
-  Result[3] = m[3];
-  return Result;
- }
-
- template<typename T, qualifier Q>
- inline mat<4, 4, T, Q> rotate_slow(mat<4, 4, T, Q> const& m, T angle, vec<3, T, Q> const& v)
- {
-  T const a = angle;
-  T const c = cos(a);
-  T const s = sin(a);
-  mat<4, 4, T, Q> Result;
-
-  vec<3, T, Q> axis = normalize(v);
-
-  Result[0][0] = c + (static_cast<T>(1) - c) * axis.x * axis.x;
-  Result[0][1] = (static_cast<T>(1) - c) * axis.x * axis.y + s * axis.z;
-  Result[0][2] = (static_cast<T>(1) - c) * axis.x * axis.z - s * axis.y;
-  Result[0][3] = static_cast<T>(0);
-
-  Result[1][0] = (static_cast<T>(1) - c) * axis.y * axis.x - s * axis.z;
-  Result[1][1] = c + (static_cast<T>(1) - c) * axis.y * axis.y;
-  Result[1][2] = (static_cast<T>(1) - c) * axis.y * axis.z + s * axis.x;
-  Result[1][3] = static_cast<T>(0);
-
-  Result[2][0] = (static_cast<T>(1) - c) * axis.z * axis.x + s * axis.y;
-  Result[2][1] = (static_cast<T>(1) - c) * axis.z * axis.y - s * axis.x;
-  Result[2][2] = c + (static_cast<T>(1) - c) * axis.z * axis.z;
-  Result[2][3] = static_cast<T>(0);
-
-  Result[3] = vec<4, T, Q>(0, 0, 0, 1);
-  return m * Result;
- }
-
- template<typename T, qualifier Q>
- inline mat<4, 4, T, Q> scale(mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v)
- {
-  mat<4, 4, T, Q> Result;
-  Result[0] = m[0] * v[0];
-  Result[1] = m[1] * v[1];
-  Result[2] = m[2] * v[2];
-  Result[3] = m[3];
-  return Result;
- }
-
- template<typename T, qualifier Q>
- inline mat<4, 4, T, Q> scale_slow(mat<4, 4, T, Q> const& m, vec<3, T, Q> const& v)
- {
-  mat<4, 4, T, Q> Result(T(1));
-  Result[0][0] = v.x;
-  Result[1][1] = v.y;
-  Result[2][2] = v.z;
-  return m * Result;
- }
-
-    template <typename T, qualifier Q>
-    inline mat<4, 4, T, Q> shear(mat<4, 4, T, Q> const &m, vec<3, T, Q> const& p, vec<2, T, Q> const &l_x, vec<2, T, Q> const &l_y, vec<2, T, Q> const &l_z)
-    {
-        T const lambda_xy = l_x[0];
-        T const lambda_xz = l_x[1];
-        T const lambda_yx = l_y[0];
-        T const lambda_yz = l_y[1];
-        T const lambda_zx = l_z[0];
-        T const lambda_zy = l_z[1];
-
-        vec<3, T, Q> point_lambda = vec<3, T, Q>(
-            (lambda_xy + lambda_xz), (lambda_yx + lambda_yz), (lambda_zx + lambda_zy)
-        );
-
-        mat<4, 4, T, Q> Shear = mat<4, 4, T, Q>(
-            1 , lambda_yx , lambda_zx , 0,
-            lambda_xy , 1 , lambda_zy , 0,
-            lambda_xz , lambda_yz , 1 , 0,
-            -point_lambda[0] * p[0], -point_lambda[1] * p[1], -point_lambda[2] * p[2], 1
-        );
-
-        mat<4, 4, T, Q> Result;
-  Result[0] = m[0] * Shear[0][0] + m[1] * Shear[0][1] + m[2] * Shear[0][2] + m[3] * Shear[0][3];
-  Result[1] = m[0] * Shear[1][0] + m[1] * Shear[1][1] + m[2] * Shear[1][2] + m[3] * Shear[1][3];
-  Result[2] = m[0] * Shear[2][0] + m[1] * Shear[2][1] + m[2] * Shear[2][2] + m[3] * Shear[2][3];
-  Result[3] = m[0] * Shear[3][0] + m[1] * Shear[3][1] + m[2] * Shear[3][2] + m[3] * Shear[3][3];
-        return Result;
-    }
-
-    template <typename T, qualifier Q>
-    inline mat<4, 4, T, Q> shear_slow(mat<4, 4, T, Q> const &m, vec<3, T, Q> const& p, vec<2, T, Q> const &l_x, vec<2, T, Q> const &l_y, vec<2, T, Q> const &l_z)
-    {
-        T const lambda_xy = static_cast<T>(l_x[0]);
-        T const lambda_xz = static_cast<T>(l_x[1]);
-        T const lambda_yx = static_cast<T>(l_y[0]);
-        T const lambda_yz = static_cast<T>(l_y[1]);
-        T const lambda_zx = static_cast<T>(l_z[0]);
-        T const lambda_zy = static_cast<T>(l_z[1]);
-
-        vec<3, T, Q> point_lambda = vec<3, T, Q>(
-            static_cast<T>(lambda_xy + lambda_xz),
-            static_cast<T>(lambda_yx + lambda_yz),
-            static_cast<T>(lambda_zx + lambda_zy)
-        );
-
-        mat<4, 4, T, Q> Shear = mat<4, 4, T, Q>(
-            1 , lambda_yx , lambda_zx , 0,
-            lambda_xy , 1 , lambda_zy , 0,
-            lambda_xz , lambda_yz , 1 , 0,
-            -point_lambda[0] * p[0], -point_lambda[1] * p[1], -point_lambda[2] * p[2], 1
-        );
-        return m * Shear;
-    }
-
- template<typename T, qualifier Q>
- inline mat<4, 4, T, Q> lookAtRH(vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up)
- {
-  vec<3, T, Q> const f(normalize(center - eye));
-  vec<3, T, Q> const s(normalize(cross(f, up)));
-  vec<3, T, Q> const u(cross(s, f));
-
-  mat<4, 4, T, Q> Result(1);
-  Result[0][0] = s.x;
-  Result[1][0] = s.y;
-  Result[2][0] = s.z;
-  Result[0][1] = u.x;
-  Result[1][1] = u.y;
-  Result[2][1] = u.z;
-  Result[0][2] =-f.x;
-  Result[1][2] =-f.y;
-  Result[2][2] =-f.z;
-  Result[3][0] =-dot(s, eye);
-  Result[3][1] =-dot(u, eye);
-  Result[3][2] = dot(f, eye);
-  return Result;
- }
-
- template<typename T, qualifier Q>
- inline mat<4, 4, T, Q> lookAtLH(vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up)
- {
-  vec<3, T, Q> const f(normalize(center - eye));
-  vec<3, T, Q> const s(normalize(cross(up, f)));
-  vec<3, T, Q> const u(cross(f, s));
-
-  mat<4, 4, T, Q> Result(1);
-  Result[0][0] = s.x;
-  Result[1][0] = s.y;
-  Result[2][0] = s.z;
-  Result[0][1] = u.x;
-  Result[1][1] = u.y;
-  Result[2][1] = u.z;
-  Result[0][2] = f.x;
-  Result[1][2] = f.y;
-  Result[2][2] = f.z;
-  Result[3][0] = -dot(s, eye);
-  Result[3][1] = -dot(u, eye);
-  Result[3][2] = -dot(f, eye);
-  return Result;
- }
-
- template<typename T, qualifier Q>
- inline mat<4, 4, T, Q> lookAt(vec<3, T, Q> const& eye, vec<3, T, Q> const& center, vec<3, T, Q> const& up)
- {
-
-
-
-            return lookAtRH(eye, center, up);
-
- }
-}
-# 172 "/usr/include/glm/ext/matrix_transform.hpp" 2 3 4
-# 31 "/usr/include/glm/gtc/matrix_transform.hpp" 2 3 4
 
 
 
@@ -125624,19 +125584,7 @@ namespace glm
 
 # 1 "/usr/include/glm/gtc/matrix_transform.inl" 1 3 4
 # 37 "/usr/include/glm/gtc/matrix_transform.hpp" 2 3 4
-# 11 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
-# 1 "/usr/include/glm/gtc/type_ptr.hpp" 1 3 4
-# 34 "/usr/include/glm/gtc/type_ptr.hpp" 3 4
-       
-
-
-# 1 "/usr/include/glm/gtc/quaternion.hpp" 1 3 4
-# 14 "/usr/include/glm/gtc/quaternion.hpp" 3 4
-       
-
-
-
-
+# 19 "/usr/include/glm/gtc/quaternion.hpp" 2 3 4
 # 1 "/usr/include/glm/ext/vector_relational.hpp" 1 3 4
 # 18 "/usr/include/glm/ext/vector_relational.hpp" 3 4
        
@@ -127371,7 +127319,78 @@ namespace glm
  }
 }
 # 174 "/usr/include/glm/gtc/quaternion.hpp" 2 3 4
-# 38 "/usr/include/glm/gtc/type_ptr.hpp" 2 3 4
+# 13 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Model.h" 2
+
+# 1 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Mesh.h" 1
+# 14 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Mesh.h"
+
+# 14 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Mesh.h"
+struct Vertex {
+    glm::vec3 position;
+    glm::vec3 normal;
+    glm::vec2 texCoords;
+};
+
+class Mesh {
+public:
+    explicit Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures);
+
+    [[nodiscard]] [[maybe_unused]] const std::vector<Vertex>& getVertices() const { return vertices; }
+    [[nodiscard]] [[maybe_unused]] const std::vector<unsigned int>& getIndices() const { return indices; }
+    [[nodiscard]] [[maybe_unused]] const std::vector<Texture>& getTextures() const { return textures; }
+
+    void draw(const Shader& shader) const;
+private:
+    unsigned int VAO{}, VBO{}, EBO{};
+
+    std::vector<Vertex> vertices;
+    std::vector<unsigned int> indices;
+    std::vector<Texture> textures;
+
+    void setupMesh();
+};
+# 15 "/home/cadenv07/CLionProjects/numericore/headers/graphics/models/Model.h" 2
+
+
+class Model {
+public:
+    explicit Model(const char* path) {
+        loadModel(path);
+    }
+    void draw(const Shader& shader) const;
+
+    void translate(const glm::vec3 translation) { model = glm::translate(model, translation); }
+    void scale(const glm::vec3 scale) { model = glm::scale(model, scale); }
+    void rotate(const float angle, const glm::vec3 axis) { model = glm::rotate(model, angle, axis); }
+
+    [[nodiscard]] const std::vector<Texture>& getTextures() const { return textures_loaded; }
+    [[nodiscard]] const glm::mat4& getModelMatrix() const { return model; }
+    [[nodiscard]] const std::vector<Mesh>& getMeshes() const { return meshes; }
+    [[nodiscard]] const std::string& getDirectory() const { return directory; }
+    [[nodiscard]] glm::vec3 getPosition() const { return model[3]; }
+    [[nodiscard]] glm::vec3 getScale() const { return glm::vec3(glm::length(glm::vec3(model[0]))); }
+    [[nodiscard]] glm::vec3 getRotation() const { return glm::eulerAngles(glm::quat_cast(model)); }
+private:
+    std::vector<Texture> textures_loaded;
+    glm::mat4 model = glm::mat4(1.0f);
+    std::vector<Mesh> meshes;
+    std::string directory;
+
+    void loadModel(const std::string& path);
+    void processNode(const aiNode* node, const aiScene* scene);
+    Mesh processMesh(aiMesh* mesh, const aiScene* scene);
+    std::vector<Texture> loadMaterialTextures(const aiMaterial *mat, aiTextureType type, const std::string& typeName);
+};
+# 8 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
+
+
+
+# 1 "/usr/include/glm/gtc/type_ptr.hpp" 1 3 4
+# 34 "/usr/include/glm/gtc/type_ptr.hpp" 3 4
+       
+
+
+
 # 1 "/usr/include/glm/gtc/vec1.hpp" 1 3 4
 # 13 "/usr/include/glm/gtc/vec1.hpp" 3 4
        
@@ -127387,6 +127406,8 @@ namespace glm
 
 
 
+
+# 21 "/usr/include/glm/ext/vector_bool1.hpp" 3 4
 namespace glm
 {
 
@@ -128217,23 +128238,31 @@ public:
         up(up),
         yaw(yaw),
         pitch(pitch),
-        zoom(1.0f) {
+        camZoom(1.0f) {
         updateCameraVectors();
     };
 
     [[nodiscard]] glm::mat4 getViewMatrix() const { return glm::lookAt(position, position + front, up); };
-    [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*zoom), 800.0f / 600.0f, 0.1f, 100.0f); };
+    [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*camZoom), 800.0f / 600.0f, 0.1f, 100.0f); };
+    [[nodiscard]] glm::vec3 getPosition() const { return position; }
+    [[nodiscard]] glm::vec3 getFront() const { return front; }
+    [[nodiscard]] glm::vec3 getUp() const { return up; }
+    [[nodiscard]] glm::vec3 getRight() const { return right; }
+    [[nodiscard]] float getZoom() const { return camZoom; }
+    [[nodiscard]] float getYaw() const { return yaw; }
+    [[nodiscard]] float getPitch() const { return pitch; }
 
     void move(const glm::vec3& direction) { position += direction; }
     void moveForward(const float distance) { position += front * distance; }
     void moveRight(const float distance) { position += right * distance; }
     void moveUp(const float distance) { position += up * distance; }
     void rotate(const float xOffset, const float yOffset) { yaw += xOffset; pitch += yOffset; if (pitch > 89.0f) pitch = 89.0f; if (pitch < -89.0f) pitch = -89.0f; updateCameraVectors(); }
+    void zoom(const float amount) { camZoom += amount; }
 private:
     glm::vec3 position, front{}, up, right{};
     glm::vec3 worldUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
-    float yaw,pitch,movementSpeed{},mouseSensitivity{},zoom;
+    float yaw,pitch,movementSpeed{},mouseSensitivity{},camZoom;
     void updateCameraVectors() {
         glm::vec3 tempFront;
         tempFront.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
@@ -128470,19 +128499,20 @@ int main() {
     }
 
     Texture t("res/textures/texture.jpg");
-    const Shader s("res/shaders/vert/shader.vert", "res/shaders/frag/shader.frag");
+    Shader s("res/shaders/vert/shader.vert", "res/shaders/frag/shader.frag");
+    Shader b("res/shaders/vert/bright.vert", "res/shaders/frag/bright.frag");
 
     Camera camera(glm::vec3(0.0f, 0.0f, 10.0f));
 
     glEnable(
-# 52 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 53 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
             0x0B71
-# 52 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 53 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                          );
     glEnable(
-# 53 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 54 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
             0x0B44
-# 53 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 54 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                         );
 
     Model backpack("res/models/backpack.obj");
@@ -128491,18 +128521,18 @@ int main() {
 
     input.addKeyListener([&](const int key, int, const int action, int) {
         if (key == 
-# 60 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   256 
-# 60 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                   && action == 
-# 60 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                                1
-# 60 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                          )
             glfwSetWindowShouldClose(window, 
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                             1
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                    );
     });
 
@@ -128512,87 +128542,143 @@ int main() {
 
     input.addKeyListener([&](const int key, int, const int action, int) {
         if (key == 
-# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   77 
-# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              && action == 
-# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                           1
-# 69 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                     )
             InputHandler::disableMouse(window);
         if (key == 
-# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   78 
-# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              && action == 
-# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                           1
-# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                     )
             InputHandler::enableMouse(window);
     });
 
+    input.addScrollListener([&](const double x, const double y) {
+        camera.zoom(static_cast<float>(y)*0.08f);
+    });
+
+    Model cube("res/models/cube/cube-tex.obj");
+    cube.translate(glm::vec3(0,0,2));
+
+    glm::vec3 lightColor = glm::vec3(1,1,1);
+
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
         glClear(
-# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                0x00004000 
-# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                    | 
-# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                      0x00000100
-# 77 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                         );
 
         input.beginFrame();
 
         if (input.isDownKey(
-# 81 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 91 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            87
-# 81 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 91 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveForward(.1f);
         if (input.isDownKey(
-# 83 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 93 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            65
-# 83 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 93 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveRight(-.1);
         if (input.isDownKey(
-# 85 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            83
-# 85 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveForward(-.1);
         if (input.isDownKey(
-# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 97 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            68
-# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 97 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveRight(.1);
         if (input.isDownKey(
-# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 99 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            340
-# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 99 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                               ))
             camera.moveUp(-.1);
         if (input.isDownKey(
-# 91 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 101 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            32
-# 91 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 101 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                          ))
             camera.moveUp(.1);
 
-        s.use();
-        glBindTexture(
-# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                     0x0DE1
-# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                  , t.getID());
+        if (input.isDownKey(
+# 104 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           73
+# 104 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            cube.translate(glm::vec3(0,0,-.1));
+        if (input.isDownKey(
+# 106 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           74
+# 106 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            cube.translate(glm::vec3(-.1,0,0));
+        if (input.isDownKey(
+# 108 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           75
+# 108 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            cube.translate(glm::vec3(0,0,.1));
+        if (input.isDownKey(
+# 110 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           76
+# 110 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            cube.translate(glm::vec3(.1,0,0));
+        if (input.isDownKey(
+# 112 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           85
+# 112 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            cube.translate(glm::vec3(0,.1,0));
+        if (input.isDownKey(
+# 114 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                           79
+# 114 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                     ))
+            cube.translate(glm::vec3(0,-.1,0));
+
+        s.setVec3("material.specular", glm::vec3(0.5f, 0.5f, 0.5f));
+        s.setFloat("material.shininess", 32.0f);
+
+        s.setVec3("light.position", cube.getPosition());
+        s.setVec3("light.ambient", glm::vec3(0.2f, 0.2f, 0.2f));
+        s.setVec3("light.diffuse", glm::vec3(0.5f, 0.5f, 0.5f));
+        s.setVec3("light.specular", glm::vec3(1.0f, 1.0f, 1.0f));
+
         s.setMat4("view", camera.getViewMatrix());
         s.setMat4("projection", camera.getProjectionMatrix(45));
+        s.setVec3("lightColor", lightColor);
+        s.setVec3("viewPos", camera.getPosition());
+        b.setMat4("view", camera.getViewMatrix());
+        b.setMat4("projection", camera.getProjectionMatrix(45));
+        b.setVec3("lightColor", lightColor);
+
+
         backpack.draw(s);
+        cube.draw(b);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

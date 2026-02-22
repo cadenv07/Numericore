@@ -75013,6 +75013,8 @@ namespace detail
 # 11 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h"
 class Shader {
 public:
+    inline static unsigned int s_current;
+
     explicit Shader(std::string vertPath, std::string fragPath);
     ~Shader();
 
@@ -75025,8 +75027,13 @@ public:
     void setInt(const std::string &name, int value) const;
     void setFloat(const std::string &name, float value) const;
     void setMat4(const std::string &name, const glm::mat4& m) const;
+    void setVec3(const std::string &name, const glm::vec3& v) const;
+    void setVec4(const std::string &name, const glm::vec4& v) const;
 private:
+    mutable std::unordered_map<std::string, int> uniformLocations;
     unsigned int s_id;
+
+    int getUniformLocation(const char *name) const;
 };
 # 6 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 2
 # 1 "/usr/include/GL/glew.h" 1 3 4
@@ -87635,6 +87642,7 @@ private:
 };
 # 10 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 2
 
+
 Shader::Shader(std::string vertPath, std::string fragPath) {
     const File vertFile(std::move(vertPath));
     const File fragFile(std::move(fragPath));
@@ -87644,140 +87652,157 @@ Shader::Shader(std::string vertPath, std::string fragPath) {
 
     const char* vertSource = vertCode.c_str();
     const GLuint vertexShader = 
-# 19 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 20 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
                                __glewCreateShader
-# 19 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 20 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                                              (
-# 19 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 20 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
                                               0x8B31
-# 19 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 20 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                                                               );
     
-# 20 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 21 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewShaderSource
-# 20 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 21 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                  (vertexShader, 1, &vertSource, nullptr);
     
-# 21 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 22 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewCompileShader
-# 21 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 22 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                   (vertexShader);
 
     const char* fragSource = fragCode.c_str();
     const GLuint fragmentShader = 
-# 24 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 25 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
                                  __glewCreateShader
-# 24 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 25 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                                                (
-# 24 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 25 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
                                                 0x8B30
-# 24 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 25 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                                                                   );
     
-# 25 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 26 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewShaderSource
-# 25 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 26 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                  (fragmentShader, 1, &fragSource, nullptr);
     
-# 26 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 27 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewCompileShader
-# 26 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 27 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                   (fragmentShader);
 
     s_id = 
-# 28 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-          __glewCreateProgram
-# 28 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                         ();
-    
 # 29 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-   __glewAttachShader
+          __glewCreateProgram
 # 29 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                 (s_id, vertexShader);
+                         ();
     
 # 30 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewAttachShader
 # 30 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                 (s_id, fragmentShader);
+                 (s_id, vertexShader);
     
 # 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-   __glewLinkProgram
+   __glewAttachShader
 # 31 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+                 (s_id, fragmentShader);
+    
+# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+   __glewLinkProgram
+# 32 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                 (s_id);
 
-    
-# 33 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-   __glewDeleteShader
-# 33 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                 (vertexShader);
     
 # 34 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewDeleteShader
 # 34 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+                 (vertexShader);
+    
+# 35 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+   __glewDeleteShader
+# 35 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                  (fragmentShader);
 }
 
 Shader::~Shader() {
     
-# 38 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 39 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewDeleteProgram
-# 38 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 39 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                   (s_id);
 }
 
 void Shader::use() const {
+    if (s_id == s_current) return;
     
-# 42 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 44 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewUseProgram
-# 42 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+# 44 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
                (s_id);
+    s_current = s_id;
 }
 
 void Shader::setBool(const std::string &name, const bool value) const {
+    use();
     
-# 46 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 50 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewUniform1i
-# 46 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-              (
-# 46 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-               __glewGetUniformLocation
-# 46 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                                   (s_id, name.c_str()), value);
+# 50 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+              (getUniformLocation(name.c_str()), value);
 }
 void Shader::setInt(const std::string &name, const int value) const {
+    use();
     
-# 49 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 54 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewUniform1i
-# 49 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-              (
-# 49 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-               __glewGetUniformLocation
-# 49 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                                   (s_id, name.c_str()), value);
+# 54 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+              (getUniformLocation(name.c_str()), value);
 }
 void Shader::setFloat(const std::string &name, const float value) const {
+    use();
     
-# 52 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 58 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewUniform1f
-# 52 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-              (
-# 52 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-               __glewGetUniformLocation
-# 52 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                                   (s_id, name.c_str()), value);
+# 58 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+              (getUniformLocation(name.c_str()), value);
 }
 void Shader::setMat4(const std::string &name, const glm::mat4 &m) const {
+    use();
     
-# 55 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+# 62 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
    __glewUniformMatrix4fv
-# 55 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                     (
-# 55 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-                      __glewGetUniformLocation
-# 55 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                                          (s_id, name.c_str()), 1, 
-# 55 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
-                                                                   0
-# 55 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
-                                                                           , glm::value_ptr(m));
+# 62 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+                     (getUniformLocation(name.c_str()), 1, 
+# 62 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+                                                           0
+# 62 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+                                                                   , glm::value_ptr(m));
+}
+void Shader::setVec3(const std::string &name, const glm::vec3 &v) const {
+    use();
+    
+# 66 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+   __glewUniform3fv
+# 66 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+               (getUniformLocation(name.c_str()), 1, glm::value_ptr(v));
+}
+void Shader::setVec4(const std::string &name, const glm::vec4 &v) const {
+    use();
+    
+# 70 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+   __glewUniform4fv
+# 70 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+               (getUniformLocation(name.c_str()), 1, glm::value_ptr(v));
+}
+
+int Shader::getUniformLocation(const char *name) const {
+    if (uniformLocations.contains(name))
+        return uniformLocations.at(name);
+    uniformLocations[name] = 
+# 76 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp" 3 4
+                            __glewGetUniformLocation
+# 76 "/home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp"
+                                                (s_id, name);
+    return uniformLocations.at(name);
 }

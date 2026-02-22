@@ -18,23 +18,31 @@ public:
         up(up),
         yaw(yaw),
         pitch(pitch),
-        zoom(1.0f) {
+        camZoom(1.0f) {
         updateCameraVectors();
     };
 
     [[nodiscard]] glm::mat4 getViewMatrix() const { return glm::lookAt(position, position + front, up); };
-    [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*zoom), 800.0f / 600.0f, 0.1f, 100.0f); };
+    [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*camZoom), 800.0f / 600.0f, 0.1f, 100.0f); };
+    [[nodiscard]] glm::vec3 getPosition() const { return position; }
+    [[nodiscard]] glm::vec3 getFront() const { return front; }
+    [[nodiscard]] glm::vec3 getUp() const { return up; }
+    [[nodiscard]] glm::vec3 getRight() const { return right; }
+    [[nodiscard]] float getZoom() const { return camZoom; }
+    [[nodiscard]] float getYaw() const { return yaw; }
+    [[nodiscard]] float getPitch() const { return pitch; }
 
     void move(const glm::vec3& direction) { position += direction; }
     void moveForward(const float distance) { position += front * distance; }
     void moveRight(const float distance) { position += right * distance; }
     void moveUp(const float distance) { position += up * distance; }
     void rotate(const float xOffset, const float yOffset) { yaw += xOffset; pitch += yOffset; if (pitch > 89.0f) pitch = 89.0f; if (pitch < -89.0f) pitch = -89.0f; updateCameraVectors(); }
+    void zoom(const float amount) { camZoom += amount; }
 private:
     glm::vec3 position, front{}, up, right{};
     glm::vec3 worldUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
-    float yaw,pitch,movementSpeed{},mouseSensitivity{},zoom;
+    float yaw,pitch,movementSpeed{},mouseSensitivity{},camZoom;
     void updateCameraVectors() {
         glm::vec3 tempFront;
         tempFront.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));

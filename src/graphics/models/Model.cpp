@@ -12,6 +12,7 @@
 #include <ostream>
 
 void Model::draw(const Shader& shader) const {
+    shader.use();
     shader.setMat4("model", model);
     for (const Mesh& mesh : meshes) {
         mesh.draw(shader);

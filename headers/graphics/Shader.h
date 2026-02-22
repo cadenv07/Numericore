@@ -10,6 +10,8 @@
 
 class Shader {
 public:
+    inline static unsigned int s_current;
+
     explicit Shader(std::string vertPath, std::string fragPath);
     ~Shader();
 
@@ -22,8 +24,13 @@ public:
     void setInt(const std::string &name, int value) const;
     void setFloat(const std::string &name, float value) const;
     void setMat4(const std::string &name, const glm::mat4& m) const;
+    void setVec3(const std::string &name, const glm::vec3& v) const;
+    void setVec4(const std::string &name, const glm::vec4& v) const;
 private:
+    mutable std::unordered_map<std::string, int> uniformLocations;
     unsigned int s_id;
+
+    int getUniformLocation(const char *name) const;
 };
 
 #endif //NUMERICORE_SHADER_H

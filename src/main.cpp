@@ -45,7 +45,8 @@ int main() {
     }
 
     Texture t("res/textures/texture.jpg");
-    const Shader s("res/shaders/vert/shader.vert", "res/shaders/frag/shader.frag");
+    Shader s("res/shaders/vert/shader.vert", "res/shaders/frag/shader.frag");
+    Shader b("res/shaders/vert/bright.vert", "res/shaders/frag/bright.frag");
 
     Camera camera(glm::vec3(0.0f, 0.0f, 10.0f));
 
@@ -72,6 +73,15 @@ int main() {
             InputHandler::enableMouse(window);
     });
 
+    input.addScrollListener([&](const double x, const double y) {
+        camera.zoom(static_cast<float>(y)*0.08f);
+    });
+
+    Model cube("res/models/cube/cube-tex.obj");
+    cube.translate(glm::vec3(0,0,2));
+
+    glm::vec3 lightColor = glm::vec3(1,1,1);
+
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -91,11 +101,38 @@ int main() {
         if (input.isDownKey(GLFW_KEY_SPACE))
             camera.moveUp(.1);
 
-        s.use();
-        glBindTexture(GL_TEXTURE_2D, t.getID());
+        if (input.isDownKey(GLFW_KEY_I))
+            cube.translate(glm::vec3(0,0,-.1));
+        if (input.isDownKey(GLFW_KEY_J))
+            cube.translate(glm::vec3(-.1,0,0));
+        if (input.isDownKey(GLFW_KEY_K))
+            cube.translate(glm::vec3(0,0,.1));
+        if (input.isDownKey(GLFW_KEY_L))
+            cube.translate(glm::vec3(.1,0,0));
+        if (input.isDownKey(GLFW_KEY_U))
+            cube.translate(glm::vec3(0,.1,0));
+        if (input.isDownKey(GLFW_KEY_O))
+            cube.translate(glm::vec3(0,-.1,0));
+
+        s.setVec3("material.specular", glm::vec3(0.5f, 0.5f, 0.5f));
+        s.setFloat("material.shininess", 32.0f);
+
+        s.setVec3("light.position", cube.getPosition());
+        s.setVec3("light.ambient",  glm::vec3(0.2f, 0.2f, 0.2f));
+        s.setVec3("light.diffuse",  glm::vec3(0.5f, 0.5f, 0.5f));
+        s.setVec3("light.specular", glm::vec3(1.0f, 1.0f, 1.0f));
+
         s.setMat4("view", camera.getViewMatrix());
         s.setMat4("projection", camera.getProjectionMatrix(45));
+        s.setVec3("lightColor", lightColor);
+        s.setVec3("viewPos", camera.getPosition());
+        b.setMat4("view", camera.getViewMatrix());
+        b.setMat4("projection", camera.getProjectionMatrix(45));
+        b.setVec3("lightColor", lightColor);
+
+        // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         backpack.draw(s);
+        cube.draw(b);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

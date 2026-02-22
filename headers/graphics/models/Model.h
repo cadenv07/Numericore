@@ -8,6 +8,8 @@
 #include <glm/glm.hpp>
 
 #include <assimp/scene.h>
+#include <glm/ext/matrix_transform.hpp>
+#include <glm/gtc/quaternion.hpp>
 
 #include "Mesh.h"
 #include "graphics/Shader.h"
@@ -18,6 +20,18 @@ public:
         loadModel(path);
     }
     void draw(const Shader& shader) const;
+
+    void translate(const glm::vec3 translation) { model = glm::translate(model, translation); }
+    void scale(const glm::vec3 scale) { model = glm::scale(model, scale); }
+    void rotate(const float angle, const glm::vec3 axis) { model = glm::rotate(model, angle, axis); }
+
+    [[nodiscard]] const std::vector<Texture>& getTextures() const { return textures_loaded; }
+    [[nodiscard]] const glm::mat4& getModelMatrix() const { return model; }
+    [[nodiscard]] const std::vector<Mesh>& getMeshes() const { return meshes; }
+    [[nodiscard]] const std::string& getDirectory() const { return directory; }
+    [[nodiscard]] glm::vec3 getPosition() const { return model[3]; }
+    [[nodiscard]] glm::vec3 getScale() const { return glm::vec3(glm::length(glm::vec3(model[0]))); }
+    [[nodiscard]] glm::vec3 getRotation() const { return glm::eulerAngles(glm::quat_cast(model)); }
 private:
     std::vector<Texture> textures_loaded;
     glm::mat4 model = glm::mat4(1.0f);

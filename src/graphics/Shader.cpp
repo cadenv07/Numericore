@@ -8,6 +8,7 @@
 
 #include "util/File.h"
 
+
 Shader::Shader(std::string vertPath, std::string fragPath) {
     const File vertFile(std::move(vertPath));
     const File fragFile(std::move(fragPath));
@@ -39,18 +40,39 @@ Shader::~Shader() {
 }
 
 void Shader::use() const {
+    if (s_id == s_current) return;
     glUseProgram(s_id);
+    s_current = s_id;
 }
 
 void Shader::setBool(const std::string &name, const bool value) const {
-    glUniform1i(glGetUniformLocation(s_id, name.c_str()), value);
+    use();
+    glUniform1i(getUniformLocation(name.c_str()), value);
 }
 void Shader::setInt(const std::string &name, const int value) const {
-    glUniform1i(glGetUniformLocation(s_id, name.c_str()), value);
+    use();
+    glUniform1i(getUniformLocation(name.c_str()), value);
 }
 void Shader::setFloat(const std::string &name, const float value) const {
-    glUniform1f(glGetUniformLocation(s_id, name.c_str()), value);
+    use();
+    glUniform1f(getUniformLocation(name.c_str()), value);
 }
 void Shader::setMat4(const std::string &name, const glm::mat4 &m) const {
-    glUniformMatrix4fv(glGetUniformLocation(s_id, name.c_str()), 1, GL_FALSE, glm::value_ptr(m));
+    use();
+    glUniformMatrix4fv(getUniformLocation(name.c_str()), 1, GL_FALSE, glm::value_ptr(m));
+}
+void Shader::setVec3(const std::string &name, const glm::vec3 &v) const {
+    use();
+    glUniform3fv(getUniformLocation(name.c_str()), 1, glm::value_ptr(v));
+}
+void Shader::setVec4(const std::string &name, const glm::vec4 &v) const {
+    use();
+    glUniform4fv(getUniformLocation(name.c_str()), 1, glm::value_ptr(v));
+}
+
+int Shader::getUniformLocation(const char *name) const {
+    if (uniformLocations.contains(name))
+        return uniformLocations.at(name);
+    uniformLocations[name] = glGetUniformLocation(s_id, name);
+    return uniformLocations.at(name);
 }
