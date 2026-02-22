@@ -28,8 +28,8 @@ assimp provides pkg-config modules:
   # Import various well-known 3D model formats in an uniform manner.
   assimp
 
-All requested installations completed successfully in: 117 us
+All requested installations completed successfully in: 92.6 us
 -- Running vcpkg install - done
--- Configuring done (1.0s)
+-- Configuring done (0.9s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/cadenv07/CLionProjects/numericore/cmake-build-debug

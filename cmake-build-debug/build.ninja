@@ -55,6 +55,26 @@ build copy_resources: phony CMakeFiles/copy_resources
 
 build cmake_object_order_depends_target_numericore: phony || copy_resources
 
+build CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.ddi: CXX_SCAN__numericore_Debug /home/cadenv07/CLionProjects/numericore/src/graphics/Light.cpp || cmake_object_order_depends_target_numericore
+  DEFINES = -DFMT_SHARED
+  DEP_FILE = CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/cadenv07/CLionProjects/numericore/headers -isystem /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include
+  OBJ_FILE = CMakeFiles/numericore.dir/src/graphics/Light.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.ddi.i
+
+build CMakeFiles/numericore.dir/src/graphics/Light.cpp.o: CXX_COMPILER__numericore_scanned_Debug /home/cadenv07/CLionProjects/numericore/src/graphics/Light.cpp | CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.modmap || cmake_object_order_depends_target_numericore CMakeFiles/numericore.dir/CXX.dd
+  CONFIG = Debug
+  DEFINES = -DFMT_SHARED
+  DEP_FILE = CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/cadenv07/CLionProjects/numericore/headers -isystem /home/cadenv07/CLionProjects/numericore/cmake-build-debug/vcpkg_installed/x64-linux/include
+  OBJECT_DIR = CMakeFiles/numericore.dir
+  OBJECT_FILE_DIR = CMakeFiles/numericore.dir/src/graphics
+  dyndep = CMakeFiles/numericore.dir/CXX.dd
+
 build CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o.ddi: CXX_SCAN__numericore_Debug /home/cadenv07/CLionProjects/numericore/src/graphics/Shader.cpp || cmake_object_order_depends_target_numericore
   DEFINES = -DFMT_SHARED
   DEP_FILE = CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o.ddi.d
@@ -175,7 +195,7 @@ build CMakeFiles/numericore.dir/src/util/File.cpp.o: CXX_COMPILER__numericore_sc
   OBJECT_FILE_DIR = CMakeFiles/numericore.dir/src/util
   dyndep = CMakeFiles/numericore.dir/CXX.dd
 
-build CMakeFiles/numericore.dir/CXX.dd | CMakeFiles/numericore.dir/CXXModules.json CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o.modmap CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o.modmap CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o.modmap CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o.modmap CMakeFiles/numericore.dir/src/main.cpp.o.modmap CMakeFiles/numericore.dir/src/util/File.cpp.o.modmap: CXX_DYNDEP__numericore_Debug CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o.ddi CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o.ddi CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o.ddi CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o.ddi CMakeFiles/numericore.dir/src/main.cpp.o.ddi CMakeFiles/numericore.dir/src/util/File.cpp.o.ddi | /home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/numericore.dir/CXXDependInfo.json
+build CMakeFiles/numericore.dir/CXX.dd | CMakeFiles/numericore.dir/CXXModules.json CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.modmap CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o.modmap CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o.modmap CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o.modmap CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o.modmap CMakeFiles/numericore.dir/src/main.cpp.o.modmap CMakeFiles/numericore.dir/src/util/File.cpp.o.modmap: CXX_DYNDEP__numericore_Debug CMakeFiles/numericore.dir/src/graphics/Light.cpp.o.ddi CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o.ddi CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o.ddi CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o.ddi CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o.ddi CMakeFiles/numericore.dir/src/main.cpp.o.ddi CMakeFiles/numericore.dir/src/util/File.cpp.o.ddi | /home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/numericore.dir/CXXDependInfo.json
 
 
 # =============================================================================
@@ -185,7 +205,7 @@ build CMakeFiles/numericore.dir/CXX.dd | CMakeFiles/numericore.dir/CXXModules.js
 #############################################
 # Link the executable numericore
 
-build numericore: CXX_EXECUTABLE_LINKER__numericore_Debug CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o CMakeFiles/numericore.dir/src/main.cpp.o CMakeFiles/numericore.dir/src/util/File.cpp.o | /usr/lib/libGLEW.so /usr/lib/libfmt.so.12.1.0 /usr/lib/libGLEW.so /usr/lib/libglfw.so.3.4 /usr/lib/libglm.a vcpkg_installed/x64-linux/debug/lib/libassimpd.a /usr/lib/libGLX.so /usr/lib/libOpenGL.so vcpkg_installed/x64-linux/debug/lib/libpolyclipping.a vcpkg_installed/x64-linux/debug/lib/libpoly2tri.a vcpkg_installed/x64-linux/debug/lib/libminizip.a vcpkg_installed/x64-linux/debug/lib/libz.a vcpkg_installed/x64-linux/debug/lib/libpugixml.a vcpkg_installed/x64-linux/debug/lib/libkubazip.a || copy_resources
+build numericore: CXX_EXECUTABLE_LINKER__numericore_Debug CMakeFiles/numericore.dir/src/graphics/Light.cpp.o CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o CMakeFiles/numericore.dir/src/graphics/models/Mesh.cpp.o CMakeFiles/numericore.dir/src/graphics/models/Model.cpp.o CMakeFiles/numericore.dir/src/main.cpp.o CMakeFiles/numericore.dir/src/util/File.cpp.o | /usr/lib/libGLEW.so /usr/lib/libfmt.so.12.1.0 /usr/lib/libGLEW.so /usr/lib/libglfw.so.3.4 /usr/lib/libglm.a vcpkg_installed/x64-linux/debug/lib/libassimpd.a /usr/lib/libGLX.so /usr/lib/libOpenGL.so vcpkg_installed/x64-linux/debug/lib/libpolyclipping.a vcpkg_installed/x64-linux/debug/lib/libpoly2tri.a vcpkg_installed/x64-linux/debug/lib/libminizip.a vcpkg_installed/x64-linux/debug/lib/libz.a vcpkg_installed/x64-linux/debug/lib/libpugixml.a vcpkg_installed/x64-linux/debug/lib/libkubazip.a || copy_resources
   CONFIG = Debug
   DEP_FILE = CMakeFiles/numericore.dir/link.d
   FLAGS = -g

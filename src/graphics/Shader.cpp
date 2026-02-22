@@ -3,6 +3,8 @@
 //
 
 #include "graphics/Shader.h"
+
+#include <iostream>
 #include <GL/glew.h>
 #include <glm/gtc/type_ptr.hpp>
 
@@ -16,20 +18,38 @@ Shader::Shader(std::string vertPath, std::string fragPath) {
     const std::string vertCode = vertFile.readFile();
     const std::string fragCode = fragFile.readFile();
 
+    int success;
+    char infoLog[512];
+
     const char* vertSource = vertCode.c_str();
     const GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertSource, nullptr);
     glCompileShader(vertexShader);
+    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+    if(!success) {
+        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+    }
 
     const char* fragSource = fragCode.c_str();
     const GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragmentShader, 1, &fragSource, nullptr);
     glCompileShader(fragmentShader);
+    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+    if(!success) {
+        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+    }
 
     s_id = glCreateProgram();
     glAttachShader(s_id, vertexShader);
     glAttachShader(s_id, fragmentShader);
     glLinkProgram(s_id);
+    glGetProgramiv(s_id, GL_LINK_STATUS, &success);
+    if(!success) {
+        glGetProgramInfoLog(s_id, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+    }
 
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
@@ -73,6 +93,18 @@ void Shader::setVec4(const std::string &name, const glm::vec4 &v) const {
 int Shader::getUniformLocation(const char *name) const {
     if (uniformLocations.contains(name))
         return uniformLocations.at(name);
-    uniformLocations[name] = glGetUniformLocation(s_id, name);
-    return uniformLocations.at(name);
+
+    int location = glGetUniformLocation(s_id, name);
+
+    if (location == -1) {
+        std::cerr << "[Shader] Warning: Uniform '"
+                  << name
+                  << "' not found in shader (ID: "
+                  << s_id
+                  << ")"
+                  << std::endl;
+    }
+
+    uniformLocations[name] = location;
+    return location;
 }

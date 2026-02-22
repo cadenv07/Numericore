@@ -15,15 +15,15 @@ public:
         float yaw = -90.0f,
         float pitch = 0.0f):
         position(position),
-        up(up),
+        worldUp(up),
         yaw(yaw),
         pitch(pitch),
         camZoom(1.0f) {
         updateCameraVectors();
     };
 
-    [[nodiscard]] glm::mat4 getViewMatrix() const { return glm::lookAt(position, position + front, up); };
-    [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*camZoom), 800.0f / 600.0f, 0.1f, 100.0f); };
+    [[nodiscard]] glm::mat4 getViewMatrix() const { return glm::lookAt(position, position + front, worldUp); };
+    [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*camZoom), 16.0f / 9.0f, 0.1f, 100.0f); };
     [[nodiscard]] glm::vec3 getPosition() const { return position; }
     [[nodiscard]] glm::vec3 getFront() const { return front; }
     [[nodiscard]] glm::vec3 getUp() const { return up; }

@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 4.1)
 project(numericore)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(OpenGL REQUIRED)
 find_package(fmt CONFIG REQUIRED)
@@ -32,13 +33,7 @@ add_custom_target(copy_resources ALL
         ${CMAKE_BINARY_DIR}/res
 )
 
-add_executable(numericore ${SOURCES} ${HEADERS}
-        headers/graphics/Camera.h
-        headers/graphics/models/Mesh.h
-        src/graphics/models/Mesh.cpp
-        headers/graphics/models/Model.h
-        src/graphics/models/Model.cpp
-        headers/util/InputHandler.h)
+add_executable(numericore ${SOURCES} ${HEADERS})
 
 target_include_directories(numericore PRIVATE
         "${CMAKE_SOURCE_DIR}/headers"

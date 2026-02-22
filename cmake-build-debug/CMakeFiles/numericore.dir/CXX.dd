@@ -1,4 +1,6 @@
 ninja_dyndep_version = 1.0
+build CMakeFiles/numericore.dir/src/graphics/Light.cpp.o: dyndep
+
 build CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o: dyndep
 
 build CMakeFiles/numericore.dir/src/graphics/Texture.cpp.o: dyndep

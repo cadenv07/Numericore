@@ -128235,15 +128235,15 @@ public:
         float yaw = -90.0f,
         float pitch = 0.0f):
         position(position),
-        up(up),
+        worldUp(up),
         yaw(yaw),
         pitch(pitch),
         camZoom(1.0f) {
         updateCameraVectors();
     };
 
-    [[nodiscard]] glm::mat4 getViewMatrix() const { return glm::lookAt(position, position + front, up); };
-    [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*camZoom), 800.0f / 600.0f, 0.1f, 100.0f); };
+    [[nodiscard]] glm::mat4 getViewMatrix() const { return glm::lookAt(position, position + front, worldUp); };
+    [[nodiscard]] glm::mat4 getProjectionMatrix(const float fov) const { return glm::perspective<float>(glm::radians(fov*camZoom), 16.0f / 9.0f, 0.1f, 100.0f); };
     [[nodiscard]] glm::vec3 getPosition() const { return position; }
     [[nodiscard]] glm::vec3 getFront() const { return front; }
     [[nodiscard]] glm::vec3 getUp() const { return up; }
@@ -128274,6 +128274,63 @@ private:
     }
 };
 # 14 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
+# 1 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Light.h" 1
+# 9 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Light.h"
+# 1 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Shader.h" 1
+# 10 "/home/cadenv07/CLionProjects/numericore/headers/graphics/Light.h" 2
+
+class Light {
+public:
+    constexpr static int DIRECTIONAL = 1;
+    constexpr static int POINT = 2;
+    constexpr static int SPOT = 3;
+
+    inline static int numLights = 0;
+
+    struct LightConfig {
+        glm::vec3 position = glm::vec3(0.0f, -1.0f, 0.0f);
+        glm::vec3 direction = glm::vec3(0.0f, -1.0f, 0.0f);
+        glm::vec3 ambient{0.2f};
+        glm::vec3 diffuse{0.5f};
+        glm::vec3 specular{1.0f};
+        glm::vec3 color{1.0f};
+        float cutOff{glm::cos(glm::radians(12.5f))};
+        float outerCutoff{glm::cos(glm::radians(17.5f))};
+
+        float constant = 1.0f;
+        float linear = 0.09f;
+        float quadratic = 0.032f;
+
+        int type = 0;
+    };
+
+    explicit Light(int type = DIRECTIONAL): config({.type = type }), id(numLights++) {}
+    explicit Light(const LightConfig& cfg): config(cfg), id(numLights++) {}
+    ~Light() = default;
+
+    [[nodiscard]] const LightConfig& getConfig() const { return config; }
+    [[nodiscard]] int getId() const { return id; }
+
+    void setPosition(const glm::vec3& pos) { config.position = pos; }
+    void setDirection(const glm::vec3& dir) { config.direction = dir; }
+    void setColor(const glm::vec3& color) { config.color = color; }
+    void setCutOff(const float cutOff) { config.cutOff = glm::cos(glm::radians(cutOff)); }
+    void setOuterCutOff(const float outerCutOff) { config.outerCutoff = glm::cos(glm::radians(outerCutOff)); }
+    void setConstant(const float constant) { config.constant = constant; }
+    void setLinear(const float linear) { config.linear = linear; }
+    void setQuadratic(const float quadratic) { config.quadratic = quadratic; }
+    void setType(const int type) { config.type = type; }
+
+    void setAmbient(const glm::vec3& ambient) { config.ambient = ambient; }
+    void setDiffuse(const glm::vec3& diffuse) { config.diffuse = diffuse; }
+    void setSpecular(const glm::vec3& specular) { config.specular = specular; }
+
+    void apply(const Shader& shader) const;
+private:
+    LightConfig config;
+    int id = 0;
+};
+# 15 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
 # 1 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h" 1
 # 12 "/home/cadenv07/CLionProjects/numericore/headers/util/InputHandler.h"
 class InputHandler {
@@ -128429,20 +128486,20 @@ private:
         for (auto& fn : charListeners) fn(codepoint);
     }
 };
-# 15 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
+# 16 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 2
 
 int main() {
     std::printf("DISPLAY=%s\n", std::getenv("DISPLAY"));
     std::printf("XAUTHORITY=%s\n", std::getenv("XAUTHORITY"));
 
     glfwInitHint(
-# 20 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 21 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                 0x00050003
-# 20 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 21 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              , 
-# 20 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 21 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                0x00060004
-# 20 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 21 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                 );
 
     if (!glfwInit()) {
@@ -128451,26 +128508,26 @@ int main() {
     }
 
     glfwWindowHint(
-# 27 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                  0x00022002
-# 27 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
-                                            , 3);
-    glfwWindowHint(
 # 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
-                  0x00022003
+                  0x00022002
 # 28 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                             , 3);
     glfwWindowHint(
 # 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+                  0x00022003
+# 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+                                            , 3);
+    glfwWindowHint(
+# 30 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   0x00022008
-# 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 30 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      , 
-# 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 30 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                        0x00032001
-# 29 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 30 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                                );
 
-    GLFWwindow* window = glfwCreateWindow(800,600,"Numericore", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(2560,1440,"Numericore", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create GLFW3" << std::endl;
         glfwTerminate();
@@ -128480,20 +128537,20 @@ int main() {
     glfwMakeContextCurrent(window);
 
     glewExperimental = 
-# 40 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 41 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                       1
-# 40 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 41 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              ;
     GLenum err = glewInit();
     if (err != 
-# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
               0
-# 42 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                      ) {
         fprintf(
-# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 44 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                stderr
-# 43 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 44 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                      , "GLEW init failed: %s\n", glewGetErrorString(err));
         return -1;
     }
@@ -128505,14 +128562,14 @@ int main() {
     Camera camera(glm::vec3(0.0f, 0.0f, 10.0f));
 
     glEnable(
-# 53 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 54 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
             0x0B71
-# 53 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 54 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                          );
     glEnable(
-# 54 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 55 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
             0x0B44
-# 54 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 55 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                         );
 
     Model backpack("res/models/backpack.obj");
@@ -128521,18 +128578,18 @@ int main() {
 
     input.addKeyListener([&](const int key, int, const int action, int) {
         if (key == 
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   256 
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                   && action == 
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                                1
-# 61 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                          )
             glfwSetWindowShouldClose(window, 
-# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 63 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                             1
-# 62 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 63 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                    );
     });
 
@@ -128542,23 +128599,23 @@ int main() {
 
     input.addKeyListener([&](const int key, int, const int action, int) {
         if (key == 
-# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   77 
-# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              && action == 
-# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                           1
-# 70 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 71 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                     )
             InputHandler::disableMouse(window);
         if (key == 
-# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 73 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                   78 
-# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 73 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                              && action == 
-# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 73 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                           1
-# 72 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 73 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                     )
             InputHandler::enableMouse(window);
     });
@@ -128570,111 +128627,109 @@ int main() {
     Model cube("res/models/cube/cube-tex.obj");
     cube.translate(glm::vec3(0,0,2));
 
-    glm::vec3 lightColor = glm::vec3(1,1,1);
+
+    Light sl({ .position = camera.getPosition(), .direction = camera.getFront(), .type = Light::SPOT });
 
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
         glClear(
-# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                0x00004000 
-# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                    | 
-# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                                      0x00000100
-# 87 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 89 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                                         );
 
         input.beginFrame();
 
         if (input.isDownKey(
-# 91 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 93 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            87
-# 91 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 93 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveForward(.1f);
         if (input.isDownKey(
-# 93 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            65
-# 93 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveRight(-.1);
         if (input.isDownKey(
-# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 97 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            83
-# 95 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 97 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveForward(-.1);
         if (input.isDownKey(
-# 97 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 99 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            68
-# 97 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 99 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             camera.moveRight(.1);
         if (input.isDownKey(
-# 99 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 101 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            340
-# 99 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 101 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                               ))
             camera.moveUp(-.1);
         if (input.isDownKey(
-# 101 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 103 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            32
-# 101 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 103 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                          ))
             camera.moveUp(.1);
 
         if (input.isDownKey(
-# 104 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 106 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            73
-# 104 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 106 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             cube.translate(glm::vec3(0,0,-.1));
         if (input.isDownKey(
-# 106 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 108 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            74
-# 106 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 108 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             cube.translate(glm::vec3(-.1,0,0));
         if (input.isDownKey(
-# 108 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 110 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            75
-# 108 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 110 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             cube.translate(glm::vec3(0,0,.1));
         if (input.isDownKey(
-# 110 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 112 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            76
-# 110 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 112 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             cube.translate(glm::vec3(.1,0,0));
         if (input.isDownKey(
-# 112 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 114 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            85
-# 112 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 114 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             cube.translate(glm::vec3(0,.1,0));
         if (input.isDownKey(
-# 114 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
+# 116 "/home/cadenv07/CLionProjects/numericore/src/main.cpp" 3 4
                            79
-# 114 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
+# 116 "/home/cadenv07/CLionProjects/numericore/src/main.cpp"
                                      ))
             cube.translate(glm::vec3(0,-.1,0));
 
-        s.setVec3("material.specular", glm::vec3(0.5f, 0.5f, 0.5f));
         s.setFloat("material.shininess", 32.0f);
 
-        s.setVec3("light.position", cube.getPosition());
-        s.setVec3("light.ambient", glm::vec3(0.2f, 0.2f, 0.2f));
-        s.setVec3("light.diffuse", glm::vec3(0.5f, 0.5f, 0.5f));
-        s.setVec3("light.specular", glm::vec3(1.0f, 1.0f, 1.0f));
+        sl.setPosition(camera.getPosition());
+        sl.setDirection(camera.getFront());
+        sl.apply(s);
 
         s.setMat4("view", camera.getViewMatrix());
         s.setMat4("projection", camera.getProjectionMatrix(45));
-        s.setVec3("lightColor", lightColor);
         s.setVec3("viewPos", camera.getPosition());
         b.setMat4("view", camera.getViewMatrix());
         b.setMat4("projection", camera.getProjectionMatrix(45));
-        b.setVec3("lightColor", lightColor);
+        b.setVec3("lightColor", sl.getConfig().color);
 
 
         backpack.draw(s);

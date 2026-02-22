@@ -26,4 +26,4 @@ assimp provides pkg-config modules:
   # Import various well-known 3D model formats in an uniform manner.
   assimp
 
-All requested installations completed successfully in: 117 us
+All requested installations completed successfully in: 92.6 us

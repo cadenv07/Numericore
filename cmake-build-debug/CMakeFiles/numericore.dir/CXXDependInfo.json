@@ -22,6 +22,11 @@
 	"module-dir" : "/home/cadenv07/CLionProjects/numericore/cmake-build-debug/CMakeFiles/numericore.dir",
 	"sources" : 
 	{
+		"CMakeFiles/numericore.dir/src/graphics/Light.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/cadenv07/CLionProjects/numericore/src/graphics/Light.cpp"
+		},
 		"CMakeFiles/numericore.dir/src/graphics/Shader.cpp.o" : 
 		{
 			"language" : "CXX",

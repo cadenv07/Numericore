@@ -11,6 +11,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "graphics/Camera.h"
+#include "graphics/Light.h"
 #include "util/InputHandler.h"
 
 int main() {
@@ -28,7 +29,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(800,600,"Numericore", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(2560,1440,"Numericore", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create GLFW3" << std::endl;
         glfwTerminate();
@@ -80,7 +81,8 @@ int main() {
     Model cube("res/models/cube/cube-tex.obj");
     cube.translate(glm::vec3(0,0,2));
 
-    glm::vec3 lightColor = glm::vec3(1,1,1);
+    //PointLight dl({ .position = cube.getPosition() });
+    Light sl({ .position = camera.getPosition(), .direction = camera.getFront(), .type = Light::SPOT });
 
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0,0,0,1);
@@ -114,21 +116,18 @@ int main() {
         if (input.isDownKey(GLFW_KEY_O))
             cube.translate(glm::vec3(0,-.1,0));
 
-        s.setVec3("material.specular", glm::vec3(0.5f, 0.5f, 0.5f));
         s.setFloat("material.shininess", 32.0f);
 
-        s.setVec3("light.position", cube.getPosition());
-        s.setVec3("light.ambient",  glm::vec3(0.2f, 0.2f, 0.2f));
-        s.setVec3("light.diffuse",  glm::vec3(0.5f, 0.5f, 0.5f));
-        s.setVec3("light.specular", glm::vec3(1.0f, 1.0f, 1.0f));
+        sl.setPosition(camera.getPosition());
+        sl.setDirection(camera.getFront());
+        sl.apply(s);
 
         s.setMat4("view", camera.getViewMatrix());
         s.setMat4("projection", camera.getProjectionMatrix(45));
-        s.setVec3("lightColor", lightColor);
         s.setVec3("viewPos", camera.getPosition());
         b.setMat4("view", camera.getViewMatrix());
         b.setMat4("projection", camera.getProjectionMatrix(45));
-        b.setVec3("lightColor", lightColor);
+        b.setVec3("lightColor", sl.getConfig().color);
 
         // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         backpack.draw(s);
